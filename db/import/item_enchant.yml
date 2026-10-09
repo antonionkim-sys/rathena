@@ -1,0 +1,3400 @@
+# This file is a part of rAthena.
+#   Copyright(C) 2022 rAthena Development Team
+#   https://rathena.org - https://github.com/rathena
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+###########################################################################
+# Item Enchant Database
+###########################################################################
+#
+# Item Enchant Settings
+#
+###########################################################################
+# - Id                         Client side LUA index.
+#   TargetItems:               List of possible target items.
+#     <item name>              Item name of possible target item.
+#   MinimumRefine              Minimum refine of the target item. (Default: 0)
+#   MinimumEnchantgrade        Minimum enchant grade of the target item. (Default: 0)
+#   AllowRandomOptions         Enable random options in the target item. (Default: true)
+#   Reset:                     Reset options. (Default: null)
+#     Chance                   Chance of successful reset. (Default: 0)
+#     Price                    Price for resetting enchants. (Default: 0)
+#     Materials:               Items required for resetting enchants. (Default: null)
+#       - Material             Item name of the required item.
+#         Amount               Amount of the required item. (Default: 1)
+#   Order:                     Order in which the slots can be enchanted.
+#                              Overwriting via import will clear the currently defined order.
+#     - Slot                   Number of the slot (0-3).
+#   Slots:                     Enchant options.
+#     - Slot                   Number of the slot (0-3).
+#       Price                  Price required for the normal enchant process. (Default: 0)
+#       Materials:             Items required for the normal enchant process. (Default: null)
+#         - Material           Item name of the required item.
+#           Amount             Amount of the required item. (Default: 1)
+#       Chance                 Base chance for the normal enchant process. (Default: 100000)
+#       EnchantgradeBonus:     Additional bonus chance increase per enchant grade. (Default: null)
+#         - Enchantgrade       Enchant grade required for the bonus.
+#           Chance             Additional chance that is added to the base chance.
+#       Enchants:              Available enchants for the normal enchant process per enchant grade. (Default: null)
+#         - Enchantgrade       Enchant grade of the item to be enchanted.
+#           Items:             Available enchants for the normal enchant process on the given enchant grade. (Default: null)
+#             - Item           Item name of the available enchant item.
+#               Chance         Chance to get this specific enchant item.
+#       PerfectEnchants:       Available perfect enchants (100% chance + selectable) for this slot. (Default: null)
+#         - Item               Item name of the available enchant item.
+#           Price              Price required for this perfect enchant. (Default: 0)
+#           Materials:         Items required for this perfect enchant. (Default: null)
+#             - Material       Item name of the required item.
+#               Amount         Amount of the required item. (Default: 1)
+#       Upgrades:              Available enchant upgrades for this slot. (Default: null)
+#         - Enchant            Item name of the enchant item available for upgrade.
+#           Upgrade            Item name of the enchant it can be upgrade to.
+#           Price              Price required for this enchant upgrade. (Default: 0)
+#           Materials:         Items required for this enchant upgrade (Default: null)
+#             - Material       Item name of the required item.
+#               Amount         Amount of the required item. (Default: 1)
+###########################################################################
+
+Header:
+  Type: ITEM_ENCHANT_DB
+  Version: 1
+
+Body:
+  - Id: 163
+    TargetItems:
+      Dimension_B_Greave: true
+      Dimension_H_Boots: true
+      Dimension_S_Shoes: true
+      Dimension_M_Shoes: true
+      Dimension_E_Boots: true
+    Reset:
+      Chance: 100000
+      Price: 5000000
+      Materials:
+        - Material: Ch1_Root_Coin
+          Amount: 25
+    Order:
+      - Slot: 3
+      - Slot: 2
+      - Slot: 1
+    Slots:
+      - Slot: 3
+        PerfectEnchants:
+          - Item: Ch01_S_E_Life01
+            Price: 2500000
+            Materials:
+              - Material: Ch1_Root_Coin
+                Amount: 30
+              - Material: Ch1_Mana_Ring
+                Amount: 20
+              - Material: Frontier_M_Stone
+                Amount: 25
+          - Item: Ch01_S_E_Regiment01
+            Price: 2500000
+            Materials:
+              - Material: Ch1_Root_Coin
+                Amount: 30
+              - Material: Ch1_Mana_Ring
+                Amount: 20
+              - Material: Frontier_M_Stone
+                Amount: 25
+          - Item: Ch01_S_E_GAE01
+            Price: 2500000
+            Materials:
+              - Material: Ch1_Root_Coin
+                Amount: 30
+              - Material: Ch1_Mana_Ring
+                Amount: 20
+              - Material: Frontier_M_Stone
+                Amount: 25
+          - Item: Ch01_S_E_Immo01
+            Price: 2500000
+            Materials:
+              - Material: Ch1_Root_Coin
+                Amount: 30
+              - Material: Ch1_Mana_Ring
+                Amount: 20
+              - Material: Frontier_M_Stone
+                Amount: 25
+          - Item: Ch01_S_E_Vain01
+            Price: 2500000
+            Materials:
+              - Material: Ch1_Root_Coin
+                Amount: 30
+              - Material: Ch1_Mana_Ring
+                Amount: 20
+              - Material: Frontier_M_Stone
+                Amount: 25
+        Upgrades:
+          - Enchant: Ch01_S_E_Life05
+            Upgrade: Ch01_S_E_Life06
+            Price: 100000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 150
+              - Material: Frontier_Stone_YL
+                Amount: 150
+              - Material: Frontier_Stone_GR
+                Amount: 100
+              - Material: Frontier_Stone_BK
+                Amount: 100
+              - Material: Dimension_Essence_BL
+                Amount: 25
+              - Material: Dimension_Essence_YL
+                Amount: 25
+              - Material: Dimension_Essence_GR
+                Amount: 25
+              - Material: Dimension_Essence_BK
+                Amount: 25
+          - Enchant: Ch01_S_E_Regiment05
+            Upgrade: Ch01_S_E_Regiment06
+            Price: 100000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 150
+              - Material: Frontier_Stone_YL
+                Amount: 150
+              - Material: Frontier_Stone_GR
+                Amount: 100
+              - Material: Frontier_Stone_BK
+                Amount: 100
+              - Material: Dimension_Essence_BL
+                Amount: 25
+              - Material: Dimension_Essence_YL
+                Amount: 25
+              - Material: Dimension_Essence_GR
+                Amount: 25
+              - Material: Dimension_Essence_BK
+                Amount: 25
+          - Enchant: Ch01_S_E_GAE05
+            Upgrade: Ch01_S_E_GAE06
+            Price: 100000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 150
+              - Material: Frontier_Stone_YL
+                Amount: 150
+              - Material: Frontier_Stone_GR
+                Amount: 100
+              - Material: Frontier_Stone_BK
+                Amount: 100
+              - Material: Dimension_Essence_BL
+                Amount: 25
+              - Material: Dimension_Essence_YL
+                Amount: 25
+              - Material: Dimension_Essence_GR
+                Amount: 25
+              - Material: Dimension_Essence_BK
+                Amount: 25
+          - Enchant: Ch01_S_E_Immo05
+            Upgrade: Ch01_S_E_Immo06
+            Price: 100000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 150
+              - Material: Frontier_Stone_YL
+                Amount: 150
+              - Material: Frontier_Stone_GR
+                Amount: 100
+              - Material: Frontier_Stone_BK
+                Amount: 100
+              - Material: Dimension_Essence_BL
+                Amount: 25
+              - Material: Dimension_Essence_YL
+                Amount: 25
+              - Material: Dimension_Essence_GR
+                Amount: 25
+              - Material: Dimension_Essence_BK
+                Amount: 25
+          - Enchant: Ch01_S_E_Vain05
+            Upgrade: Ch01_S_E_Vain06
+            Price: 100000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 150
+              - Material: Frontier_Stone_YL
+                Amount: 150
+              - Material: Frontier_Stone_GR
+                Amount: 100
+              - Material: Frontier_Stone_BK
+                Amount: 100
+              - Material: Dimension_Essence_BL
+                Amount: 25
+              - Material: Dimension_Essence_YL
+                Amount: 25
+              - Material: Dimension_Essence_GR
+                Amount: 25
+              - Material: Dimension_Essence_BK
+                Amount: 25
+        RandomUpgrades:
+          - Enchant: Ch01_S_E_Life01
+            Price: 5000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 12
+              - Material: Frontier_Stone_YL
+                Amount: 10
+              - Material: Chaotic_Rune
+                Amount: 30
+              - Material: Chaotic_Essence
+                Amount: 6
+            Items:
+              - Item: Ch01_S_E_Life03
+                Chance: 10000
+              - Item: Ch01_S_E_Life02
+                Chance: 90000
+          - Enchant: Ch01_S_E_Life02
+            Price: 10000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 14
+              - Material: Frontier_Stone_YL
+                Amount: 12
+              - Material: Chaotic_Rune
+                Amount: 60
+              - Material: Chaotic_Essence
+                Amount: 12
+            Items:
+              - Item: Ch01_S_E_Life04
+                Chance: 10000
+              - Item: Ch01_S_E_Life03
+                Chance: 90000
+          - Enchant: Ch01_S_E_Life03
+            Price: 17500000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 16
+              - Material: Frontier_Stone_YL
+                Amount: 14
+              - Material: Disparate_Rune
+                Amount: 20
+              - Material: Disparate_Essence
+                Amount: 5
+            Items:
+              - Item: Ch01_S_E_Life05
+                Chance: 10000
+              - Item: Ch01_S_E_Life04
+                Chance: 90000
+          - Enchant: Ch01_S_E_Life04
+            Price: 27500000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 18
+              - Material: Frontier_Stone_YL
+                Amount: 16
+              - Material: Disparate_Rune
+                Amount: 40
+              - Material: Disparate_Essence
+                Amount: 10
+            Items:
+              - Item: Ch01_S_E_Life06
+                Chance: 10000
+              - Item: Ch01_S_E_Life05
+                Chance: 90000
+          - Enchant: Ch01_S_E_Regiment01
+            Price: 5000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 12
+              - Material: Frontier_Stone_YL
+                Amount: 10
+              - Material: Chaotic_Rune
+                Amount: 30
+              - Material: Chaotic_Essence
+                Amount: 6
+            Items:
+              - Item: Ch01_S_E_Regiment03
+                Chance: 10000
+              - Item: Ch01_S_E_Regiment02
+                Chance: 90000
+          - Enchant: Ch01_S_E_Regiment02
+            Price: 10000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 14
+              - Material: Frontier_Stone_YL
+                Amount: 12
+              - Material: Chaotic_Rune
+                Amount: 60
+              - Material: Chaotic_Essence
+                Amount: 12
+            Items:
+              - Item: Ch01_S_E_Regiment04
+                Chance: 10000
+              - Item: Ch01_S_E_Regiment03
+                Chance: 90000
+          - Enchant: Ch01_S_E_Regiment03
+            Price: 17500000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 16
+              - Material: Frontier_Stone_YL
+                Amount: 14
+              - Material: Disparate_Rune
+                Amount: 20
+              - Material: Disparate_Essence
+                Amount: 5
+            Items:
+              - Item: Ch01_S_E_Regiment05
+                Chance: 10000
+              - Item: Ch01_S_E_Regiment04
+                Chance: 90000
+          - Enchant: Ch01_S_E_Regiment04
+            Price: 27500000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 18
+              - Material: Frontier_Stone_YL
+                Amount: 16
+              - Material: Disparate_Rune
+                Amount: 40
+              - Material: Disparate_Essence
+                Amount: 10
+            Items:
+              - Item: Ch01_S_E_Regiment06
+                Chance: 10000
+              - Item: Ch01_S_E_Regiment05
+                Chance: 90000
+          - Enchant: Ch01_S_E_GAE01
+            Price: 5000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 12
+              - Material: Frontier_Stone_YL
+                Amount: 10
+              - Material: Chaotic_Rune
+                Amount: 30
+              - Material: Chaotic_Essence
+                Amount: 6
+            Items:
+              - Item: Ch01_S_E_GAE03
+                Chance: 10000
+              - Item: Ch01_S_E_GAE02
+                Chance: 90000
+          - Enchant: Ch01_S_E_GAE02
+            Price: 10000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 14
+              - Material: Frontier_Stone_YL
+                Amount: 12
+              - Material: Chaotic_Rune
+                Amount: 60
+              - Material: Chaotic_Essence
+                Amount: 12
+            Items:
+              - Item: Ch01_S_E_GAE04
+                Chance: 10000
+              - Item: Ch01_S_E_GAE03
+                Chance: 90000
+          - Enchant: Ch01_S_E_GAE03
+            Price: 17500000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 16
+              - Material: Frontier_Stone_YL
+                Amount: 14
+              - Material: Disparate_Rune
+                Amount: 20
+              - Material: Disparate_Essence
+                Amount: 5
+            Items:
+              - Item: Ch01_S_E_GAE05
+                Chance: 10000
+              - Item: Ch01_S_E_GAE04
+                Chance: 90000
+          - Enchant: Ch01_S_E_GAE04
+            Price: 27500000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 18
+              - Material: Frontier_Stone_YL
+                Amount: 16
+              - Material: Disparate_Rune
+                Amount: 40
+              - Material: Disparate_Essence
+                Amount: 10
+            Items:
+              - Item: Ch01_S_E_GAE06
+                Chance: 10000
+              - Item: Ch01_S_E_GAE05
+                Chance: 90000
+          - Enchant: Ch01_S_E_Immo01
+            Price: 5000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 12
+              - Material: Frontier_Stone_YL
+                Amount: 10
+              - Material: Chaotic_Rune
+                Amount: 30
+              - Material: Chaotic_Essence
+                Amount: 6
+            Items:
+              - Item: Ch01_S_E_Immo03
+                Chance: 10000
+              - Item: Ch01_S_E_Immo02
+                Chance: 90000
+          - Enchant: Ch01_S_E_Immo02
+            Price: 10000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 14
+              - Material: Frontier_Stone_YL
+                Amount: 12
+              - Material: Chaotic_Rune
+                Amount: 60
+              - Material: Chaotic_Essence
+                Amount: 12
+            Items:
+              - Item: Ch01_S_E_Immo04
+                Chance: 10000
+              - Item: Ch01_S_E_Immo03
+                Chance: 90000
+          - Enchant: Ch01_S_E_Immo03
+            Price: 17500000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 16
+              - Material: Frontier_Stone_YL
+                Amount: 14
+              - Material: Disparate_Rune
+                Amount: 20
+              - Material: Disparate_Essence
+                Amount: 5
+            Items:
+              - Item: Ch01_S_E_Immo05
+                Chance: 10000
+              - Item: Ch01_S_E_Immo04
+                Chance: 90000
+          - Enchant: Ch01_S_E_Immo04
+            Price: 27500000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 18
+              - Material: Frontier_Stone_YL
+                Amount: 16
+              - Material: Disparate_Rune
+                Amount: 40
+              - Material: Disparate_Essence
+                Amount: 10
+            Items:
+              - Item: Ch01_S_E_Immo06
+                Chance: 10000
+              - Item: Ch01_S_E_Immo05
+                Chance: 90000
+          - Enchant: Ch01_S_E_Vain01
+            Price: 5000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 12
+              - Material: Frontier_Stone_YL
+                Amount: 10
+              - Material: Chaotic_Rune
+                Amount: 30
+              - Material: Chaotic_Essence
+                Amount: 6
+            Items:
+              - Item: Ch01_S_E_Vain03
+                Chance: 10000
+              - Item: Ch01_S_E_Vain02
+                Chance: 90000
+          - Enchant: Ch01_S_E_Vain02
+            Price: 10000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 14
+              - Material: Frontier_Stone_YL
+                Amount: 12
+              - Material: Chaotic_Rune
+                Amount: 60
+              - Material: Chaotic_Essence
+                Amount: 12
+            Items:
+              - Item: Ch01_S_E_Vain04
+                Chance: 10000
+              - Item: Ch01_S_E_Vain03
+                Chance: 90000
+          - Enchant: Ch01_S_E_Vain03
+            Price: 17500000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 16
+              - Material: Frontier_Stone_YL
+                Amount: 14
+              - Material: Disparate_Rune
+                Amount: 20
+              - Material: Disparate_Essence
+                Amount: 5
+            Items:
+              - Item: Ch01_S_E_Vain05
+                Chance: 10000
+              - Item: Ch01_S_E_Vain04
+                Chance: 90000
+          - Enchant: Ch01_S_E_Vain04
+            Price: 27500000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 18
+              - Material: Frontier_Stone_YL
+                Amount: 16
+              - Material: Disparate_Rune
+                Amount: 40
+              - Material: Disparate_Essence
+                Amount: 10
+            Items:
+              - Item: Ch01_S_E_Vain06
+                Chance: 10000
+              - Item: Ch01_S_E_Vain05
+                Chance: 90000
+      - Slot: 2
+        PerfectEnchants:
+          - Item: Ch01_S_E_Flame01
+            Price: 3500000
+            Materials:
+              - Material: Ch1_Root_Coin
+                Amount: 50
+              - Material: Ch1_Mana_Ring
+                Amount: 30
+              - Material: Frontier_M_Stone
+                Amount: 35
+          - Item: Ch01_S_E_Frozen01
+            Price: 3500000
+            Materials:
+              - Material: Ch1_Root_Coin
+                Amount: 50
+              - Material: Ch1_Mana_Ring
+                Amount: 30
+              - Material: Frontier_M_Stone
+                Amount: 35
+          - Item: Ch01_S_E_Earth01
+            Price: 3500000
+            Materials:
+              - Material: Ch1_Root_Coin
+                Amount: 50
+              - Material: Ch1_Mana_Ring
+                Amount: 30
+              - Material: Frontier_M_Stone
+                Amount: 35
+          - Item: Ch01_S_E_Death01
+            Price: 3500000
+            Materials:
+              - Material: Ch1_Root_Coin
+                Amount: 50
+              - Material: Ch1_Mana_Ring
+                Amount: 30
+              - Material: Frontier_M_Stone
+                Amount: 35
+          - Item: Ch01_S_E_Poison01
+            Price: 3500000
+            Materials:
+              - Material: Ch1_Root_Coin
+                Amount: 50
+              - Material: Ch1_Mana_Ring
+                Amount: 30
+              - Material: Frontier_M_Stone
+                Amount: 35
+        Upgrades:
+          - Enchant: Ch01_S_E_Flame05
+            Upgrade: Ch01_S_E_Flame06
+            Price: 100000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 150
+              - Material: Frontier_Stone_YL
+                Amount: 150
+              - Material: Frontier_Stone_GR
+                Amount: 100
+              - Material: Frontier_Stone_BK
+                Amount: 100
+              - Material: Dimension_Essence_BL
+                Amount: 25
+              - Material: Dimension_Essence_YL
+                Amount: 25
+              - Material: Dimension_Essence_GR
+                Amount: 25
+              - Material: Dimension_Essence_BK
+                Amount: 25
+          - Enchant: Ch01_S_E_Frozen05
+            Upgrade: Ch01_S_E_Frozen06
+            Price: 100000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 150
+              - Material: Frontier_Stone_YL
+                Amount: 150
+              - Material: Frontier_Stone_GR
+                Amount: 100
+              - Material: Frontier_Stone_BK
+                Amount: 100
+              - Material: Dimension_Essence_BL
+                Amount: 25
+              - Material: Dimension_Essence_YL
+                Amount: 25
+              - Material: Dimension_Essence_GR
+                Amount: 25
+              - Material: Dimension_Essence_BK
+                Amount: 25
+          - Enchant: Ch01_S_E_Earth05
+            Upgrade: Ch01_S_E_Earth06
+            Price: 100000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 150
+              - Material: Frontier_Stone_YL
+                Amount: 150
+              - Material: Frontier_Stone_GR
+                Amount: 100
+              - Material: Frontier_Stone_BK
+                Amount: 100
+              - Material: Dimension_Essence_BL
+                Amount: 25
+              - Material: Dimension_Essence_YL
+                Amount: 25
+              - Material: Dimension_Essence_GR
+                Amount: 25
+              - Material: Dimension_Essence_BK
+                Amount: 25
+          - Enchant: Ch01_S_E_Death05
+            Upgrade: Ch01_S_E_Death06
+            Price: 100000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 150
+              - Material: Frontier_Stone_YL
+                Amount: 150
+              - Material: Frontier_Stone_GR
+                Amount: 100
+              - Material: Frontier_Stone_BK
+                Amount: 100
+              - Material: Dimension_Essence_BL
+                Amount: 25
+              - Material: Dimension_Essence_YL
+                Amount: 25
+              - Material: Dimension_Essence_GR
+                Amount: 25
+              - Material: Dimension_Essence_BK
+                Amount: 25
+          - Enchant: Ch01_S_E_Poison05
+            Upgrade: Ch01_S_E_Poison06
+            Price: 100000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 150
+              - Material: Frontier_Stone_YL
+                Amount: 150
+              - Material: Frontier_Stone_GR
+                Amount: 100
+              - Material: Frontier_Stone_BK
+                Amount: 100
+              - Material: Dimension_Essence_BL
+                Amount: 25
+              - Material: Dimension_Essence_YL
+                Amount: 25
+              - Material: Dimension_Essence_GR
+                Amount: 25
+              - Material: Dimension_Essence_BK
+                Amount: 25
+        RandomUpgrades:
+          - Enchant: Ch01_S_E_Flame01
+            Price: 5000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 12
+              - Material: Frontier_Stone_YL
+                Amount: 10
+              - Material: Chaotic_Rune
+                Amount: 30
+              - Material: Chaotic_Essence
+                Amount: 6
+            Items:
+              - Item: Ch01_S_E_Flame03
+                Chance: 10000
+              - Item: Ch01_S_E_Flame02
+                Chance: 90000
+          - Enchant: Ch01_S_E_Flame02
+            Price: 10000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 14
+              - Material: Frontier_Stone_YL
+                Amount: 12
+              - Material: Chaotic_Rune
+                Amount: 60
+              - Material: Chaotic_Essence
+                Amount: 12
+            Items:
+              - Item: Ch01_S_E_Flame04
+                Chance: 10000
+              - Item: Ch01_S_E_Flame03
+                Chance: 90000
+          - Enchant: Ch01_S_E_Flame03
+            Price: 17500000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 16
+              - Material: Frontier_Stone_YL
+                Amount: 14
+              - Material: Disparate_Rune
+                Amount: 20
+              - Material: Disparate_Essence
+                Amount: 5
+            Items:
+              - Item: Ch01_S_E_Flame05
+                Chance: 10000
+              - Item: Ch01_S_E_Flame04
+                Chance: 90000
+          - Enchant: Ch01_S_E_Flame04
+            Price: 27500000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 18
+              - Material: Frontier_Stone_YL
+                Amount: 16
+              - Material: Disparate_Rune
+                Amount: 40
+              - Material: Disparate_Essence
+                Amount: 10
+            Items:
+              - Item: Ch01_S_E_Flame06
+                Chance: 10000
+              - Item: Ch01_S_E_Flame05
+                Chance: 90000
+          - Enchant: Ch01_S_E_Frozen01
+            Price: 5000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 12
+              - Material: Frontier_Stone_YL
+                Amount: 10
+              - Material: Chaotic_Rune
+                Amount: 30
+              - Material: Chaotic_Essence
+                Amount: 6
+            Items:
+              - Item: Ch01_S_E_Frozen03
+                Chance: 10000
+              - Item: Ch01_S_E_Frozen02
+                Chance: 90000
+          - Enchant: Ch01_S_E_Frozen02
+            Price: 10000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 14
+              - Material: Frontier_Stone_YL
+                Amount: 12
+              - Material: Chaotic_Rune
+                Amount: 60
+              - Material: Chaotic_Essence
+                Amount: 12
+            Items:
+              - Item: Ch01_S_E_Frozen04
+                Chance: 10000
+              - Item: Ch01_S_E_Frozen03
+                Chance: 90000
+          - Enchant: Ch01_S_E_Frozen03
+            Price: 17500000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 16
+              - Material: Frontier_Stone_YL
+                Amount: 14
+              - Material: Disparate_Rune
+                Amount: 20
+              - Material: Disparate_Essence
+                Amount: 5
+            Items:
+              - Item: Ch01_S_E_Frozen05
+                Chance: 10000
+              - Item: Ch01_S_E_Frozen04
+                Chance: 90000
+          - Enchant: Ch01_S_E_Frozen04
+            Price: 27500000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 18
+              - Material: Frontier_Stone_YL
+                Amount: 16
+              - Material: Disparate_Rune
+                Amount: 40
+              - Material: Disparate_Essence
+                Amount: 10
+            Items:
+              - Item: Ch01_S_E_Frozen06
+                Chance: 10000
+              - Item: Ch01_S_E_Frozen05
+                Chance: 90000
+          - Enchant: Ch01_S_E_Earth01
+            Price: 5000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 12
+              - Material: Frontier_Stone_YL
+                Amount: 10
+              - Material: Chaotic_Rune
+                Amount: 30
+              - Material: Chaotic_Essence
+                Amount: 6
+            Items:
+              - Item: Ch01_S_E_Earth03
+                Chance: 10000
+              - Item: Ch01_S_E_Earth02
+                Chance: 90000
+          - Enchant: Ch01_S_E_Earth02
+            Price: 10000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 14
+              - Material: Frontier_Stone_YL
+                Amount: 12
+              - Material: Chaotic_Rune
+                Amount: 60
+              - Material: Chaotic_Essence
+                Amount: 12
+            Items:
+              - Item: Ch01_S_E_Earth04
+                Chance: 10000
+              - Item: Ch01_S_E_Earth03
+                Chance: 90000
+          - Enchant: Ch01_S_E_Earth03
+            Price: 17500000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 16
+              - Material: Frontier_Stone_YL
+                Amount: 14
+              - Material: Disparate_Rune
+                Amount: 20
+              - Material: Disparate_Essence
+                Amount: 5
+            Items:
+              - Item: Ch01_S_E_Earth05
+                Chance: 10000
+              - Item: Ch01_S_E_Earth04
+                Chance: 90000
+          - Enchant: Ch01_S_E_Earth04
+            Price: 27500000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 18
+              - Material: Frontier_Stone_YL
+                Amount: 16
+              - Material: Disparate_Rune
+                Amount: 40
+              - Material: Disparate_Essence
+                Amount: 10
+            Items:
+              - Item: Ch01_S_E_Earth06
+                Chance: 10000
+              - Item: Ch01_S_E_Earth05
+                Chance: 90000
+          - Enchant: Ch01_S_E_Death01
+            Price: 5000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 12
+              - Material: Frontier_Stone_YL
+                Amount: 10
+              - Material: Chaotic_Rune
+                Amount: 30
+              - Material: Chaotic_Essence
+                Amount: 6
+            Items:
+              - Item: Ch01_S_E_Death03
+                Chance: 10000
+              - Item: Ch01_S_E_Death02
+                Chance: 90000
+          - Enchant: Ch01_S_E_Death02
+            Price: 10000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 14
+              - Material: Frontier_Stone_YL
+                Amount: 12
+              - Material: Chaotic_Rune
+                Amount: 60
+              - Material: Chaotic_Essence
+                Amount: 12
+            Items:
+              - Item: Ch01_S_E_Death04
+                Chance: 10000
+              - Item: Ch01_S_E_Death03
+                Chance: 90000
+          - Enchant: Ch01_S_E_Death03
+            Price: 17500000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 16
+              - Material: Frontier_Stone_YL
+                Amount: 14
+              - Material: Disparate_Rune
+                Amount: 20
+              - Material: Disparate_Essence
+                Amount: 5
+            Items:
+              - Item: Ch01_S_E_Death05
+                Chance: 10000
+              - Item: Ch01_S_E_Death04
+                Chance: 90000
+          - Enchant: Ch01_S_E_Death04
+            Price: 27500000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 18
+              - Material: Frontier_Stone_YL
+                Amount: 16
+              - Material: Disparate_Rune
+                Amount: 40
+              - Material: Disparate_Essence
+                Amount: 10
+            Items:
+              - Item: Ch01_S_E_Death06
+                Chance: 10000
+              - Item: Ch01_S_E_Death05
+                Chance: 90000
+          - Enchant: Ch01_S_E_Poison01
+            Price: 5000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 12
+              - Material: Frontier_Stone_YL
+                Amount: 10
+              - Material: Chaotic_Rune
+                Amount: 30
+              - Material: Chaotic_Essence
+                Amount: 6
+            Items:
+              - Item: Ch01_S_E_Poison03
+                Chance: 10000
+              - Item: Ch01_S_E_Poison02
+                Chance: 90000
+          - Enchant: Ch01_S_E_Poison02
+            Price: 10000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 14
+              - Material: Frontier_Stone_YL
+                Amount: 12
+              - Material: Chaotic_Rune
+                Amount: 60
+              - Material: Chaotic_Essence
+                Amount: 12
+            Items:
+              - Item: Ch01_S_E_Poison04
+                Chance: 10000
+              - Item: Ch01_S_E_Poison03
+                Chance: 90000
+          - Enchant: Ch01_S_E_Poison03
+            Price: 17500000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 16
+              - Material: Frontier_Stone_YL
+                Amount: 14
+              - Material: Disparate_Rune
+                Amount: 20
+              - Material: Disparate_Essence
+                Amount: 5
+            Items:
+              - Item: Ch01_S_E_Poison05
+                Chance: 10000
+              - Item: Ch01_S_E_Poison04
+                Chance: 90000
+          - Enchant: Ch01_S_E_Poison04
+            Price: 27500000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 18
+              - Material: Frontier_Stone_YL
+                Amount: 16
+              - Material: Disparate_Rune
+                Amount: 40
+              - Material: Disparate_Essence
+                Amount: 10
+            Items:
+              - Item: Ch01_S_E_Poison06
+                Chance: 10000
+              - Item: Ch01_S_E_Poison05
+                Chance: 90000
+      - Slot: 1
+        PerfectEnchants:
+          - Item: Ch01_S_E_Fighting01
+            Price: 5000000
+            Materials:
+              - Material: Ch1_Root_Coin
+                Amount: 70
+              - Material: Ch1_Mana_Ring
+                Amount: 40
+              - Material: Frontier_M_Stone
+                Amount: 45
+          - Item: Ch01_S_E_Prudence01
+            Price: 5000000
+            Materials:
+              - Material: Ch1_Root_Coin
+                Amount: 70
+              - Material: Ch1_Mana_Ring
+                Amount: 40
+              - Material: Frontier_M_Stone
+                Amount: 45
+          - Item: Ch01_S_E_Pride01
+            Price: 5000000
+            Materials:
+              - Material: Ch1_Root_Coin
+                Amount: 70
+              - Material: Ch1_Mana_Ring
+                Amount: 40
+              - Material: Frontier_M_Stone
+                Amount: 45
+          - Item: Ch01_S_E_Sageness01
+            Price: 5000000
+            Materials:
+              - Material: Ch1_Root_Coin
+                Amount: 70
+              - Material: Ch1_Mana_Ring
+                Amount: 40
+              - Material: Frontier_M_Stone
+                Amount: 45
+          - Item: Ch01_S_E_Volition01
+            Price: 5000000
+            Materials:
+              - Material: Ch1_Root_Coin
+                Amount: 70
+              - Material: Ch1_Mana_Ring
+                Amount: 40
+              - Material: Frontier_M_Stone
+                Amount: 45
+          - Item: Ch01_S_E_Will01
+            Price: 5000000
+            Materials:
+              - Material: Ch1_Root_Coin
+                Amount: 70
+              - Material: Ch1_Mana_Ring
+                Amount: 40
+              - Material: Frontier_M_Stone
+                Amount: 45
+        Upgrades:
+          - Enchant: Ch01_S_E_Fighting05
+            Upgrade: Ch01_S_E_Fighting06
+            Price: 100000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 250
+              - Material: Frontier_Stone_YL
+                Amount: 250
+              - Material: Frontier_Stone_GR
+                Amount: 200
+              - Material: Frontier_Stone_BK
+                Amount: 200
+              - Material: Dimension_Essence_BL
+                Amount: 75
+              - Material: Dimension_Essence_YL
+                Amount: 75
+              - Material: Dimension_Essence_GR
+                Amount: 75
+              - Material: Dimension_Essence_BK
+                Amount: 75
+          - Enchant: Ch01_S_E_Prudence05
+            Upgrade: Ch01_S_E_Prudence06
+            Price: 100000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 250
+              - Material: Frontier_Stone_YL
+                Amount: 250
+              - Material: Frontier_Stone_GR
+                Amount: 200
+              - Material: Frontier_Stone_BK
+                Amount: 200
+              - Material: Dimension_Essence_BL
+                Amount: 75
+              - Material: Dimension_Essence_YL
+                Amount: 75
+              - Material: Dimension_Essence_GR
+                Amount: 75
+              - Material: Dimension_Essence_BK
+                Amount: 75
+          - Enchant: Ch01_S_E_Pride05
+            Upgrade: Ch01_S_E_Pride06
+            Price: 100000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 250
+              - Material: Frontier_Stone_YL
+                Amount: 250
+              - Material: Frontier_Stone_GR
+                Amount: 200
+              - Material: Frontier_Stone_BK
+                Amount: 200
+              - Material: Dimension_Essence_BL
+                Amount: 75
+              - Material: Dimension_Essence_YL
+                Amount: 75
+              - Material: Dimension_Essence_GR
+                Amount: 75
+              - Material: Dimension_Essence_BK
+                Amount: 75
+          - Enchant: Ch01_S_E_Sageness05
+            Upgrade: Ch01_S_E_Sageness06
+            Price: 100000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 250
+              - Material: Frontier_Stone_YL
+                Amount: 250
+              - Material: Frontier_Stone_GR
+                Amount: 200
+              - Material: Frontier_Stone_BK
+                Amount: 200
+              - Material: Dimension_Essence_BL
+                Amount: 75
+              - Material: Dimension_Essence_YL
+                Amount: 75
+              - Material: Dimension_Essence_GR
+                Amount: 75
+              - Material: Dimension_Essence_BK
+                Amount: 75
+          - Enchant: Ch01_S_E_Volition05
+            Upgrade: Ch01_S_E_Volition06
+            Price: 100000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 250
+              - Material: Frontier_Stone_YL
+                Amount: 250
+              - Material: Frontier_Stone_GR
+                Amount: 200
+              - Material: Frontier_Stone_BK
+                Amount: 200
+              - Material: Dimension_Essence_BL
+                Amount: 75
+              - Material: Dimension_Essence_YL
+                Amount: 75
+              - Material: Dimension_Essence_GR
+                Amount: 75
+              - Material: Dimension_Essence_BK
+                Amount: 75
+          - Enchant: Ch01_S_E_Will05
+            Upgrade: Ch01_S_E_Will06
+            Price: 100000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 250
+              - Material: Frontier_Stone_YL
+                Amount: 250
+              - Material: Frontier_Stone_GR
+                Amount: 200
+              - Material: Frontier_Stone_BK
+                Amount: 200
+              - Material: Dimension_Essence_BL
+                Amount: 75
+              - Material: Dimension_Essence_YL
+                Amount: 75
+              - Material: Dimension_Essence_GR
+                Amount: 75
+              - Material: Dimension_Essence_BK
+                Amount: 75
+        RandomUpgrades:
+          - Enchant: Ch01_S_E_Fighting01
+            Price: 7500000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 14
+              - Material: Frontier_Stone_YL
+                Amount: 12
+              - Material: Frontier_Stone_GR
+                Amount: 10
+              - Material: Frontier_Stone_BK
+                Amount: 8
+              - Material: Chaotic_Essence
+                Amount: 15
+              - Material: Disparate_Essence
+                Amount: 6
+            Items:
+              - Item: Ch01_S_E_Fighting03
+                Chance: 10000
+              - Item: Ch01_S_E_Fighting02
+                Chance: 90000
+          - Enchant: Ch01_S_E_Fighting02
+            Price: 12500000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 16
+              - Material: Frontier_Stone_YL
+                Amount: 14
+              - Material: Frontier_Stone_GR
+                Amount: 12
+              - Material: Frontier_Stone_BK
+                Amount: 10
+              - Material: Chaotic_Essence
+                Amount: 20
+              - Material: Disparate_Essence
+                Amount: 9
+            Items:
+              - Item: Ch01_S_E_Fighting04
+                Chance: 10000
+              - Item: Ch01_S_E_Fighting03
+                Chance: 90000
+          - Enchant: Ch01_S_E_Fighting03
+            Price: 20000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 18
+              - Material: Frontier_Stone_YL
+                Amount: 16
+              - Material: Frontier_Stone_GR
+                Amount: 14
+              - Material: Frontier_Stone_BK
+                Amount: 12
+              - Material: Chaotic_Essence
+                Amount: 25
+              - Material: Disparate_Essence
+                Amount: 12
+            Items:
+              - Item: Ch01_S_E_Fighting05
+                Chance: 10000
+              - Item: Ch01_S_E_Fighting04
+                Chance: 90000
+          - Enchant: Ch01_S_E_Fighting04
+            Price: 30000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 20
+              - Material: Frontier_Stone_YL
+                Amount: 18
+              - Material: Frontier_Stone_GR
+                Amount: 16
+              - Material: Frontier_Stone_BK
+                Amount: 14
+              - Material: Chaotic_Essence
+                Amount: 30
+              - Material: Disparate_Essence
+                Amount: 15
+            Items:
+              - Item: Ch01_S_E_Fighting06
+                Chance: 10000
+              - Item: Ch01_S_E_Fighting05
+                Chance: 90000
+          - Enchant: Ch01_S_E_Prudence01
+            Price: 7500000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 14
+              - Material: Frontier_Stone_YL
+                Amount: 12
+              - Material: Frontier_Stone_GR
+                Amount: 10
+              - Material: Frontier_Stone_BK
+                Amount: 8
+              - Material: Chaotic_Essence
+                Amount: 15
+              - Material: Disparate_Essence
+                Amount: 6
+            Items:
+              - Item: Ch01_S_E_Prudence03
+                Chance: 10000
+              - Item: Ch01_S_E_Prudence02
+                Chance: 90000
+          - Enchant: Ch01_S_E_Prudence02
+            Price: 12500000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 16
+              - Material: Frontier_Stone_YL
+                Amount: 14
+              - Material: Frontier_Stone_GR
+                Amount: 12
+              - Material: Frontier_Stone_BK
+                Amount: 10
+              - Material: Chaotic_Essence
+                Amount: 20
+              - Material: Disparate_Essence
+                Amount: 9
+            Items:
+              - Item: Ch01_S_E_Prudence04
+                Chance: 10000
+              - Item: Ch01_S_E_Prudence03
+                Chance: 90000
+          - Enchant: Ch01_S_E_Prudence03
+            Price: 20000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 18
+              - Material: Frontier_Stone_YL
+                Amount: 16
+              - Material: Frontier_Stone_GR
+                Amount: 14
+              - Material: Frontier_Stone_BK
+                Amount: 12
+              - Material: Chaotic_Essence
+                Amount: 25
+              - Material: Disparate_Essence
+                Amount: 12
+            Items:
+              - Item: Ch01_S_E_Prudence05
+                Chance: 10000
+              - Item: Ch01_S_E_Prudence04
+                Chance: 90000
+          - Enchant: Ch01_S_E_Prudence04
+            Price: 30000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 20
+              - Material: Frontier_Stone_YL
+                Amount: 18
+              - Material: Frontier_Stone_GR
+                Amount: 16
+              - Material: Frontier_Stone_BK
+                Amount: 14
+              - Material: Chaotic_Essence
+                Amount: 30
+              - Material: Disparate_Essence
+                Amount: 15
+            Items:
+              - Item: Ch01_S_E_Prudence06
+                Chance: 10000
+              - Item: Ch01_S_E_Prudence05
+                Chance: 90000
+          - Enchant: Ch01_S_E_Pride01
+            Price: 7500000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 14
+              - Material: Frontier_Stone_YL
+                Amount: 12
+              - Material: Frontier_Stone_GR
+                Amount: 10
+              - Material: Frontier_Stone_BK
+                Amount: 8
+              - Material: Chaotic_Essence
+                Amount: 15
+              - Material: Disparate_Essence
+                Amount: 6
+            Items:
+              - Item: Ch01_S_E_Pride03
+                Chance: 10000
+              - Item: Ch01_S_E_Pride02
+                Chance: 90000
+          - Enchant: Ch01_S_E_Pride02
+            Price: 12500000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 16
+              - Material: Frontier_Stone_YL
+                Amount: 14
+              - Material: Frontier_Stone_GR
+                Amount: 12
+              - Material: Frontier_Stone_BK
+                Amount: 10
+              - Material: Chaotic_Essence
+                Amount: 20
+              - Material: Disparate_Essence
+                Amount: 9
+            Items:
+              - Item: Ch01_S_E_Pride04
+                Chance: 10000
+              - Item: Ch01_S_E_Pride03
+                Chance: 90000
+          - Enchant: Ch01_S_E_Pride03
+            Price: 20000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 18
+              - Material: Frontier_Stone_YL
+                Amount: 16
+              - Material: Frontier_Stone_GR
+                Amount: 14
+              - Material: Frontier_Stone_BK
+                Amount: 12
+              - Material: Chaotic_Essence
+                Amount: 25
+              - Material: Disparate_Essence
+                Amount: 12
+            Items:
+              - Item: Ch01_S_E_Pride05
+                Chance: 10000
+              - Item: Ch01_S_E_Pride04
+                Chance: 90000
+          - Enchant: Ch01_S_E_Pride04
+            Price: 30000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 20
+              - Material: Frontier_Stone_YL
+                Amount: 18
+              - Material: Frontier_Stone_GR
+                Amount: 16
+              - Material: Frontier_Stone_BK
+                Amount: 14
+              - Material: Chaotic_Essence
+                Amount: 30
+              - Material: Disparate_Essence
+                Amount: 15
+            Items:
+              - Item: Ch01_S_E_Pride06
+                Chance: 10000
+              - Item: Ch01_S_E_Pride05
+                Chance: 90000
+          - Enchant: Ch01_S_E_Sageness01
+            Price: 7500000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 14
+              - Material: Frontier_Stone_YL
+                Amount: 12
+              - Material: Frontier_Stone_GR
+                Amount: 10
+              - Material: Frontier_Stone_BK
+                Amount: 8
+              - Material: Chaotic_Essence
+                Amount: 15
+              - Material: Disparate_Essence
+                Amount: 6
+            Items:
+              - Item: Ch01_S_E_Sageness03
+                Chance: 10000
+              - Item: Ch01_S_E_Sageness02
+                Chance: 90000
+          - Enchant: Ch01_S_E_Sageness02
+            Price: 12500000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 16
+              - Material: Frontier_Stone_YL
+                Amount: 14
+              - Material: Frontier_Stone_GR
+                Amount: 12
+              - Material: Frontier_Stone_BK
+                Amount: 10
+              - Material: Chaotic_Essence
+                Amount: 20
+              - Material: Disparate_Essence
+                Amount: 9
+            Items:
+              - Item: Ch01_S_E_Sageness04
+                Chance: 10000
+              - Item: Ch01_S_E_Sageness03
+                Chance: 90000
+          - Enchant: Ch01_S_E_Sageness03
+            Price: 20000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 18
+              - Material: Frontier_Stone_YL
+                Amount: 16
+              - Material: Frontier_Stone_GR
+                Amount: 14
+              - Material: Frontier_Stone_BK
+                Amount: 12
+              - Material: Chaotic_Essence
+                Amount: 25
+              - Material: Disparate_Essence
+                Amount: 12
+            Items:
+              - Item: Ch01_S_E_Sageness05
+                Chance: 10000
+              - Item: Ch01_S_E_Sageness04
+                Chance: 90000
+          - Enchant: Ch01_S_E_Sageness04
+            Price: 30000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 20
+              - Material: Frontier_Stone_YL
+                Amount: 18
+              - Material: Frontier_Stone_GR
+                Amount: 16
+              - Material: Frontier_Stone_BK
+                Amount: 14
+              - Material: Chaotic_Essence
+                Amount: 30
+              - Material: Disparate_Essence
+                Amount: 15
+            Items:
+              - Item: Ch01_S_E_Sageness06
+                Chance: 10000
+              - Item: Ch01_S_E_Sageness05
+                Chance: 90000
+          - Enchant: Ch01_S_E_Volition01
+            Price: 7500000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 14
+              - Material: Frontier_Stone_YL
+                Amount: 12
+              - Material: Frontier_Stone_GR
+                Amount: 10
+              - Material: Frontier_Stone_BK
+                Amount: 8
+              - Material: Chaotic_Essence
+                Amount: 15
+              - Material: Disparate_Essence
+                Amount: 6
+            Items:
+              - Item: Ch01_S_E_Volition03
+                Chance: 10000
+              - Item: Ch01_S_E_Volition02
+                Chance: 90000
+          - Enchant: Ch01_S_E_Volition02
+            Price: 12500000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 16
+              - Material: Frontier_Stone_YL
+                Amount: 14
+              - Material: Frontier_Stone_GR
+                Amount: 12
+              - Material: Frontier_Stone_BK
+                Amount: 10
+              - Material: Chaotic_Essence
+                Amount: 20
+              - Material: Disparate_Essence
+                Amount: 9
+            Items:
+              - Item: Ch01_S_E_Volition04
+                Chance: 10000
+              - Item: Ch01_S_E_Volition03
+                Chance: 90000
+          - Enchant: Ch01_S_E_Volition03
+            Price: 20000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 18
+              - Material: Frontier_Stone_YL
+                Amount: 16
+              - Material: Frontier_Stone_GR
+                Amount: 14
+              - Material: Frontier_Stone_BK
+                Amount: 12
+              - Material: Chaotic_Essence
+                Amount: 25
+              - Material: Disparate_Essence
+                Amount: 12
+            Items:
+              - Item: Ch01_S_E_Volition05
+                Chance: 10000
+              - Item: Ch01_S_E_Volition04
+                Chance: 90000
+          - Enchant: Ch01_S_E_Volition04
+            Price: 30000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 20
+              - Material: Frontier_Stone_YL
+                Amount: 18
+              - Material: Frontier_Stone_GR
+                Amount: 16
+              - Material: Frontier_Stone_BK
+                Amount: 14
+              - Material: Chaotic_Essence
+                Amount: 30
+              - Material: Disparate_Essence
+                Amount: 15
+            Items:
+              - Item: Ch01_S_E_Volition06
+                Chance: 10000
+              - Item: Ch01_S_E_Volition05
+                Chance: 90000
+          - Enchant: Ch01_S_E_Will01
+            Price: 7500000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 14
+              - Material: Frontier_Stone_YL
+                Amount: 12
+              - Material: Frontier_Stone_GR
+                Amount: 10
+              - Material: Frontier_Stone_BK
+                Amount: 8
+              - Material: Chaotic_Essence
+                Amount: 15
+              - Material: Disparate_Essence
+                Amount: 6
+            Items:
+              - Item: Ch01_S_E_Will03
+                Chance: 10000
+              - Item: Ch01_S_E_Will02
+                Chance: 90000
+          - Enchant: Ch01_S_E_Will02
+            Price: 12500000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 16
+              - Material: Frontier_Stone_YL
+                Amount: 14
+              - Material: Frontier_Stone_GR
+                Amount: 12
+              - Material: Frontier_Stone_BK
+                Amount: 10
+              - Material: Chaotic_Essence
+                Amount: 20
+              - Material: Disparate_Essence
+                Amount: 9
+            Items:
+              - Item: Ch01_S_E_Will04
+                Chance: 10000
+              - Item: Ch01_S_E_Will03
+                Chance: 90000
+          - Enchant: Ch01_S_E_Will03
+            Price: 20000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 18
+              - Material: Frontier_Stone_YL
+                Amount: 16
+              - Material: Frontier_Stone_GR
+                Amount: 14
+              - Material: Frontier_Stone_BK
+                Amount: 12
+              - Material: Chaotic_Essence
+                Amount: 25
+              - Material: Disparate_Essence
+                Amount: 12
+            Items:
+              - Item: Ch01_S_E_Will05
+                Chance: 10000
+              - Item: Ch01_S_E_Will04
+                Chance: 90000
+          - Enchant: Ch01_S_E_Will04
+            Price: 30000000
+            Materials:
+              - Material: Frontier_Stone_BL
+                Amount: 20
+              - Material: Frontier_Stone_YL
+                Amount: 18
+              - Material: Frontier_Stone_GR
+                Amount: 16
+              - Material: Frontier_Stone_BK
+                Amount: 14
+              - Material: Chaotic_Essence
+                Amount: 30
+              - Material: Disparate_Essence
+                Amount: 15
+            Items:
+              - Item: Ch01_S_E_Will06
+                Chance: 10000
+              - Item: Ch01_S_E_Will05
+                Chance: 90000
+  - Id: 200
+    TargetItems:
+      Puente_Robe_IL: true
+      Goibne_Armor_IL: true
+      Nurse_Cap_IL: true
+      Apple_Of_Archer_IL: true
+      Cap_IL: true
+      Fancy_Flower_IL: true
+      Headband_Of_Power_IL: true
+      Goibne_Helmet_IL: true
+      Morpheus_Hood_IL: true
+      Muffler_IL: true
+      Cape_Of_Ancient_Lord_IL: true
+      Clack_Of_Servival_IL: true
+      Goibne_Shoulder_IL: true
+      Morpheus_Shawl_IL: true
+      Shoes_IL: true
+      Boots_IL: true
+      Goibne_Boots_IL: true
+      Herald_Of_GOD_IL: true
+      Morrigane_Helm_IL: true
+      Saint_Robe_IL: true
+      Water_Sprits_Armor_IL: true
+      Chain_Mail_IL: true
+      Sprint_Mail_IL: true
+      Guard_IL: true
+      Siver_Guard_IL: true
+      Sprint_Shoes_IL: true
+      Morrigane_Manyeau_IL: true
+      
+    Reset:
+      Chance: 100000
+      Price: 0
+    Order:
+      - Slot: 3
+      - Slot: 2
+    Slots:
+      - Slot: 3
+        Price: 100000
+        Materials:
+          - Material: IllusionStone
+            Amount: 5
+        Enchants:
+          - Enchantgrade: 0
+            Items:
+              - Item: Strength1
+                Chance: 5000
+              - Item: Strength2
+                Chance: 3000
+              - Item: Strength3
+                Chance: 1000
+              - Item: Inteligence1
+                Chance: 5000
+              - Item: Inteligence2
+                Chance: 3000
+              - Item: Inteligence3
+                Chance: 1000
+              - Item: Dexterity1
+                Chance: 5000
+              - Item: Dexterity2
+                Chance: 3000
+              - Item: Dexterity3
+                Chance: 1000
+              - Item: Agility1
+                Chance: 5000
+              - Item: Agility2
+                Chance: 3000
+              - Item: Agility3
+                Chance: 1000
+              - Item: Vitality1
+                Chance: 5000
+              - Item: Vitality2
+                Chance: 3000
+              - Item: Vitality3
+                Chance: 1000
+              - Item: Luck1
+                Chance: 5000
+              - Item: Luck2
+                Chance: 3000
+              - Item: Luck3
+                Chance: 1000
+              - Item: MHP1
+                Chance: 5000
+              - Item: MHP2
+                Chance: 3500
+              - Item: MHP3
+                Chance: 2000
+              - Item: MHP4
+                Chance: 500
+              - Item: HPdrain1
+                Chance: 2000
+              - Item: SPdrain1
+                Chance: 2000
+              - Item: HPdrain3
+                Chance: 500
+              - Item: SPdrain2
+                Chance: 500
+              - Item: Neev_STR_1
+                Chance: 4500
+              - Item: Neev_AGI_1
+                Chance: 4500
+              - Item: Neev_STR_2
+                Chance: 500
+              - Item: Neev_AGI_2
+                Chance: 500
+              - Item: Neev_INT_1
+                Chance: 4500
+              - Item: Neev_DEX_1
+                Chance: 4500
+              - Item: Neev_INT_2
+                Chance: 500
+              - Item: Neev_DEX_2
+                Chance: 500
+              - Item: Neev_LUK_1
+                Chance: 4500
+              - Item: Neev_VIT_1
+                Chance: 4500
+              - Item: Neev_LUK_2
+                Chance: 500
+              - Item: Neev_VIT_2
+                Chance: 500
+          - Enchantgrade: 1
+            Items:
+              - Item: Strength1
+                Chance: 5000
+              - Item: Strength2
+                Chance: 3000
+              - Item: Strength3
+                Chance: 1000
+              - Item: Inteligence1
+                Chance: 5000
+              - Item: Inteligence2
+                Chance: 3000
+              - Item: Inteligence3
+                Chance: 1000
+              - Item: Dexterity1
+                Chance: 5000
+              - Item: Dexterity2
+                Chance: 3000
+              - Item: Dexterity3
+                Chance: 1000
+              - Item: Agility1
+                Chance: 5000
+              - Item: Agility2
+                Chance: 3000
+              - Item: Agility3
+                Chance: 1000
+              - Item: Vitality1
+                Chance: 5000
+              - Item: Vitality2
+                Chance: 3000
+              - Item: Vitality3
+                Chance: 1000
+              - Item: Luck1
+                Chance: 5000
+              - Item: Luck2
+                Chance: 3000
+              - Item: Luck3
+                Chance: 1000
+              - Item: MHP1
+                Chance: 5000
+              - Item: MHP2
+                Chance: 3500
+              - Item: MHP3
+                Chance: 2000
+              - Item: MHP4
+                Chance: 500
+              - Item: HPdrain1
+                Chance: 2000
+              - Item: SPdrain1
+                Chance: 2000
+              - Item: HPdrain3
+                Chance: 500
+              - Item: SPdrain2
+                Chance: 500
+              - Item: Neev_STR_1
+                Chance: 4500
+              - Item: Neev_AGI_1
+                Chance: 4500
+              - Item: Neev_STR_2
+                Chance: 500
+              - Item: Neev_AGI_2
+                Chance: 500
+              - Item: Neev_INT_1
+                Chance: 4500
+              - Item: Neev_DEX_1
+                Chance: 4500
+              - Item: Neev_INT_2
+                Chance: 500
+              - Item: Neev_DEX_2
+                Chance: 500
+              - Item: Neev_LUK_1
+                Chance: 4500
+              - Item: Neev_VIT_1
+                Chance: 4500
+              - Item: Neev_LUK_2
+                Chance: 500
+              - Item: Neev_VIT_2
+                Chance: 500
+          - Enchantgrade: 2
+            Items:
+              - Item: Strength1
+                Chance: 5000
+              - Item: Strength2
+                Chance: 3000
+              - Item: Strength3
+                Chance: 1000
+              - Item: Inteligence1
+                Chance: 5000
+              - Item: Inteligence2
+                Chance: 3000
+              - Item: Inteligence3
+                Chance: 1000
+              - Item: Dexterity1
+                Chance: 5000
+              - Item: Dexterity2
+                Chance: 3000
+              - Item: Dexterity3
+                Chance: 1000
+              - Item: Agility1
+                Chance: 5000
+              - Item: Agility2
+                Chance: 3000
+              - Item: Agility3
+                Chance: 1000
+              - Item: Vitality1
+                Chance: 5000
+              - Item: Vitality2
+                Chance: 3000
+              - Item: Vitality3
+                Chance: 1000
+              - Item: Luck1
+                Chance: 5000
+              - Item: Luck2
+                Chance: 3000
+              - Item: Luck3
+                Chance: 1000
+              - Item: MHP1
+                Chance: 5000
+              - Item: MHP2
+                Chance: 3500
+              - Item: MHP3
+                Chance: 2000
+              - Item: MHP4
+                Chance: 500
+              - Item: HPdrain1
+                Chance: 2000
+              - Item: SPdrain1
+                Chance: 2000
+              - Item: HPdrain3
+                Chance: 500
+              - Item: SPdrain2
+                Chance: 500
+              - Item: Neev_STR_1
+                Chance: 4500
+              - Item: Neev_AGI_1
+                Chance: 4500
+              - Item: Neev_STR_2
+                Chance: 500
+              - Item: Neev_AGI_2
+                Chance: 500
+              - Item: Neev_INT_1
+                Chance: 4500
+              - Item: Neev_DEX_1
+                Chance: 4500
+              - Item: Neev_INT_2
+                Chance: 500
+              - Item: Neev_DEX_2
+                Chance: 500
+              - Item: Neev_LUK_1
+                Chance: 4500
+              - Item: Neev_VIT_1
+                Chance: 4500
+              - Item: Neev_LUK_2
+                Chance: 500
+              - Item: Neev_VIT_2
+                Chance: 500
+          - Enchantgrade: 3
+            Items:
+              - Item: Strength1
+                Chance: 5000
+              - Item: Strength2
+                Chance: 3000
+              - Item: Strength3
+                Chance: 1000
+              - Item: Inteligence1
+                Chance: 5000
+              - Item: Inteligence2
+                Chance: 3000
+              - Item: Inteligence3
+                Chance: 1000
+              - Item: Dexterity1
+                Chance: 5000
+              - Item: Dexterity2
+                Chance: 3000
+              - Item: Dexterity3
+                Chance: 1000
+              - Item: Agility1
+                Chance: 5000
+              - Item: Agility2
+                Chance: 3000
+              - Item: Agility3
+                Chance: 1000
+              - Item: Vitality1
+                Chance: 5000
+              - Item: Vitality2
+                Chance: 3000
+              - Item: Vitality3
+                Chance: 1000
+              - Item: Luck1
+                Chance: 5000
+              - Item: Luck2
+                Chance: 3000
+              - Item: Luck3
+                Chance: 1000
+              - Item: MHP1
+                Chance: 5000
+              - Item: MHP2
+                Chance: 3500
+              - Item: MHP3
+                Chance: 2000
+              - Item: MHP4
+                Chance: 500
+              - Item: HPdrain1
+                Chance: 2000
+              - Item: SPdrain1
+                Chance: 2000
+              - Item: HPdrain3
+                Chance: 500
+              - Item: SPdrain2
+                Chance: 500
+              - Item: Neev_STR_1
+                Chance: 4500
+              - Item: Neev_AGI_1
+                Chance: 4500
+              - Item: Neev_STR_2
+                Chance: 500
+              - Item: Neev_AGI_2
+                Chance: 500
+              - Item: Neev_INT_1
+                Chance: 4500
+              - Item: Neev_DEX_1
+                Chance: 4500
+              - Item: Neev_INT_2
+                Chance: 500
+              - Item: Neev_DEX_2
+                Chance: 500
+              - Item: Neev_LUK_1
+                Chance: 4500
+              - Item: Neev_VIT_1
+                Chance: 4500
+              - Item: Neev_LUK_2
+                Chance: 500
+              - Item: Neev_VIT_2
+                Chance: 500
+          - Enchantgrade: 4
+            Items:
+              - Item: Strength1
+                Chance: 5000
+              - Item: Strength2
+                Chance: 3000
+              - Item: Strength3
+                Chance: 1000
+              - Item: Inteligence1
+                Chance: 5000
+              - Item: Inteligence2
+                Chance: 3000
+              - Item: Inteligence3
+                Chance: 1000
+              - Item: Dexterity1
+                Chance: 5000
+              - Item: Dexterity2
+                Chance: 3000
+              - Item: Dexterity3
+                Chance: 1000
+              - Item: Agility1
+                Chance: 5000
+              - Item: Agility2
+                Chance: 3000
+              - Item: Agility3
+                Chance: 1000
+              - Item: Vitality1
+                Chance: 5000
+              - Item: Vitality2
+                Chance: 3000
+              - Item: Vitality3
+                Chance: 1000
+              - Item: Luck1
+                Chance: 5000
+              - Item: Luck2
+                Chance: 3000
+              - Item: Luck3
+                Chance: 1000
+              - Item: MHP1
+                Chance: 5000
+              - Item: MHP2
+                Chance: 3500
+              - Item: MHP3
+                Chance: 2000
+              - Item: MHP4
+                Chance: 500
+              - Item: HPdrain1
+                Chance: 2000
+              - Item: SPdrain1
+                Chance: 2000
+              - Item: HPdrain3
+                Chance: 500
+              - Item: SPdrain2
+                Chance: 500
+              - Item: Neev_STR_1
+                Chance: 4500
+              - Item: Neev_AGI_1
+                Chance: 4500
+              - Item: Neev_STR_2
+                Chance: 500
+              - Item: Neev_AGI_2
+                Chance: 500
+              - Item: Neev_INT_1
+                Chance: 4500
+              - Item: Neev_DEX_1
+                Chance: 4500
+              - Item: Neev_INT_2
+                Chance: 500
+              - Item: Neev_DEX_2
+                Chance: 500
+              - Item: Neev_LUK_1
+                Chance: 4500
+              - Item: Neev_VIT_1
+                Chance: 4500
+              - Item: Neev_LUK_2
+                Chance: 500
+              - Item: Neev_VIT_2
+                Chance: 500
+        PerfectEnchants:
+          - Item: Strength3
+            Price: 500000
+            Materials:
+              - Material: IllusionStone
+                Amount: 600
+          - Item: Inteligence3
+            Price: 500000
+            Materials:
+              - Material: IllusionStone
+                Amount: 600
+          - Item: Dexterity3
+            Price: 500000
+            Materials:
+              - Material: IllusionStone
+                Amount: 600
+          - Item: Agility3
+            Price: 500000
+            Materials:
+              - Material: IllusionStone
+                Amount: 600
+          - Item: Vitality3
+            Price: 500000
+            Materials:
+              - Material: IllusionStone
+                Amount: 600
+          - Item: Luck3
+            Price: 500000
+            Materials:
+              - Material: IllusionStone
+                Amount: 600
+          - Item: MHP4
+            Price: 500000
+            Materials:
+              - Material: IllusionStone
+                Amount: 600
+          - Item: HPdrain3
+            Price: 500000
+            Materials:
+              - Material: IllusionStone
+                Amount: 600
+          - Item: SPdrain2
+            Price: 500000
+            Materials:
+              - Material: IllusionStone
+                Amount: 600
+          - Item: Neev_STR_2
+            Price: 500000
+            Materials:
+              - Material: IllusionStone
+                Amount: 600
+          - Item: Neev_AGI_2
+            Price: 500000
+            Materials:
+              - Material: IllusionStone
+                Amount: 600
+          - Item: Neev_INT_2
+            Price: 500000
+            Materials:
+              - Material: IllusionStone
+                Amount: 600
+          - Item: Neev_DEX_2
+            Price: 500000
+            Materials:
+              - Material: IllusionStone
+                Amount: 600
+          - Item: Neev_LUK_2
+            Price: 500000
+            Materials:
+              - Material: IllusionStone
+                Amount: 600
+          - Item: Neev_VIT_2
+            Price: 500000
+            Materials:
+              - Material: IllusionStone
+                Amount: 600
+      - Slot: 2
+        Price: 100000
+        Materials:
+          - Material: IllusionStone
+            Amount: 5
+        Enchants:
+          - Enchantgrade: 0
+            Items:
+              - Item: Strength1
+                Chance: 5000
+              - Item: Strength2
+                Chance: 3000
+              - Item: Strength3
+                Chance: 1000
+              - Item: Inteligence1
+                Chance: 5000
+              - Item: Inteligence2
+                Chance: 3000
+              - Item: Inteligence3
+                Chance: 1000
+              - Item: Dexterity1
+                Chance: 5000
+              - Item: Dexterity2
+                Chance: 3000
+              - Item: Dexterity3
+                Chance: 1000
+              - Item: Agility1
+                Chance: 5000
+              - Item: Agility2
+                Chance: 3000
+              - Item: Agility3
+                Chance: 1000
+              - Item: Vitality1
+                Chance: 5000
+              - Item: Vitality2
+                Chance: 3000
+              - Item: Vitality3
+                Chance: 1000
+              - Item: Luck1
+                Chance: 5000
+              - Item: Luck2
+                Chance: 3000
+              - Item: Luck3
+                Chance: 1000
+              - Item: MHP1
+                Chance: 5000
+              - Item: MHP2
+                Chance: 3500
+              - Item: MHP3
+                Chance: 2000
+              - Item: MHP4
+                Chance: 500
+              - Item: HPdrain1
+                Chance: 2000
+              - Item: SPdrain1
+                Chance: 2000
+              - Item: HPdrain3
+                Chance: 500
+              - Item: SPdrain2
+                Chance: 500
+              - Item: Neev_STR_1
+                Chance: 4500
+              - Item: Neev_AGI_1
+                Chance: 4500
+              - Item: Neev_STR_2
+                Chance: 500
+              - Item: Neev_AGI_2
+                Chance: 500
+              - Item: Neev_INT_1
+                Chance: 4500
+              - Item: Neev_DEX_1
+                Chance: 4500
+              - Item: Neev_INT_2
+                Chance: 500
+              - Item: Neev_DEX_2
+                Chance: 500
+              - Item: Neev_LUK_1
+                Chance: 4500
+              - Item: Neev_VIT_1
+                Chance: 4500
+              - Item: Neev_LUK_2
+                Chance: 500
+              - Item: Neev_VIT_2
+                Chance: 500
+          - Enchantgrade: 1
+            Items:
+              - Item: Strength1
+                Chance: 5000
+              - Item: Strength2
+                Chance: 3000
+              - Item: Strength3
+                Chance: 1000
+              - Item: Inteligence1
+                Chance: 5000
+              - Item: Inteligence2
+                Chance: 3000
+              - Item: Inteligence3
+                Chance: 1000
+              - Item: Dexterity1
+                Chance: 5000
+              - Item: Dexterity2
+                Chance: 3000
+              - Item: Dexterity3
+                Chance: 1000
+              - Item: Agility1
+                Chance: 5000
+              - Item: Agility2
+                Chance: 3000
+              - Item: Agility3
+                Chance: 1000
+              - Item: Vitality1
+                Chance: 5000
+              - Item: Vitality2
+                Chance: 3000
+              - Item: Vitality3
+                Chance: 1000
+              - Item: Luck1
+                Chance: 5000
+              - Item: Luck2
+                Chance: 3000
+              - Item: Luck3
+                Chance: 1000
+              - Item: MHP1
+                Chance: 5000
+              - Item: MHP2
+                Chance: 3500
+              - Item: MHP3
+                Chance: 2000
+              - Item: MHP4
+                Chance: 500
+              - Item: HPdrain1
+                Chance: 2000
+              - Item: SPdrain1
+                Chance: 2000
+              - Item: HPdrain3
+                Chance: 500
+              - Item: SPdrain2
+                Chance: 500
+              - Item: Neev_STR_1
+                Chance: 4500
+              - Item: Neev_AGI_1
+                Chance: 4500
+              - Item: Neev_STR_2
+                Chance: 500
+              - Item: Neev_AGI_2
+                Chance: 500
+              - Item: Neev_INT_1
+                Chance: 4500
+              - Item: Neev_DEX_1
+                Chance: 4500
+              - Item: Neev_INT_2
+                Chance: 500
+              - Item: Neev_DEX_2
+                Chance: 500
+              - Item: Neev_LUK_1
+                Chance: 4500
+              - Item: Neev_VIT_1
+                Chance: 4500
+              - Item: Neev_LUK_2
+                Chance: 500
+              - Item: Neev_VIT_2
+                Chance: 500
+          - Enchantgrade: 2
+            Items:
+              - Item: Strength1
+                Chance: 5000
+              - Item: Strength2
+                Chance: 3000
+              - Item: Strength3
+                Chance: 1000
+              - Item: Inteligence1
+                Chance: 5000
+              - Item: Inteligence2
+                Chance: 3000
+              - Item: Inteligence3
+                Chance: 1000
+              - Item: Dexterity1
+                Chance: 5000
+              - Item: Dexterity2
+                Chance: 3000
+              - Item: Dexterity3
+                Chance: 1000
+              - Item: Agility1
+                Chance: 5000
+              - Item: Agility2
+                Chance: 3000
+              - Item: Agility3
+                Chance: 1000
+              - Item: Vitality1
+                Chance: 5000
+              - Item: Vitality2
+                Chance: 3000
+              - Item: Vitality3
+                Chance: 1000
+              - Item: Luck1
+                Chance: 5000
+              - Item: Luck2
+                Chance: 3000
+              - Item: Luck3
+                Chance: 1000
+              - Item: MHP1
+                Chance: 5000
+              - Item: MHP2
+                Chance: 3500
+              - Item: MHP3
+                Chance: 2000
+              - Item: MHP4
+                Chance: 500
+              - Item: HPdrain1
+                Chance: 2000
+              - Item: SPdrain1
+                Chance: 2000
+              - Item: HPdrain3
+                Chance: 500
+              - Item: SPdrain2
+                Chance: 500
+              - Item: Neev_STR_1
+                Chance: 4500
+              - Item: Neev_AGI_1
+                Chance: 4500
+              - Item: Neev_STR_2
+                Chance: 500
+              - Item: Neev_AGI_2
+                Chance: 500
+              - Item: Neev_INT_1
+                Chance: 4500
+              - Item: Neev_DEX_1
+                Chance: 4500
+              - Item: Neev_INT_2
+                Chance: 500
+              - Item: Neev_DEX_2
+                Chance: 500
+              - Item: Neev_LUK_1
+                Chance: 4500
+              - Item: Neev_VIT_1
+                Chance: 4500
+              - Item: Neev_LUK_2
+                Chance: 500
+              - Item: Neev_VIT_2
+                Chance: 500
+          - Enchantgrade: 3
+            Items:
+              - Item: Strength1
+                Chance: 5000
+              - Item: Strength2
+                Chance: 3000
+              - Item: Strength3
+                Chance: 1000
+              - Item: Inteligence1
+                Chance: 5000
+              - Item: Inteligence2
+                Chance: 3000
+              - Item: Inteligence3
+                Chance: 1000
+              - Item: Dexterity1
+                Chance: 5000
+              - Item: Dexterity2
+                Chance: 3000
+              - Item: Dexterity3
+                Chance: 1000
+              - Item: Agility1
+                Chance: 5000
+              - Item: Agility2
+                Chance: 3000
+              - Item: Agility3
+                Chance: 1000
+              - Item: Vitality1
+                Chance: 5000
+              - Item: Vitality2
+                Chance: 3000
+              - Item: Vitality3
+                Chance: 1000
+              - Item: Luck1
+                Chance: 5000
+              - Item: Luck2
+                Chance: 3000
+              - Item: Luck3
+                Chance: 1000
+              - Item: MHP1
+                Chance: 5000
+              - Item: MHP2
+                Chance: 3500
+              - Item: MHP3
+                Chance: 2000
+              - Item: MHP4
+                Chance: 500
+              - Item: HPdrain1
+                Chance: 2000
+              - Item: SPdrain1
+                Chance: 2000
+              - Item: HPdrain3
+                Chance: 500
+              - Item: SPdrain2
+                Chance: 500
+              - Item: Neev_STR_1
+                Chance: 4500
+              - Item: Neev_AGI_1
+                Chance: 4500
+              - Item: Neev_STR_2
+                Chance: 500
+              - Item: Neev_AGI_2
+                Chance: 500
+              - Item: Neev_INT_1
+                Chance: 4500
+              - Item: Neev_DEX_1
+                Chance: 4500
+              - Item: Neev_INT_2
+                Chance: 500
+              - Item: Neev_DEX_2
+                Chance: 500
+              - Item: Neev_LUK_1
+                Chance: 4500
+              - Item: Neev_VIT_1
+                Chance: 4500
+              - Item: Neev_LUK_2
+                Chance: 500
+              - Item: Neev_VIT_2
+                Chance: 500
+          - Enchantgrade: 4
+            Items:
+              - Item: Strength1
+                Chance: 5000
+              - Item: Strength2
+                Chance: 3000
+              - Item: Strength3
+                Chance: 1000
+              - Item: Inteligence1
+                Chance: 5000
+              - Item: Inteligence2
+                Chance: 3000
+              - Item: Inteligence3
+                Chance: 1000
+              - Item: Dexterity1
+                Chance: 5000
+              - Item: Dexterity2
+                Chance: 3000
+              - Item: Dexterity3
+                Chance: 1000
+              - Item: Agility1
+                Chance: 5000
+              - Item: Agility2
+                Chance: 3000
+              - Item: Agility3
+                Chance: 1000
+              - Item: Vitality1
+                Chance: 5000
+              - Item: Vitality2
+                Chance: 3000
+              - Item: Vitality3
+                Chance: 1000
+              - Item: Luck1
+                Chance: 5000
+              - Item: Luck2
+                Chance: 3000
+              - Item: Luck3
+                Chance: 1000
+              - Item: MHP1
+                Chance: 5000
+              - Item: MHP2
+                Chance: 3500
+              - Item: MHP3
+                Chance: 2000
+              - Item: MHP4
+                Chance: 500
+              - Item: HPdrain1
+                Chance: 2000
+              - Item: SPdrain1
+                Chance: 2000
+              - Item: HPdrain3
+                Chance: 500
+              - Item: SPdrain2
+                Chance: 500
+              - Item: Neev_STR_1
+                Chance: 4500
+              - Item: Neev_AGI_1
+                Chance: 4500
+              - Item: Neev_STR_2
+                Chance: 500
+              - Item: Neev_AGI_2
+                Chance: 500
+              - Item: Neev_INT_1
+                Chance: 4500
+              - Item: Neev_DEX_1
+                Chance: 4500
+              - Item: Neev_INT_2
+                Chance: 500
+              - Item: Neev_DEX_2
+                Chance: 500
+              - Item: Neev_LUK_1
+                Chance: 4500
+              - Item: Neev_VIT_1
+                Chance: 4500
+              - Item: Neev_LUK_2
+                Chance: 500
+              - Item: Neev_VIT_2
+                Chance: 500
+        PerfectEnchants:
+          - Item: Strength3
+            Price: 5000000
+            Materials:
+              - Material: IllusionStone
+                Amount: 1000
+          - Item: Inteligence3
+            Price: 5000000
+            Materials:
+              - Material: IllusionStone
+                Amount: 1000
+          - Item: Dexterity3
+            Price: 5000000
+            Materials:
+              - Material: IllusionStone
+                Amount: 1000
+          - Item: Agility3
+            Price: 5000000
+            Materials:
+              - Material: IllusionStone
+                Amount: 1000
+          - Item: Vitality3
+            Price: 5000000
+            Materials:
+              - Material: IllusionStone
+                Amount: 1000
+          - Item: Luck3
+            Price: 5000000
+            Materials:
+              - Material: IllusionStone
+                Amount: 1000
+          - Item: MHP4
+            Price: 5000000
+            Materials:
+              - Material: IllusionStone
+                Amount: 1000
+          - Item: HPdrain3
+            Price: 5000000
+            Materials:
+              - Material: IllusionStone
+                Amount: 1000
+          - Item: SPdrain2
+            Price: 5000000
+            Materials:
+              - Material: IllusionStone
+                Amount: 1000
+          - Item: Neev_STR_2
+            Price: 5000000
+            Materials:
+              - Material: IllusionStone
+                Amount: 1000
+          - Item: Neev_AGI_2
+            Price: 5000000
+            Materials:
+              - Material: IllusionStone
+                Amount: 1000
+          - Item: Neev_INT_2
+            Price: 5000000
+            Materials:
+              - Material: IllusionStone
+                Amount: 1000
+          - Item: Neev_DEX_2
+            Price: 5000000
+            Materials:
+              - Material: IllusionStone
+                Amount: 1000
+          - Item: Neev_LUK_2
+            Price: 5000000
+            Materials:
+              - Material: IllusionStone
+                Amount: 1000
+          - Item: Neev_VIT_2
+            Price: 5000000
+            Materials:
+              - Material: IllusionStone
+                Amount: 1000
+  - Id: 201
+    TargetItems:
+      Sprint_Ring_IL: true
+      Sprint_Glove_IL: true
+      Skul_Ring_IL: true
+      Ring_IL: true
+      Morpheus_Ring_IL: true
+      Morpheus_Armlet_IL: true
+      Morrigane_Belt_IL: true
+      Morrigane_Pendant_IL: true      
+    Reset:
+      Chance: 100000
+      Price: 0
+    Order:
+      - Slot: 3
+      - Slot: 2
+    Slots:
+      - Slot: 3
+        Price: 100000
+        Materials:
+          - Material: IllusionStone
+            Amount: 5
+        Enchants:
+          - Enchantgrade: 0
+            Items:
+              - Item: Strength1
+                Chance: 8000
+              - Item: Strength2
+                Chance: 3000
+              - Item: Strength3
+                Chance: 1500
+              - Item: Strength4
+                Chance: 500
+              - Item: Inteligence1
+                Chance: 8000
+              - Item: Inteligence2
+                Chance: 3000
+              - Item: Inteligence3
+                Chance: 1500
+              - Item: Inteligence4
+                Chance: 500
+              - Item: Dexterity1
+                Chance: 8000
+              - Item: Dexterity2
+                Chance: 3000
+              - Item: Dexterity3
+                Chance: 1500
+              - Item: Dexterity4
+                Chance: 500
+              - Item: Agility1
+                Chance: 8000
+              - Item: Agility2
+                Chance: 3000
+              - Item: Agility3
+                Chance: 1500
+              - Item: Agility4
+                Chance: 500
+              - Item: Vitality1
+                Chance: 8000
+              - Item: Vitality2
+                Chance: 3000
+              - Item: Vitality3
+                Chance: 1500
+              - Item: Vitality4
+                Chance: 500
+              - Item: Luck1
+                Chance: 8000
+              - Item: Luck2
+                Chance: 3000
+              - Item: Luck3
+                Chance: 1500
+              - Item: Luck4
+                Chance: 500
+              - Item: HP200
+                Chance: 6000
+              - Item: HP300
+                Chance: 4000
+              - Item: HP400
+                Chance: 1000
+              - Item: SP50
+                Chance: 6000
+              - Item: SP100
+                Chance: 4000
+              - Item: SP150
+                Chance: 1000
+          - Enchantgrade: 1
+            Items:
+              - Item: Strength1
+                Chance: 8000
+              - Item: Strength2
+                Chance: 3000
+              - Item: Strength3
+                Chance: 1500
+              - Item: Strength4
+                Chance: 500
+              - Item: Inteligence1
+                Chance: 8000
+              - Item: Inteligence2
+                Chance: 3000
+              - Item: Inteligence3
+                Chance: 1500
+              - Item: Inteligence4
+                Chance: 500
+              - Item: Dexterity1
+                Chance: 8000
+              - Item: Dexterity2
+                Chance: 3000
+              - Item: Dexterity3
+                Chance: 1500
+              - Item: Dexterity4
+                Chance: 500
+              - Item: Agility1
+                Chance: 8000
+              - Item: Agility2
+                Chance: 3000
+              - Item: Agility3
+                Chance: 1500
+              - Item: Agility4
+                Chance: 500
+              - Item: Vitality1
+                Chance: 8000
+              - Item: Vitality2
+                Chance: 3000
+              - Item: Vitality3
+                Chance: 1500
+              - Item: Vitality4
+                Chance: 500
+              - Item: Luck1
+                Chance: 8000
+              - Item: Luck2
+                Chance: 3000
+              - Item: Luck3
+                Chance: 1500
+              - Item: Luck4
+                Chance: 500
+              - Item: HP200
+                Chance: 6000
+              - Item: HP300
+                Chance: 4000
+              - Item: HP400
+                Chance: 1000
+              - Item: SP50
+                Chance: 6000
+              - Item: SP100
+                Chance: 4000
+              - Item: SP150
+                Chance: 1000
+          - Enchantgrade: 2
+            Items:
+              - Item: Strength1
+                Chance: 8000
+              - Item: Strength2
+                Chance: 3000
+              - Item: Strength3
+                Chance: 1500
+              - Item: Strength4
+                Chance: 500
+              - Item: Inteligence1
+                Chance: 8000
+              - Item: Inteligence2
+                Chance: 3000
+              - Item: Inteligence3
+                Chance: 1500
+              - Item: Inteligence4
+                Chance: 500
+              - Item: Dexterity1
+                Chance: 8000
+              - Item: Dexterity2
+                Chance: 3000
+              - Item: Dexterity3
+                Chance: 1500
+              - Item: Dexterity4
+                Chance: 500
+              - Item: Agility1
+                Chance: 8000
+              - Item: Agility2
+                Chance: 3000
+              - Item: Agility3
+                Chance: 1500
+              - Item: Agility4
+                Chance: 500
+              - Item: Vitality1
+                Chance: 8000
+              - Item: Vitality2
+                Chance: 3000
+              - Item: Vitality3
+                Chance: 1500
+              - Item: Vitality4
+                Chance: 500
+              - Item: Luck1
+                Chance: 8000
+              - Item: Luck2
+                Chance: 3000
+              - Item: Luck3
+                Chance: 1500
+              - Item: Luck4
+                Chance: 500
+              - Item: HP200
+                Chance: 6000
+              - Item: HP300
+                Chance: 4000
+              - Item: HP400
+                Chance: 1000
+              - Item: SP50
+                Chance: 6000
+              - Item: SP100
+                Chance: 4000
+              - Item: SP150
+                Chance: 1000
+          - Enchantgrade: 3
+            Items:
+              - Item: Strength1
+                Chance: 8000
+              - Item: Strength2
+                Chance: 3000
+              - Item: Strength3
+                Chance: 1500
+              - Item: Strength4
+                Chance: 500
+              - Item: Inteligence1
+                Chance: 8000
+              - Item: Inteligence2
+                Chance: 3000
+              - Item: Inteligence3
+                Chance: 1500
+              - Item: Inteligence4
+                Chance: 500
+              - Item: Dexterity1
+                Chance: 8000
+              - Item: Dexterity2
+                Chance: 3000
+              - Item: Dexterity3
+                Chance: 1500
+              - Item: Dexterity4
+                Chance: 500
+              - Item: Agility1
+                Chance: 8000
+              - Item: Agility2
+                Chance: 3000
+              - Item: Agility3
+                Chance: 1500
+              - Item: Agility4
+                Chance: 500
+              - Item: Vitality1
+                Chance: 8000
+              - Item: Vitality2
+                Chance: 3000
+              - Item: Vitality3
+                Chance: 1500
+              - Item: Vitality4
+                Chance: 500
+              - Item: Luck1
+                Chance: 8000
+              - Item: Luck2
+                Chance: 3000
+              - Item: Luck3
+                Chance: 1500
+              - Item: Luck4
+                Chance: 500
+              - Item: HP200
+                Chance: 6000
+              - Item: HP300
+                Chance: 4000
+              - Item: HP400
+                Chance: 1000
+              - Item: SP50
+                Chance: 6000
+              - Item: SP100
+                Chance: 4000
+              - Item: SP150
+                Chance: 1000
+          - Enchantgrade: 4
+            Items:
+              - Item: Strength1
+                Chance: 8000
+              - Item: Strength2
+                Chance: 3000
+              - Item: Strength3
+                Chance: 1500
+              - Item: Strength4
+                Chance: 500
+              - Item: Inteligence1
+                Chance: 8000
+              - Item: Inteligence2
+                Chance: 3000
+              - Item: Inteligence3
+                Chance: 1500
+              - Item: Inteligence4
+                Chance: 500
+              - Item: Dexterity1
+                Chance: 8000
+              - Item: Dexterity2
+                Chance: 3000
+              - Item: Dexterity3
+                Chance: 1500
+              - Item: Dexterity4
+                Chance: 500
+              - Item: Agility1
+                Chance: 8000
+              - Item: Agility2
+                Chance: 3000
+              - Item: Agility3
+                Chance: 1500
+              - Item: Agility4
+                Chance: 500
+              - Item: Vitality1
+                Chance: 8000
+              - Item: Vitality2
+                Chance: 3000
+              - Item: Vitality3
+                Chance: 1500
+              - Item: Vitality4
+                Chance: 500
+              - Item: Luck1
+                Chance: 8000
+              - Item: Luck2
+                Chance: 3000
+              - Item: Luck3
+                Chance: 1500
+              - Item: Luck4
+                Chance: 500
+              - Item: HP200
+                Chance: 6000
+              - Item: HP300
+                Chance: 4000
+              - Item: HP400
+                Chance: 1000
+              - Item: SP50
+                Chance: 6000
+              - Item: SP100
+                Chance: 4000
+              - Item: SP150
+                Chance: 1000
+        PerfectEnchants:
+          - Item: Strength4
+            Price: 500000
+            Materials:
+              - Material: IllusionStone
+                Amount: 300
+          - Item: Inteligence4
+            Price: 500000
+            Materials:
+              - Material: IllusionStone
+                Amount: 300
+          - Item: Dexterity4
+            Price: 500000
+            Materials:
+              - Material: IllusionStone
+                Amount: 300
+          - Item: Agility4
+            Price: 500000
+            Materials:
+              - Material: IllusionStone
+                Amount: 300
+          - Item: Vitality4
+            Price: 500000
+            Materials:
+              - Material: IllusionStone
+                Amount: 300
+          - Item: Luck4
+            Price: 500000
+            Materials:
+              - Material: IllusionStone
+                Amount: 300
+          - Item: HP400
+            Price: 500000
+            Materials:
+              - Material: IllusionStone
+                Amount: 300
+          - Item: SP150
+            Price: 500000
+            Materials:
+              - Material: IllusionStone
+                Amount: 300
+      - Slot: 2
+        Price: 100000
+        Materials:
+          - Material: IllusionStone
+            Amount: 5
+        Enchants:
+          - Enchantgrade: 0
+            Items:
+              - Item: Strength1
+                Chance: 8000
+              - Item: Strength2
+                Chance: 3000
+              - Item: Strength3
+                Chance: 1500
+              - Item: Strength4
+                Chance: 500
+              - Item: Inteligence1
+                Chance: 8000
+              - Item: Inteligence2
+                Chance: 3000
+              - Item: Inteligence3
+                Chance: 1500
+              - Item: Inteligence4
+                Chance: 500
+              - Item: Dexterity1
+                Chance: 8000
+              - Item: Dexterity2
+                Chance: 3000
+              - Item: Dexterity3
+                Chance: 1500
+              - Item: Dexterity4
+                Chance: 500
+              - Item: Agility1
+                Chance: 8000
+              - Item: Agility2
+                Chance: 3000
+              - Item: Agility3
+                Chance: 1500
+              - Item: Agility4
+                Chance: 500
+              - Item: Vitality1
+                Chance: 8000
+              - Item: Vitality2
+                Chance: 3000
+              - Item: Vitality3
+                Chance: 1500
+              - Item: Vitality4
+                Chance: 500
+              - Item: Luck1
+                Chance: 8000
+              - Item: Luck2
+                Chance: 3000
+              - Item: Luck3
+                Chance: 1500
+              - Item: Luck4
+                Chance: 500
+              - Item: HP200
+                Chance: 6000
+              - Item: HP300
+                Chance: 4000
+              - Item: HP400
+                Chance: 1000
+              - Item: SP50
+                Chance: 6000
+              - Item: SP100
+                Chance: 4000
+              - Item: SP150
+                Chance: 1000
+          - Enchantgrade: 1
+            Items:
+              - Item: Strength1
+                Chance: 8000
+              - Item: Strength2
+                Chance: 3000
+              - Item: Strength3
+                Chance: 1500
+              - Item: Strength4
+                Chance: 500
+              - Item: Inteligence1
+                Chance: 8000
+              - Item: Inteligence2
+                Chance: 3000
+              - Item: Inteligence3
+                Chance: 1500
+              - Item: Inteligence4
+                Chance: 500
+              - Item: Dexterity1
+                Chance: 8000
+              - Item: Dexterity2
+                Chance: 3000
+              - Item: Dexterity3
+                Chance: 1500
+              - Item: Dexterity4
+                Chance: 500
+              - Item: Agility1
+                Chance: 8000
+              - Item: Agility2
+                Chance: 3000
+              - Item: Agility3
+                Chance: 1500
+              - Item: Agility4
+                Chance: 500
+              - Item: Vitality1
+                Chance: 8000
+              - Item: Vitality2
+                Chance: 3000
+              - Item: Vitality3
+                Chance: 1500
+              - Item: Vitality4
+                Chance: 500
+              - Item: Luck1
+                Chance: 8000
+              - Item: Luck2
+                Chance: 3000
+              - Item: Luck3
+                Chance: 1500
+              - Item: Luck4
+                Chance: 500
+              - Item: HP200
+                Chance: 6000
+              - Item: HP300
+                Chance: 4000
+              - Item: HP400
+                Chance: 1000
+              - Item: SP50
+                Chance: 6000
+              - Item: SP100
+                Chance: 4000
+              - Item: SP150
+                Chance: 1000
+          - Enchantgrade: 2
+            Items:
+              - Item: Strength1
+                Chance: 8000
+              - Item: Strength2
+                Chance: 3000
+              - Item: Strength3
+                Chance: 1500
+              - Item: Strength4
+                Chance: 500
+              - Item: Inteligence1
+                Chance: 8000
+              - Item: Inteligence2
+                Chance: 3000
+              - Item: Inteligence3
+                Chance: 1500
+              - Item: Inteligence4
+                Chance: 500
+              - Item: Dexterity1
+                Chance: 8000
+              - Item: Dexterity2
+                Chance: 3000
+              - Item: Dexterity3
+                Chance: 1500
+              - Item: Dexterity4
+                Chance: 500
+              - Item: Agility1
+                Chance: 8000
+              - Item: Agility2
+                Chance: 3000
+              - Item: Agility3
+                Chance: 1500
+              - Item: Agility4
+                Chance: 500
+              - Item: Vitality1
+                Chance: 8000
+              - Item: Vitality2
+                Chance: 3000
+              - Item: Vitality3
+                Chance: 1500
+              - Item: Vitality4
+                Chance: 500
+              - Item: Luck1
+                Chance: 8000
+              - Item: Luck2
+                Chance: 3000
+              - Item: Luck3
+                Chance: 1500
+              - Item: Luck4
+                Chance: 500
+              - Item: HP200
+                Chance: 6000
+              - Item: HP300
+                Chance: 4000
+              - Item: HP400
+                Chance: 1000
+              - Item: SP50
+                Chance: 6000
+              - Item: SP100
+                Chance: 4000
+              - Item: SP150
+                Chance: 1000
+          - Enchantgrade: 3
+            Items:
+              - Item: Strength1
+                Chance: 8000
+              - Item: Strength2
+                Chance: 3000
+              - Item: Strength3
+                Chance: 1500
+              - Item: Strength4
+                Chance: 500
+              - Item: Inteligence1
+                Chance: 8000
+              - Item: Inteligence2
+                Chance: 3000
+              - Item: Inteligence3
+                Chance: 1500
+              - Item: Inteligence4
+                Chance: 500
+              - Item: Dexterity1
+                Chance: 8000
+              - Item: Dexterity2
+                Chance: 3000
+              - Item: Dexterity3
+                Chance: 1500
+              - Item: Dexterity4
+                Chance: 500
+              - Item: Agility1
+                Chance: 8000
+              - Item: Agility2
+                Chance: 3000
+              - Item: Agility3
+                Chance: 1500
+              - Item: Agility4
+                Chance: 500
+              - Item: Vitality1
+                Chance: 8000
+              - Item: Vitality2
+                Chance: 3000
+              - Item: Vitality3
+                Chance: 1500
+              - Item: Vitality4
+                Chance: 500
+              - Item: Luck1
+                Chance: 8000
+              - Item: Luck2
+                Chance: 3000
+              - Item: Luck3
+                Chance: 1500
+              - Item: Luck4
+                Chance: 500
+              - Item: HP200
+                Chance: 6000
+              - Item: HP300
+                Chance: 4000
+              - Item: HP400
+                Chance: 1000
+              - Item: SP50
+                Chance: 6000
+              - Item: SP100
+                Chance: 4000
+              - Item: SP150
+                Chance: 1000
+          - Enchantgrade: 4
+            Items:
+              - Item: Strength1
+                Chance: 8000
+              - Item: Strength2
+                Chance: 3000
+              - Item: Strength3
+                Chance: 1500
+              - Item: Strength4
+                Chance: 500
+              - Item: Inteligence1
+                Chance: 8000
+              - Item: Inteligence2
+                Chance: 3000
+              - Item: Inteligence3
+                Chance: 1500
+              - Item: Inteligence4
+                Chance: 500
+              - Item: Dexterity1
+                Chance: 8000
+              - Item: Dexterity2
+                Chance: 3000
+              - Item: Dexterity3
+                Chance: 1500
+              - Item: Dexterity4
+                Chance: 500
+              - Item: Agility1
+                Chance: 8000
+              - Item: Agility2
+                Chance: 3000
+              - Item: Agility3
+                Chance: 1500
+              - Item: Agility4
+                Chance: 500
+              - Item: Vitality1
+                Chance: 8000
+              - Item: Vitality2
+                Chance: 3000
+              - Item: Vitality3
+                Chance: 1500
+              - Item: Vitality4
+                Chance: 500
+              - Item: Luck1
+                Chance: 8000
+              - Item: Luck2
+                Chance: 3000
+              - Item: Luck3
+                Chance: 1500
+              - Item: Luck4
+                Chance: 500
+              - Item: HP200
+                Chance: 6000
+              - Item: HP300
+                Chance: 4000
+              - Item: HP400
+                Chance: 1000
+              - Item: SP50
+                Chance: 6000
+              - Item: SP100
+                Chance: 4000
+              - Item: SP150
+                Chance: 1000
+        PerfectEnchants:
+          - Item: Strength4
+            Price: 500000
+            Materials:
+              - Material: IllusionStone
+                Amount: 300
+          - Item: Inteligence4
+            Price: 500000
+            Materials:
+              - Material: IllusionStone
+                Amount: 300
+          - Item: Dexterity4
+            Price: 500000
+            Materials:
+              - Material: IllusionStone
+                Amount: 300
+          - Item: Agility4
+            Price: 500000
+            Materials:
+              - Material: IllusionStone
+                Amount: 300
+          - Item: Vitality4
+            Price: 500000
+            Materials:
+              - Material: IllusionStone
+                Amount: 300
+          - Item: Luck4
+            Price: 500000
+            Materials:
+              - Material: IllusionStone
+                Amount: 300
+          - Item: HP400
+            Price: 500000
+            Materials:
+              - Material: IllusionStone
+                Amount: 300
+          - Item: SP150
+            Price: 500000
+            Materials:
+              - Material: IllusionStone
+                Amount: 300
