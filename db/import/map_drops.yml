@@ -169,86 +169,26 @@ Body:
 #        Rate: 100
   - Map: jor_raise1
     GlobalDrops:
-      - Index: 0
-        Item: Shadowdecon_Ore
-        Rate: 1500
-      - Index: 1
-        Item: Shadowdecon
-        Rate: 200
-      - Index: 2
-        Item: Zelunium_Ore
-        Rate: 1500
-      - Index: 3
-        Item: Zelunium
-        Rate: 200
       - Index: 4
         Item: Etel_Dust
         Rate: 875
   - Map: jor_raise2
     GlobalDrops:
-      - Index: 0
-        Item: Shadowdecon_Ore
-        Rate: 1500
-      - Index: 1
-        Item: Shadowdecon
-        Rate: 200
-      - Index: 2
-        Item: Zelunium_Ore
-        Rate: 1500
-      - Index: 3
-        Item: Zelunium
-        Rate: 200
       - Index: 4
         Item: Etel_Dust
         Rate: 875
   - Map: jor_tmple1
     GlobalDrops:
-      - Index: 0
-        Item: Shadowdecon_Ore
-        Rate: 1500
-      - Index: 1
-        Item: Shadowdecon
-        Rate: 200
-      - Index: 2
-        Item: Zelunium_Ore
-        Rate: 1500
-      - Index: 3
-        Item: Zelunium
-        Rate: 200
       - Index: 4
         Item: Etel_Dust
         Rate: 875
   - Map: jor_tmple2
     GlobalDrops:
-      - Index: 0
-        Item: Shadowdecon_Ore
-        Rate: 1500
-      - Index: 1
-        Item: Shadowdecon
-        Rate: 200
-      - Index: 2
-        Item: Zelunium_Ore
-        Rate: 1500
-      - Index: 3
-        Item: Zelunium
-        Rate: 200
       - Index: 4
         Item: Etel_Dust
         Rate: 875
   - Map: jor_base
     GlobalDrops:
-      - Index: 0
-        Item: Shadowdecon_Ore
-        Rate: 1500
-      - Index: 1
-        Item: Shadowdecon
-        Rate: 200
-      - Index: 2
-        Item: Zelunium_Ore
-        Rate: 1500
-      - Index: 3
-        Item: Zelunium
-        Rate: 200
       - Index: 4
         Item: Etel_Dust
         Rate: 875
@@ -324,18 +264,6 @@ Body:
             Rate: 3000
   - Map: jor_sklf1
     GlobalDrops:
-      - Index: 0
-        Item: Shadowdecon_Ore
-        Rate: 1500
-      - Index: 1
-        Item: Shadowdecon
-        Rate: 200
-      - Index: 2
-        Item: Zelunium_Ore
-        Rate: 1500
-      - Index: 3
-        Item: Zelunium
-        Rate: 200
       - Index: 4
         Item: Etel_Dust
         Rate: 875
@@ -347,18 +275,6 @@ Body:
         Rate: 100
   - Map: jor_sklf2
     GlobalDrops:
-      - Index: 0
-        Item: Shadowdecon_Ore
-        Rate: 1500
-      - Index: 1
-        Item: Shadowdecon
-        Rate: 200
-      - Index: 2
-        Item: Zelunium_Ore
-        Rate: 1500
-      - Index: 3
-        Item: Zelunium
-        Rate: 200
       - Index: 4
         Item: Etel_Dust
         Rate: 875
@@ -443,18 +359,6 @@ Body:
             Rate: 20000
   - Map: mu_fild01
     GlobalDrops:
-      - Index: 0
-        Item: Shadowdecon_Ore
-        Rate: 1500
-      - Index: 1
-        Item: Shadowdecon
-        Rate: 200
-      - Index: 2
-        Item: Zelunium_Ore
-        Rate: 1500
-      - Index: 3
-        Item: Zelunium
-        Rate: 200
       - Index: 4
         Item: Etel_Dust
         Rate: 875
@@ -463,80 +367,26 @@ Body:
         Rate: 7500
   - Map: hem_fild
     GlobalDrops:
-      - Index: 0
-        Item: Shadowdecon_Ore
-        Rate: 1000
-      - Index: 1
-        Item: Shadowdecon
-        Rate: 100
-      - Index: 2
-        Item: Zelunium_Ore
-        Rate: 1000
-      - Index: 3
-        Item: Zelunium
-        Rate: 100
       - Index: 4
         Item: Etel_Dust
         Rate: 475
   - Map: hem_dun01
     GlobalDrops:
-      - Index: 0
-        Item: Shadowdecon_Ore
-        Rate: 1500
-      - Index: 1
-        Item: Shadowdecon
-        Rate: 200
-      - Index: 2
-        Item: Zelunium_Ore
-        Rate: 1500
-      - Index: 3
-        Item: Zelunium
-        Rate: 200
       - Index: 4
         Item: Etel_Dust
         Rate: 875
   - Map: uknw_ruin
     GlobalDrops:
-      - Index: 0
-        Item: Shadowdecon_Ore
-        Rate: 1500
-      - Index: 1
-        Item: Shadowdecon
-        Rate: 200
-      - Index: 2
-        Item: Zelunium_Ore
-        Rate: 1500
-      - Index: 3
-        Item: Zelunium
-        Rate: 200
       - Index: 4
         Item: Etel_Dust
         Rate: 875
   - Map: uknw_ruin2
     GlobalDrops:
-      - Index: 0
-        Item: Shadowdecon_Ore
-        Rate: 1500
-      - Index: 1
-        Item: Shadowdecon
-        Rate: 200
-      - Index: 2
-        Item: Zelunium_Ore
-        Rate: 1500
-      - Index: 3
-        Item: Zelunium
-        Rate: 200
       - Index: 4
         Item: Etel_Dust
         Rate: 875
   - Map: hem_dun02
     GlobalDrops:
-      - Index: 0
-        Item: Shadowdecon
-        Rate: 2000
-      - Index: 1
-        Item: Zelunium
-        Rate: 2000
       - Index: 2
         Item: Etel_Dust
         Rate: 7500
@@ -563,12 +413,6 @@ Body:
         Rate: 200
   - Map: ch1_gfn01
     GlobalDrops:
-      - Index: 0
-        Item: Shadowdecon
-        Rate: 3000
-      - Index: 1
-        Item: Zelunium
-        Rate: 3000
       - Index: 2
         Item: Etel_Dust
         Rate: 10000
@@ -604,12 +448,6 @@ Body:
         Rate: 500
   - Map: ch1_gfn03
     GlobalDrops:
-      - Index: 0
-        Item: Shadowdecon
-        Rate: 3000
-      - Index: 1
-        Item: Zelunium
-        Rate: 3000
       - Index: 2
         Item: Etel_Dust
         Rate: 10000

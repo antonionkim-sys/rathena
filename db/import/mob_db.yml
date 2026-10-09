@@ -6357,14 +6357,6 @@ Body:
         Rate: 2000
       - Item: EP19_Transparency_Shell
         Rate: 300
-      - Item: Shadowdecon_Ore
-        Rate: 20
-      - Item: Shadowdecon
-        Rate: 3
-      - Item: Zelunium_Ore
-        Rate: 20
-      - Item: Zelunium
-        Rate: 3
       - Item: Etel_Dust
         Rate: 20
         StealProtected: true
@@ -6405,14 +6397,6 @@ Body:
         Rate: 5
       - Item: Scales_Shell
         Rate: 200
-      - Item: Shadowdecon_Ore
-        Rate: 20
-      - Item: Shadowdecon
-        Rate: 3
-      - Item: Zelunium_Ore
-        Rate: 20
-      - Item: Zelunium
-        Rate: 3
       - Item: Etel_Dust
         Rate: 20
       - Item: Unfrost_Flower_card
@@ -6454,14 +6438,6 @@ Body:
     Drops:
       - Item: EP19_Calapy
         Rate: 500
-      - Item: Zelunium
-        Rate: 3
-      - Item: Zelunium_Ore
-        Rate: 20
-      - Item: Shadowdecon_Ore
-        Rate: 20
-      - Item: Shadowdecon
-        Rate: 3
       - Item: Germinating_Sprout
         Rate: 500
       - Item: Sticky_Poison
@@ -6506,14 +6482,6 @@ Body:
         Rate: 1000
       - Item: Ice_Piece
         Rate: 1500
-      - Item: Shadowdecon_Ore
-        Rate: 20
-      - Item: Shadowdecon
-        Rate: 3
-      - Item: Zelunium_Ore
-        Rate: 20
-      - Item: Zelunium
-        Rate: 3
       - Item: EP19_Thin_Shell
         Rate: 500
       - Item: Etel_Dust
@@ -6556,14 +6524,6 @@ Body:
       ChangeTargetMelee: true
       ChangeTargetChase: true
     Drops:
-      - Item: Shadowdecon_Ore
-        Rate: 20
-      - Item: Shadowdecon
-        Rate: 3
-      - Item: Zelunium_Ore
-        Rate: 20
-      - Item: Zelunium
-        Rate: 3
       - Item: Etel_Dust
         Rate: 20
       - Item: EP19_Shiny_Seaweed
@@ -6610,14 +6570,6 @@ Body:
       ChangeTargetMelee: true
       ChangeTargetChase: true
     Drops:
-      - Item: Shadowdecon_Ore
-        Rate: 20
-      - Item: Shadowdecon
-        Rate: 3
-      - Item: Zelunium_Ore
-        Rate: 20
-      - Item: Zelunium
-        Rate: 3
       - Item: Etel_Dust
         Rate: 20
       - Item: Fluorescent_Liquid
@@ -6655,14 +6607,6 @@ Body:
     DamageMotion: 384
     Ai: 09
     Drops:
-      - Item: Shadowdecon_Ore
-        Rate: 20
-      - Item: Shadowdecon
-        Rate: 3
-      - Item: Zelunium_Ore
-        Rate: 20
-      - Item: Zelunium
-        Rate: 3
       - Item: Etel_Dust
         Rate: 20
       - Item: EP19_Shell_Of_Rgan
@@ -6713,15 +6657,6 @@ Body:
         Rate: 200
       - Item: Etel_Dust
         Rate: 20
-      - Item: Zelunium
-        Rate: 3
-      - Item: Zelunium_Ore
-        Rate: 20
-      - Item: Shadowdecon
-        Rate: 3
-      - Item: Shadowdecon_Ore
-        Rate: 20
-        StealProtected: true
       - Item: Lowest_Rgan_Card
         Rate: 1
         StealProtected: true
@@ -6765,13 +6700,8 @@ Body:
         Rate: 20
       - Item: Ep19_Snow_Flower
         Rate: 20
-      - Item: Zelunium_Ore
-        Rate: 20
       - Item: Snow_F_Ore
         Rate: 3
-      - Item: Shadowdecon_Ore
-        Rate: 20
-        StealProtected: true
       - Item: Junior_Rgan_Card
         Rate: 1
         StealProtected: true
@@ -6817,11 +6747,6 @@ Body:
         Rate: 200
       - Item: EP19_Unknown_Cell
         Rate: 200
-      - Item: Zelunium_Ore
-        Rate: 20
-      - Item: Shadowdecon_Ore
-        Rate: 20
-        StealProtected: true
       - Item: Middle_G_Rgan_Card
         Rate: 1
         StealProtected: true
@@ -7121,10 +7046,6 @@ Body:
         Rate: 200
       - Item: Snow_F_Ore
         Rate: 3
-      - Item: Zelunium_Ore
-        Rate: 20
-      - Item: Shadowdecon_Ore
-        Rate: 20
       - Item: Rotten_Bandage
         Rate: 2000
       - Item: Discarded_P_R_Card
@@ -7170,10 +7091,6 @@ Body:
         Rate: 200
       - Item: EP19_Unknown_Cell
         Rate: 200
-      - Item: Shadowdecon_Ore
-        Rate: 20
-      - Item: Zelunium_Ore
-        Rate: 20
       - Item: Discarded_L_R_Card
         Rate: 1
         StealProtected: true
@@ -7219,10 +7136,6 @@ Body:
         Rate: 800
       - Item: Etel_Dust
         Rate: 20
-      - Item: Shadowdecon_Ore
-        Rate: 20
-      - Item: Zelunium_Ore
-        Rate: 20
       - Item: Snow_F_Stone1
         Rate: 5
       - Item: Cave_Calmaring_Card
@@ -7258,10 +7171,6 @@ Body:
     DamageMotion: 886
     Ai: 09
     Drops:
-      - Item: Shadowdecon_Ore
-        Rate: 20
-      - Item: Zelunium_Ore
-        Rate: 20
       - Item: Etel_Dust
         Rate: 20
       - Item: EP19_Unknown_Cell
@@ -7312,11 +7221,6 @@ Body:
         Rate: 500
       - Item: Sticky_Poison
         Rate: 1000
-      - Item: Zelunium_Ore
-        Rate: 50
-      - Item: Shadowdecon_Ore
-        Rate: 50
-        StealProtected: true
       - Item: Hallucigenia_Card
         Rate: 1
         StealProtected: true
@@ -7356,10 +7260,6 @@ Body:
         Rate: 1500
       - Item: Sticky_Poison
         Rate: 1000
-      - Item: Shadowdecon_Ore
-        Rate: 50
-      - Item: Zelunium_Ore
-        Rate: 50
       - Item: B_Hallucigenia_Card
         Rate: 1
         StealProtected: true
@@ -7403,12 +7303,6 @@ Body:
         Rate: 500
       - Item: EP19_Bell_Flower
         Rate: 1000
-      - Item: Zelunium_Ore
-        Rate: 20
-        StealProtected: true
-      - Item: Shadowdecon_Ore
-        Rate: 20
-        StealProtected: true
       - Item: One_E_Dollocaris_Card
         Rate: 1
         StealProtected: true
@@ -7452,12 +7346,6 @@ Body:
         Rate: 500
       - Item: EP19_Bell_Flower
         Rate: 1000
-      - Item: Zelunium_Ore
-        Rate: 20
-        StealProtected: true
-      - Item: Shadowdecon_Ore
-        Rate: 20
-        StealProtected: true
       - Item: One_E_Dollocaris_Card
         Rate: 1
         StealProtected: true
@@ -7611,10 +7499,6 @@ Body:
         Rate: 2000
       - Item: Etel_Dust
         Rate: 10
-      - Item: Shadowdecon_Ore
-        Rate: 20
-      - Item: Zelunium_Ore
-        Rate: 20
       - Item: Heart_Hunter_AT_Card
         Rate: 1
         StealProtected: true
@@ -7659,10 +7543,6 @@ Body:
         Rate: 200
       - Item: EP19_Unknown_Cell
         Rate: 200
-      - Item: Zelunium_Ore
-        Rate: 20
-      - Item: Shadowdecon_Ore
-        Rate: 20
       - Item: R_Superior_Rgan_Card
         Rate: 1
         StealProtected: true
@@ -7706,10 +7586,6 @@ Body:
         Rate: 200
       - Item: EP19_Unknown_Cell
         Rate: 200
-      - Item: Zelunium_Ore
-        Rate: 20
-      - Item: Shadowdecon_Ore
-        Rate: 20
       - Item: E_Inter_Rgan_Card
         Rate: 1
         StealProtected: true
@@ -12808,8 +12684,6 @@ Body:
         Rate: 30
       - Item: Odin_itembox
         Rate: 8
-      - Item: Shadowdecon_Ore
-        Rate: 10
       - Item: Rune_Of_Darkness
         Rate: 10
       - Item: Angelgolt_Card
@@ -12857,8 +12731,6 @@ Body:
         Rate: 30
       - Item: Odin_itembox
         Rate: 8
-      - Item: Shadowdecon_Ore
-        Rate: 10
       - Item: Rune_Of_Darkness
         Rate: 10
       - Item: Angelgolt_Card
@@ -12902,8 +12774,6 @@ Body:
         Rate: 30
       - Item: Brigan
         Rate: 50
-      - Item: Zelunium
-        Rate: 30
       - Item: Odin_itembox
         Rate: 8
       - Item: Soft_Feather
@@ -12951,8 +12821,6 @@ Body:
         Rate: 30
       - Item: Brigan
         Rate: 50
-      - Item: Shadowdecon
-        Rate: 30
       - Item: Odin_itembox
         Rate: 8
       - Item: Soft_Feather
@@ -13006,8 +12874,6 @@ Body:
         Rate: 10
       - Item: Old_Violet_Box
         Rate: 10
-      - Item: Shadowdecon_Ore
-        Rate: 10
       - Item: Plasma_Arch_Card
         Rate: 1
         StealProtected: true      
@@ -13054,8 +12920,6 @@ Body:
       - Item: Odin_itembox
         Rate: 10
       - Item: Old_Violet_Box
-        Rate: 10
-      - Item: Zelunium_Ore
         Rate: 10
       - Item: Plasma_Spt_Card
         Rate: 1
@@ -13107,13 +12971,9 @@ Body:
         Rate: 5000
       - Item: Soft_Feather
         Rate: 5000
-      - Item: Zelunium
-        Rate: 5
       - Item: Valhalla_Flower
         Rate: 2550
       - Item: Cassock_Boots
-        Rate: 10
-      - Item: Shadowdecon
         Rate: 10
       - Item: Reginleif_Card
         Rate: 1
@@ -13165,13 +13025,9 @@ Body:
         Rate: 5000
       - Item: Soft_Feather
         Rate: 5000
-      - Item: Zelunium
-        Rate: 5
       - Item: Valhalla_Flower
         Rate: 2550
       - Item: Cassock_Manteau
-        Rate: 10
-      - Item: Shadowdecon
         Rate: 10
       - Item: Ingrid_Card
         Rate: 1
@@ -13208,8 +13064,6 @@ Body:
     DamageTaken: 10
     Ai: 05      
     Drops: 
-      - Item: Shadowdecon
-        Rate: 20      
       - Item: Dragon's_Skin
         Rate: 20   
       - Item: Dragon_Train
@@ -13263,8 +13117,6 @@ Body:
         Rate: 10         
       - Item: Crystal_Jewel__
         Rate: 10      
-      - Item: Zelunium
-        Rate: 10          
       - Item: Treasure_Mimic_Card
         Rate: 1         
         StealProtected: true       
