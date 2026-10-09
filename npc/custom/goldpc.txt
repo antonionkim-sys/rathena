@@ -1,0 +1,22 @@
+-	script	GOLDPCCAFE	-1,{
+	end;
+
+OnClaim:
+	.@points = Goldpc_Points;
+
+	if (.@points <= 0) {
+		dispbottom "You have no Idle Points to claim.";
+		end;
+	}
+
+	if (#IdlePoints > 2000000000 - .@points) {
+		dispbottom "Your stored Idle Points balance is full.";
+		end;
+	}
+
+	#IdlePoints += .@points;
+	Goldpc_Points = 0;
+
+	dispbottom "You received " + .@points + " Idle Points.";
+	end;
+}

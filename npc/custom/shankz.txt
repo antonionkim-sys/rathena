@@ -1,0 +1,61 @@
+-	script	FloatingRates	-1,{
+ 
+	OnInit:
+		// Save your server's true baseline rates from your drops.conf
+		.base_exp_rate = 10000;       // 100x Exp baseline
+		.job_exp_rate = 10000;        // 100x Job Exp baseline
+		.item_rate_common = 10000;    // 100x
+		.item_rate_heal = 10000;      // 100x
+		.item_rate_use = 10000;       // 100x
+		.item_rate_equip = 30000;     // 300x (your default equip rate)
+		.item_rate_card = 50000;      // 500x (your default card rate)
+		.item_rate_mvp = 2000;        // MVP inventory rate baseline
+
+		// Bind custom GM command: @toggleevent (Requires GM level 60+ by default)
+		bindatcmd "toggleevent", "FloatingRates::OnCommandToggle", 60, 99;
+		end;
+
+	OnCommandToggle:
+		if ($EarthfallEventActive == 0) {
+			// Turn ON 500x Event (Multiplier 5x against baseline or absolute 50000)
+			$EarthfallEventActive = 1;
+			callsub( L_rate, 50000 );
+		} else {
+			// Turn OFF (Revert to standard config defaults)
+			$EarthfallEventActive = 0;
+			callsub( L_rate, 0 );
+		}
+		end;
+ 
+	L_rate:
+		.@mode = getarg(0,0);
+
+		if (.@mode == 50000) {
+			// Apply 500x across all flags
+			setbattleflag("base_exp_rate", 50000);
+			setbattleflag("job_exp_rate", 50000);
+			setbattleflag("item_rate_common", 50000);
+			setbattleflag("item_rate_heal", 50000);
+			setbattleflag("item_rate_use", 50000);
+			setbattleflag("item_rate_equip", 50000);
+			setbattleflag("item_rate_card", 50000);
+			setbattleflag("item_rate_mvp", 50000);
+			
+			atcommand "@kami [Event Notice]: 500x MEGA DROP EVENT HAS STARTED!";
+		} else {
+			// Revert to normal baseline variables
+			setbattleflag("base_exp_rate", .base_exp_rate);
+			setbattleflag("job_exp_rate", .job_exp_rate);
+			setbattleflag("item_rate_common", .item_rate_common);
+			setbattleflag("item_rate_heal", .item_rate_heal);
+			setbattleflag("item_rate_use", .item_rate_use);
+			setbattleflag("item_rate_equip", .item_rate_equip);
+			setbattleflag("item_rate_card", .item_rate_card);
+			setbattleflag("item_rate_mvp", .item_rate_mvp);
+
+			atcommand "@kami [Event Notice]: Event ended. Rates returned to normal.";
+		}
+ 
+		atcommand "@reloadmobdb";
+		return;
+}

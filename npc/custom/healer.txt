@@ -1,0 +1,121 @@
+//===== rAthena Script =======================================
+//= Malangdo Corp Healer
+//= Quest NPC and Healing Service unlock
+//============================================================
+
+iz_ac01,93,156,6	script	Healer	437,{
+	if (checkquest(90073) == 1) {
+		mes "[Cindy]";
+		mes "Hi again, " + strcharinfo(0) + "!";
+		next;
+
+		mes "[Cindy]";
+		mes "In case you've forgotten, I'm Cindy. Whenever you need me, I'll restore you to full health and send you on your way with a fresh set of buffs.";
+		mes "No zeny. No waiting. Just ask.";
+		next;
+
+		mes "[Cindy]";
+		mes "I can also <b>cleanse your debuffs, identify your items, and repair your equipment.</b>";
+		mes "Think of me as your one-stop shop for getting back into the fight!";
+		next;
+
+		mes "You've recovered ^i[44599] 1x ^0000FF<b>Memory Shard!</b>^000000";
+		mes "You gained ^FFA500some experience back^000000.";
+
+		completequest 90073;
+		setquest 90074;
+		end;
+	}
+
+	mes "[Cindy]";
+	mes "I'm here whenever you need me.";
+	end;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Malangdo Corp]");
+	end;
+}
+
+
+//===== Healing Service ======================================
+//= Free full heal with long-duration buffs
+//============================================================
+
+iz_ac01,62,50,3	script	Healing Service	437,{
+	percentheal 100,100;
+
+	specialeffect2 EF_HEAL2;
+
+	// Increase Agility - 40 minutes
+	specialeffect2 EF_INCAGILITY;
+	sc_start SC_INCREASEAGI,2400000,10;
+
+	// Blessing - 40 minutes
+	specialeffect2 EF_BLESSING;
+	sc_start SC_BLESSING,2400000,10;
+
+	// Magnificat - 30 minutes
+	specialeffect2 EF_MAGNIFICAT;
+	sc_start SC_MAGNIFICAT,1800000,5;
+
+	// Impositio Manus - 30 minutes
+	specialeffect2 EF_IMPOSITIO;
+	sc_start SC_IMPOSITIO,1800000,5;
+
+	// Angelus - 30 minutes
+	specialeffect2 EF_ANGELUS;
+	sc_start SC_ANGELUS,1800000,10;
+
+	// Kyrie Eleison - 30 minutes
+	specialeffect2 EF_KYRIE;
+	sc_start SC_KYRIE,1800000,10;
+
+	npctalk "Full Heal!";
+	end;
+}
+
+
+//===== Healing Service Duplicates ===========================
+//============================================================
+
+alberta,25,240,6	duplicate(Healing Service)	Healer#alb909
+aldebaran,135,118,6	duplicate(Healing Service)	Healer#alde909
+amatsu,200,79,4	duplicate(Healing Service)	Healer#ama909
+ayothaya,207,169,6	duplicate(Healing Service)	Healer#ayo909
+comodo,184,158,6	duplicate(Healing Service)	Healer#com909
+einbech,57,36,6	duplicate(Healing Service)	Healer#einbe909
+einbroch,57,202,6	duplicate(Healing Service)	Healer#einbr909
+geffen,115,72,6	duplicate(Healing Service)	Healer#gef909
+gonryun,156,122,6	duplicate(Healing Service)	Healer#gon909
+hugel,89,150,6	duplicate(Healing Service)	Healer#hug909
+izlude,121,150,6	duplicate(Healing Service)	Healer#izl909
+jawaii,250,139,4	duplicate(Healing Service)	Healer#jaw909
+lighthalzen,152,100,6	duplicate(Healing Service)	Healer#lhz909
+louyang,226,103,4	duplicate(Healing Service)	Healer#lou909
+manuk,272,144,6	duplicate(Healing Service)	Healer#man909
+mid_camp,203,289,6	duplicate(Healing Service)	Healer#mid909
+moc_ruins,72,164,4	duplicate(Healing Service)	Healer#moc909
+morocc,153,97,6	duplicate(Healing Service)	Healer#mor909
+moscovia,220,191,4	duplicate(Healing Service)	Healer#mos909
+niflheim,212,182,5	duplicate(Healing Service)	Healer#nif909
+payon,179,106,4	duplicate(Healing Service)	Healer#pay909
+prontera,162,193,4	duplicate(Healing Service)	Healer#prt909
+rachel,125,116,6	duplicate(Healing Service)	Healer#rac909
+splendide,201,153,4	duplicate(Healing Service)	Healer#spl909
+thor_camp,249,74,4	duplicate(Healing Service)	Healer#thor909
+umbala,105,148,3	duplicate(Healing Service)	Healer#umb909
+veins,217,121,4	duplicate(Healing Service)	Healer#ve909
+xmas,143,136,4	duplicate(Healing Service)	Healer#xmas909
+yuno,164,45,4	duplicate(Healing Service)	Healer#yuno909
+
+
+//===== Healing Service Duplicates (Renewal) ================
+//============================================================
+
+brasilis,194,221,6	duplicate(Healing Service)	Healer#bra909
+dewata,195,187,4	duplicate(Healing Service)	Healer#dew909
+dicastes01,201,194,4	duplicate(Healing Service)	Healer#dic909
+ecl_in01,45,60,4	duplicate(Healing Service)	Healer#ecl909
+malangdo,132,114,6	duplicate(Healing Service)	Healer#mal909
+malaya,227,204,6	duplicate(Healing Service)	Healer#ma909
+mora,55,152,4	duplicate(Healing Service)	Healer#mora909
