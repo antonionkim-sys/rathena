@@ -1,0 +1,25 @@
+//===== rAthena Script =======================================
+//= Enchanter Machine - Item Enchant
+//============================================================
+
+prontera,182,222,3	script	Enchanter Machine	10045,{
+	mes "[Enchanter Machine]";
+	mes "- Enchanter Machine Online -";
+	mes "- Check if item is in inventory -";
+	mes "- Awaiting Enchant ID input -";
+	mes "- Refer to <URL>Item Enchant Wiki<INFO>http://174.91.36.91:8080/brotherhoodro/enchants.php</INFO></URL>  for IDs -";
+
+	input .@enchant_id,1,2147483647;
+	next;
+	mes "[Enchanter Machine]";
+	mes "Enchant ID " + .@enchant_id + " confirmed.";
+	mes "Launching enchantment interface...";
+	close2;
+
+	item_enchant .@enchant_id;
+	end;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Item Enchant]");
+	end;
+}

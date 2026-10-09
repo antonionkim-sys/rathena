@@ -1,0 +1,20 @@
+//===== rAthena Script =======================================
+//= Refining Genius - Refine+Craft
+//============================================================
+
+prontera,118,219,3	script	Refining genius	46,{
+	mes "[Refining Genius]";
+	mes "Ah! Another customer seeking perfection in craftsmanship!";
+	mes "I'm the Refining Genius, able to increase any equipment's refine level by +1!";
+	mes "I can even refine ^0000FFShadow Gears^000000 beyond their regular limit of +10, all the way up to +30!!!";
+	next;
+
+	mes "[Refining Genius]";
+	mes "However, my supplies have completely run dry.";
+	mes "Please come back later~";
+	close;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Refine+Craft]");
+	end;
+}

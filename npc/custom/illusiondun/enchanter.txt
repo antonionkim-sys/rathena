@@ -1,0 +1,97 @@
+prt_in,222,42,5	script	Liz Arch	677,{
+
+	if (checkquest(90096) == 2)
+		goto L_Menu;
+
+L_Intro:
+	mes "[Liz Arch]";
+	mes "Do you happen to have any illusion equipment with you?";
+	next;
+	select("I don't know what those are..");
+
+	mes "[Liz Arch]";
+	mes "I suddenly jumped into conclusion. I should have explained first...";
+	next;
+
+	mes "[Liz Arch]";
+	mes "I'm an alchemist that is studying a material called <ITEM>[Illusion Stone]<INFO>25271</INFO></ITEM>.";
+	mes "Recently, it's become a material that is common among adventurers.";
+	next;
+	select("Is it an illusion?");
+
+	mes "[Liz Arch]";
+	mes "I don't know yet, but it's quite peculiar.";
+	next;
+	select("That's amazing!");
+
+	mes "[Liz Arch]";
+	mes "I guess you've already heard about the strange dimensions that have opened all over Prontera.";
+	mes "Apparently the Illusion Stones are formed inside these dimensions.";
+	next;
+
+	mes "[Liz Arch]";
+	mes "Their mineral structure is not consistent with any minerals that I've studied so far..";
+	next;
+	select("I want to know more!");
+
+	mes "[Liz Arch]";
+	mes "Basically, if you bring me Illusion Stones, I can upgrade certain pieces of equipment for you.";
+	next;
+	select("What's the trade?");
+
+	mes "[Liz Arch]";
+	mes "There's no risk of breaking when enchanting your equipment.";
+	mes "You can also reset the enchant of your illusion equipment.";
+	next;
+
+	mes "[Liz Arch]";
+	mes "I will continue studying these dimensions to be able to create even more powerful equipments.";
+	next;
+
+	mes "[Liz Arch]";
+	mes "Ah, and I should have mentioned this earlier... The service isn't free.";
+	mes "I'll need Zeny and Illusion Stones as a fee.";
+	next;
+
+	mes "[Liz Arch]";
+	mes "Did you understand all of it?";
+	if (select("Yes!:Not at all.") == 2) {
+		next;
+		goto L_Intro;
+	}
+
+	mes "";
+	mes "Alright! Let's begin anytime.";
+	setquest 90096;
+	completequest 90096;
+	close;
+
+L_Menu:
+	mes "[Liz Arch]";
+	mes "I can only enchant equipments that came from the Illusion dimensions.";
+	next;
+
+	switch(select("What do I need to enchant?:Enchant Illusion Dungeon Equipment:Enchant Illusion Dungeon Accessories")) {
+	case 1:
+		mes "[Liz Arch]";
+		mes "As I've said, you can only enchant equipments that you have obtained from the illusion dimensions.";
+		next;
+		mes "[Liz Arch]";
+		mes "You can enchant the item twice, for 5 <ITEM>[Illusion Stone]<INFO>25271</INFO></ITEM> per enchant.";
+		mes "Reset is possible at any time.";
+		close;
+	case 2:
+		close2;
+		item_enchant(200);
+		end;
+	case 3:
+		close2;
+		item_enchant(201);
+		end;
+	}
+	end;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Enchanter]");
+	end;
+}

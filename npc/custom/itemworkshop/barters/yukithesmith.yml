@@ -1,0 +1,753 @@
+Header:
+  Type: BARTER_DB
+  Version: 2
+
+Body:
+  - Name: yuki_safe_refine_tickets
+    Items:
+      - Index: 0
+        Item: Guarantee_Armor_7Up
+        RequiredItems:
+          - Index: 0
+            Item: IllusionStone
+            Amount: 100
+
+      - Index: 1
+        Item: Guarantee_Weapon_7Up
+        RequiredItems:
+          - Index: 0
+            Item: IllusionStone
+            Amount: 100
+
+      - Index: 2
+        Item: Armor_7Up_Box
+        RequiredItems:
+          - Index: 0
+            Item: Apple   # TODO: put AegisName for 44411
+            Amount: 30
+
+      - Index: 3
+        Item: Weapon_7Up_Box
+        RequiredItems:
+          - Index: 0
+            Item: Apple   # TODO: put AegisName for 44411
+            Amount: 30
+
+      - Index: 4
+        Item: Refine_Hero_Weapon
+        RequiredItems:
+          - Index: 0
+            Item: Apple   # TODO: put AegisName for 44412
+            Amount: 30
+
+      - Index: 5
+        Item: Refine_Hero_Boots
+        RequiredItems:
+          - Index: 0
+            Item: Apple   # TODO: put AegisName for 44412
+            Amount: 30
+
+      - Index: 6
+        Item: Noblesse_Rifine_Ticket
+        RequiredItems:
+          - Index: 0
+            Item: TokenOfHonor
+            Amount: 10
+
+      - Index: 7
+        Item: Imperial_Rifine_Ticket
+        RequiredItems:
+          - Index: 0
+            Item: Swz_Honor_Token
+            Amount: 10
+
+      - Index: 8
+        Item: Grace_Rifine_Ticket
+        RequiredItems:
+          - Index: 0
+            Item: EP17_1_EVT39
+            Amount: 20
+
+      - Index: 9
+        Item: Illu_Enhance_Cube
+        RequiredItems:
+          - Index: 0
+            Item: EP17_1_EVT02
+            Amount: 500
+
+      - Index: 10
+        Item: Auto_Enhance_Cube
+        RequiredItems:
+          - Index: 0
+            Item: BarMealTicket
+            Amount: 300
+
+      - Index: 11
+        Item: Metal_7_Ticket
+        RequiredItems:
+          - Index: 0
+            Item: Ein_DYNITE
+            Amount: 30
+
+  - Name: yuki_special_refine_hammers
+    Items:
+      - Index: 0
+        Item: Shadow_Refine_Hammer
+        RequiredItems:
+          - Index: 0
+            Item: Shadowdecon
+            Amount: 90
+
+      - Index: 1
+        Item: F_Ein_Weapon_Hammer
+        RequiredItems:
+          - Index: 0
+            Item: Mjo_Energy
+            Amount: 1000
+
+      - Index: 2
+        Item: Barmund_Hammer
+        RequiredItems:
+          - Index: 0
+            Item: Apple   # TODO: put AegisName for 100103
+            Amount: 1500
+
+      - Index: 3
+        Item: OS_Helm_Hammer
+        RequiredItems:
+          - Index: 0
+            Item: EP17_1_EVT39
+            Amount: 250
+
+      - Index: 4
+        Item: OS_Weapon_Hammer
+        RequiredItems:
+          - Index: 0
+            Item: EP17_1_EVT02
+            Amount: 400
+
+      - Index: 5
+        Item: Clock_Tower_W_Hammer
+        RequiredItems:
+          - Index: 0
+            Item: ClockTower_Gear
+            Amount: 100
+
+      - Index: 6
+        Item: Thanos_Refine_Hammer
+        RequiredItems:
+          - Index: 0
+            Item: Apple   # TODO: put AegisName for 44412
+            Amount: 10
+
+      - Index: 7
+        Item: Hero_Weapon_Hammer_1
+        RequiredItems:
+          - Index: 0
+            Item: Apple   # TODO: put AegisName for 44413
+            Amount: 10
+
+      - Index: 8
+        Item: Hero_Weapon_Hammer_2
+        RequiredItems:
+          - Index: 0
+            Item: Apple   # TODO: put AegisName for 44413
+            Amount: 10
+
+      - Index: 9
+        Item: Hero_Weapon_Hammer_3
+        RequiredItems:
+          - Index: 0
+            Item: Apple   # TODO: put AegisName for 44413
+            Amount: 10
+
+      - Index: 10
+        Item: Hero_Weapon_Hammer_4
+        RequiredItems:
+          - Index: 0
+            Item: Apple   # TODO: put AegisName for 44413
+            Amount: 10
+
+      - Index: 11
+        Item: Hero_Weapon_Hammer_5
+        RequiredItems:
+          - Index: 0
+            Item: Apple   # TODO: put AegisName for 44413
+            Amount: 10
+
+      - Index: 12
+        Item: Hero_Weapon_Hammer_6
+        RequiredItems:
+          - Index: 0
+            Item: Apple   # TODO: put AegisName for 44413
+            Amount: 10
+
+      - Index: 13
+        Item: Poenitentia_Hammer
+        RequiredItems:
+          - Index: 0
+            Item: Apple   # TODO: put AegisName for 44413
+            Amount: 10
+
+      - Index: 14
+        Item: Special_Hat_Hammer
+        RequiredItems:
+          - Index: 0
+            Item: Apple   # TODO: put AegisName for 44413
+            Amount: 10
+
+      - Index: 15
+        Item: Helm_Of_Faith_Hammer
+        RequiredItems:
+          - Index: 0
+            Item: Ep18_Amethyst_Fragment
+            Amount: 1800
+
+      - Index: 16
+        Item: Justice_Weapon_Hammer
+        RequiredItems:
+          - Index: 0
+            Item: Fate_Fragment
+            Amount: 200
+
+      - Index: 17
+        Item: Injustice_Weapon_Hammer
+        RequiredItems:
+          - Index: 0
+            Item: Sin_Fragment
+            Amount: 200
+
+      - Index: 18
+        Item: GoodnEvil_Helm_Hammer
+        RequiredItems:
+          - Index: 0
+            Item: Apple   # TODO: put AegisName for 44186
+            Amount: 500
+
+      - Index: 19
+        Item: Isgard_Crown_Hammer
+        RequiredItems:
+          - Index: 0
+            Item: Ep19_Snow_Flower
+            Amount: 1800
+
+      - Index: 20
+        Item: FateSin_Boots_Hammer
+        RequiredItems:
+          - Index: 0
+            Item: Apple   # TODO: put AegisName for 44185
+            Amount: 50
+
+      - Index: 21
+        Item: Apple   # TODO: put AegisName for 44275
+        RequiredItems:
+          - Index: 0
+            Item: Weapon_Stone_2
+            Amount: 1000
+
+      - Index: 22
+        Item: Refine_Furious
+        RequiredItems:
+          - Index: 0
+            Item: Apple   # TODO: put AegisName for 42011
+            Amount: 100
+
+      - Index: 23
+        Item: Vivatus_Weapon_Hammer
+        RequiredItems:
+          - Index: 0
+            Item: Ep18_Amethyst_Fragment
+            Amount: 1000
+
+      - Index: 24
+        Item: EP19_DGW_Refine
+        RequiredItems:
+          - Index: 0
+            Item: EP19_D_P_Stone
+            Amount: 1
+          - Index: 1
+            Item: EP19_D_P_Crystal
+            Amount: 10
+          - Index: 2
+            Item: EP19_N_P_Crystal
+            Amount: 10
+
+      - Index: 25
+        Item: EP20_DGA_Refine
+        RequiredItems:
+          - Index: 0
+            Item: EP20_D_Scale
+            Amount: 1
+          - Index: 1
+            Item: EP20_D_P_Extract
+            Amount: 15
+          - Index: 2
+            Item: EP20_D_P_Crystal
+            Amount: 25
+
+      - Index: 26
+        Item: Dimen_W_Refine
+        RequiredItems:
+          - Index: 0
+            Item: Abyss_Rune_Ore
+            Amount: 150
+
+      - Index: 27
+        Item: Gaebolg_A_Hammer_1
+        RequiredItems:
+          - Index: 0
+            Item: Ep21_Wigner_Ticket
+            Amount: 50
+
+      - Index: 28
+        Item: Gaebolg_A_Hammer_2
+        Zeny: 400000
+        RequiredItems:
+          - Index: 0
+            Item: Ep21_Wigner_Ticket
+            Amount: 100
+
+      - Index: 29
+        Item: Gaebolg_A_Hammer_3
+        Zeny: 700000
+        RequiredItems:
+          - Index: 0
+            Item: Ep21_Wigner_Ticket
+            Amount: 200
+
+      - Index: 30
+        Item: Yorscalp_Refin_Hammer
+        RequiredItems:
+          - Index: 0
+            Item: Yorscalp_Spirit
+            Amount: 300
+
+      - Index: 31
+        Item: Time_Gap_Refine_Hammer
+        RequiredItems:
+          - Index: 0
+            Item: Apple   # TODO: put AegisName for 42003
+            Amount: 300
+
+      - Index: 32
+        Item: Yorscalp_Refin_Hammer
+        RequiredItems:
+          - Index: 0
+            Item: Apple   # TODO: put AegisName for 42003
+            Amount: 500
+
+      - Index: 33
+        Item: Sky_Weapon_Hammer
+        RequiredItems:
+          - Index: 0
+            Item: Apple   # TODO: put AegisName for 42003
+            Amount: 500
+
+      - Index: 34
+        Item: Sky_Crown_Hammer   # TODO: put AegisName for 106471
+        Zeny: 1500000
+        RequiredItems:
+          - Index: 0
+            Item: Yorscalp_Spirit
+            Amount: 100
+
+      - Index: 35
+        Item: Apple   # TODO: put AegisName for 106472
+        Zeny: 3000000
+        RequiredItems:
+          - Index: 0
+            Item: Ch2_Flame_Coin
+            Amount: 150
+
+      - Index: 36
+        Item: Apple   # TODO: put AegisName for 106473
+        Zeny: 7000000
+        RequiredItems:
+          - Index: 0
+            Item: Ch2_Flame_Coin
+            Amount: 250
+
+  - Name: yuki_safe_refine_boxes
+    Items:
+      - Index: 0
+        Item: Moonlight_Box_IL
+        RequiredItems:
+          - Index: 0
+            Item: IllusionStone
+            Amount: 200
+
+      - Index: 1
+        Item: Frozen_Box_IL
+        RequiredItems:
+          - Index: 0
+            Item: IllusionStone
+            Amount: 200
+
+      - Index: 2
+        Item: Vampire_Box_IL
+        RequiredItems:
+          - Index: 0
+            Item: IllusionStone
+            Amount: 220
+
+      - Index: 3
+        Item: Teddy_Bear_Box_IL
+        RequiredItems:
+          - Index: 0
+            Item: IllusionStone
+            Amount: 220
+
+      - Index: 4
+        Item: Turtle_Is_Box_IL
+        RequiredItems:
+          - Index: 0
+            Item: IllusionStone
+            Amount: 240
+
+      - Index: 5
+        Item: Luanda_Box_IL
+        RequiredItems:
+          - Index: 0
+            Item: IllusionStone
+            Amount: 240
+
+      - Index: 6
+        Item: Twins_Box_IL
+        RequiredItems:
+          - Index: 0
+            Item: IllusionStone
+            Amount: 260
+
+      - Index: 7
+        Item: Labyrinth_Box_IL
+        RequiredItems:
+          - Index: 0
+            Item: IllusionStone
+            Amount: 260
+
+      - Index: 8
+        Item: Underwater_Box_IL
+        RequiredItems:
+          - Index: 0
+            Item: IllusionStone
+            Amount: 260
+
+      - Index: 9
+        Item: Temporal_Refine_Cube
+        RequiredItems:
+          - Index: 0
+            Item: Apple   # TODO: put AegisName for 44412
+            Amount: 30
+
+      - Index: 10
+        Item: Old_Refine_Cube
+        RequiredItems:
+          - Index: 0
+            Item: Apple   # TODO: put AegisName for 44412
+            Amount: 30
+
+      - Index: 11
+        Item: Bio_Weapon_Refine_Cube
+        RequiredItems:
+          - Index: 0
+            Item: Apple   # TODO: put AegisName for 44412
+            Amount: 30
+
+      - Index: 12
+        Item: Circlet_Refine_Cube
+        RequiredItems:
+          - Index: 0
+            Item: Apple   # TODO: put AegisName for 44412
+            Amount: 30
+
+      - Index: 13
+        Item: OS_Weapon_Refine_Cube
+        RequiredItems:
+          - Index: 0
+            Item: Apple   # TODO: put AegisName for 44412
+            Amount: 30
+
+      - Index: 14
+        Item: Auto_Armor_Refine_Cube
+        RequiredItems:
+          - Index: 0
+            Item: Apple   # TODO: put AegisName for 44412
+            Amount: 30
+
+      - Index: 15
+        Item: Racecap_Refine_Cube
+        RequiredItems:
+          - Index: 0
+            Item: Apple   # TODO: put AegisName for 44412
+            Amount: 30
+
+      - Index: 16
+        Item: Geffen_Refine_Cube
+        RequiredItems:
+          - Index: 0
+            Item: Apple   # TODO: put AegisName for 44412
+            Amount: 30
+
+      - Index: 17
+        Item: Bio_Helm_Refine_Cube
+        RequiredItems:
+          - Index: 0
+            Item: Apple   # TODO: put AegisName for 44412
+            Amount: 30
+
+      - Index: 18
+        Item: GrayWolf_7_Ticket
+        RequiredItems:
+          - Index: 0
+            Item: Ep18_Amethyst_Fragment
+            Amount: 300
+
+      - Index: 19
+        Item: GrayWolf_9_Ticket
+        RequiredItems:
+          - Index: 0
+            Item: Ep18_Amethyst_Fragment
+            Amount: 600
+
+      - Index: 20
+        Item: Apple   # TODO: put AegisName for 44276
+        RequiredItems:
+          - Index: 0
+            Item: Ep18_Amethyst_Fragment
+            Amount: 1000
+
+      - Index: 21
+        Item: Snow_F_Refine
+        RequiredItems:
+          - Index: 0
+            Item: Ep19_Snow_Flower
+            Amount: 200
+
+      - Index: 22
+        Item: Apple   # TODO: put AegisName for 44277
+        RequiredItems:
+          - Index: 0
+            Item: Ep19_Snow_Flower
+            Amount: 500
+
+      - Index: 23
+        Item: Glacier_W_Refine
+        RequiredItems:
+          - Index: 0
+            Item: Ep19_Snow_Flower
+            Amount: 500
+
+      - Index: 24
+        Item: Apple   # TODO: put AegisName for 44278
+        RequiredItems:
+          - Index: 0
+            Item: Ep19_Snow_Flower
+            Amount: 1000
+
+      - Index: 25
+        Item: Glacier_Armor_9Refine
+        RequiredItems:
+          - Index: 0
+            Item: Ep20_Cat_Whiskers
+            Amount: 500
+
+      - Index: 26
+        Item: True_Hunting_9Refine
+        RequiredItems:
+          - Index: 0
+            Item: Vote_Rose
+            Amount: 300
+
+  - Name: yuki_weapon_safe_ticket_upgrade
+    Items:
+      - Index: 0
+        Item: Guarantee_Weapon_8Up
+        RequiredItems:
+          - Index: 0
+            Item: Guarantee_Weapon_7Up
+            Amount: 2
+
+      - Index: 1
+        Item: Guarantee_Weapon_9Up
+        RequiredItems:
+          - Index: 0
+            Item: Guarantee_Weapon_8Up
+            Amount: 2
+
+      - Index: 2
+        Item: Guarantee_Weapon_10Up
+        RequiredItems:
+          - Index: 0
+            Item: Guarantee_Weapon_9Up
+            Amount: 2
+
+      - Index: 3
+        Item: Guarantee_Weapon_11Up
+        RequiredItems:
+          - Index: 0
+            Item: Guarantee_Weapon_10Up
+            Amount: 2
+
+      - Index: 4
+        Item: Guarantee_Weapon_12Up
+        RequiredItems:
+          - Index: 0
+            Item: Guarantee_Weapon_11Up
+            Amount: 2
+
+      - Index: 5
+        Item: Guarantee_Weapon_13Up
+        RequiredItems:
+          - Index: 0
+            Item: Guarantee_Weapon_12Up
+            Amount: 2
+
+      - Index: 6
+        Item: Guarantee_Weapon_14Up
+        RequiredItems:
+          - Index: 0
+            Item: Guarantee_Weapon_13Up
+            Amount: 2
+
+      - Index: 7
+        Item: Guarantee_Weapon_15Up
+        RequiredItems:
+          - Index: 0
+            Item: Guarantee_Weapon_14Up
+            Amount: 2
+
+      - Index: 8
+        Item: Guarantee_Weapon_16Up
+        RequiredItems:
+          - Index: 0
+            Item: Guarantee_Weapon_15Up
+            Amount: 2
+
+      - Index: 9
+        Item: Guarantee_Weapon_17Up
+        RequiredItems:
+          - Index: 0
+            Item: Guarantee_Weapon_16Up
+            Amount: 2
+
+      - Index: 10
+        Item: Guarantee_Weapon_18Up
+        RequiredItems:
+          - Index: 0
+            Item: Guarantee_Weapon_17Up
+            Amount: 2
+
+      - Index: 11
+        Item: Guarantee_Weapon_19Up
+        RequiredItems:
+          - Index: 0
+            Item: Guarantee_Weapon_18Up
+            Amount: 2
+
+  - Name: yuki_armor_safe_ticket_upgrade
+    Items:
+      - Index: 0
+        Item: Guarantee_Armor_8Up
+        RequiredItems:
+          - Index: 0
+            Item: Guarantee_Armor_7Up
+            Amount: 2
+
+      - Index: 1
+        Item: Guarantee_Armor_9Up
+        RequiredItems:
+          - Index: 0
+            Item: Guarantee_Armor_8Up
+            Amount: 2
+
+      - Index: 2
+        Item: Guarantee_Armor_10Up
+        RequiredItems:
+          - Index: 0
+            Item: Guarantee_Armor_9Up
+            Amount: 2
+
+      - Index: 3
+        Item: Guarantee_Armor_11Up
+        RequiredItems:
+          - Index: 0
+            Item: Guarantee_Armor_10Up
+            Amount: 2
+
+      - Index: 4
+        Item: Guarantee_Armor_12Up
+        RequiredItems:
+          - Index: 0
+            Item: Guarantee_Armor_11Up
+            Amount: 2
+
+      - Index: 5
+        Item: Guarantee_Armor_13Up
+        RequiredItems:
+          - Index: 0
+            Item: Guarantee_Armor_12Up
+            Amount: 2
+
+      - Index: 6
+        Item: Guarantee_Armor_14Up
+        RequiredItems:
+          - Index: 0
+            Item: Guarantee_Armor_13Up
+            Amount: 2
+
+      - Index: 7
+        Item: Guarantee_Armor_15Up
+        RequiredItems:
+          - Index: 0
+            Item: Guarantee_Armor_14Up
+            Amount: 2
+
+      - Index: 8
+        Item: Guarantee_Armor_16Up
+        RequiredItems:
+          - Index: 0
+            Item: Guarantee_Armor_15Up
+            Amount: 2
+
+      - Index: 9
+        Item: Guarantee_Armor_17Up
+        RequiredItems:
+          - Index: 0
+            Item: Guarantee_Armor_16Up
+            Amount: 2
+
+      - Index: 10
+        Item: Guarantee_Armor_18Up
+        RequiredItems:
+          - Index: 0
+            Item: Guarantee_Armor_17Up
+            Amount: 2
+
+      - Index: 11
+        Item: Guarantee_Weapon_19Up
+        RequiredItems:
+          - Index: 0
+            Item: Guarantee_Armor_18Up
+            Amount: 2
+
+  - Name: yuki_safe_ticket_cross_exchange
+    Items:
+      - Index: 0
+        Item: Guarantee_Armor_18Up
+        RequiredItems:
+          - Index: 0
+            Item: Guarantee_Weapon_18Up
+            Amount: 1
+          - Index: 1
+            Item: Apple   # TODO: put AegisName for 46405
+            Amount: 10
+
+      - Index: 1
+        Item: Guarantee_Weapon_18Up
+        RequiredItems:
+          - Index: 0
+            Item: Guarantee_Armor_18Up
+            Amount: 1
+          - Index: 1
+            Item: Apple   # TODO: put AegisName for 46405
+            Amount: 10

@@ -1,0 +1,249 @@
+prt_in,229,46,3	script	Professor Worm	627,{
+	if (checkquest(90081) == 1) {
+		mes "[Professor Worm]";
+		mes "Oh! A visitor who actually found me down here!";
+		mes "I am <b>Professor Worm</b>, and I study what the <b>Illusion Dungeons</b> keep buried.";
+		next;
+
+		mes "[Professor Worm]";
+		mes "You do look awfully familiar...";
+		mes "But never mind that. There's research to be done!";
+		next;
+
+		mes "[Professor Worm]";
+		mes "Every day, I hand out <b>Hunting Quests</b> for the Illusion Dungeons, and I'll give you <b>all of them at once</b>.";
+		next;
+
+		mes "[Professor Worm]";
+		mes "Come back tomorrow, and I'll clear your <b>cooldowns</b> so you can start another round.";
+		next;
+
+		mes "[Professor Worm]";
+		mes "When you've finished your hunting, <b>turn all your quests in right here</b>.";
+		next;
+
+		mes "[Professor Worm]";
+		mes "Each quest rewards you with <b>Base and Job EXP</b>, plus <b>2-8</b> ^i[25271] <b>Illusion Stones</b>.";
+		mes "The town's smiths accept those stones in trade, so whatever you do...";
+		mes "<b>Don't throw them away!</b>";
+		next;
+
+		mes "[Professor Worm]";
+		mes "You've recovered ^i[44599] 1x ^0000FF<b>Memory Shard!</b>^000000";
+		mes "You gained ^FFA500some experience back^000000.";
+
+		completequest 90081;
+		setquest 90082;
+		close;
+	}
+
+	mes "[Professor Worm]";
+	mes "Hi, I have many Illusion Dungeon monster hunting quests.";
+	mes "You can ^0000FFTake all Quests^000000, and I will give you all quests available.";
+	mes "^0000FFCheck Cool Down^000000 to clear your cooldowns on the next day.";
+	mes "^0000FFTurn in all Quests^000000 to receive EXP and rewards for the completed quests.";
+	next;
+
+	switch (select("Take all Quests:Check Cool Down:Turn in all Quests:Nothing...")) {
+	case 1:
+		goto L_TakeAll;
+	case 2:
+		goto L_CheckCooldown;
+	case 3:
+		goto L_TurnInAll;
+	case 4:
+		close;
+	}
+
+L_TakeAll:
+	if (checkquest(3447, HUNTING) == -1 && checkquest(3448, PLAYTIME) == -1)
+		setquest 3447;
+
+	if (checkquest(3450, HUNTING) == -1 && checkquest(3451, PLAYTIME) == -1)
+		setquest 3450;
+
+	if (checkquest(3453, HUNTING) == -1 && checkquest(3454, PLAYTIME) == -1)
+		setquest 3453;
+
+	if (checkquest(3456, HUNTING) == -1 && checkquest(3457, PLAYTIME) == -1)
+		setquest 3456;
+
+	if (checkquest(3459, HUNTING) == -1 && checkquest(3460, PLAYTIME) == -1)
+		setquest 3459;
+
+	if (checkquest(3462, HUNTING) == -1 && checkquest(3463, PLAYTIME) == -1)
+		setquest 3462;
+
+	if (checkquest(3465, HUNTING) == -1 && checkquest(3466, PLAYTIME) == -1)
+		setquest 3465;
+
+	if (checkquest(3468, HUNTING) == -1 && checkquest(3469, PLAYTIME) == -1)
+		setquest 3468;
+
+	if (checkquest(3508, HUNTING) == -1 && checkquest(3509, PLAYTIME) == -1)
+		setquest 3508;
+
+	mes "[Professor Worm]";
+	mes "I have given you every Illusion Dungeon hunting quest currently available.";
+	mes "Complete the hunting objectives and return to me to turn them in.";
+	close;
+
+L_CheckCooldown:
+	if (checkquest(3448, PLAYTIME) == 2)
+		erasequest 3448;
+
+	if (checkquest(3451, PLAYTIME) == 2)
+		erasequest 3451;
+
+	if (checkquest(3454, PLAYTIME) == 2)
+		erasequest 3454;
+
+	if (checkquest(3457, PLAYTIME) == 2)
+		erasequest 3457;
+
+	if (checkquest(3460, PLAYTIME) == 2)
+		erasequest 3460;
+
+	if (checkquest(3463, PLAYTIME) == 2)
+		erasequest 3463;
+
+	if (checkquest(3466, PLAYTIME) == 2)
+		erasequest 3466;
+
+	if (checkquest(3469, PLAYTIME) == 2)
+		erasequest 3469;
+
+	if (checkquest(3509, PLAYTIME) == 2)
+		erasequest 3509;
+
+	mes "[Professor Worm]";
+	mes "Any expired Illusion Dungeon cooldowns have been cleared.";
+	mes "You may now take the available hunting quests again.";
+	close;
+
+L_TurnInAll:
+	.@stone = 0;
+	.@base_exp = 0;
+	.@job_exp = 0;
+	.@completed = 0;
+
+	if (checkquest(3447, HUNTING) == 2) {
+		erasequest 3447;
+		setquest 3448;
+		.@base_exp += 2500000;
+		.@job_exp += 2500000;
+		.@stone += rand(2, 8);
+		.@completed++;
+	}
+
+	if (checkquest(3450, HUNTING) == 2) {
+		erasequest 3450;
+		setquest 3451;
+		.@base_exp += 6000000;
+		.@job_exp += 6000000;
+		.@stone += rand(2, 8);
+		.@completed++;
+	}
+
+	if (checkquest(3453, HUNTING) == 2) {
+		erasequest 3453;
+		setquest 3454;
+		.@base_exp += 10000000;
+		.@job_exp += 10000000;
+		.@stone += rand(2, 8);
+		.@completed++;
+	}
+
+	if (checkquest(3456, HUNTING) == 2) {
+		erasequest 3456;
+		setquest 3457;
+		.@base_exp += 17500000;
+		.@job_exp += 12500000;
+		.@stone += rand(2, 8);
+		.@completed++;
+	}
+
+	if (checkquest(3459, HUNTING) == 2) {
+		erasequest 3459;
+		setquest 3460;
+		.@base_exp += 22500000;
+		.@job_exp += 16000000;
+		.@stone += rand(2, 8);
+		.@completed++;
+	}
+
+	if (checkquest(3462, HUNTING) == 2) {
+		erasequest 3462;
+		setquest 3463;
+		.@base_exp += 29000000;
+		.@job_exp += 19600000;
+		.@stone += rand(2, 8);
+		.@completed++;
+	}
+
+	if (checkquest(3465, HUNTING) == 2) {
+		erasequest 3465;
+		setquest 3466;
+		.@base_exp += 35000000;
+		.@job_exp += 22750000;
+		.@stone += rand(2, 8);
+		.@completed++;
+	}
+
+	if (checkquest(3468, HUNTING) == 2) {
+		erasequest 3468;
+		setquest 3469;
+		.@base_exp += 65000000;
+		.@job_exp += 45000000;
+		.@stone += rand(2, 8);
+		.@completed++;
+	}
+
+	if (checkquest(3508, HUNTING) == 2) {
+		erasequest 3508;
+		setquest 3509;
+		.@base_exp += 27000000;
+		.@job_exp += 18000000;
+		.@stone += rand(2, 8);
+		.@completed++;
+	}
+
+	mes "[Professor Worm]";
+
+	if (.@completed == 0) {
+		mes "You have no completed Illusion Dungeon hunting quests to turn in.";
+		mes "Finish your active hunting quests and come back.";
+		close;
+	}
+
+	getexp .@base_exp, .@job_exp;
+	getitem 25271, .@stone;
+
+	mes "Excellent work.";
+	mes "You turned in "+.@completed+" completed hunting quest(s).";
+	mes "You received ^0000FF"+.@base_exp+" Base EXP^000000.";
+	mes "You received ^0000FF"+.@job_exp+" Job EXP^000000.";
+	mes "You received ^0000FF"+.@stone+" Illusion Stone(s)^000000.";
+	close;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Daily Quests]");
+	end;
+}
+
+
+
+prt_in,248,23,3	script	Maid#sign	1275,{
+	end;
+}
+prt_in,248,23,0	script	Maid#sign2	111,{
+	callfunc "F_UpdateSignVars";
+	mes "[Elle]";
+	if (sign_q < 3) {
+		mes "Wh-what are you";
+		mes "doing in Master Metz's";
+		mes "room? Please leave";
+		mes "immediately!";
+		close;
+	}
+}

@@ -1,0 +1,64 @@
+prt_in,225,40,3	script	Champion Soul	411,{
+	cutin "ins_cata_champ_n.bmp",2;
+
+	mes "[Champion Soul]";
+	mes "You can see me?";
+	next;
+
+	mes "[Champion Soul]";
+	mes "That's impressive. Then I shall craft you exclusive Illusion equipment from Illusion Dungeons.";
+	mes "You bring the mats, and I give you the goodies!";
+	next;
+
+	switch (select(
+		"Illusion Moonlight Weapons",
+		"Illusion Moonlight Gears",
+		"Illusion Frozen Weapons",
+		"Illusion Frozen Gears",
+		"Illusion Vampire Weapons",
+		"Illusion Vampire Gears",
+		"Illusion Abyss Weapons",
+		"Illusion Abyss Gears",
+		"Illusion Teddy Weapons",
+		"Illusion Teddy Gears",
+		"Illusion Luanda Weapons",
+		"Illusion Luanda Gears",
+		"Illusion Twins Shop",
+		"Illusion Labyrinth Weapons",
+		"Illusion Labyrinth Gears",
+		"Illusion Underwater Shop",
+		"Cancel"
+	)) {
+	case 1: callsub S_OpenShop, "champion_soul_moonlight_weapons";
+	case 2: callsub S_OpenShop, "champion_soul_moonlight_gears";
+	case 3: callsub S_OpenShop, "champion_soul_frozen_weapons";
+	case 4: callsub S_OpenShop, "champion_soul_frozen_gears";
+	case 5: callsub S_OpenShop, "champion_soul_vampire_weapons";
+	case 6: callsub S_OpenShop, "champion_soul_vampire_gears";
+	case 7: callsub S_OpenShop, "champion_soul_abyss_weapons";
+	case 8: callsub S_OpenShop, "champion_soul_abyss_gears";
+	case 9: callsub S_OpenShop, "champion_soul_teddy_weapons";
+	case 10: callsub S_OpenShop, "champion_soul_teddy_gears";
+	case 11: callsub S_OpenShop, "champion_soul_luanda_weapons";
+	case 12: callsub S_OpenShop, "champion_soul_luanda_gears";
+	case 13: callsub S_OpenShop, "champion_soul_twins";
+	case 14: callsub S_OpenShop, "champion_soul_labyrinth_weapons";
+	case 15: callsub S_OpenShop, "champion_soul_labyrinth_gears";
+	case 16: callsub S_OpenShop, "champion_soul_underwater";
+	default:
+		cutin "",255;
+		close;
+	}
+
+S_OpenShop:
+	mes "[Champion Soul]";
+	mes "Have a look. Take what you like to take!";
+	close2;
+	cutin "",255;
+	callshop getarg(0),1;
+	end;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Equipment Exchange]");
+	end;
+}

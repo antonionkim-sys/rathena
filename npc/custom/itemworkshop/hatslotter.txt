@@ -1,0 +1,343 @@
+//===== rAthena Script =======================================
+//= Slot Artisan - Hat Slotter
+//============================================================
+//= 6396: 100% success.
+//= 25041: 25% success.
+//= Failure consumes only the catalyst.
+//= Success gives a fresh slotted item.
+//= No Zeny fee.
+//= Both catalysts are available for every listed hat.
+//============================================================
+
+prontera,185,213,3	script	Slot Artisan	744,{
+	mes "[Slot Artisan]";
+	mes "If you have a ^i[6396] or ^i[25041], I can use it to add a card slot to your headgear.";
+	next;
+
+	mes "[Slot Artisan]";
+	mes "Do you wish for me to start working?";
+
+	switch(select(
+		"Information",
+		"Add a Card Slot to my hat",
+		"Cancel"
+	)) {
+	case 1:
+		mes "[Slot Artisan]";
+		mes "I can add a card slot to supported headgear.";
+		mes "For that, I need special items to process.";
+		next;
+
+		mes "[Slot Artisan]";
+		mes "Using ^i[6396], the success rate is 100%.";
+		mes "Using ^i[25041], the success rate is 25%.";
+		mes "On failure, only ^i[25041] is lost.";
+		mes "Your hat stays unchanged.";
+		next;
+
+		mes "[Slot Artisan]";
+		mes "You can buy ^i[25041] from the Department Store.";
+		mes "As for ^i[6396], it comes from Free Egg Scrolls.";
+		mes "It totally depends on your luck.";
+		close;
+
+	case 2:
+		break;
+
+	default:
+		close;
+	}
+	mes "";
+	mes "So, which headgear do you want me to work on?";
+	next;
+
+	.@choice = select(.menu$ + ":Cancel") - 1;
+
+	if (.@choice >= getarraysize(.base))
+		close;
+
+	.@base = .base[.@choice];
+	.@result = .result[.@choice];
+
+	mes "[Slot Artisan]";
+	mes "Would you like to use ^i[6396] or ^i[25041]?";
+	next;
+
+	switch(select(
+		"Spiritual Auger",
+		"Soul Plunger",
+		"Cancel"
+	)) {
+	case 1:
+		.@catalyst = 6396;
+		.@chance = 100;
+		break;
+
+	case 2:
+		.@catalyst = 25041;
+		.@chance = 25;
+		break;
+
+	default:
+		close;
+	}
+
+	mes "[Slot Artisan]";
+
+	if (.@catalyst == 25041) {
+		mes "If slot creation fails, you will lose " + mesitemlink(25041) + ".";
+		mes "Your hat will NOT be destroyed on failure.";
+	}
+
+	mes "On success, the selected hat becomes a fresh slotted version.";
+	mes "^FF0000Refines, enchants, random options, and other item-specific data will not be transferred.^000000";
+	mes "Please unequip the hat first.";
+	mes "Bound and rental hats are not accepted.";
+	mes "Success rate: " + .@chance + "%";
+	next;
+
+	if (select(
+		"^0000FFAsk for slot creation^000000",
+		"^FF0000Try next time^000000"
+	) == 2)
+		close;
+
+	// --------------------------------------------------
+	// Check source headgear quantity.
+	// Missing and duplicate items have separate messages.
+	// --------------------------------------------------
+	.@hat_count = countitem(.@base);
+
+	if (.@hat_count < 1) {
+		mes "[Slot Artisan]";
+		mes "You don't have the required unslotted headgear:";
+		mes mesitemlink(.@base);
+		close;
+	}
+
+	if (.@hat_count > 1) {
+		mes "[Slot Artisan]";
+		mes "You have more than one copy of the chosen unslotted headgear.";
+		mes "Please store the extra copies and carry only one.";
+		close;
+	}
+
+	// --------------------------------------------------
+	// Check catalyst.
+	// --------------------------------------------------
+	if (countitem(.@catalyst) < 1) {
+		mes "[Slot Artisan]";
+		mes "You don't have the required catalyst:";
+		mes mesitemlink(.@catalyst);
+		close;
+	}
+
+	// --------------------------------------------------
+	// Find the exact source inventory slot.
+	// --------------------------------------------------
+	getinventorylist;
+	.@idx = -1;
+
+	for (.@i = 0; .@i < @inventorylist_count; .@i++) {
+		if (@inventorylist_id[.@i] != .@base)
+			continue;
+
+		if (@inventorylist_equip[.@i]) {
+			mes "[Slot Artisan]";
+			mes "Please unequip the selected headgear first.";
+			close;
+		}
+
+		if (@inventorylist_bound[.@i]) {
+			mes "[Slot Artisan]";
+			mes "Bound headgear cannot be processed.";
+			close;
+		}
+
+		if (@inventorylist_expire[.@i]) {
+			mes "[Slot Artisan]";
+			mes "Rental headgear cannot be processed.";
+			close;
+		}
+
+		if (!@inventorylist_identify[.@i]) {
+			mes "[Slot Artisan]";
+			mes "Please identify the selected headgear first.";
+			close;
+		}
+
+		.@idx = @inventorylist_idx[.@i];
+		break;
+	}
+
+	if (.@idx < 0) {
+		mes "[Slot Artisan]";
+		mes "I couldn't locate the selected headgear in your inventory.";
+		close;
+	}
+
+	// --------------------------------------------------
+	// Conservative capacity check before consuming items.
+	// --------------------------------------------------
+	if (!checkweight(.@result,1)) {
+		mes "[Slot Artisan]";
+		mes "Please free inventory space and reduce your carried weight.";
+		close;
+	}
+
+	// --------------------------------------------------
+	// Consume catalyst and perform the success roll.
+	// Failure leaves the original hat untouched.
+	// --------------------------------------------------
+	delitem .@catalyst,1;
+
+	if (rand(1,100) > .@chance) {
+		mes "[Slot Artisan]";
+		mes "Slot creation failed.";
+		mes "The Soul Plunger was consumed.";
+		mes "Your headgear is unchanged.";
+		close;
+	}
+
+	// --------------------------------------------------
+	// Success: replace the exact source hat.
+	// --------------------------------------------------
+	delitemidx .@idx,1;
+	getitem .@result,1;
+
+	mes "[Slot Artisan]";
+	mes "Success! Here is your " + mesitemlink(.@result) + ".";
+	close;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Hat Slotter]");
+
+	// Each base item matches the result at the same index.
+	setarray .base[0],
+		2286,		// Elven Ears
+		18599,		// Black Devils Mask
+		2201,		// Sunglasses
+		2203,		// Glasses
+		5040,		// Blush
+		5085,		// Small Ribbons
+		5104,		// Dark Blinkers
+		5592,		// Sigrun's Wings
+		5325,		// Robo Eye
+		5389,		// Angel Spirit
+		2296,		// Binoculars
+		2295,		// Blinker
+		5086,		// Alarm Mask
+		5043,		// Opera Phantom Mask
+		5006,		// Machoman's Glasses
+		2243,		// Geek Glasses
+		5421,		// Ears of Ifrit
+		5283,		// Chick Hat
+		5374,		// Gigantic Majestic Goat
+		19135,		// Spirit of Green Maiden
+		2291,		// Butterfly Mask / Masquerade
+		5864,		// Shadow Booster
+		19031,		// Fallen Angel Blessing
+		19177,		// Elemental Crown
+		5503,		// Rabbit Magic Hat
+		5490,		// Anubis Helm
+		18813,		// New Wave Sunglasses
+		400001,		// Victory Wing Ears
+		436000,		// Thanatos's Maeror Mask
+		436001,		// Thanatos's Despero Mask
+		436002,		// Thanatos's Odium Mask
+		410016,		// Battle Processor
+		410093,		// Chain of Seals
+		410091,		// Cor Core Booster
+		410079,		// Deep Blue Sunglasses
+		19117,		// Poring Sunglasses
+		410232,		// Gambler's Seal
+		410587,		// Mermaid Headphones (Global Cooldown)
+		410588,		// Mermaid Headphones (Variable Casting)
+		410589;		// Mermaid Headphones (Max HP)
+
+	setarray .result[0],
+		18507,		// Elven Ears [1]
+		18603,		// Black Devils Mask [1]
+		2202,		// Sunglasses [1]
+		2204,		// Glasses [1]
+		18607,		// Blush [1]
+		18608,		// Small Ribbons [1]
+		18609,		// Dark Blinkers [1]
+		19085,		// Sigrun's Wings [1]
+		19086,		// Robo Eye [1]
+		19087,		// Angel Spirit [1]
+		19088,		// Binoculars [1]
+		19089,		// Blinker [1]
+		19090,		// Alarm Mask [1]
+		19091,		// Opera Phantom Mask [1]
+		19092,		// Machoman's Glasses [1]
+		19093,		// Geek Glasses [1]
+		19128,		// Ears of Ifrit [1]
+		19129,		// Chick Hat [1]
+		18724,		// Gigantic Majestic Goat [1]
+		19136,		// Spirit of Green Maiden [1]
+		19132,		// Butterfly Mask / Masquerade [1]
+		19126,		// Shadow Booster [1]
+		19176,		// Fallen Angel Blessing [1]
+		19178,		// Elemental Crown [1]
+		19179,		// Rabbit Magic Hat [1]
+		19180,		// Anubis Helm [1]
+		19181,		// New Wave Sunglasses [1]
+		400002,		// Victory Wing Ears [1]
+		436005,		// Thanatos's Maeror Mask [1]
+		436004,		// Thanatos's Despero Mask [1]
+		436003,		// Thanatos's Odium Mask [1]
+		410017,		// Battle Processor [1]
+		410094,		// Chain of Seals [1]
+		410092,		// Cor Core Booster [1]
+		410080,		// Deep Blue Sunglasses [1]
+		19118,		// Poring Sunglasses [1]
+		410233,		// Gambler's Seal [1]
+		410590,		// Mermaid Headphones (Global Cooldown) [1]
+		410591,		// Mermaid Headphones (Variable Casting) [1]
+		410592;		// Mermaid Headphones (Max HP) [1]
+
+	.menu$ =
+		"Elven Ears:" +
+		"Black Devils Mask:" +
+		"Sunglasses:" +
+		"Glasses:" +
+		"Blush:" +
+		"Small Ribbons:" +
+		"Dark Blinkers:" +
+		"Sigrun's Wings:" +
+		"Robo Eye:" +
+		"Angel Spirit:" +
+		"Binoculars:" +
+		"Blinker:" +
+		"Alarm Mask:" +
+		"Opera Phantom Mask:" +
+		"Machoman's Glasses:" +
+		"Geek Glasses:" +
+		"Ears of Ifrit:" +
+		"Chick Hat:" +
+		"Gigantic Majestic Goat:" +
+		"Spirit of Green Maiden:" +
+		"Butterfly Mask:" +
+		"Shadow Booster:" +
+		"Fallen Angel Blessing:" +
+		"Elemental Crown:" +
+		"Rabbit Magic Hat:" +
+		"Anubis Helm:" +
+		"New Wave Sunglasses:" +
+		"Victory Wing Ears:" +
+		"Thanatos's Maeror Mask:" +
+		"Thanatos's Despero Mask:" +
+		"Thanatos's Odium Mask:" +
+		"Battle Processor:" +
+		"Chain of Seals:" +
+		"Cor Core Booster:" +
+		"Deep Blue Sunglasses:" +
+		"Poring Sunglasses:" +
+		"Gambler's Seal:" +
+		"Mermaid Headphones (Global Cooldown):" +
+		"Mermaid Headphones (Variable Casting):" +
+		"Mermaid Headphones (Max HP)";
+
+	end;
+}

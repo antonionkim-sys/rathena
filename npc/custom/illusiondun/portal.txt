@@ -1,0 +1,72 @@
+prt_in,226,46,5	script	Illusion Portal	10007,{
+	mes "[Illusion Portal]";
+	mes "Activating Warp Portal.";
+	mes "Select destination.";
+	next;
+
+	switch(select(
+		"Illusion of Moonlight (100+)",
+		"Illusion of Frozen (120+)",
+		"Illusion of Vampire (130+)",
+		"Illusion of Underwater (140+)",
+		"Illusion of Abyss (150+)",
+		"Illusion of Teddy Bear (150+)",
+		"Illusion of Luanda (160+)",
+		"Illusion of Twins (160+)",
+		"Illusion of Labyrinth (170+)",
+		"Illusion of Underwater (180+)",
+		"Cancel"
+	)) {
+	case 1:
+		if (BaseLevel < 100) goto L_Level;
+		warp "pay_d03_i",140,44;
+		end;
+	case 2:
+		if (BaseLevel < 120) goto L_Level;
+		warp "ice_dun03_i",149,24;
+		end;
+	case 3:
+		if (BaseLevel < 130) goto L_Level;
+		warp "gef_d01_i",115,223;
+		end;
+	case 4:
+		if (BaseLevel < 140) goto L_Level;
+		warp "iz_d04_i",127,224;
+		end;
+	case 5:
+		if (BaseLevel < 150) goto L_Level;
+		warp "tur_d03_i",132,189;
+		end;
+	case 6:
+		if (BaseLevel < 150) goto L_Level;
+		warp "ein_d02_i",168,197;
+		end;
+	case 7:
+		if (BaseLevel < 160) goto L_Level;
+		warp "com_d02_i",249,242;
+		end;
+	case 8:
+		if (BaseLevel < 160) goto L_Level;
+		warp "ant_d02_i",167,184;
+		end;
+	case 9:
+		if (BaseLevel < 170) goto L_Level;
+		warp "prt_fild01",131,364;
+		end;
+	case 10:
+		if (BaseLevel < 180) goto L_Level;
+		warp "iz_d05_i",141,186;
+		end;
+	case 11:
+		close;
+	}
+
+L_Level:
+	mes "[Illusion Portal]";
+	mes "Your level is too low for that destination.";
+	close;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Dungeon Warper]");
+	end;
+}

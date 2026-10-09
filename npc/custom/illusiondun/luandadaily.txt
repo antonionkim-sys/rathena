@@ -1,0 +1,103 @@
+prt_in,227,29,3	script	Request Board	857,{
+	mes "[Request Board]";
+	mes "Pick the request you want to take.";
+	next;
+
+	.@s1$ = (checkquest(5848) != -1) ? "^808080[Progress] Evidence of eradication of Megaliths^000000" : "[Daily] Evidence of eradication of Megaliths";
+	.@s2$ = (checkquest(5850) != -1) ? "^808080[Progress] Evidence of eradication of Wootan^000000" : "[Daily] Evidence of eradication of Wootan";
+	.@s3$ = (checkquest(5852) != -1) ? "^808080[Progress] Operation to eradicate Megaliths^000000" : "[Daily] Operation to eradicate Megaliths";
+	.@s4$ = (checkquest(5854) != -1) ? "^808080[Progress] Operation to eradicate Wootan^000000" : "[Daily] Operation to eradicate Wootan";
+
+	switch(select(.@s1$ + ":" + .@s2$ + ":" + .@s3$ + ":" + .@s4$ + ":Accept all quests")) {
+	case 1: .@q = 5848; .@p = 5849; break;
+	case 2: .@q = 5850; .@p = 5851; break;
+	case 3: .@q = 5852; .@p = 5853; break;
+	case 4: .@q = 5854; .@p = 5855; break;
+	case 5:
+		if (checkquest(5849, PLAYTIME) == 2) erasequest 5849;
+		if (checkquest(5851, PLAYTIME) == 2) erasequest 5851;
+		if (checkquest(5853, PLAYTIME) == 2) erasequest 5853;
+		if (checkquest(5855, PLAYTIME) == 2) erasequest 5855;
+
+		.@n = 0;
+		if (checkquest(5848) == -1 && checkquest(5849, PLAYTIME) == -1) { setquest 5848; .@n++; }
+		if (checkquest(5850) == -1 && checkquest(5851, PLAYTIME) == -1) { setquest 5850; .@n++; }
+		if (checkquest(5852) == -1 && checkquest(5853, PLAYTIME) == -1) { setquest 5852; .@n++; }
+		if (checkquest(5854) == -1 && checkquest(5855, PLAYTIME) == -1) { setquest 5854; .@n++; }
+
+		mes "[Request Board]";
+		if (.@n)
+			mes "Accepted " + .@n + " quest(s).";
+		else
+			mes "No quests available right now.";
+		close;
+	}
+
+	switch(checkquest(.@p, PLAYTIME)) {
+	case -1:
+		break;
+	case 0:
+	case 1:
+		mes "[Request Board]";
+		mes "This quest is on cooldown.";
+		mes "Come back after the reset.";
+		close;
+	case 2:
+		erasequest .@p;
+		break;
+	}
+
+	if (checkquest(.@q) != -1) {
+		mes "[Request Board]";
+		mes "This quest is already in progress.";
+		close;
+	}
+
+	setquest .@q;
+	mes "[Request Board]";
+	mes "Quest accepted.";
+	close;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Into Luanda]");
+	end;
+}
+
+prt_in,228,27,3	script	Defense Manager Luanda	843,{
+	.@stones = 0;
+
+	if (checkquest(5848, HUNTING) == 2) {
+		erasequest 5848;
+		setquest 5849;
+		.@stones += 3;
+	}
+
+	if (checkquest(5850, HUNTING) == 2) {
+		erasequest 5850;
+		setquest 5851;
+		.@stones += 3;
+	}
+
+	if (checkquest(5852, HUNTING) == 2) {
+		erasequest 5852;
+		setquest 5853;
+		.@stones += 3;
+	}
+
+	if (checkquest(5854, HUNTING) == 2) {
+		erasequest 5854;
+		setquest 5855;
+		.@stones += 3;
+	}
+
+	if (!.@stones)
+		end;
+
+	getitem 25271, .@stones;
+	dispbottom "Luanda quests turned in. You received " + .@stones + " " + getitemname(25271) + "(s).";
+	end;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Turn Luanda Quest]");
+	end;
+}

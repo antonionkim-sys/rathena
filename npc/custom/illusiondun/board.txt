@@ -1,0 +1,112 @@
+prt_in,227,32,3	script	Illusion Board	857,{
+	mes "[Illusion Board]";
+	mes "List of all regular Daily Quests for Illusion Dungeons.";
+	mes "Pick the one you want to take or complete.";
+	mes "Each quest rewards 3x ^i[25271] ^0000FFIllusion Stone^000000.";
+	next;
+
+	switch(select(
+		"[Moonlight] Stop the Wizard!",
+		"[Moonlight] No Mercy for Illusions",
+		"[Moonlight] Remembering My Ancestors",
+		"[Vampire] Send the Dead Back to Earth",
+		"[Vampire] Sweet Dreams",
+		"[Vampire] Unreliable Fake Blood",
+		"[Vampire] Preparing for the Firework Festival",
+		"[Vampire] Noisy Neighbors",
+		"[Vampire] Curious by Nature",
+		"[Vampire] Studying in Dim Light",
+		"[Abyss] Vain Desire",
+		"[Abyss] Endless Hunger 1",
+		"[Abyss] Endless Hunger 2",
+		"[Underwater] Collect Abyssal Essence",
+		"[Underwater] Defeat Deep Sea Creatures 1",
+		"[Underwater] Defeat Deep Sea Creatures 2",
+		"[Underwater] Defeat Deep Sea Fishman",
+		"[Twins] Geological Survey",
+		"[Twins] Source of Power",
+		"[Twins] Same Thing",
+		"[Twins] Shared Memories",
+		"[Teddy] Run Away",
+		"[Teddy] Shouldn't Exist 1",
+		"[Teddy] Shouldn't Exist 2",
+		"[Teddy] Let the Light Devour the Darkness",
+		"Cancel"
+	)) {
+	case 1:  .@q = 7782;  .@p = 7783;  break;
+	case 2:  .@q = 7784;  .@p = 7785;  break;
+	case 3:  .@q = 7786;  .@p = 7787;  break;
+	case 4:  .@q = 14667; .@p = 14668; break;
+	case 5:  .@q = 14669; .@p = 14670; break;
+	case 6:  .@q = 14671; .@p = 14674; break;
+	case 7:  .@q = 14672; .@p = 14673; break;
+	case 8:  .@q = 14675; .@p = 14676; break;
+	case 9:  .@q = 14679; .@p = 14680; break;
+	case 10: .@q = 14677; .@p = 14678; .@item = 25264; .@amt = 10; .@item2 = 25265; .@amt2 = 10; break;
+	case 11: .@q = 16109; .@p = 16110; break;
+	case 12: .@q = 16111; .@p = 16113; break;
+	case 13: .@q = 16112; .@p = 16113; break;
+	case 14: .@q = 3413;  .@p = 3414;  .@item = 25899; .@amt = 10; break;
+	case 15: .@q = 3415;  .@p = 3416;  break;
+	case 16: .@q = 3417;  .@p = 3418;  break;
+	case 17: .@q = 3419;  .@p = 3420;  break;
+	case 18: .@q = 8731;  .@p = 8732;  .@item = 1000504; .@amt = 20; break;
+	case 19: .@q = 8733;  .@p = 8734;  .@item = 1000505; .@amt = 20; break;
+	case 20: .@q = 8735;  .@p = 8736;  break;
+	case 21: .@q = 8737;  .@p = 8738;  .@item = 1000506; .@amt = 20; break;
+	case 22: .@q = 11565; .@p = 11566; break;
+	case 23: .@q = 11567; .@p = 11569; break;
+	case 24: .@q = 11568; .@p = 11569; break;
+	case 25: .@q = 11570; .@p = 11571; break;
+	case 26: close;
+	}
+
+	switch(checkquest(.@p, PLAYTIME)) {
+	case -1:
+		break;
+	case 0:
+	case 1:
+		mes "[Illusion Board]";
+		mes "This quest is on cooldown.";
+		mes "Come back after the reset.";
+		close;
+	case 2:
+		erasequest .@p;
+		break;
+	}
+
+	if (checkquest(.@q) == -1) {
+		setquest .@q;
+		mes "[Illusion Board]";
+		mes "Quest accepted.";
+		close;
+	}
+
+	if (.@item) {
+		if (countitem(.@item) < .@amt || (.@item2 && countitem(.@item2) < .@amt2)) {
+			mes "[Illusion Board]";
+			mes "Quest objective isn't complete";
+			close;
+		}
+		delitem .@item, .@amt;
+		if (.@item2)
+			delitem .@item2, .@amt2;
+	}
+	else if (checkquest(.@q, HUNTING) != 2) {
+		mes "[Illusion Board]";
+		mes "Quest objective isn't complete";
+		close;
+	}
+
+	erasequest .@q;
+	setquest .@p;
+	getitem 25271, 3;
+	mes "[Illusion Board]";
+	mes "Quest complete!";
+	mes "You received 3x ^i[25271] ^0000FFIllusion Stone^000000.";
+	close;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Daily Quests]");
+	end;
+}
