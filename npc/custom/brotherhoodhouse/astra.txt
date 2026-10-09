@@ -1,0 +1,45 @@
+iz_ac01,165,78,5	script	Astra	10300,{
+	mes "[Astra]";
+	mes "Hiya~ Are you here to learn more about monsters?";
+	next;
+
+	if (select("Yes, tell me more.:No, thanks.") == 2) {
+		mes "[Astra]";
+		mes "Come back if you want to learn more.";
+		close;
+	}
+
+	mes "[Astra]";
+	mes "In Brotherhood, we have a competitive PvM with 3 categories.";
+	mes "Nightmare Dungeons, Instances, MVPs, and World Bosses...";
+	next;
+
+	mes "[Astra]";
+	mes "<b>Nightmare Dungeons</b> are open dungeons where players fight hard monsters for rare materials.";
+	mes "The entrance can be found in ...";
+	next;
+
+	mes "[Astra]";
+	mes "Our instances are all located in the <b>Dimensional Library</b>, where you can easily navigate to do daily instances.";
+	mes "You can also reset the daily instances to repeat them.";
+	mes "The entrance can be found in Prontera City.";
+	next;
+
+	mes "[Astra]";
+	mes "MVPs in Brotherhood spawn at the same hours, and they drop rare items that you can exchange for good prizes.";
+	mes "You can find their spawn timer beside the fountain in Prontera City.";
+	next;
+
+	mes "[Astra]";
+	mes "Finally, the World Boss event.";
+	mes "This one is not every day, but if it happens... you can earn crystals to exchange for MVP Cards.";
+	next;
+
+	mes "[Astra]";
+	mes "Cool, right?";
+
+	if (checkquest(90013) == 1)
+		completequest 90013;
+
+	close;
+}

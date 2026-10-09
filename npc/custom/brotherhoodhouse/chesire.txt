@@ -1,0 +1,50 @@
+//===== rAthena Script =======================================
+//= Cheshire - Nyang Club Tutorial
+//============================================================
+
+iz_ac01,139,42,3	script	Cheshire	497,{
+
+	if (checkquest(90017) != -1) {
+		mes "[Cheshire]";
+		mes "Meow! You've already heard my little Nyang Club introduction.";
+		close;
+	}
+
+	mes "[Cheshire]";
+	mes "Oh welcome to my little tutorial.";
+	next;
+
+	mes "[Cheshire]";
+	mes "I'm going to tell you one of the most precious things in Bromance RO.";
+	next;
+
+	mes "[Cheshire]";
+	mes "This one and my only love... ^i[6909]";
+	mes "Silvervine Cat Fruits!!!!!";
+	mes "";
+	mes "I LOVE THOSE! Haha! And so do my cat cousins.";
+	next;
+
+	mes "[Cheshire]";
+	mes "I work in <b>Nyang Club</b>, we are located in Prontera.";
+	mes "Inside there, my friend... we offer A LOT!!!";
+	next;
+
+	mes "[Cheshire]";
+	mes "We sell <b>Costume Enchant Stones</b>, <b>Shadow Gears</b>, special hourly buffs, <b>Yggdrasil Blessing</b>, <b>Nyang Benefits</b>, <b>Battle Manuals</b>, <b>Bubble Gums</b>, and <b>Bloody Branches</b>.";
+	mes "You HAVE to come visit!";
+	next;
+
+	getitem 6909,10;
+
+	mes "[Cheshire]";
+	mes "*Cheshire secretly slipped 10 Silvervine Cat Fruits into your inventory.*";
+
+	completequest 90017;
+	close;
+
+OnInit:
+	questinfo QTYPE_QUEST2, QMARK_YELLOW, "checkquest(90017) == -1";
+	setunitdata getnpcid(0), UNPC_GROUP_ID, 40;	
+	end;
+}

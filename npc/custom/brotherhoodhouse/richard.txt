@@ -1,0 +1,68 @@
+iz_ac01,120,56,3	script	Teacher Richard	556,{
+	.@blue$ = "^0000FF";
+	.@end$ = "^000000";
+
+	cutin "ma_tomas01",2;
+
+	if (checkquest(90016) == 2) {
+		mes "[Richard]";
+		mes "Remember, for fast farming, go to Thanatos Tower Floor 7, loot everything, and sell it to NPCs.";
+		mes"You can store your Zeny with " + .@blue$ + "[CTRL] + [B]" + .@end$ + ".";
+		close2;
+		cutin "",255;
+		end;
+	}
+
+	mes "[Teacher Richard]";
+	mes "So, are you the new guy they've been mentioning?";
+	mes "Are you here to get rich?";
+	next;
+
+	select("Hmm, how?");
+
+	mes "[Teacher Richard]";
+	mes "What? How? Of course by buying LOW and selling HIGH! Hahah!";
+	mes "It's so simple!";
+	next;
+
+	mes "[Teacher Richard]";
+	mes "Anyways, first you need to learn some basics... and here in this world, we use " + .@blue$ + "Zeny" + .@end$ + " as our main currency.";
+	mes "With Zeny, you can buy almost everything!";
+	next;
+
+	select("How do I make zeny?");
+
+	mes "[Teacher Richard]";
+	mes "How to make zeny?";
+	mes "For starters, you need to FARM it!";
+	mes "FARM! Hmm, not by growing turnips... but by killing monsters out in the wild!";
+	next;
+
+	mes "[Teacher Richard]";
+	mes "The monsters carry loot. You take it from them and sell the loot to NPC stores in town.";
+	mes "A fast way for beginners to earn zeny is to warp to Thanatos Tower Floor 7 and loot everything, then sell it to NPCs.";
+	next;
+
+	mes "[Teacher Richard]";
+	mes "One character can carry around " + .@blue$ + "2b zeny" + .@end$ + "! 2b!";
+	mes "You can then store zeny in your private bank by pressing " + .@blue$ + "[CTRL] + [B]" + .@end$ + ".";
+	next;
+
+	mes "[Teacher Richard]";
+	mes "Ahem! Well, that's all!";
+	mes "A wise man said, \"It's better to teach you how to fish than to give you a bucket of fish!\"";
+
+	getitem 12134,3;
+
+	setquest 90016;
+	completequest 90016;
+
+	close2;
+	cutin "",255;
+	end;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Lesson]");
+	questinfo QTYPE_QUEST2, QMARK_YELLOW, "checkquest(90016) == -1";
+	end;
+}

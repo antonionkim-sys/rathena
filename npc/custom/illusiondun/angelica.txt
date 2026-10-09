@@ -1,0 +1,51 @@
+//===== rAthena Script =======================================
+//= Mage Angelica - Illusion Random Options
+//============================================================
+
+// --------------------------------------------------
+// Hidden Zeny Shop: Random Option Stones
+// --------------------------------------------------
+iz_ac01,1,2,0	shop	mage_angelica_zeny	-1,100003:1
+
+// --------------------------------------------------
+// Mage Angelica
+// --------------------------------------------------
+prt_in,220,39,5	script	Mage Angelica	68,{
+	mes "[Mage Angelica]";
+	mes "I'm selling two types of special option stones.";
+	mes "You can pay me either in Zeny or with Illusion Stones.";
+	next;
+
+	mes "[Mage Angelica]";
+	mes "The special option stones grant 2 Random Options to your Level 4 Illusion weapons.";
+	next;
+
+	switch (select("Purchase with Zeny", "Purchase with Illusion Stones", "Cancel")) {
+	case 1:
+		mes "[Mage Angelica]";
+		mes "Take a look.";
+		close2;
+		callshop "mage_angelica_zeny", 1;
+		end;
+	case 2:
+		mes "[Mage Angelica]";
+		mes "Take a look.";
+		close2;
+		callshop "mage_angelica_illusion_stones", 1;
+		end;
+	default:
+		close;
+	}
+
+OnInit:
+	hideoffnpc "mage_angelica_zeny";
+	npcshopdelitem "mage_angelica_zeny", 100003;
+
+	npcshopadditem "mage_angelica_zeny", 100003, 2000000;
+	npcshopadditem "mage_angelica_zeny", 100004, 2000000;
+	npcshopadditem "mage_angelica_zeny", 40055, 10000000;
+	npcshopadditem "mage_angelica_zeny", 40056, 10000000;
+
+	setunittitle(getnpcid(0), "[Random Options]");
+	end;
+}

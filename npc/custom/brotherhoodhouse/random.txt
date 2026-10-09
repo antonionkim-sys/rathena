@@ -1,0 +1,13 @@
+iz_ac01,86,52,3	script	Novice::Novice1	882,{
+	npctalk "I want to hunt faster, to deal a lot of damage to monsters.";
+	end;
+}
+
+iz_ac01,81,53,5	script	Novice::Novice2	642,{
+	npctalk "MISS keeps popping up when attacking a monster. What should I do?";
+
+	sleep2 2500;
+	unittalk getnpcid(0, "Novice1"), "Then add DEX.";
+	end;
+
+}

@@ -1,0 +1,94 @@
+iz_ac01,154,79,3	script	Dus	10379,{
+	.@red$ = "^FF0000";
+	.@end$ = "^000000";
+
+	if (checkquest(90012) != 2) {
+		mes "[Dus]";
+		mes "Hi, there! Would you like to learn more about item enhancement and modification?";
+		next;
+
+		if (select("Yes:No") == 2) {
+			mes "[Dus]";
+			mes "Come back if you want to learn more.";
+			close;
+		}
+
+		mes "[Dus]";
+		mes "There is a master smith of the " + .@red$ + "Item Workshop" + .@end$ + " in Prontera City that goes by the name of <b>Bob</b>.";
+		mes "He sells items related to item enhancement and modification.";
+		next;
+
+		mes "[Dus]";
+		mes "The Item Workshop also offers services like refining and strengthening your equipment by improving its refinement level.";
+		mes "Did you know you can refine it all the way up to " + .@red$ + "+20" + .@end$ + "?";
+		next;
+
+		mes "[Dus]";
+		mes "Besides refining, you can also do the following:";
+		mes "- " + .@red$ + "Item Enchanting" + .@end$ + ": Add special properties to your gear.";
+		mes "- " + .@red$ + "Item Grading" + .@end$ + ": Unlock hidden potential in powerful items.";
+		mes "- " + .@red$ + "Card Removal" + .@end$ + ": Safely extract cards from equipment.";
+		mes "- " + .@red$ + "Item Recycling" + .@end$ + ": Convert unwanted items into materials.";
+		mes "- " + .@red$ + "Ore Exchange" + .@end$ + ": Trade different refinement materials.";
+		next;
+
+		select("Tell me more about Item Enchanting");
+
+		mes "[Dus]";
+		mes "Enchanting allows you to add special properties to weapons and armor that go beyond simple refinement.";
+		mes "While not every piece of equipment can be enchanted, most high-quality items can receive powerful bonuses like:";
+		mes "- Increased damage against specific monsters";
+		mes "- Additional stat bonuses";
+		mes "- Special effects when attacking or being hit";
+		next;
+
+		mes "[Dus]";
+		mes "Each enchant requires specific materials and zeny, with success rates varying by item type.";
+		mes "You'll find all our enchanting specialists in the Item Workshop in Prontera.";
+		next;
+
+		select("Explain Item Grading");
+
+		mes "[Dus]";
+		mes "Grading, from D to A, unlocks an item's hidden power!";
+		mes "Requirements:";
+		mes "- +9, or sometimes +11, refinement";
+		mes "- Specific materials";
+		mes "- High success rates!";
+
+		completequest 90012;
+		close;
+	}
+
+	switch (select(
+		"Tell me more about Item Enchanting",
+		"Explain Item Grading",
+		"Nothing, thanks."
+	)) {
+		case 1:
+			mes "[Dus]";
+			mes "Enchanting allows you to add special properties to weapons and armor that go beyond simple refinement.";
+			mes "While not every piece of equipment can be enchanted, most high-quality items can receive powerful bonuses like:";
+			mes "- Increased damage against specific monsters";
+			mes "- Additional stat bonuses";
+			mes "- Special effects when attacking or being hit";
+			next;
+
+			mes "[Dus]";
+			mes "Each enchant requires specific materials and zeny, with success rates varying by item type.";
+			mes "You'll find all our enchanting specialists in the Item Workshop in Prontera City.";
+			close;
+
+		case 2:
+			mes "[Dus]";
+			mes "Grading, from D to A, unlocks an item's hidden power!";
+			mes "Requirements:";
+			mes "- +9, or sometimes +11, refinement";
+			mes "- Specific materials";
+			mes "- High success rates!";
+			close;
+
+		case 3:
+			close;
+	}
+}

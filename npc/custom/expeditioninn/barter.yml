@@ -1,0 +1,1802 @@
+Header:
+  Type: BARTER_DB
+  Version: 2
+
+Body:
+  - Name: Astra_Crystal
+    Items:
+      - Index: 0
+        Item: Shining_Galaxy_Crystal
+        RequiredItems:
+          - Index: 0
+            Item: Outer_Galaxy_Crystal
+            Amount: 40
+
+  - Name: Astra_Weapon
+    Items:
+      # Doppelganger Card (ID 4142)
+      - Index: 0
+        Item: Doppelganger_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 30
+      # Drake Card (ID 4137)
+      - Index: 1
+        Item: Drake_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 40
+      # Queen Scaraba Card (ID 4507)
+      - Index: 2
+        Item: Q_Scaraba_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 50
+      # Sweety Card (ID 300078)
+      - Index: 3
+        Item: Sweety_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 50
+      # Dracula Card (ID 4134)
+      - Index: 4
+        Item: Dracula_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 60
+      # Phreeoni Card (ID 4121)
+      - Index: 5
+        Item: Phreeoni_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 100
+      # Corruption Root Card (ID 4603)
+      - Index: 6
+        Item: CorruptionRoot_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 100
+      # Memory of Thanatos Card (ID 4399)
+      - Index: 7
+        Item: Thanatos_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 100
+      # MasterSmith Card (ID 4361)
+      - Index: 8
+        Item: B_Harword_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 120
+      # Captain Felock Card (ID 27182)
+      - Index: 9
+        Item: Felock_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 120
+      # Baphomet Card (ID 4147)
+      - Index: 10
+        Item: Baphomet_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 120
+      # Atroce Card (ID 4425)
+      - Index: 11
+        Item: Atroce_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 130
+      # Charleston3 Card (ID 4697)
+      - Index: 12
+        Item: Charleston_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 140
+      # Stormy Knight Card (ID 4318)
+      - Index: 13
+        Item: Knight_Windstorm_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 150
+      # General Daehyon Card (ID 4574)
+      - Index: 14
+        Item: Daehyon_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 150
+      # Angry Student Pyuriel Card (ID 4578)
+      - Index: 15
+        Item: Pyuriel_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 150
+      # Evil Fanatics Card (ID 27265)
+      - Index: 16
+        Item: Evil_Fanatics_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 160
+      # Celine Kimi Card (ID 31023)
+      - Index: 17
+        Item: XM_Celine_Kimi_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 160
+      # Unidentified Creature card (ID 300176)
+      - Index: 18
+        Item: MD_Airboat_Card7
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 170
+      # T W O Card (ID 27020)
+      - Index: 19
+        Item: T_W_O_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 180
+      # Infinite Phreeoni Card (ID 4649)
+      - Index: 20
+        Item: IFN_Phreeoni_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 180
+      # Realized Corruption Root Card (ID 4604)
+      - Index: 21
+        Item: CorruptionRootH_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # Time Holder Card (ID 4625)
+      - Index: 22
+        Item: Timeholder_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # Samurai Spector Card (ID 4263)
+      - Index: 23
+        Item: Incant_Samurai_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # Lord of The Dead Card (ID 4276)
+      - Index: 24
+        Item: Lord_Of_Death_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # Deep Sea Kraken Card (ID 300151)
+      - Index: 25
+        Item: ILL_Kraken_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # Randgris Card (ID 4407)
+      - Index: 26
+        Item: Randgris_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 250
+      # Turtle General Card (ID 4305)
+      - Index: 27
+        Item: Turtle_General_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 300
+      # Sniper Card (ID 4367)
+      - Index: 28
+        Item: B_Shecil_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 300
+      # Ghost Ship Captain Card (ID 300532)
+      - Index: 29
+        Item: Cap_Of_G_Ship_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 180
+
+  - Name: Astra_Headgear
+    Items:
+      # Pharaoh Card (ID 4148)
+      - Index: 0
+        Item: Pharaoh_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 30
+      # Mistress Card (ID 4132)
+      - Index: 1
+        Item: Mistress_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 50
+      # Orc Hero Card (ID 4143)
+      - Index: 2
+        Item: Orc_Hero_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 60
+      # Evil Snake Lord Card (ID 4330)
+      - Index: 3
+        Item: Dark_Snake_Lord_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 60
+      # Gopinich Card (ID 27162)
+      - Index: 4
+        Item: Gopinich_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 60
+      # Gold Queen Scaraba Card (ID 4509)
+      - Index: 5
+        Item: Gold_Q_Scaraba_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 70
+      # Mutant Coelacanth Card (ID 4528)
+      - Index: 6
+        Item: Mutant_Coelacanth_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 70
+      # Violent Coelacanth Card (ID 4529)
+      - Index: 7
+        Item: Cruel_Coelacanth_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 70
+      # White Lady Card (ID 4372)
+      - Index: 8
+        Item: Bacsojin_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 90
+      # Lord Knight Card (ID 4357)
+      - Index: 9
+        Item: B_Seyren_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 100
+      # Vesper Card (ID 4374)
+      - Index: 10
+        Item: Apocalips_H_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 120
+      # Infinite Orc Hero Card (ID 4650)
+      - Index: 11
+        Item: IFN_OrcHero_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 150
+      # High Wizard Card (ID 4365)
+      - Index: 12
+        Item: B_Katrinn_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # Ancient Tao Gunka Card (ID 27294)
+      - Index: 13
+        Item: Ancient_Tao_Gunka_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # Grim Reaper Ankou Card (ID 27327)
+      - Index: 14
+        Item: ReaperAnkou_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 220
+      # Kiel-D-01 Card (ID 4403)
+      - Index: 15
+        Item: Kiel_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 300
+      # Fenrir Card (ID 4556)
+      - Index: 16
+        Item: Fenrir_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 300
+      # Ultra Limacina Card (ID 300377)
+      - Index: 17
+        Item: Ultra_Limacina_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 300
+      # Nightmare Piamette Card (ID 300560)
+      - Index: 18
+        Item: aegis_300560
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 300
+
+  - Name: Astra_Armor
+    Items:
+      # Weird Coelacanth Card (ID 4526)
+      - Index: 0
+        Item: Odd_Coelacanth_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 50
+      # Infinite Tao Gunka Card (ID 4651)
+      - Index: 1
+        Item: IFN_Tao_Gunka_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 50
+      # Bangungot Card (ID 4590)
+      - Index: 2
+        Item: Bangungot_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 80
+      # Bakonawa Card (ID 4591)
+      - Index: 3
+        Item: Bakonawa_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 80
+      # Buwaya Card (ID 4592)
+      - Index: 4
+        Item: Buwaya_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 80
+      # Heart Hunter Evil Card (ID 27151)
+      - Index: 5
+        Item: Evil_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 80
+      # Detardeurus Card (ID 4386)
+      - Index: 6
+        Item: Detale_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 90
+      # Angry Moonlight Flower Card (ID 27081)
+      - Index: 7
+        Item: AngerMoonlight_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 90
+      # High Priest Card (ID 4363)
+      - Index: 8
+        Item: B_Magaleta_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 100
+      # Clown Alphoccio Card (ID 4560)
+      - Index: 9
+        Item: Clown_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 100
+      # Gypsy Trentini Card (ID 4566)
+      - Index: 10
+        Item: Gypsy_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 100
+      # Awaken Ktullanux Card (ID 27113)
+      - Index: 11
+        Item: AwakenKtullanux_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 100
+      # Morocc's Minion Card (ID 27326)
+      - Index: 12
+        Item: MinionOfMorocc_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 100
+      # RSX-0806 Card (ID 4342)
+      - Index: 13
+        Item: Rsx_0806_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 120
+      # Dark Coelacanth Card (ID 4527)
+      - Index: 14
+        Item: Black_Coelacanth_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 120
+      # Amdarais Card (ID 4601)
+      - Index: 15
+        Item: Amdarais_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 120
+      # Chaotic Baphomet Card (ID 27334)
+      - Index: 16
+        Item: Chaos_Baphomet_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 130
+      # Sarah Card (ID 4610)
+      - Index: 17
+        Item: Sarah_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 140
+      # Boitata Card (ID 27126)
+      - Index: 18
+        Item: Boitata_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 140
+      # R48-85-BESTIA Card (ID 27319)
+      - Index: 19
+        Item: R48_85_Bestia_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 140
+      # Cursed Schmidt Card (ID 27329)
+      - Index: 20
+        Item: Schmidt_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 140
+      # Reginleif Card (ID 300013)
+      - Index: 21
+        Item: Reginleif_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 140
+      # Ingrid Card (ID 300014)
+      - Index: 22
+        Item: Ingrid_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 140
+      # Entweihen Crothen Card (ID 4451)
+      - Index: 23
+        Item: Ant_Buyanne_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 150
+      # Awaken Pere Card (ID 27106)
+      - Index: 24
+        Item: Grand_Pere_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 150
+      # Red Pepper Card (ID 300079)
+      - Index: 25
+        Item: Redpepper_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 150
+      # Orc Lord Card (ID 4135)
+      - Index: 26
+        Item: Orc_Load_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 160
+      # Hatii Card (ID 4324)
+      - Index: 27
+        Item: Garm_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 160
+      # Giant Octopus Card (ID 4534)
+      - Index: 28
+        Item: Giant_Octopus_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 160
+      # Jeweled Ungoliant Card (ID 300007)
+      - Index: 29
+        Item: Jungoliant_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 160
+      # Senior Red Pepper Card (ID 300080)
+      - Index: 30
+        Item: Redpepper_H_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 160
+      # Bone Detardeurus Card (ID 300021)
+      - Index: 31
+        Item: Bone_Detale_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 160
+      # Unknown Swordsman Card (ID 300266)
+      - Index: 32
+        Item: Unknown_Swordman_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 170
+      # Nidhoggur Shadow Card (ID 4456)
+      - Index: 33
+        Item: Nidhogg_Shadow_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 180
+      # Naght Sieger Card (ID 4457)
+      - Index: 34
+        Item: Nahtzigger_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 180
+      # Gaia Pol Card (ID 300445)
+      - Index: 35
+        Item: Gaia_Pol_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # Gloom Under Night Card (ID 4408)
+      - Index: 36
+        Item: Gloom_Under_Night_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # Ktullanux Card (ID 4419)
+      - Index: 37
+        Item: Ktullanux_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # Professor Celia Card (ID 4561)
+      - Index: 38
+        Item: Professor_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # Champion Chen Card (ID 4562)
+      - Index: 39
+        Item: Champion_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # Creator Flamel Card (ID 4563)
+      - Index: 40
+        Item: Creator_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # Stalker Gertie Card (ID 4564)
+      - Index: 41
+        Item: Stalker_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # Paladin Randel Card (ID 4565)
+      - Index: 42
+        Item: Paladin_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # Nightmare Amon Ra Card (ID 4652)
+      - Index: 43
+        Item: Grave_Amon_Ra_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # Schulang Card (ID 300227)
+      - Index: 44
+        Item: EP18_Schulang_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 220
+      # Twisted God Card (ID 300228)
+      - Index: 45
+        Item: EP18_Demi_Freyja_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 220
+      # Realized Amdarais Card (ID 4602)
+      - Index: 46
+        Item: AmdaraisH_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 240
+      # Tao Gunka Card (ID 4302)
+      - Index: 47
+        Item: Tao_Gunka_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 300
+      # Simulation Juncea Card (ID 300378)
+      - Index: 48
+        Item: Simulation_Juncea_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 300
+      # Ultimate Rasgandr Card (ID 300472)
+      - Index: 49
+        Item: Demigod_Lasgand_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 300
+      # Devouring Tan Card (ID 300533)
+      - Index: 50
+        Item: Encroached_Tan_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 300
+#       # Phantom Snapdragon Card (ID 300783)
+#       - Index: 51
+#         Item: MISSING_AEGIS_ID_300783
+#         RequiredItems:
+#           - Index: 0
+#             Item: Shining_Galaxy_Crystal
+#             Amount: 300
+
+  - Name: Astra_Shield
+    Items:
+      # Silva Papilia Card (ID 300099)
+      - Index: 0
+        Item: Silva_Papilia_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 140
+      # Silent Maya Card (ID 300239)
+      - Index: 1
+        Item: ILL_Maya_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 140
+      # Maya Card (ID 4146)
+      - Index: 2
+        Item: Maya_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 150
+      # Bijou Card (ID 4636)
+      - Index: 3
+        Item: Bijou_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 160
+      # Gran Papilia Card (ID 300100)
+      - Index: 4
+        Item: Gran_Papilia_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 160
+      # Rigid Muspellskoll Card (ID 27346)
+      - Index: 5
+        Item: Firm_Muspell_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 180
+      # Ominous Turtle General Card (ID 27119)
+      - Index: 6
+        Item: OminousTurtleG_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # Ancient Wootan Defender Card (ID 27298)
+      - Index: 7
+        Item: Ancient_W_Deffend_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # Golden Thief Bug Card (ID 4128)
+      - Index: 8
+        Item: Golden_Bug_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 500
+
+  - Name: Astra_Garment
+    Items:
+      # Big Eggring Card (ID 4662)
+      - Index: 0
+        Item: Big_Eggring_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 40
+      # Kraken Card (ID 4525)
+      - Index: 1
+        Item: Kraken_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 80
+      # Leak Card (ID 4520)
+      - Index: 2
+        Item: Leak_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 100
+      # Furious Dracula Card (ID 27104)
+      - Index: 3
+        Item: Ill_Dracula_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 110
+      # Dark Guardian Kades Card (ID 4580)
+      - Index: 4
+        Item: Kades_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 140
+      # Minstel Alphoccio Card (ID 4673)
+      - Index: 5
+        Item: Minstrel_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 150
+      # Guillotine Cross Eremes Card (ID 4674)
+      - Index: 6
+        Item: GuillotineCross_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 150
+      # Arch Bishop Magaleta Card (ID 4675)
+      - Index: 7
+        Item: Archbishop_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 150
+      # Wanderer Trentini Card (ID 4683)
+      - Index: 8
+        Item: Wanderer_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 150
+      # Assassin Cross Card (ID 4359)
+      - Index: 9
+        Item: B_Eremes_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 160
+      # Mechanic Howard Card (ID 4677)
+      - Index: 10
+        Item: Mechanic_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 160
+      # Sorcerer Celia Card (ID 4671)
+      - Index: 11
+        Item: Sorcerer_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 180
+      # Shadow Chaser Gertie Card (ID 4682)
+      - Index: 12
+        Item: ShadowChaser_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 180
+      # Ranger Cecil Card (ID 4676)
+      - Index: 13
+        Item: Ranger_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 190
+      # Sura Chen Card (ID 4672)
+      - Index: 14
+        Item: Sura_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # Warlock Kathryne Card (ID 4678)
+      - Index: 15
+        Item: Warlock_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # Rune Knight Seyren Card (ID 4679)
+      - Index: 16
+        Item: RuneKnight_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # Royal Guard Randel Card (ID 4680)
+      - Index: 17
+        Item: RoyalGuard_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # Genetic Flamel Card (ID 4681)
+      - Index: 18
+        Item: Genetic_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # Gioia Card (ID 4576)
+      - Index: 19
+        Item: Gioia_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 300
+      # Polluted Queen Spider Card (ID 27362)
+      - Index: 20
+        Item: Polluted_Spi_Q_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 300
+      # Himmelmez's Phantom Card (ID 27381)
+      - Index: 21
+        Item: C_Himel_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 300
+      # Deep Sea Witch Card (ID 300145)
+      - Index: 22
+        Item: ILL_Abysmal_Witch_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 300
+      # Aquila Card (ID 300382)
+      - Index: 23
+        Item: Aquila_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 300
+      # Snowstorm Angel Card (ID 300473)
+      - Index: 24
+        Item: Snow_Angel_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 300
+      # Sanctuary Cleaning Chief Card (ID 300474)
+      - Index: 25
+        Item: Rgan_Chief_Clean_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 300
+      # Yortus Arbiter Card (ID 300530)
+      - Index: 26
+        Item: Yortus_Arbiter_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 300
+#       # Urochs Card (ID 300763)
+#       - Index: 27
+#         Item: MISSING_AEGIS_ID_300763
+#         RequiredItems:
+#           - Index: 0
+#             Item: Shining_Galaxy_Crystal
+#             Amount: 300
+
+  - Name: Astra_Footgear
+    Items:
+      # Eddga Card (ID 4123)
+      - Index: 0
+        Item: Eddga_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 50
+      # Moonlight Flower Card (ID 4131)
+      - Index: 1
+        Item: Moonlight_Flower_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 50
+      # Lady Tanee Card (ID 4376)
+      - Index: 2
+        Item: Lady_Tanee_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 80
+      # Infinite Eddga Card (ID 4648)
+      - Index: 3
+        Item: IFN_Eddga_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 60
+      # Shiny Teddy Bear Card (ID 27287)
+      - Index: 4
+        Item: Shining_T_Bear_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 100
+      # Miguel Card (ID 27318)
+      - Index: 5
+        Item: Miguel_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 100
+      # Burning Fang Card (ID 300217)
+      - Index: 6
+        Item: EP18_Burning_Fang_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 100
+      # Cutie Card (ID 27152)
+      - Index: 7
+        Item: Cutie_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 120
+      # Stephane Jack Earnest Wolf Card (ID 31026)
+      - Index: 8
+        Item: As_Ragged_Golem_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 120
+      # Amon Ra Card (ID 4236)
+      - Index: 9
+        Item: Amon_Ra_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 140
+      # General Egnigem Cenia Card (ID 4352)
+      - Index: 10
+        Item: B_Ygnizem_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 150
+      # Toxic Enchanted Chimera Card (ID 27150)
+      - Index: 11
+        Item: Venom_Kimera_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 170
+      # Amdarais's Phantom Card (ID 27383)
+      - Index: 12
+        Item: C_Amdarais_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 180
+      # Broken Memory of Thanatos Card (ID 300280)
+      - Index: 13
+        Item: Broken_Thanatos_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 180
+      # Goblin King Card (ID 300297)
+      - Index: 14
+        Item: Goblin_King_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 180
+      # Dark Lord Card (ID 4168)
+      - Index: 15
+        Item: Dark_Lord_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # Fallen Bishop Hibram Card (ID 4441)
+      - Index: 16
+        Item: Fallen_Bishop_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # Faceworm Queen Card (ID 27164)
+      - Index: 17
+        Item: Faceworm_Q_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # Death Witch Card (ID 300248)
+      - Index: 18
+        Item: Death_Witch_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # The One Card (ID 300262)
+      - Index: 19
+        Item: The_One_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # R001-Bestia Card (ID 300281)
+      - Index: 20
+        Item: R001_Bestia_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # Renire Card (ID 300450)
+      - Index: 21
+        Item: Renire_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # Icehorn Card (ID 300513)
+      - Index: 22
+        Item: Ice_Horn_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # Yortus Bailiff Card (ID 300531)
+      - Index: 23
+        Item: Yortus_Bailiff_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # Glutton Card (ID 300667)
+      - Index: 24
+        Item: aegis_300667
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+#       # Feeos Card (ID 300782)
+#       - Index: 25
+#         Item: MISSING_AEGIS_ID_300782
+#         RequiredItems:
+#           - Index: 0
+#             Item: Shining_Galaxy_Crystal
+#             Amount: 200
+      # Despair God Morocc Card (ID 27321)
+      - Index: 26
+        Item: DespairGodMorocc_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 350
+
+  - Name: Astra_Accessory
+    Items:
+      # Osiris Card (ID 4144)
+      - Index: 0
+        Item: Osiris_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 20
+      # Infinite Osiris Card (ID 4647)
+      - Index: 1
+        Item: IFN_Osiris_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 30
+      # Boss Pitaya Card (ID 300107)
+      - Index: 2
+        Item: Pitaya_Boss_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 50
+      # Berzebub Card (ID 4145)
+      - Index: 3
+        Item: Berzebub_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 120
+      # Ifrit Card (ID 4430)
+      - Index: 4
+        Item: Ifrit_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 150
+      # Lich Lord Card (ID 27025)
+      - Index: 5
+        Item: Lich_Lord_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 150
+      # Polluted Dark Lord Card (ID 27363)
+      - Index: 6
+        Item: Polluted_Dark_L_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 180
+      # Mechaspider Card (ID 27180)
+      - Index: 7
+        Item: Mechaspider_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # EL A17T Card (ID 27305)
+      - Index: 8
+        Item: EL_A17T_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 200
+      # Fallen Angel Slug Card (ID 300471)
+      - Index: 9
+        Item: F_Angel_Iceslug_Card
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 300
+      # Guide of Dead Card (ID 300565)
+      - Index: 10
+        Item: aegis_300565
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 300
+      # Peska Card (ID 300613)
+      - Index: 11
+        Item: aegis_300613
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 300
+      # Bulgasari Card (ID 300666)
+      - Index: 12
+        Item: aegis_300666
+        RequiredItems:
+          - Index: 0
+            Item: Shining_Galaxy_Crystal
+            Amount: 300
+#       # Flame Anima Card (ID 300774)
+#       - Index: 13
+#         Item: MISSING_AEGIS_ID_300774
+#         RequiredItems:
+#           - Index: 0
+#             Item: Shining_Galaxy_Crystal
+#             Amount: 300
+#       # Frost Morbang Card (ID 300775)
+#       - Index: 14
+#         Item: MISSING_AEGIS_ID_300775
+#         RequiredItems:
+#           - Index: 0
+#             Item: Shining_Galaxy_Crystal
+#             Amount: 300
+  - Name: Gary_GoodEvil_Crowns
+    Items:
+      # 400374: Crown of Good and Evil (Dragon Knight)
+      - Index: 0
+        Item: GoodnEvil_Circlet_DK
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Crown_Coupon
+            Amount: 1
+      # 400375: Crown of Good and Evil (Imperial Guard)
+      - Index: 1
+        Item: GoodnEvil_Circlet_IG
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Crown_Coupon
+            Amount: 1
+      # 400376: Crown of Good and Evil (Arch Mage)
+      - Index: 2
+        Item: GoodnEvil_Circlet_AG
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Crown_Coupon
+            Amount: 1
+      # 400377: Crown of Good and Evil (Elemental Master)
+      - Index: 3
+        Item: GoodnEvil_Circlet_EM
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Crown_Coupon
+            Amount: 1
+      # 400378: Crown of Good and Evil (Cardinal)
+      - Index: 4
+        Item: GoodnEvil_Circlet_CD
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Crown_Coupon
+            Amount: 1
+      # 400379: Crown of Good and Evil (Inquisitor)
+      - Index: 5
+        Item: GoodnEvil_Circlet_IQ
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Crown_Coupon
+            Amount: 1
+      # 400380: Crown of Good and Evil (Meister)
+      - Index: 6
+        Item: GoodnEvil_Circlet_MT
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Crown_Coupon
+            Amount: 1
+      # 400381: Crown of Good and Evil (Biolo)
+      - Index: 7
+        Item: GoodnEvil_Circlet_BO
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Crown_Coupon
+            Amount: 1
+      # 400382: Crown of Good and Evil (Shadow Cross)
+      - Index: 8
+        Item: GoodnEvil_Circlet_SHC
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Crown_Coupon
+            Amount: 1
+      # 400383: Crown of Good and Evil (Abyss Chaser)
+      - Index: 9
+        Item: GoodnEvil_Circlet_ABC
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Crown_Coupon
+            Amount: 1
+      # 400384: Crown of Good and Evil (Windhawk)
+      - Index: 10
+        Item: GoodnEvil_Circlet_WH
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Crown_Coupon
+            Amount: 1
+      # 400385: Crown of Good and Evil (Trouvere & Troubadour)
+      - Index: 11
+        Item: GoodnEvil_Circlet_TR
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Crown_Coupon
+            Amount: 1
+      # 400386: Crown of Good and Evil (Shinkiro & Shiranui)
+      - Index: 12
+        Item: GoodnEvil_Circlet_SS
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Crown_Coupon
+            Amount: 1
+      # 400387: Crown of Good and Evil (Sky Emperor)
+      - Index: 13
+        Item: GoodnEvil_Circlet_SKE
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Crown_Coupon
+            Amount: 1
+      # 400388: Crown of Good and Evil (Soul Ascetic)
+      - Index: 14
+        Item: GoodnEvil_Circlet_SOA
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Crown_Coupon
+            Amount: 1
+      # 400389: Crown of Good and Evil (Hyper Novice)
+      - Index: 15
+        Item: GoodnEvil_Circlet_HN
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Crown_Coupon
+            Amount: 1
+      # 400390: Crown of Good and Evil (Spirit Handler)
+      - Index: 16
+        Item: GoodnEvil_Circlet_SH
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Crown_Coupon
+            Amount: 1
+      # 400391: Crown of Good and Evil (Night Watch - GL)
+      - Index: 17
+        Item: GoodnEvil_Circlet_NW
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Crown_Coupon
+            Amount: 1
+      # 400392: Crown of Good and Evil (Night Watch - Revolver)
+      - Index: 18
+        Item: GoodnEvil_Circlet_NW2
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Crown_Coupon
+            Amount: 1
+      # 400393: Crown of Good and Evil (Night Watch - Gatling Gun)
+      - Index: 19
+        Item: GoodnEvil_Circlet_NW3
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Crown_Coupon
+            Amount: 1
+      # 400394: Crown of Good and Evil (Night Watch - Shotgun)
+      - Index: 20
+        Item: GoodnEvil_Circlet_NW4
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Crown_Coupon
+            Amount: 1
+      # 400395: Crown of Good and Evil (Night Watch - Rifle)
+      - Index: 21
+        Item: GoodnEvil_Circlet_NW5
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Crown_Coupon
+            Amount: 1
+  - Name: Gary_GoodEvil_Weapons
+    Items:
+      # 590045: Punish Scepter
+      - Index: 0
+        Item: Punish_Hall
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 550088: Saint Bringer
+      - Index: 1
+        Item: Saint_Bringer
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 560036: Demonic Claw
+      - Index: 2
+        Item: Demonic_Claw
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 540053: Sealed Bible
+      - Index: 3
+        Item: Sealed_Bible
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 540054: Darkness Tablet
+      - Index: 4
+        Item: Darkness_Tablet
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 640036: Devil Wing Staff
+      - Index: 5
+        Item: Devil_Wing_Staff
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 540059: Doom Bible
+      - Index: 6
+        Item: Doom_Bible
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 550093: Soul Harvest
+      - Index: 7
+        Item: Soul_Harvest
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 610044: The Ripper
+      - Index: 8
+        Item: The_Reaper
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 510091: Underworld Knife
+      - Index: 9
+        Item: Underworld_Knife
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 500062: Devil Cursed Sword
+      - Index: 10
+        Item: Devil_Cursed_Sword
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 700066: Dark Angel Ray Bow
+      - Index: 11
+        Item: Dark_Angel_Ray_Bow
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 570036: Crime Violin
+      - Index: 12
+        Item: Crime_Violine
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 580037: Crime Whip
+      - Index: 13
+        Item: Crime_Whip
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 830025: RG-5649
+      - Index: 14
+        Item: RG_5649
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 840020: Devil Lord Launcher
+      - Index: 15
+        Item: Devil_L_Launcher
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 810026: Screaming Rifle
+      - Index: 16
+        Item: Screaming_Rifle
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 800026: Devil's Bullet
+      - Index: 17
+        Item: Devils_Bullet
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 820020: Outlaw Cursed Shotgun
+      - Index: 18
+        Item: Outlaw_Cursed_Shotgun
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 500065: Blood Rapier
+      - Index: 19
+        Item: Blood_Rapier
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 1341: Destruction Axe
+      - Index: 20
+        Item: Destruction_Axe
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 650033: Devil Claw
+      - Index: 21
+        Item: Devil_Claw
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 600041: Execution Great Sword
+      - Index: 22
+        Item: Execution_Great_Sword
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 500072: Devil Guardian Sword
+      - Index: 23
+        Item: Devil_Guardian_Sword
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 550115: Darkness Foxtail Model
+      - Index: 24
+        Item: Darkness_Foxtail_Model
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 650034: Huuma Shuriken Brilliance
+      - Index: 25
+        Item: Humma_Brilliance
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 630027: Jupiter Spear
+      - Index: 26
+        Item: Luppiter_Spear
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 530045: Holy Light Spear
+      - Index: 27
+        Item: Holy_Raise_Spear
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 550116: Lightforce Foxtail Wand
+      - Index: 28
+        Item: Lightforce_Foxtail_Wand
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 610045: Shining Light Katar
+      - Index: 29
+        Item: Shining_Light_Katar
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 700065: Angel Wing Bow
+      - Index: 30
+        Item: Angel_Wing_Bow
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 500063: Guardian Saber
+      - Index: 31
+        Item: Guardian_Saber
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 510092: Holy Light Dagger
+      - Index: 32
+        Item: Holy_Light_Dagger
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 570037: Light Power Harp
+      - Index: 33
+        Item: Light_Power_Harp
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 580038: Light Power Spark
+      - Index: 34
+        Item: Light_Power_Spark
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 830026: Lightning Splatter
+      - Index: 35
+        Item: Lighting_Splatter
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 840021: Justice Bomber
+      - Index: 36
+        Item: Justice_Bomber
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 810027: Last Dawn
+      - Index: 37
+        Item: Last_Dawn
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 800027: Devil Hunter
+      - Index: 38
+        Item: Devil_Hunter
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 820021: Lord of Glory
+      - Index: 39
+        Item: Road_Of_Glory
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 500066: Victory Sword
+      - Index: 40
+        Item: Victory_Sword
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 620022: Divine Buster
+      - Index: 41
+        Item: Divine_Buster
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 540055: Origin of Life
+      - Index: 42
+        Item: Orign_Of_Life
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 640037: Destiny Staff
+      - Index: 43
+        Item: Destiny_Staff
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 540060: Blessed Bible
+      - Index: 44
+        Item: Blessed_Bible
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+      # 550094: Soul Liberator
+      - Index: 45
+        Item: Soul_Liberator
+        RequiredItems:
+          - Index: 0
+            Item: Good_and_Evil_Essence
+            Amount: 1
+  - Name: Knight_Shield_Exchange
+    Items:
+      # 28945: Bloody Knight's Shield
+      # Requires 3x 28942: Cursed Knight's Shield
+      - Index: 0
+        Item: Bloody_Knight_Shield_
+        RequiredItems:
+          - Index: 0
+            Item: Bloody_Knight_Shield
+            Amount: 3
+
+      # 28946: Purified Knight's Shield
+      # Requires 3x 28945: Bloody Knight's Shield
+      - Index: 1
+        Item: Bloody_Knight_Shield__
+        RequiredItems:
+          - Index: 0
+            Item: Bloody_Knight_Shield_
+            Amount: 3
+
+      # 28902: Mad Bunny
+      # Requires 3x 28901: Cursed Mad Bunny
+      - Index: 2
+        Item: Mad_Bunny_K_
+        RequiredItems:
+          - Index: 0
+            Item: Mad_Bunny_K
+            Amount: 3

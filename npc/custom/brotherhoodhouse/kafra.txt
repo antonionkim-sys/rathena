@@ -1,0 +1,121 @@
+iz_ac01,96,44,5	script	Kafra	114,{
+
+if (checkquest(90005) == 2 &&
+    checkquest(90006) == 2 &&
+    checkquest(90007) == 2) {
+	cutin "kafra_04",2;
+
+	mes "[Kafra]";
+	mes "Welcome back, adventurer! I hope you are enjoying your time with the Brotherhood!";
+	next;
+
+	mes "[Kafra]";
+	mes "Would you like to make the Brotherhood your save point again?";
+	next;
+
+	switch(select("Yes.:No.")) {
+	case 1:
+		savepoint "iz_ac01",45,51;
+
+		mes "[Kafra]";
+		mes "Your save point has been set to the Brotherhood.";
+		break;
+
+	case 2:
+		mes "[Kafra]";
+		mes "Alright. Your current save point will remain unchanged.";
+		break;
+	}
+
+	cutin "",255;
+	close;
+}
+
+	if (checkquest(90004) == 2) {
+		npctalk "Please visit Philophontes, Belymina, and Suad to complete your Brotherhood orientation.";
+		end;
+	}
+
+	cutin "kafra_04",2;
+
+	mes "[Kafra]";
+	mes "Welcome! Welcome! To the ^0000FFBEST Medium Rate (almost) up-to-date server Brotherhood RO!^000000";
+	mes "We gladly help newcomers to enroll in our facilities, designed to teach you from zero!";
+	next;
+
+	mes "[Kafra]";
+	mes "On your left, you will find the infirmary and the armory.";
+	mes "The infirmary contains healing supplies, recovery items, and other useful resources for adventurers.";
+	next;
+
+	mes "[Kafra]";
+	mes "Speak with ^0000FFPhilophontes^000000 to learn what is available inside the infirmary.";
+	mes "For equipment and armory services, speak with ^0000FFBelymina^000000.";
+	mes "Both of them are already expecting you.";
+	next;
+
+	mes "[Kafra]";
+	mes "On your right, you will find the cafeteria.";
+	mes "It is a good place to rest, meet other members, and enjoy something prepared by our specialty chefs.";
+	next;
+
+	mes "[Kafra]";
+	mes "There may not be much for you to do there just yet, but I encourage you to look around when you have the chance.";
+	mes "You never know what useful information-or delicious food-you may find.";
+	next;
+
+	mes "[Kafra]";
+	mes "Finally, the library is located farther inside the building.";
+	mes "I have already notified ^0000FFSuad^000000 that you will be visiting.";
+	mes "He is waiting for you there.";
+	next;
+
+	mes "[Kafra]";
+	mes "Try to be respectful and speak clearly.";
+	mes "Suad can be... rather difficult when interrupted.";
+	next;
+
+	mes "[Kafra]";
+	mes "Before you begin your orientation, I have prepared a welcoming box for you.";
+	mes "Please accept it as a small gesture from the Brotherhood.";
+	next;
+
+	mes "[Kafra]";
+	mes "The supplies inside should help you get settled and prepare for your first assignments.";
+	next;
+
+	getitem 11502,10;
+	getitem 12412,5;
+
+	mes "[Kafra]";
+	mes "There you are. I hope the supplies prove useful.";
+	mes "Your orientation begins now.";
+	next;
+
+	mes "[Kafra]";
+	mes "Please visit Philophontes in the infirmary, Belymina in the armory, and Suad in the library.";
+	next;
+
+	mes "[Kafra]";
+	mes "Each of them will introduce you to a different part of Brotherhood RO.";
+	mes "Once you have spoken with all three, your initial orientation will be complete.";
+	next;
+
+	mes "[Kafra]";
+	mes "Take your time, look around, and become familiar with the facilities.";
+	mes "Welcome to Brotherhood RO. We are glad to have you with us.";
+	next;
+
+	mes "[Kafra]";
+	mes "Oh! And remember, you can always view your ^FF0000Quest Log.^000000";
+	mes "You can open it by pressing ^0000FFAlt + U^000000 or by selecting it from your Basic Info menu.";
+
+	savepoint "iz_ac01",45,51;
+	completequest 90004;
+	setquest 90005;
+	setquest 90006;
+	setquest 90007;
+
+	cutin "",255;
+	close;
+}

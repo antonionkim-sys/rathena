@@ -1,0 +1,21 @@
+//===== rAthena Script =======================================
+//= Shield Exchange - Knight Shield Collector
+//============================================================
+
+prtinn,54,51,5	script	Knight Shield Collector	492,{
+	mes "[Knight Shield Collector]";
+	mes "Have you got any unused " + mesitemlink(28901) + " or " + mesitemlink(28945) + "?";
+	mes "Hand it in and in return, I will reward you with " + mesitemlink(28902) + " or " + mesitemlink(28946) + "!!!!!";
+	next;
+
+	if (select("Shield exchange:Cancel") == 2)
+		close;
+
+	close2;
+	callshop "Knight_Shield_Exchange", 1;
+	end;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Shield exchange]");
+	end;
+}

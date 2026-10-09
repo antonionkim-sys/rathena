@@ -1,0 +1,4 @@
+iz_ac01,129,85,3	script	Runestone	10547,{
+	npctalk "This runestone hums with ancient power.";
+	end;
+}

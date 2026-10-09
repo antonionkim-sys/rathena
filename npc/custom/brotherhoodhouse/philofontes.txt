@@ -1,0 +1,129 @@
+iz_ac01,56,42,5	script	Philofontes	10182,{
+	cutin "ep16_tes01",2;
+
+	.@dust_icon$ = "^i[1000322]";
+
+	if (checkquest(90005) == 1) {
+		mes "[Philofontes]";
+		mes "Ah, you must be the new recruit Kafra mentioned.";
+		mes "Welcome to the Brotherhood infirmary.";
+		next;
+
+		mes "[Philofontes]";
+		mes "This is where we manage the supplies that keep our members prepared.";
+		mes "Healing goods, combat provisions, special utilities, and other useful items can be acquired here.";
+		next;
+
+		mes "[Philofontes]";
+		mes "Our exchange system uses " + .@dust_icon$ + " as its primary currency.";
+		mes "The Brotherhood calls it ^0000FFEtel Dust^000000.";
+		next;
+
+		mes "[Philofontes]";
+		mes "You can obtain Etel Dust by defeating creatures in the regions associated with Episodes 18 through 21.";
+		mes "If you need help finding a source, use ^0000FF@whodrops 1000322^000000.";
+		next;
+
+		mes "[Philofontes]";
+		mes "I will mark your orientation here as complete.";
+		mes "Whenever you return, I can show you our available buff supplies, utility items, and reputation options.";
+		next;
+
+		completequest 90005;
+
+		mes "[Philofontes]";
+		mes "That concludes your introduction to the infirmary.";
+		mes "Take a look around, and return whenever you need supplies.";
+		cutin "",255;
+		close;
+	}
+
+	mes "[Philofontes]";
+	mes "Greetings, I oversee the inventory and acquisitions for the house of Brotherhood.";
+	mes "With " + .@dust_icon$ + ", you may acquire any item from our establishment.";
+	next;
+
+	switch (select(
+		"Buff Shop",
+		"Utility Shop",
+		"How do I increase Reputation?",
+		"How do I obtain Etel Dust?"
+	)) {
+	case 1:
+		.@rank = RepPointsBrotherhood / 1000;
+
+		mes "[Philofontes]";
+		mes "Your Reputation rank is " + .@rank + ".";
+
+		if (.@rank >= 1) {
+			mes "You have access to our complete buff selection.";
+			mes "All premium items are available.";
+		}
+		else {
+			mes "You have access to our ^0000FFstandard buff selection.^000000";
+			mes "Reach ^FF0000Reputation rank 1^000000 to unlock premium items: ^i[23204] and ^i[12883].";
+		}
+
+		close2;
+
+		if (RepPointsBrotherhood >= 1000)
+			callshop "philofontes_buff_lv1",1;
+		else
+			callshop "philofontes_buff_lv0",1;
+		end;
+
+	case 2:
+		.@rank = RepPointsBrotherhood / 1000;
+
+		mes "[Philofontes]";
+		mes "Your Reputation rank is " + .@rank + ".";
+
+		if (.@rank >= 1) {
+			mes "You have access to our complete utility collection.";
+			mes "All advanced utility items are available.";
+		}
+		else {
+			mes "You may browse our ^0000FFbasic utility collection^000000.";
+			mes "Reach ^FF0000Reputation rank 1^000000 to acquire ^i[1000988], ^i[1001214], and ^i[1001215].";
+		}
+
+		close2;
+
+		if (RepPointsBrotherhood >= 1000)
+			callshop "philofontes_utility_lv1",1;
+		else
+			callshop "philofontes_utility_lv0",1;
+		end;
+
+	case 3:
+		mes "[Philofontes]";
+		mes "An excellent inquiry.";
+		mes "For comprehensive information regarding Reputation, I recommend consulting our manager, ^0000FFSecretary Snow.^000000";
+		mes "She maintains complete records of all our reputation matters.";
+		cutin "",255;
+		close;
+
+	case 4:
+		mes "[Philofontes]";
+		mes "Ah, " + .@dust_icon$ + ", commonly referred to as ^0000FFEtel Dust.^000000";
+		mes "This precious commodity originates from distant lands.";
+		next;
+
+		mes "[Philofontes]";
+		mes "Specifically, it is obtained from creatures inhabiting the regions featured in Episodes 18 through 21.";
+		mes "The dust is found exclusively in these territories.";
+		next;
+
+		mes "[Philofontes]";
+		mes "For precise acquisition details, you may enter ^0000FF@whodrops 1000322^000000 in your chat interface.";
+		mes "This will provide comprehensive drop information.";
+		cutin "",255;
+		close;
+	}
+
+	end;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Adventure Shop]");
+	end;
+}

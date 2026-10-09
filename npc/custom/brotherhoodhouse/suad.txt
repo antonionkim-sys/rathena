@@ -1,0 +1,220 @@
+iz_ac01,132,80,5	script	Suad	10378,{
+	.@name$ = strcharinfo(0);
+	.@red$ = "^FF0000";
+	.@green$ = "^00FF00";
+	.@orange$ = "^FF8800";
+	.@gray$ = "^808080";
+	.@end$ = "^000000";
+
+	cutin "ep18_suad_01",2;
+
+	if (checkquest(90007) == 1 && (eaclass() & EAJL_FOURTH) == 0) {
+		mes "[Suad]";
+		mes "Hmmf, the Valkyrie sent you?";
+		next;
+
+		mes "[Suad]";
+		mes "Someone unworthy of my time...";
+
+		completequest 90007;
+		setquest 90011;
+
+		close2;
+		cutin "",255;
+		end;
+	}
+
+	if (checkquest(90007) == 1 && (eaclass() & EAJL_FOURTH) != 0) {
+		mes "[Suad]";
+		mes "Hmm, the Valkyrie sent you?";
+		next;
+
+		mes "[Suad]";
+		mes "Talk to Maram on my right, he will assist you further.";
+
+		completequest 90007;
+		setquest 90011;
+
+		close2;
+		cutin "",255;
+		end;
+	}
+
+	if (checkquest(90014) == 2 && (eaclass() & EAJL_FOURTH) == 0) {
+		mes "[Suad]";
+		mes "I have nothing more to say to you.";
+		close2;
+		cutin "",255;
+		end;
+	}
+
+	if (checkquest(90014) == 2 && checkquest(90015) == -1 && (eaclass() & EAJL_FOURTH) != 0) {
+		mes "[Suad]";
+		mes "You have finally reached 4th Job.";
+		mes "Now you may begin learning the art of Gray Wolf enchantment.";
+
+		
+//may add something here after
+setquest 90015;
+completequest 90015;
+
+		close2;
+		cutin "",255;
+		end;
+	}
+
+	if (checkquest(90015) == 2 && (eaclass() & EAJL_FOURTH) != 0) {
+		mes "[Suad]";
+		mes "You dare approach me, whelp?";
+		mes "Speak quickly, my patience wears thin.";
+		next;
+
+		switch (select(
+			"Enchant Gray Wolf Armor",
+			"Enchant Gray Wolf Garment",
+			"Enchant Gray Wolf Footwear",
+			"Enchant Gray Wolf Accessory Left",
+			"Enchant Gray Wolf Accessory Right",
+			"Can you enchant other gear?",
+			"Explain these enchantments",
+			"Cancel"
+		)) {
+			case 1:
+				mes "[Suad]";
+				mes "I'll enhance your ^i[450177] or ^i[450178].";
+				mes "The enchantment is free, but the reset will cost you zeny and amethyst fragments!";
+				mes "Choose wisely...I don't tolerate fools.";
+				next;
+
+				// Open Armor enchantment window here.
+				close2;
+				cutin "",255;
+				end;
+
+			case 2:
+				mes "[Suad]";
+				mes "I'll enhance your ^i[480090] or ^i[480091].";
+				mes "The enchantment is free, but the reset will cost you zeny and amethyst fragments!";
+				mes "Choose wisely...I don't tolerate fools.";
+				next;
+
+				// Open Garment enchantment window here.
+				close2;
+				cutin "",255;
+				end;
+
+			case 3:
+				mes "[Suad]";
+				mes "I'll enhance your ^i[470087] or ^i[470088].";
+				mes "The enchantment is free, but the reset will cost you zeny and amethyst fragments!";
+				mes "Choose wisely...I don't tolerate fools.";
+				next;
+
+				// Open Footwear enchantment window here.
+				close2;
+				cutin "",255;
+				end;
+
+			case 4:
+				mes "[Suad]";
+				mes "I'll enhance your ^i[490107] or ^i[490109].";
+				mes "The enchantment is free, but the reset will cost you zeny and amethyst fragments!";
+				mes "Choose wisely...I don't tolerate fools.";
+				next;
+
+				// Open Left Accessory enchantment window here.
+				close2;
+				cutin "",255;
+				end;
+
+			case 5:
+				mes "[Suad]";
+				mes "I'll enhance your ^i[490106] or ^i[490108].";
+				mes "The enchantment is free, but the reset will cost you zeny and amethyst fragments!";
+				mes "Choose wisely...I don't tolerate fools.";
+				next;
+
+				// Open Right Accessory enchantment window here.
+				close2;
+				cutin "",255;
+				end;
+
+			case 6:
+				mes "[Suad]";
+				mes "*Bares teeth* You insult me!";
+				mes "I am Gray Wolf! I Enchant ONLY Gray Wolf gear!";
+				next;
+
+				mes "[Suad]";
+				mes "Seek the " + .@red$ + "All-in-One Device Enchanter" + .@end$ + " in Prontera City";
+				mes "for your pathetic non-clan equipment.";
+				close2;
+				cutin "",255;
+				end;
+
+			case 7:
+				mes "[Suad]";
+				mes "Grrrr. You need lessons in power?";
+				mes "Enchanting is everyone's way to strengthen gear!";
+				next;
+
+				mes "[Suad]";
+				mes .@red$ + "Normal Enchant:" + .@end$;
+				mes "- Quick and cheap";
+				mes "- Results random as a cub's first hunt";
+				mes "- For those who can't afford better";
+				next;
+
+				mes "[Suad]";
+				mes .@green$ + "Perfect Enchant:" + .@end$;
+				mes "- Costs more, but guarantees results";
+				mes "- Like an alpha choosing its prey";
+				mes "- For warriors who know what they want";
+				next;
+
+				mes "[Suad]";
+				mes .@orange$ + "Upgrade Enchant:" + .@end$;
+				mes "- Improves existing enchantments";
+				mes "- Like sharpening claws twice over";
+				mes "- For gear worth keeping";
+				next;
+
+				mes "[Suad]";
+				mes .@gray$ + "Reset Enchant:" + .@end$;
+				mes "- Wipes all enchantments clean";
+				mes "- Like a wolf licking wounds";
+				mes "- Costs dearly, choose wisely!";
+				next;
+
+				mes "[Suad]";
+				mes "Listen well...";
+				mes "- Different enchanters specialize in different equipment";
+				mes "- Not all services may be available for every item";
+				next;
+
+				select("Understood, thanks!");
+
+				mes "[Suad]";
+				mes "Happy enchanting! Remember...";
+				mes "the right enchantments can make all the difference in battle.";
+				close2;
+				cutin "",255;
+				end;
+
+			case 8:
+				close2;
+				cutin "",255;
+				end;
+		}
+	}
+
+	mes "[Suad]";
+	mes "I have nothing more to say to you.";
+	close2;
+	cutin "",255;
+	end;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Enchanter]");
+	end;
+}

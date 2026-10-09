@@ -1,0 +1,11 @@
+iz_ac01,130,48,5	script	[Lollishop - Mimi]	96,{
+	cutin "ch1_kid01",2;
+	mes "[Lollishop - Mimi]";
+	mes "Hi, adventurer!";
+	mes "Wanna try some homemade lollipop?";
+	close2;
+
+	cutin "",255;
+	callshop "Lollishop",1;
+	end;
+}

@@ -1,0 +1,67 @@
+//===== rAthena Script =======================================
+//= Astra - MvP Card Shop
+//============================================================
+
+prtinn,66,53,3	script	Astra	10300,{
+	mes "[Astra]";
+	mes "I'm here to collect ^i[44415].";
+	mes "In return, I'll give you MvP cards.";
+	mes "Those crystals are needed to fuel this city.";
+	mes "You can collect them by participating in World Boss battles.";
+	next;
+
+	switch(select(
+		"Shining Galaxy Crystal exchange",
+		"Weapon MvP cards",
+		"Headgear MvP cards",
+		"Armor",
+		"Shield",
+		"Garment",
+		"Footwear",
+		"Accessory",
+		"Cancel"
+	)) {
+	case 1:
+		.@shop$ = "Astra_Crystal";
+		break;
+
+	case 2:
+		.@shop$ = "Astra_Weapon";
+		break;
+
+	case 3:
+		.@shop$ = "Astra_Headgear";
+		break;
+
+	case 4:
+		.@shop$ = "Astra_Armor";
+		break;
+
+	case 5:
+		.@shop$ = "Astra_Shield";
+		break;
+
+	case 6:
+		.@shop$ = "Astra_Garment";
+		break;
+
+	case 7:
+		.@shop$ = "Astra_Footgear";
+		break;
+
+	case 8:
+		.@shop$ = "Astra_Accessory";
+		break;
+
+	default:
+		close;
+	}
+
+	close2;
+	callshop .@shop$,1;
+	end;
+
+OnInit:
+	setunittitle(getnpcid(0), "[MvP Card Shop]");
+	end;
+}

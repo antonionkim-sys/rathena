@@ -1,0 +1,75 @@
+//===== rAthena Script =======================================
+//= RS26
+//= Booster Equipment Enchanter
+//============================================================
+
+iz_ac01,37,83,5	script	RS26-1	3155,{
+
+	mes "[Enchanter]";
+	mes "I am RS26, the f..f...first.";
+	mes "I can apply enchants to your Booster equipment.";
+	mes "Materials needed: ^i[1000322].";
+	mes "These items cannot be tainted by the Shadow.";
+	next;
+
+	switch (select(
+		"Booster Automatic Armor",
+		"Booster Automatic Garment",
+		"Booster Automatic Shoes",
+		"Booster Automatic Accessory L",
+		"Booster Automatic Accessory R",
+		"Cancel"
+	)) {
+	case 1:
+		mes "[Enchanter]";
+		mes "Up to 3 Perfect enchants can be applied.";
+		mes "There is no option to reset them.";
+		next;
+		close2;
+		item_enchant 44;
+		end;
+
+	case 2:
+		mes "[Enchanter]";
+		mes "Up to 3 Perfect enchants can be applied.";
+		mes "There is no option to reset them.";
+		next;
+		close2;
+		item_enchant 45;
+		end;
+
+	case 3:
+		mes "[Enchanter]";
+		mes "Up to 3 Perfect enchants can be applied.";
+		mes "There is no option to reset them.";
+		next;
+		close2;
+		item_enchant 46;
+		end;
+
+	case 4:
+		mes "[Enchanter]";
+		mes "Up to 3 Perfect enchants can be applied.";
+		mes "There is no option to reset them.";
+		next;
+		close2;
+		item_enchant 35;
+		end;
+
+	case 5:
+		mes "[Enchanter]";
+		mes "Up to 3 Perfect enchants can be applied.";
+		mes "There is no option to reset them.";
+		next;
+		close2;
+		item_enchant 41;
+		end;
+
+	default:
+		close;
+	}
+
+OnInit:
+	setunittitle(getnpcid(0), "[Enchanter]");
+	end;
+}

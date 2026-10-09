@@ -1,0 +1,1246 @@
+Header:
+  Type: BARTER_DB
+  Version: 2
+
+Body:
+  - Name: champion_soul_moonlight_weapons
+    Items:
+      - Index: 0
+        Item: Staff_Of_Bordeaux_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Staff_Of_Bordeaux
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: HazyDream
+            Amount: 100
+          - Index: 2
+            Item: IllusionStone
+            Amount: 30
+      - Index: 1
+        Item: Moonlight_Sword_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Moonlight_Sword
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: HazyDream
+            Amount: 100
+          - Index: 2
+            Item: IllusionStone
+            Amount: 60
+      - Index: 2
+        Item: Long_Mace_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Long_Mace
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: HazyDream
+            Amount: 20
+          - Index: 2
+            Item: IllusionStone
+            Amount: 20
+      - Index: 3
+        Item: Spectral_Spear_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Spectral_Spear
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: HazyDream
+            Amount: 100
+          - Index: 2
+            Item: IllusionStone
+            Amount: 100
+  - Name: champion_soul_moonlight_gears
+    Items:
+      - Index: 0
+        Item: Nurse_Cap_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Nurse_Cap
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Bloody_LoveLetter
+            Amount: 100
+          - Index: 2
+            Item: IllusionStone
+            Amount: 10
+      - Index: 1
+        Item: Apple_Of_Archer_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Apple_Of_Archer
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: BrokenArrow
+            Amount: 100
+          - Index: 2
+            Item: IllusionStone
+            Amount: 10
+      - Index: 2
+        Item: Puente_Robe_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Puente_Robe
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: HazyDream
+            Amount: 100
+          - Index: 2
+            Item: IllusionStone
+            Amount: 10
+      - Index: 3
+        Item: Muffler_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Muffler_
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: HazyMooncake
+            Amount: 100
+          - Index: 2
+            Item: IllusionStone
+            Amount: 10
+      - Index: 4
+        Item: Muffler_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Muffler
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: HazyMooncake
+            Amount: 200
+          - Index: 2
+            Item: IllusionStone
+            Amount: 20
+      - Index: 5
+        Item: Shoes_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Shoes_
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: HazyMooncake
+            Amount: 100
+          - Index: 2
+            Item: IllusionStone
+            Amount: 10
+      - Index: 6
+        Item: Shoes_IL
+        Refine: 9
+        RequiredItems:
+          - Index: 0
+            Item: Shoes
+            Refine: 9
+            Amount: 1
+          - Index: 1
+            Item: HazyMooncake
+            Amount: 200
+          - Index: 2
+            Item: IllusionStone
+            Amount: 20
+  - Name: champion_soul_frozen_weapons
+    Items:
+      - Index: 0
+        Item: Huuma_Flutter_Snow_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Huuma_Fluttering_Snow
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: KTULLANUXsEye
+            Amount: 20
+          - Index: 2
+            Item: IllusionStone
+            Amount: 100
+      - Index: 1
+        Item: Combo_Battle_Glove_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Combo_Battle_Glove
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Snowball
+            Amount: 100
+          - Index: 2
+            Item: IllusionStone
+            Amount: 100
+  - Name: champion_soul_frozen_gears
+    Items:
+      - Index: 0
+        Item: Herald_Of_GOD_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Herald_Of_GOD_
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: SpritJewel
+            Amount: 300
+          - Index: 2
+            Item: IllusionStone
+            Amount: 100
+      - Index: 1
+        Item: Herald_Of_GOD_IL
+        Refine: 9
+        RequiredItems:
+          - Index: 0
+            Item: Herald_Of_GOD
+            Refine: 9
+            Amount: 1
+          - Index: 1
+            Item: SpritJewel
+            Amount: 100
+          - Index: 2
+            Item: IllusionStone
+            Amount: 200
+      - Index: 2
+        Item: Clack_Of_Servival_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Combo_Battle_Glove
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Frozen_PieceOfRock
+            Amount: 200
+          - Index: 2
+            Item: IllusionStone
+            Amount: 100
+      - Index: 3
+        Item: Cap_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Cap_
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Frozen_PieceOfRock
+            Amount: 100
+          - Index: 2
+            Item: IllusionStone
+            Amount: 50
+      - Index: 4
+        Item: Cap_IL
+        Refine: 9
+        RequiredItems:
+          - Index: 0
+            Item: Cap
+            Refine: 9
+            Amount: 1
+          - Index: 1
+            Item: Frozen_PieceOfRock
+            Amount: 100
+          - Index: 2
+            Item: IllusionStone
+            Amount: 100
+  - Name: champion_soul_vampire_weapons
+    Items:
+      - Index: 0
+        Item: Half_BF_Katar2
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Infiltrator_
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Torn_Diary
+            Amount: 20
+          - Index: 2
+            Item: IllusionStone
+            Amount: 80
+      - Index: 1
+        Item: Ghoul_Leg_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Ghoul_Leg
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: NightmareOfLump
+            Amount: 100
+          - Index: 2
+            Item: IllusionStone
+            Amount: 10
+      - Index: 2
+        Item: Wizardy_Staff_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Wizardy_Staff
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: SuspiciousMagicCircle
+            Amount: 100
+          - Index: 2
+            Item: IllusionStone
+            Amount: 40
+      - Index: 3
+        Item: Balistar_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Balistar_
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Shining_Spore
+            Amount: 100
+          - Index: 2
+            Item: IllusionStone
+            Amount: 50
+      - Index: 4
+        Item: Book_Of_The_Apo_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Book_Of_The_Apocalypse
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Dried_Clover
+            Amount: 100
+          - Index: 2
+            Item: IllusionStone
+            Amount: 50
+  - Name: champion_soul_vampire_gears
+    Items:
+      - Index: 0
+        Item: Cape_Of_Ancient_Lord_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Cape_Of_Ancient_Lord_
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Short_Bat_Fur
+            Amount: 200
+          - Index: 2
+            Item: IllusionStone
+            Amount: 30
+      - Index: 1
+        Item: Skul_Ring_IL
+        RequiredItems:
+          - Index: 0
+            Item: Skul_Ring_
+            Amount: 1
+          - Index: 1
+            Item: Dried_Leaf_Of_Ygg
+            Amount: 400
+          - Index: 2
+            Item: IllusionStone
+            Amount: 50
+      - Index: 2
+        Item: Ring_IL
+        RequiredItems:
+          - Index: 0
+            Item: Ring_
+            Amount: 1
+          - Index: 1
+            Item: SuspiciousMagicCircle
+            Amount: 400
+          - Index: 2
+            Item: IllusionStone
+            Amount: 50
+  - Name: champion_soul_abyss_weapons
+    Items:
+      - Index: 0
+        Item: Immaterial_Sword_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Immaterial_Sword
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: ShipsLog
+            Amount: 5
+          - Index: 2
+            Item: IllusionStone
+            Amount: 100
+      - Index: 1
+        Item: War_Axe_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: War_Axe
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: PieceOfBlackSpirit
+            Amount: 200
+          - Index: 2
+            Item: IllusionStone
+            Amount: 100
+      - Index: 2
+        Item: Pole_Axe_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Pole_Axe
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: PieceOfBlackSpirit
+            Amount: 200
+          - Index: 2
+            Item: IllusionStone
+            Amount: 100
+      - Index: 3
+        Item: Huuma_Bird_Wing_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Huuma_Bird_Wing
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: OldShell
+            Amount: 200
+          - Index: 2
+            Item: IllusionStone
+            Amount: 100
+      - Index: 4
+        Item: Iron_Driver_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Iron_Driver
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: OldShell
+            Amount: 200
+          - Index: 2
+            Item: IllusionStone
+            Amount: 100
+  - Name: champion_soul_abyss_gears
+    Items:
+      - Index: 0
+        Item: Fancy_Flower_IL
+        RequiredItems:
+          - Index: 0
+            Item: Fancy_Flower
+            Amount: 1
+          - Index: 1
+            Item: OldDoll
+            Amount: 50
+          - Index: 2
+            Item: IllusionStone
+            Amount: 50
+  - Name: champion_soul_teddy_weapons
+    Items:
+      - Index: 0
+        Item: Counter_Dagger_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Counter_Dagger
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Green_Bearopy
+            Amount: 75
+          - Index: 2
+            Item: Chonchon_Doll_HQ
+            Amount: 50
+          - Index: 3
+            Item: IllusionStone
+            Amount: 95
+      - Index: 1
+        Item: Gate_KeeperDD_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Gate_KeeperDD
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Gothic_China_Doll
+            Amount: 75
+          - Index: 2
+            Item: NasariansSoulstone
+            Amount: 150
+          - Index: 3
+            Item: IllusionStone
+            Amount: 95
+      - Index: 2
+        Item: Survival_Staff_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Survival_Rod_
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Clay_Doll
+            Amount: 15
+          - Index: 2
+            Item: Gothic_China_Doll
+            Amount: 100
+          - Index: 3
+            Item: Chonchon_Doll_HQ
+            Amount: 100
+          - Index: 4
+            Item: IllusionStone
+            Amount: 125
+      - Index: 3
+        Item: Survival_Staff_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Survival_Rod2_
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Clay_Doll
+            Amount: 15
+          - Index: 2
+            Item: Gothic_China_Doll
+            Amount: 100
+          - Index: 3
+            Item: Chonchon_Doll_HQ
+            Amount: 100
+          - Index: 4
+            Item: IllusionStone
+            Amount: 125
+  - Name: champion_soul_teddy_gears
+    Items:
+      - Index: 0
+        Item: Boots_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Boots_
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Green_Bearopy
+            Amount: 50
+          - Index: 2
+            Item: Gothic_China_Doll
+            Amount: 50
+          - Index: 3
+            Item: IllusionStone
+            Amount: 85
+      - Index: 1
+        Item: Headband_Of_Power_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Headband_Of_Power
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Clay_Doll
+            Amount: 5
+          - Index: 2
+            Item: Chonchon_Doll_HQ
+            Amount: 50
+          - Index: 3
+            Item: NasariansSoulstone
+            Amount: 100
+          - Index: 4
+            Item: IllusionStone
+            Amount: 115
+  - Name: champion_soul_luanda_weapons
+    Items:
+      - Index: 0
+        Item: Tablet_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Tablet
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Weak_Worm
+            Amount: 100
+          - Index: 2
+            Item: IllusionStone
+            Amount: 50
+      - Index: 1
+        Item: Iron_Driver_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Hunter_Bow_
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Shooting_Stone
+            Amount: 50
+          - Index: 2
+            Item: Pot_Stone
+            Amount: 50
+          - Index: 3
+            Item: Hair_Leaf
+            Amount: 50
+          - Index: 4
+            Item: IllusionStone
+            Amount: 80
+  - Name: champion_soul_luanda_gears
+    Items:
+      - Index: 0
+        Item: Goibne_Helmet_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Goibne's_Helmet
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Wootan_D_S_Piece
+            Amount: 30
+          - Index: 2
+            Item: Token_Of_Wootan
+            Amount: 150
+          - Index: 3
+            Item: IllusionStone
+            Amount: 120
+      - Index: 1
+        Item: Goibne_Armor_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Goibne's_Armor
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Hard_Mud
+            Amount: 100
+          - Index: 2
+            Item: Token_Of_Bigstone
+            Amount: 150
+          - Index: 3
+            Item: IllusionStone
+            Amount: 80
+      - Index: 2
+        Item: Goibne_Boots_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Goibne's_Combat_Boots
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Wootan_F_Fur
+            Amount: 100
+          - Index: 2
+            Item: Token_Of_Wootan
+            Amount: 150
+          - Index: 3
+            Item: IllusionStone
+            Amount: 80
+      - Index: 3
+        Item: Goibne_Shoulder_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Goibne's_Shoulder_Arms
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Fragment_Of_Rock
+            Amount: 30
+          - Index: 2
+            Item: Token_Of_Bigstone
+            Amount: 150
+          - Index: 3
+            Item: IllusionStone
+            Amount: 120
+  - Name: champion_soul_twins
+    Items:
+      - Index: 0
+        Item: Sprint_Mail_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Sprint_Mail
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: IL_Twins_Fur
+            Amount: 125
+          - Index: 2
+            Item: IL_Twins_Hat
+            Amount: 55
+          - Index: 3
+            Item: IllusionStone
+            Amount: 100
+      - Index: 1
+        Item: Sprint_Shoes_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Sprint_Shoes
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: IL_Twins_Shovel
+            Amount: 75
+          - Index: 2
+            Item: IL_Twins_Leg
+            Amount: 125
+          - Index: 3
+            Item: IllusionStone
+            Amount: 100
+      - Index: 2
+        Item: Thorn_Staff_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Thorn_Staff
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: IL_Twins_Fang
+            Amount: 75
+          - Index: 2
+            Item: IL_Twins_Shovel
+            Amount: 75
+          - Index: 3
+            Item: IllusionStone
+            Amount: 135
+      - Index: 3
+        Item: Dea_Staff_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Dea_Staff
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: IL_Twins_Crown
+            Amount: 75
+          - Index: 2
+            Item: IL_Twins_Leg
+            Amount: 125
+          - Index: 3
+            Item: IL_Twins_Shovel
+            Amount: 75
+          - Index: 4
+            Item: IllusionStone
+            Amount: 150
+      - Index: 4
+        Item: Gelerdria_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Gelerdria
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: IL_Twins_Hat
+            Amount: 30
+          - Index: 2
+            Item: IL_Twins_Feeler
+            Amount: 125
+          - Index: 3
+            Item: IllusionStone
+            Amount: 150
+      - Index: 5
+        Item: Excalibur_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Excalibur
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: IL_Twins_Fang
+            Amount: 75
+          - Index: 2
+            Item: IL_Twins_Acid
+            Amount: 75
+          - Index: 3
+            Item: IllusionStone
+            Amount: 150
+      - Index: 6
+        Item: Doom_Slayer_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Doom_Slayer
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: IL_Twins_Acid
+            Amount: 75
+          - Index: 2
+            Item: IL_Twins_Leg
+            Amount: 125
+          - Index: 3
+            Item: IllusionStone
+            Amount: 150
+      - Index: 7
+        Item: Ancient_Dagger_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Ancient_Dagger
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: IL_Twins_Fang
+            Amount: 125
+          - Index: 2
+            Item: IL_Twins_Fur
+            Amount: 125
+          - Index: 3
+            Item: IllusionStone
+            Amount: 135
+      - Index: 8
+        Item: Guard_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Guard
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: IL_Twins_Feeler
+            Amount: 75
+          - Index: 2
+            Item: IL_Twins_Fur
+            Amount: 125
+          - Index: 3
+            Item: IllusionStone
+            Amount: 100
+      - Index: 9
+        Item: Siver_Guard_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Siver_Guard
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: IL_Twins_Jaw
+            Amount: 75
+          - Index: 2
+            Item: IL_Twins_Feeler
+            Amount: 125
+          - Index: 3
+            Item: IllusionStone
+            Amount: 100
+      - Index: 10
+        Item: Sprint_Ring_IL
+        RequiredItems:
+          - Index: 0
+            Item: Sprint_Ring
+            Amount: 1
+          - Index: 1
+            Item: IL_Twins_Acid
+            Amount: 75
+          - Index: 2
+            Item: IL_Twins_Feeler
+            Amount: 125
+          - Index: 3
+            Item: IllusionStone
+            Amount: 120
+      - Index: 11
+        Item: Sprint_Glove_IL
+        RequiredItems:
+          - Index: 0
+            Item: Sprint_Glove
+            Amount: 1
+          - Index: 1
+            Item: IL_Twins_Jaw
+            Amount: 55
+          - Index: 2
+            Item: IL_Twins_Fur
+            Amount: 125
+          - Index: 3
+            Item: IllusionStone
+            Amount: 120
+  - Name: champion_soul_labyrinth_weapons
+    Items:
+      - Index: 0
+        Item: Butcher_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Butcher_
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Delicious_Juice
+            Amount: 150
+          - Index: 2
+            Item: IllusionStone
+            Amount: 120
+      - Index: 1
+        Item: Taegoolyeon_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Tae_Goo_Lyeon
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Short_Rope
+            Amount: 150
+          - Index: 2
+            Item: IllusionStone
+            Amount: 120
+      - Index: 2
+        Item: Gold_Lux_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Gold_Lux
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Snake_Deadly_Poison
+            Amount: 150
+          - Index: 2
+            Item: IllusionStone
+            Amount: 120
+      - Index: 3
+        Item: Bazerald_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Bazerald
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Mantis_Flower
+            Amount: 150
+          - Index: 2
+            Item: IllusionStone
+            Amount: 120
+  - Name: champion_soul_labyrinth_gears
+    Items:
+      - Index: 0
+        Item: Morpheus_Hood_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Morpheus's_Hood
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Soft_Scarf
+            Amount: 100
+          - Index: 2
+            Item: Cold_Holy_Water
+            Amount: 50
+          - Index: 3
+            Item: IllusionStone
+            Amount: 100
+      - Index: 1
+        Item: Morpheus_Shawl_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Morpheus's_Shawl
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Brilliant_Jelly
+            Amount: 100
+          - Index: 2
+            Item: Medicinal_Stuff
+            Amount: 50
+          - Index: 3
+            Item: IllusionStone
+            Amount: 100
+      - Index: 2
+        Item: Morpheus_Ring_IL
+        RequiredItems:
+          - Index: 0
+            Item: Morpheus's_Ring
+            Amount: 1
+          - Index: 1
+            Item: Purple_Solid_Shell
+            Amount: 100
+          - Index: 2
+            Item: Little_Lovely_Candle
+            Amount: 50
+          - Index: 3
+            Item: Essence_Of_Demon
+            Amount: 15
+          - Index: 4
+            Item: IllusionStone
+            Amount: 100
+      - Index: 3
+        Item: Morpheus_Armlet_IL
+        RequiredItems:
+          - Index: 0
+            Item: Morpheus's_Armlet
+            Amount: 1
+          - Index: 1
+            Item: Suspicious_Sap
+            Amount: 100
+          - Index: 2
+            Item: Small_Flashlight
+            Amount: 50
+          - Index: 3
+            Item: Essence_Of_Demon
+            Amount: 15
+          - Index: 4
+            Item: IllusionStone
+            Amount: 100
+  - Name: champion_soul_underwater
+    Items:
+      - Index: 0
+        Item: Electric_Eel_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Electric_Eel
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Deep_Sea_Starfish
+            Amount: 150
+          - Index: 2
+            Item: IllusionStone
+            Amount: 120
+      - Index: 1
+        Item: Electronic_Guitar_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Electronic_Guitar
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Deep_Sea_Starfish
+            Amount: 150
+          - Index: 2
+            Item: IllusionStone
+            Amount: 120
+      - Index: 2
+        Item: Brionac_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Brionac
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Deepsea_Fish_Tail
+            Amount: 150
+          - Index: 2
+            Item: IllusionStone
+            Amount: 120
+      - Index: 3
+        Item: KatarOfCold_Icicle_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Katar_Of_Cold_Icicle_
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Deep_Sea_Crab
+            Amount: 150
+          - Index: 2
+            Item: IllusionStone
+            Amount: 120
+      - Index: 4
+        Item: Death_Guidance_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Death_Guidance
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Rotten_Deepseafish
+            Amount: 150
+          - Index: 2
+            Item: IllusionStone
+            Amount: 120
+      - Index: 5
+        Item: Zephyrus_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Zephyrus_
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Abysmal_Clam
+            Amount: 150
+          - Index: 2
+            Item: IllusionStone
+            Amount: 120
+      - Index: 6
+        Item: Saint_Robe_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Saint_Robe_
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Deepsea_Fish_Tail
+            Amount: 100
+          - Index: 2
+            Item: E_Abyss1
+            Amount: 20
+          - Index: 3
+            Item: IllusionStone
+            Amount: 90
+      - Index: 7
+        Item: Water_Sprits_Armor_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Water_Sprits_Armor_
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Deep_Sea_Crab
+            Amount: 100
+          - Index: 2
+            Item: E_Abyss1
+            Amount: 20
+          - Index: 3
+            Item: IllusionStone
+            Amount: 90
+      - Index: 8
+        Item: Chain_Mail_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Chain_Mail_
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Deep_Sea_Starfish
+            Amount: 100
+          - Index: 2
+            Item: E_Abyss1
+            Amount: 20
+          - Index: 3
+            Item: IllusionStone
+            Amount: 90
+      - Index: 9
+        Item: Morrigane_Helm_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Morrigane's_Helm
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Deep_Sea_Crab
+            Amount: 100
+          - Index: 2
+            Item: E_Abyss1
+            Amount: 50
+          - Index: 3
+            Item: IllusionStone
+            Amount: 100
+      - Index: 10
+        Item: Morrigane_Manyeau_IL
+        Refine: 7
+        RequiredItems:
+          - Index: 0
+            Item: Morrigane's_Manteau
+            Refine: 7
+            Amount: 1
+          - Index: 1
+            Item: Rotten_Deepseafish
+            Amount: 100
+          - Index: 2
+            Item: E_Abyss1
+            Amount: 50
+          - Index: 3
+            Item: IllusionStone
+            Amount: 100
+      - Index: 11
+        Item: Morrigane_Belt_IL
+        RequiredItems:
+          - Index: 0
+            Item: Morrigane's_Belt
+            Amount: 1
+          - Index: 1
+            Item: Deepsea_Fish_Tail
+            Amount: 100
+          - Index: 2
+            Item: E_Abyss1
+            Amount: 50
+          - Index: 3
+            Item: IllusionStone
+            Amount: 100
+      - Index: 12
+        Item: Morrigane_Pendant_IL
+        RequiredItems:
+          - Index: 0
+            Item: Morrigane's_Pendant
+            Amount: 1
+          - Index: 1
+            Item: Abysmal_Clam
+            Amount: 100
+          - Index: 2
+            Item: E_Abyss1
+            Amount: 50
+          - Index: 3
+            Item: IllusionStone
+            Amount: 100
+  - Name: mage_angelica_illusion_stones
+    Items:
+      - Index: 0
+        Item: ILL_Piece_A
+        RequiredItems:
+          - Index: 0
+            Item: IllusionStone
+            Amount: 2
+      - Index: 1
+        Item: ILL_Piece_B
+        RequiredItems:
+          - Index: 0
+            Item: IllusionStone
+            Amount: 2
+      - Index: 2
+        Item: ILL_Piece_2A
+        RequiredItems:
+          - Index: 0
+            Item: IllusionStone
+            Amount: 10
+      - Index: 3
+        Item: ILL_Piece_2B
+        RequiredItems:
+          - Index: 0
+            Item: IllusionStone
+            Amount: 10

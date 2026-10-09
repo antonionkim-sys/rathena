@@ -1,0 +1,838 @@
+Header:
+  Type: BARTER_DB
+  Version: 2
+
+Body:
+  - Name: philofontes_buff_lv0
+    Items:
+      - Index: 0
+        Item: E_Small_Life_Potion
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 5
+      - Index: 1
+        Item: Comp_Small_Mana_Potion
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 5
+      - Index: 2
+        Item: Infinity_Drink
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 5
+      - Index: 3
+        Item: Red_Booster
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 3
+      - Index: 4
+        Item: Limit_Power_Booster
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 6
+      - Index: 5
+        Item: ASPD_Potion
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 5
+      - Index: 6
+        Item: Mental_Potion
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 3
+      - Index: 7
+        Item: "Eir's_Blessing"
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 4
+
+  - Name: philofontes_buff_lv1
+    Items:
+      - Index: 0
+        Item: E_Small_Life_Potion
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 5
+      - Index: 1
+        Item: Comp_Small_Mana_Potion
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 5
+      - Index: 2
+        Item: Infinity_Drink
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 5
+      - Index: 3
+        Item: Red_Booster
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 3
+      - Index: 4
+        Item: Limit_Power_Booster
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 6
+      - Index: 5
+        Item: ASPD_Potion
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 5
+      - Index: 6
+        Item: Mental_Potion
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 3
+      - Index: 7
+        Item: "Eir's_Blessing"
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 4
+      - Index: 8
+        Item: M_DEFScroll
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 10
+      - Index: 9
+        Item: Almighty
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 15
+
+  - Name: philofontes_utility_lv0
+    Items:
+      - Index: 0
+        Item: Comp_Battle_Manual
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 150
+      - Index: 1
+        Item: D_EpisodClear13
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 1000
+      - Index: 2
+        Item: D_EpisodClear14
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 1000
+      - Index: 3
+        Item: D_EpisodClear15
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 1000
+      - Index: 4
+        Item: EpisodClear16
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 1000
+      - Index: 5
+        Item: EpisodClear17
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 1000
+      - Index: 6
+        Item: EpisodClear18
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 1000
+
+  - Name: philofontes_utility_lv1
+    Items:
+      - Index: 0
+        Item: Comp_Battle_Manual
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 150
+      - Index: 1
+        Item: D_EpisodClear13
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 1000
+      - Index: 2
+        Item: D_EpisodClear14
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 1000
+      - Index: 3
+        Item: D_EpisodClear15
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 1000
+      - Index: 4
+        Item: EpisodClear16
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 1000
+      - Index: 5
+        Item: EpisodClear17
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 1000
+      - Index: 6
+        Item: EpisodClear18
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 1000
+      - Index: 7
+        Item: EpisodClear19
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 1000
+      - Index: 8
+        Item: EpisodClear20
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 1000
+      - Index: 9
+        Item: EpisodClear21
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 1000
+
+  - Name: Lollishop
+    Items:
+      - Index: 0
+        Item: Monster_Bread
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 2
+      - Index: 1
+        Item: Monster_Bread_
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 4
+      - Index: 2
+        Item: Poring_Kombucha
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 2
+      - Index: 3
+        Item: South_Pork_Ricebowl
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 5
+
+  - Name: Belymina_Booster
+    Items:
+      - Index: 0
+        Item: IW_B_T_Sword
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 1
+        Item: HB_B_T_Spear
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 2
+        Item: BC_B_Spear
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 3
+        Item: PG_B_Sword
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 4
+        Item: PT_B_Axe
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 5
+        Item: AK_B_Mace
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 6
+        Item: AC_B_Club
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 7
+        Item: HS_T_Sword
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 8
+        Item: ML_B_Book
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 9
+        Item: SS_B_Book
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 10
+        Item: ES_B_Staff
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 11
+        Item: EC_B_Staff
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 12
+        Item: RC_B_Katar
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 13
+        Item: TB_B_Bow
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 14
+        Item: MF_B_Dagger
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 15
+        Item: CS_B_Staff
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 16
+        Item: CJ_B_Staff
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 17
+        Item: SB_B_Book
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 18
+        Item: ES_B_Stick
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 19
+        Item: AN_B_Wand
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 20
+        Item: DD_B_Mace
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 21
+        Item: PS_B_Knuckle
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 22
+        Item: CP_B_Knuckle
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 23
+        Item: AS_B_Bow
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 24
+        Item: SB_B_Bow
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 25
+        Item: RS_B_Violin
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 26
+        Item: RS_B_Whip
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 27
+        Item: MV_B_Violin
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 28
+        Item: MV_B_Whip
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 29
+        Item: SP_B_Saber
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 30
+        Item: SI_B_Saber
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 31
+        Item: SN_B_Wand
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 32
+        Item: SN_B_Dagger
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 33
+        Item: FCH_B_Huuma
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 34
+        Item: SN_B_Huuma
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 35
+        Item: DF_B_Revolver
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 36
+        Item: FR_B_Gatling
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 37
+        Item: SP_B_Fox
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 38
+        Item: GB_B_Fox
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+#     - Index: 39
+#       Item: 620064
+#       RequiredItems:
+#         - Index: 0
+#           Item: Etel_Dust
+#           Amount: 300
+#
+#     - Index: 40
+#       Item: 510200
+#       RequiredItems:
+#         - Index: 0
+#           Item: Etel_Dust
+#           Amount: 300
+
+  - Name: Belymina_Dust
+    Items:
+      - Index: 0
+        Item: Booster_W_Up_3
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 100
+
+      - Index: 1
+        Item: Booster_RandomOpt_P
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 5
+
+      - Index: 2
+        Item: Booster_RandomOpt_M
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 5
+
+  - Name: Centro_Equipment
+    Items:
+      - Index: 0
+        Item: E_Auto_Up
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 30
+
+      - Index: 1
+        Item: E_Auto_Armor_A
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 200
+
+      - Index: 2
+        Item: E_Auto_Armor_B
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 200
+
+      - Index: 3
+        Item: E_Auto_Engine_A
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 100
+
+      - Index: 4
+        Item: E_Auto_Engine_B
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 100
+
+      - Index: 5
+        Item: E_Auto_Leg_A
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 100
+
+      - Index: 6
+        Item: E_Auto_Leg_B
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 100
+
+      - Index: 7
+        Item: E_Auto_B_R
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 50
+
+      - Index: 8
+        Item: E_Auto_B_L
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 50
+
+      - Index: 9
+        Item: E_Auto_BC_R
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 50
+
+      - Index: 10
+        Item: E_Auto_BC_L
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 50
+
+  - Name: MegaMaster_Mask
+    Items:
+      - Index: 0
+        Item: Booster_Mask_A
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 500
+
+      - Index: 1
+        Item: Booster_Mask_B
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 500
+
+      - Index: 2
+        Item: Booster_Mask_C
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 500
+
+  - Name: MegaMaster_Shadow
+    Items:
+      - Index: 0
+        Item: S_Booster_Armor
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 200
+
+      - Index: 1
+        Item: S_Booster_Shield
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 200
+
+      - Index: 2
+        Item: S_Booster_Shoes
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 200
+
+      - Index: 3
+        Item: S_Booster_Earing
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 200
+
+      - Index: 4
+        Item: S_Booster_Pandent
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 200
+
+      - Index: 5
+        Item: S_RK_B_Weapon
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 6
+        Item: S_LG_B_Weapon
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 7
+        Item: S_NC_B_Weapon
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 8
+        Item: S_GN_B_Weapon
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 9
+        Item: S_GC_B_Weapon
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 10
+        Item: S_SC_B_Weapon
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 11
+        Item: S_WL_B_Weapon
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 12
+        Item: S_SO_B_Weapon
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 13
+        Item: S_AB_B_Weapon
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 14
+        Item: S_SR_B_Weapon
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 15
+        Item: S_RA_B_Weapon
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 16
+        Item: S_WM_B_Weapon
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 17
+        Item: S_SU_Weapon
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 18
+        Item: S_SJ_Weapon
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 19
+        Item: S_KO_Weapon
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 20
+        Item: S_RL_Weapon
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 21
+        Item: S_SP_Weapon
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+      - Index: 22
+        Item: S_NV_Weapon
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 300
+
+    # 1270161 - Karnos - Not implemented yet
+    #   - Index: 23
+    #     Item: Karnos
+    #     RequiredItems:
+    #       - Index: 0
+    #         Item: Etel_Dust
+    #         Amount: 0

@@ -1,0 +1,198 @@
+//===== rAthena Script =======================================
+//= Belymina
+//= Introduction / Flexible Tube Quest / Booster Weapon Shop
+//============================================================
+
+iz_ac01,40,75,5	script	Belymina#10301	10301,{
+	cutin "ep171_elyumina04.bmp",2;
+
+	//========================================================
+	// Quest 90006 is incomplete:
+	// Show the introduction, complete quest 90006,
+	// and start quest 90009.
+	//========================================================
+
+if (checkquest(90006) == 1) {
+	mes "[Belymina]";
+	mes "Have you gotten those Flexible Tubes yet?";
+
+	cutin "",255;
+	close;
+}
+
+	if (checkquest(90006) == -1) {
+		mes "[Belymina]";
+		mes "Yo, "+strcharinfo(0)+"! I've been expecting you!";
+		mes "My name is Belymina.";
+		next;
+
+		mes "[Belymina]";
+		mes "I used to be part of the Eden Group, researching highly advanced tactical weapons. Eventually, I joined the Bromance Union to guide novices and aspiring adventurers.";
+		next;
+
+		mes "[Belymina]";
+		mes "I wanted to help them survive their first real battles, so I developed weapons designed to help them grow into capable fighters.";
+		next;
+
+		mes "[Belymina]";
+		mes "After many trials and years of research, I finally figured out how to improve the tactical weapons supplied by the Eden Group.";
+		next;
+
+		mes "[Belymina]";
+		mes "The Eden Group was established in response to the growing threats facing Midgard, bringing together skilled fighters to prepare for the catastrophe on the horizon.";
+		next;
+
+		mes "[Belymina]";
+		mes "Tell you what. We're running low on Flexible Tubes.";
+		mes "Head over to ^0000FFEinbroch Field^000000 (^0000FFein_fild^000000) and collect ^0000FF20 Flexible Tubes^000000 from Heavy Metallings.";
+		next;
+
+		mes "[Belymina]";
+		mes "The item ID is ^0000FF7325^000000. Come back once you've collected them, and I'll reward you.";
+
+		completequest 90006;
+		setquest 90009;
+
+		close2;
+		cutin "",255;
+		end;
+	}
+
+	//========================================================
+	// Quest 90009 is active:
+	// Check for the required Flexible Tubes.
+	//========================================================
+
+if (checkquest(90009) == 1) {
+	mes "[Belymina]";
+	mes "Have you gotten those tubes yet?";
+	next;
+
+	if (countitem(7325) < 20) {
+		close2;
+		cutin "",255;
+		end;
+	}
+
+	delitem 7325,20;
+
+	mes "[Belymina]";
+	mes "Excellent! These supplies will help keep our weapon research running.";
+	next;
+
+	mes "[Belymina]";
+	mes "Most people think weapons are made from metal, but that's only half the story.";
+	next;
+
+	mes "[Belymina]";
+	mes "A weapon is only as good as the person using it. The strongest blade in the world is useless in the hands of someone who hasn't learned how to wield it.";
+	next;
+
+	mes "[Belymina]";
+	mes "You've got potential, but you're not ready for the work I have waiting for you.";
+	next;
+
+	mes "[Belymina]";
+	mes "As promised, here is your reward.";
+	
+	getitem 1000322,20;
+	getexp 20693,5000;
+	completequest 90009;	
+	setquest 90010;
+	
+	next;
+	
+	mes "[Belymina]";
+	mes "That's all I can offer you for now. Come back when you've reached third job.";
+
+	close2;
+	cutin "",255;
+	end;
+}
+
+if (checkquest(90010) == 1 && (Class >= Job_3_1 || Class >= Job_3_2)) {
+	mes "[Belymina]";
+	mes "You've reached third job! Now you're able to wield the power needed to handle what's ahead.";
+
+	completequest 90010;
+
+	close2;
+	cutin "",255;
+	end;
+}
+
+	//========================================================
+	// Quest 90009 is complete:
+	// Show the Booster Weapon shop dialogue and menu.
+	//========================================================
+
+	if (checkquest(90011) == 2) {
+		mes "[Belymina]";
+		mes "Look over here!";
+		mes "Well-balanced ^0000FFBooster Weapons^000000 with overall empowerment for 3rd Job skills.";
+		next;
+
+		mes "[Belymina]";
+		mes "You can make them stronger with Booster Weapon Upgrade Packages.";
+		mes "Booster Modification Stone (Physical).";
+		mes "Booster Modification Stone (Magical).";
+		mes "You can make them even stronger with Booster Weapon Enchants.";
+		next;
+
+		switch (select(
+			"Buy a Booster Weapon.",
+			"Refine & Random Options a Booster Weapon.",
+			"Enchant a Booster Weapon.",
+			"Do you have any equipment."
+		)) {
+
+		case 1:
+			mes "[Belymina]";
+			mes "Take a look.";
+			close2;
+			cutin "",255;
+			callshop "Belymina_Booster",1;
+			end;
+
+		case 2:
+			mes "[Belymina]";
+			mes "Take a look at our available materials.";
+			close2;
+			cutin "",255;
+			callshop "Belymina_Dust",1;
+			end;
+
+		case 3:
+			mes "[Belymina]";
+			mes "I'd be delighted to ^0000FFenchant^000000 your Booster Weapon, increasing its power.";
+			mes "Oh, make sure you ^0000FFhave it in your inventory.^000000";
+			next;
+
+			mes "[Belymina]";
+			mes "Apply ^0000FFtwo preferred perfect enchantments^000000 to your Mega Booster Weapon.";
+			mes "Select with caution, as there is ^FF0000no option to reset them.^000000";
+
+			close2;
+			cutin "",255;
+			item_enchant 36;
+			end;
+
+		case 4:
+			mes "[Belymina]";
+			mes "Do you have any equipment?";
+			mes "Me? Personally, I don't like to build equipment.";
+			mes "But if you are in need, talk to Cento over by the desk. She has a few.";
+			close2;
+			cutin "",255;
+			end;
+		}
+	}
+
+	close2;
+	cutin "",255;
+	end;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Weapon Shop]");
+	end;
+}

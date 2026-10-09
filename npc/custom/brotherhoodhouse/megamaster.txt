@@ -1,0 +1,51 @@
+//===== rAthena Script =======================================
+//= Mega Master
+//= Booster Mask and Shadow Gear Shop
+//============================================================
+
+iz_ac01,51,82,3	script	MegaMaster	10440,{
+	cutin "ex_sh_kisul02.bmp",2;
+
+	mes "[Mega Master]";
+	mes "Isn't Centro nice looking?";
+	mes "I love my job, starring at her...aaheem!";
+	mes "I mean, how can I help you?";
+	next;
+
+	switch (select(
+		"Buy Booster Mask (Mid Hat)",
+		"Buy Booster Shadow Gears (100+)",
+		"Cancel"
+	)) {
+	case 1:
+		mes "[Mega Master]";
+		mes "Those are exclusive Middle Headgear only I produce.";
+		close2;
+		cutin "",255;
+		callshop "MegaMaster_Mask",1;
+		end;
+
+	case 2:
+		mes "[Mega Master]";
+		mes "Most beginner friendly Shadow equipment for you.";
+		next;
+
+		mes "[Mega Master]";
+		mes "If you want more powerful Shadow equipment,";
+		mes "you should goto ^0000FFHero Garden^000000.";
+		mes "The entrance is in Midgard Memory!";
+		close2;
+		cutin "",255;
+		callshop "MegaMaster_Shadow",1;
+		end;
+
+	default:
+		close2;
+		cutin "",255;
+		end;
+	}
+
+OnInit:
+	setunittitle(getnpcid(0), "[Equipment Shop]");
+	end;
+}

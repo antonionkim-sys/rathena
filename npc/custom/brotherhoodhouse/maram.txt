@@ -1,0 +1,153 @@
+iz_ac01,139,82,3	script	Maram	10376,{
+	.@name$ = strcharinfo(0);
+	.@blue$ = "^0000FF";
+	.@endblue$ = "^000000";
+
+	cutin "ep18_maram_01",2;
+
+	if (checkquest(90011) == 1 && checkquest(90007) == 2) {
+		mes "[Maram]";
+		mes "Hello " + .@name$ + ". Don't mind him. He only talks to people 4th job and higher.";
+		next;
+
+		mes "[Maram]";
+		mes "I've heard a lot about you from " + .@blue$ + "Valkyrie Sigrun" + .@endblue$ + ". My name is Maram from the " + .@blue$ + "Gray Wolf Village!" + .@endblue$;
+		next;
+
+		mes "[Maram]";
+		mes "We specialize in things that adventurers tend to underestimate.";
+		next;
+
+		mes "[Maram]";
+		mes "Enchantments, Crafting and Item Grading.";
+		next;
+
+		mes "[Maram]";
+		mes "If you're planning to make a name for yourself, you'll need more than just a strong weapon.";
+		next;
+
+		mes "[Maram]";
+		mes "You'll need to understand how to make your equipment work for you.";
+		mes "<b>Dus</b> will help you with that.";
+		next;
+
+		mes "[Maram]";
+		mes "<b>Astra</b> will introduce you to the more dangerous side of the Brotherhood.";
+		next;
+
+		mes "[Maram]";
+		mes "He'll teach you about " + .@blue$ + "Nightmare Dungeons, Instances, MVPs and World Bosses." + .@endblue$;
+		next;
+
+		mes "[Maram]";
+		mes "You don't have to learn everything at once.";
+		next;
+
+		mes "[Maram]";
+		mes "Take your time, talk to them, and you'll eventually understand how everything fits together.";
+		next;
+
+		mes "[Maram]";
+		mes "Oh, and if you're looking for ways to make some extra " + .@blue$ + "Zeny" + .@endblue$ + "... I'm sure you'll find someone useful around here too.";
+		next;
+
+		mes "[Maram]";
+		mes "Go on, " + .@name$ + ". There's plenty to learn.";
+
+		completequest 90011;
+		setquest 90012;
+		setquest 90013;
+
+		close2;
+		cutin "",255;
+		end;
+	}
+
+	if (checkquest(90012) == 1 || checkquest(90013) == 1) {
+		mes "[Maram]";
+		mes "Go on, " + .@name$ + ". There's plenty to learn.";
+		close2;
+		cutin "",255;
+		end;
+	}
+
+	if (checkquest(90012) == 2 && checkquest(90013) == 2 && checkquest(90014) == -1) {
+		mes "[Maram]";
+		mes "WOW! You talked to everyone?!";
+		mes "That deserves something special from my hometown.";
+		next;
+
+		getitem 12622,1;
+		setquest 90014;
+
+		mes "[Maram]";
+		mes "It's not much, but I think you'll find it useful on your journey.";
+		next;
+
+		mes "[Maram]";
+		mes "Take good care of it, " + .@name$ + ".";
+		mes "And remember what you learned here.";
+		next;
+
+		mes "[Maram]";
+		mes "Come back when you're " + .@blue$ + "4th Job" + .@endblue$ + ".";
+		mes "";
+		mes "We'll have more to offer you then.";
+
+		completequest 90014;
+		setquest 90015;
+
+		close2;
+		cutin "",255;
+		end;
+	}
+
+	if (checkquest(90012) == 2 && checkquest(90013) == 2 && checkquest(90014) == 1) {
+		mes "[Maram]";
+		mes "It's not much, but I think you'll find it useful on your journey.";
+		next;
+
+		mes "[Maram]";
+		mes "Take good care of it, " + .@name$ + ".";
+		mes "And remember what you learned here.";
+		next;
+
+		mes "[Maram]";
+		mes "Come back when you're " + .@blue$ + "4th Job" + .@endblue$ + ".";
+		mes "";
+		mes "We'll have more to offer you then.";
+
+		completequest 90014;
+		setquest 90015;
+
+		close2;
+		cutin "",255;
+		end;
+	}
+
+	if (checkquest(90014) == 2 && (eaclass() & EAJL_FOURTH) == 0) {
+		mes "[Maram]";
+		mes "Come back when you're " + .@blue$ + "4th Job" + .@endblue$ + ". We'll have more to offer you then.";
+		close2;
+		cutin "",255;
+		end;
+	}
+
+	if (checkquest(90014) == 2 && (eaclass() & EAJL_FOURTH) != 0) {
+		npctalk "I'll add something here.";
+		cutin "",255;
+		end;
+	}
+
+	mes "[Maram]";
+	mes "Go on, " + .@name$ + ". There's plenty to learn.";
+	close2;
+	cutin "",255;
+	end;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Enchanter]");
+	questinfo QTYPE_QUEST2, QMARK_YELLOW, "((checkquest(90007) == 2 && checkquest(90011) == 1) || (checkquest(90012) == 2 && checkquest(90013) == 2 && checkquest(90014) == -1))";
+	end;
+
+}

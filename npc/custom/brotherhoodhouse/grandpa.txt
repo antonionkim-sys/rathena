@@ -1,0 +1,105 @@
+iz_ac01,107,39,3	script	Grandpa Sake	933,{
+	if (checkquest(90005) != 2 || checkquest(90006) != 2 || checkquest(90014) != 2) {
+		mes "[Grandpa Sake]";
+		mes "Hm? Ah... a young face. Forgive an old man, these eyes are not what they were.";
+		mes "Come back once you have finished your training, and we will talk properly.";
+		close;
+	}
+
+	if (checkquest(90070) == -1) {
+		mes "[Grandpa Sake]";
+		mes "Oh? A visitor. Come closer, child...";
+		mes "You seem awfully familiar...";
+		mes "But age is a curious thing, isn't it?";
+		next;
+
+		mes "[Grandpa Sake]";
+		mes "Perhaps my memory is simply playing tricks on me...";
+		next;
+
+		mes "[Grandpa Sake]";
+		mes "I came to this city from Rachel so long ago when the roads were still dirt.";
+		mes "I once led the ^0000FFBrotherhood^000000... long before it became what you see today.";
+		next;
+
+		mes "[Grandpa Sake]";
+		mes "But age is a cruel thief.";
+		mes "My memories are slowly slipping away...";
+		next;
+
+		mes "[Grandpa Sake]";
+		mes "There was a time when I knew every face, every name, every story.";
+		mes "Now... even those memories are beginning to fade.";
+		next;
+
+		mes "[Grandpa Sake]";
+		mes "I heard you've lost your memories, my dear.";
+		next;
+
+		mes "[Grandpa Sake]";
+		mes "However, the truth is... they have not been lost.";
+		mes "They are scattered throughout the world.";
+		next;
+
+		mes "[Grandpa Sake]";
+		mes "A piece of your past rests in shops, its gardens, its homes...";
+		mes "and even within the people who call this place their own.";
+		next;
+
+		mes "[Grandpa Sake]";
+		mes "There are 26 ^i[44599] <b>Memory Shards</b> in total.";
+		mes "Each one contains a fragment of your memory...";
+		mes "and you will need to recover them all.";
+		next;
+
+		mes "[Grandpa Sake]";
+		mes "Bless you, child.";
+		next;
+
+		mes "[Grandpa Sake]";
+		mes "Now, go and see <b>Secretary Snow</b> again at the front.";
+		mes "She is the first face anyone in the town meets..";
+		mes "And she is carrying one of those memories without even knowing it.";
+		next;
+
+		setquest 90070;
+		setquest 90071;
+
+		close;
+	}
+
+	if (checkquest(90070) == 1) {
+		mes "[Grandpa Sake]";
+		mes "How are your memories coming along, child?";
+		mes "You have recovered ^0000FF" + countitem(44599) + "^000000 of ^0000FF26^000000 ^i[44599]<b>memory shards.</b>";
+		next;
+
+		mes "[Grandpa Sake]";
+		mes "Every building in Memory is keeping one of them from you.";
+		next;
+
+		mes "[Grandpa Sake]";
+		mes "The shard that is awake right now is sitting in your ^0000FFQuest Window^000000,";
+		mes "waiting as its own little quest. Open it and press ^FF8000Navigate^000000 -";
+		mes "it will walk you straight to the door that shard is behind.";
+		next;
+		mes "They only come back in order, so do not skip ahead of yourself!";
+		close;
+	}
+
+if (checkquest(90070) == 2) {
+	mes "[Grandpa Sake]";
+	mes "You have recovered all ^0000FF26^000000 ^i[44599]<b>Memory Shards</b>.";
+	mes "Your memories are beginning to return.";
+	mes "Me? Hah... I'm too old for miracles.";
+	mes "I'll leave the rest of the story to you, child.";
+	close;
+}
+
+	close;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Grandpa]");
+	questinfo QTYPE_QUEST2, QMARK_YELLOW, "checkquest(90005) == 2 && checkquest(90006) == 2 && checkquest(90014) == 2 && checkquest(90070) == -1";
+	end;
+}

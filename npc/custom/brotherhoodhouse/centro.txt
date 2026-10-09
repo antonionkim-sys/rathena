@@ -1,0 +1,33 @@
+//===== rAthena Script =======================================
+//= Centro
+//= Equipment Shop
+//============================================================
+
+iz_ac01,46,82,3	script	Centro	485,{
+	cutin "3rd_wd_kimdancer01.bmp",2;
+
+	mes "[Centro]";
+	mes "Hi *_*";
+	mes "With ^i[1000322] Etel Dust you can exchange for equipment.";
+	mes "Those previous dust are from monsters in the wild,";
+	mes "mainly found around Episode 18-21.";
+	next;
+
+	mes "[Centro]";
+	mes "I sell useful equipment for 3rd jobs.";
+	mes "^0000FFRS26-1^000000 beside me can apply additional enchants.";
+	next;
+
+	mes "[Centro]";
+	mes "You can get an ^0000FFUpgrade Package^000000 from the shop to instantly refine the equipment that I sell,";
+	mes "except for the accessories.";
+	close2;
+
+	cutin "",255;
+	callshop "Centro_Equipment",1;
+	end;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Equipment Shop]");
+	end;
+}
