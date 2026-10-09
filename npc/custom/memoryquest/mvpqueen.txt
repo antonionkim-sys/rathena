@@ -1,0 +1,179 @@
+prontera,140,197,5	script	MvP Queen	465,{
+	cutin "3rd_wl_queen01.bmp", 2;
+
+	// First-time Memory Shard / quest dialogue only.
+	// The normal menu still appears immediately afterward.
+	if (checkquest(90087) == 1) {
+		mes "[MvP Queen]";
+		mes "Mortal... you carry a shard of a young man's memory.";
+		mes "How dull. Do you know what I carry?";
+		next;
+
+		mes "[MvP Queen]";
+		mes "Bloody Branches.";
+		mes "Break one, and a lord of the abyss answers.";
+		next;
+
+		mes "[MvP Queen]";
+		mes "And if you ever have ^i[46405] <b>Rune Tickets</b>...";
+		mes "O..m..g.";
+		mes "One ticket buys you 25 ^i[40060] <b>Bloody Branches</b>.";
+		next;
+
+		mes "[MvP Queen]";
+		mes "You've recovered ^i[44599] 1x ^0000FF<b>Memory Shard!</b>^000000.";
+		mes "You gained ^FFA500some experience back^000000.";
+
+		completequest 90087;
+		setquest 90088;
+		next;
+	}
+
+	mes "[MvP Queen]";
+	mes "Do you have something worth trading?";
+	next;
+
+	switch (select(
+		"Browse Bloody Branches (Barter)",
+		"Exchange using Rune Tickets",
+		"What MvPs can be summoned?",
+		"Tell me about the rewards",
+		"I'm not ready for this power"
+	)) {
+	case 1:
+		mes "[MvP Queen]";
+		mes "Excellent... let the chaos begin.";
+		mes "Choose your currency wisely, mortal.";
+		mes "Each type holds different value.";
+
+		cutin "", 255;
+		close2;
+
+		callshop "mvp_queen_barter", 1;
+		end;
+
+case 2:
+	mes "[MvP Queen]";
+	mes "O..m..g, you have ^i[46405] <b>Rune Tickets</b>?!?!";
+	mes "Give me, give me!";
+	mes "I need them for my secret spell! Wahaha!";
+	next;
+
+	mes "[MvP Queen]";
+	mes "How about 1 ^i[46405] <b>Rune Ticket</b>";
+	mes "for 25 ^i[40060] <b>Bloody Branches</b>?";
+	next;
+
+	if (select("Exchange 1 Rune Ticket:Maybe later") == 2) {
+		mes "[MvP Queen]";
+		mes "Then keep your ticket, mortal.";
+		cutin "", 255;
+		close;
+	}
+
+	if (countitem(46405) < 1) {
+		mes "[MvP Queen]";
+		mes "You do not have a ^i[46405] <b>Rune Ticket</b>.";
+		mes "Do not tease me with empty pockets!";
+		cutin "", 255;
+		close;
+	}
+
+	if (!checkweight(40060, 25)) {
+		mes "[MvP Queen]";
+		mes "Your inventory is too full for 25 ^i[40060] <b>Bloody Branches</b>.";
+		mes "Make room, then return to me.";
+		cutin "", 255;
+		close;
+	}
+
+	delitem 46405, 1;
+	getitem 40060, 25;
+
+	mes "[MvP Queen]";
+	mes "Wahaha! Mine, mine, mine!";
+	mes "You received ^i[40060] 25x ^0000FF<b>Bloody Branches</b>^000000.";
+
+	cutin "", 255;
+	close;
+
+	case 3:
+		mes "[MvP Queen]";
+		mes "The Bloody Branch can summon any MvP that roams";
+		mes "the fields and dungeons of this world.";
+		next;
+
+		mes "[MvP Queen]";
+		mes "From the gentle ^0000FFMoonlight Flower^000000";
+		mes "to the terrifying ^FF0000Dark Lord^000000,";
+		mes "from the ancient ^00AA00Mistress^000000";
+		mes "to the mighty ^A020F0Valkyrie^000000...";
+		next;
+
+		mes "[MvP Queen]";
+		mes "But beware, some MvPs are more... aggressive than others.";
+		mes "Summon at your own risk, and always be prepared to flee!";
+		next;
+
+		mes "[MvP Queen]";
+		mes "Instance-bound MvPs from special realms cannot be summoned.";
+		mes "Their power is too contained by magical barriers.";
+
+		cutin "", 255;
+		close;
+
+	case 4:
+		mes "[MvP Queen]";
+		mes "Ah, the spoils of victory...";
+		mes "Defeating my summoned MvPs yields precious treasures:";
+		next;
+
+		mes "[MvP Queen]";
+		mes "^FFA500MvP Footprints^000000.";
+		mes "Tier MvPs drop their unique footprint, from Tier A to Tier D.";
+		mes "Collect these at the ^0000FFExpedition Inn^000000";
+		mes "to exchange them for powerful items.";
+		next;
+
+		mes "[MvP Queen]";
+		mes "The innkeeper rewards those who prove their might against multiple MvPs.";
+		mes "The more footprints you collect, the greater your rewards.";
+		next;
+
+		mes "[MvP Queen]";
+		mes "^A020F0Outer Galaxy Crystals^000000 are rare cosmic fragments";
+		mes "that drop from the most powerful summons.";
+		next;
+
+		mes "[MvP Queen]";
+		mes "These crystals can be exchanged at the ^FF0000MvP Card Shop^000000";
+		mes "for guaranteed MvP cards of your choosing.";
+		mes "No more relying on luck!";
+		next;
+
+		mes "[MvP Queen]";
+		mes "The card shop offers a selection of powerful MvP cards";
+		mes "for those with enough cosmic crystals.";
+		mes "A worthy prize for true champions.";
+
+		cutin "", 255;
+		close;
+
+	default:
+		mes "[MvP Queen]";
+		mes "Wise choice, mortal.";
+		mes "The power to summon MvPs should not be taken lightly.";
+		next;
+
+		mes "[MvP Queen]";
+		mes "Return when you are ready to face the true rulers of this world.";
+		mes "I shall be waiting...";
+
+		cutin "", 255;
+		close;
+	}
+
+OnInit:
+	setunittitle(getnpcid(0), "[Bloody Branch Seller]");
+	end;
+}

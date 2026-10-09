@@ -1,0 +1,57 @@
+//===== rAthena Script =======================================
+//= Ore Researcher - Upgrade Stone Shop
+//============================================================
+
+prtrefinery,202,139,5	script	Ore Researcher	402,{
+	mes "[Ore Researcher]";
+	mes "Come on, because the budget is always insufficient for a research lab, I had to set up something like this.";
+	next;
+
+	mes "[Ore Researcher]";
+	mes "The raw stones used in this lab are taken out and refined by assistants.";
+	mes "For a fee.";
+	next;
+
+	switch(select(
+		"Upgrade ore to stone exchange",
+		"Upgrade stone to stone exchange",
+		"Shadowdecon to stone exchange",
+		"Cross exchange upgrade stones",
+		"Cancel"
+	)) {
+	case 1:
+		mes "[Ore Researcher]";
+		mes "Take a look at the available Upgrade Stones.";
+		close2;
+		callshop "OreResearcher_Ore",1;
+		end;
+
+	case 2:
+		mes "[Ore Researcher]";
+		mes "Some of the best Upgrade Stones.";
+		close2;
+		callshop "OreResearcher_Stone",1;
+		end;
+
+	case 3:
+		mes "[Ore Researcher]";
+		mes "Other ores to upgrade stones!";
+		close2;
+		callshop "OreResearcher_Shadowdecon",1;
+		end;
+
+	case 4:
+		mes "[Ore Researcher]";
+		mes "Stones to stones, with a good ratio!";
+		close2;
+		callshop "OreResearcher_Cross",1;
+		end;
+
+	default:
+		close;
+	}
+
+OnInit:
+	setunittitle(getnpcid(0), "[Upgrade Stone Shop]");
+	end;
+}

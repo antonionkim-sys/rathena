@@ -1,0 +1,67 @@
+prontera,134,199,5	script	Nillem	807,{
+	// Quest conversation only.
+	if (checkquest(90088) == 1) {
+		mes "[Nillem]";
+		mes "Ohh... you came all the way over here?";
+		mes "I've been standing in the exact same spot this whole time.";
+		next;
+
+		mes "[Nillem]";
+		mes "That's the trick, you know.";
+		mes "You earn <b>1 Idle Point for every minute</b> you spend ingame.";
+		mes "Walking around, standing still, even fast asleep - it all counts.";
+		mes "The little timer in the corner keeps track of everything for you.";
+		next;
+
+		mes "[Nillem]";
+		mes "Then spend those points in my shop.";
+		mes "Rewards for doing absolutely nothing.";
+		mes "Honestly...";
+		mes "<b>It's the only honest work I've ever done.</b>";
+		next;
+
+		mes "[Nillem]";
+		mes "You've recovered ^i[44599] 1x ^0000FF<b>Memory Shard!</b>^000000";
+		mes "You gained ^FFA500some experience back^000000.";
+
+		completequest 90088;
+		setquest 90089;
+		close;
+	}
+
+	// Normal conversation.
+	mes "[Nillem]";
+	mes "Stay idle ingame and get free <b>Idle Points</b>.";
+	next;
+
+	switch (select("Open Idle Shop:How to get Idle Points?")) {
+	case 1:
+		mes "[Nillem]";
+		mes "Spend your points wisely!";
+		next;
+
+		mes "[Nillem]";
+		mes "You currently have " + #IdlePoints + " Idle Points.";
+		mes "Which item would you like to purchase?";
+		next;
+
+		// Implement purchases here later.
+		mes "[Nillem]";
+		mes "The Idle Shop is not available yet.";
+		close;
+
+	case 2:
+		mes "[Nillem]";
+		mes "On your upper right corner, there is a <b>timer icon</b> that accumulates Idle Points.";
+		mes "Every 1 minute spent ingame generates 1 Idle Point.";
+		next;
+
+		mes "[Nillem]";
+		mes "Click on the icon to claim your Idle Points at any time.";
+		close;
+	}
+
+OnInit:
+	setunittitle(getnpcid(0), "[Idle Vault]");
+	end;
+}

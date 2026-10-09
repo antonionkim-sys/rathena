@@ -1,0 +1,1044 @@
+Header:
+  Type: BARTER_DB
+  Version: 2
+Body:
+- Name: Arrow_Quiver_Exchange
+  Items:
+  - Index: 0
+    Item: Arrow_Container
+    RequiredItems:
+    - Index: 0
+      Item: Arrow
+      Amount: 500
+  - Index: 1
+    Item: Iron_Arrow_Container
+    RequiredItems:
+    - Index: 0
+      Item: Iron_Arrow
+      Amount: 500
+  - Index: 2
+    Item: Steel_Arrow_Container
+    RequiredItems:
+    - Index: 0
+      Item: Steel_Arrow
+      Amount: 500
+  - Index: 3
+    Item: Ori_Arrow_Container
+    RequiredItems:
+    - Index: 0
+      Item: Oridecon_Arrow
+      Amount: 500
+  - Index: 4
+    Item: Fire_Arrow_Container
+    RequiredItems:
+    - Index: 0
+      Item: Fire_Arrow
+      Amount: 500
+  - Index: 5
+    Item: Silver_Arrow_Container
+    RequiredItems:
+    - Index: 0
+      Item: Silver_Arrow
+      Amount: 500
+  - Index: 6
+    Item: Wind_Arrow_Container
+    RequiredItems:
+    - Index: 0
+      Item: Arrow_Of_Wind
+      Amount: 500
+  - Index: 7
+    Item: Stone_Arrow_Container
+    RequiredItems:
+    - Index: 0
+      Item: Stone_Arrow
+      Amount: 500
+  - Index: 8
+    Item: Crystal_Arrow_Container
+    RequiredItems:
+    - Index: 0
+      Item: Crystal_Arrow
+      Amount: 500
+  - Index: 9
+    Item: Shadow_Arrow_Container
+    RequiredItems:
+    - Index: 0
+      Item: Arrow_Of_Shadow
+      Amount: 500
+  - Index: 10
+    Item: Imma_Arrow_Container
+    RequiredItems:
+    - Index: 0
+      Item: Immatrial_Arrow
+      Amount: 500
+  - Index: 11
+    Item: Rusty_Arrow_Container
+    RequiredItems:
+    - Index: 0
+      Item: Rusty_Arrow
+      Amount: 500
+  - Index: 12
+    Item: Vit_Dish08
+    RequiredItems:
+    - Index: 0
+      Item: Holy_Arrow
+      Amount: 500
+  - Index: 13
+    Item: Arrow_Of_Elf_Cntr
+    RequiredItems:
+    - Index: 0
+      Item: Arrow_Of_Elf
+      Amount: 500
+  - Index: 14
+    Item: Hunting_Arrow_Cntr
+    RequiredItems:
+    - Index: 0
+      Item: Hunting_Arrow
+      Amount: 500
+  - Index: 15
+    Item: Poi_Arrow_Container
+    RequiredItems:
+    - Index: 0
+      Item: Poison_Arrow
+      Amount: 500
+  - Index: 16
+    Item: Siege_Arrow_Quiver_A
+    RequiredItems:
+    - Index: 0
+      Item: Siege_Arrow_A
+      Amount: 500
+  - Index: 17
+    Item: Siege_Arrow_Quiver_S
+    RequiredItems:
+    - Index: 0
+      Item: Siege_Arrow_S
+      Amount: 500
+  - Index: 18
+    Item: Incisive_Arrow_Cntr
+    RequiredItems:
+    - Index: 0
+      Item: Incisive_Arrow
+      Amount: 500
+  - Index: 19
+    Item: Booby_Trap_Box
+    RequiredItems:
+    - Index: 0
+      Item: Booby_Trap
+      Amount: 500
+  - Index: 20
+    Item: Special_Alloy_Trap_Box
+    RequiredItems:
+    - Index: 0
+      Item: Special_Alloy_Trap
+      Amount: 500
+- Name: Ammo_Cartridge_Exchange
+  Items:
+  - Index: 0
+    Item: Bullet_Case
+    RequiredItems:
+    - Index: 0
+      Item: Bullet
+      Amount: 500
+  - Index: 1
+    Item: Bullet_Case_Silver_
+    RequiredItems:
+    - Index: 0
+      Item: Silver_Bullet_
+      Amount: 500
+  - Index: 2
+    Item: Bullet_Case_Flare
+    RequiredItems:
+    - Index: 0
+      Item: Flare_Bullet
+      Amount: 500
+  - Index: 3
+    Item: Bullet_Case_Lighting
+    RequiredItems:
+    - Index: 0
+      Item: Lighting_Bullet
+      Amount: 500
+  - Index: 4
+    Item: Bullet_Case_Ice
+    RequiredItems:
+    - Index: 0
+      Item: Ice_Bullet
+      Amount: 500
+  - Index: 5
+    Item: Bullet_Case_Poison
+    RequiredItems:
+    - Index: 0
+      Item: Poison_Bullet
+      Amount: 500
+  - Index: 6
+    Item: Bullet_Case_Blind
+    RequiredItems:
+    - Index: 0
+      Item: Blind_Bullet
+      Amount: 500
+  - Index: 7
+    Item: Bullet_Case_Blood_
+    RequiredItems:
+    - Index: 0
+      Item: Shell_Of_Blood_
+      Amount: 500
+  - Index: 8
+    Item: Bullet_Case_AP
+    RequiredItems:
+    - Index: 0
+      Item: AP_Ammo
+      Amount: 500
+  - Index: 9
+    Item: Bullet_Case_Blaze
+    RequiredItems:
+    - Index: 0
+      Item: Blaze_Bullet
+      Amount: 500
+  - Index: 10
+    Item: Bullet_Case_Fleeze
+    RequiredItems:
+    - Index: 0
+      Item: Freezing_Bullet
+      Amount: 500
+  - Index: 11
+    Item: Bullet_Case_Electric
+    RequiredItems:
+    - Index: 0
+      Item: Electric_Shock_Bullet
+      Amount: 500
+  - Index: 12
+    Item: Bullet_Case_Stone
+    RequiredItems:
+    - Index: 0
+      Item: Magical_Stone_Bullet
+      Amount: 500
+  - Index: 13
+    Item: Sanctified_Bullet_Case
+    RequiredItems:
+    - Index: 0
+      Item: Sanctified_Bullet
+      Amount: 500
+  - Index: 14
+    Item: Bullet_Case_Full
+    RequiredItems:
+    - Index: 0
+      Item: Full_Metal_Jacket
+      Amount: 500
+  - Index: 15
+    Item: Bullet_Case_Tail
+    RequiredItems:
+    - Index: 0
+      Item: Dragon_Tail_Missile
+      Amount: 500
+  - Index: 16
+    Item: Bullet_Case_Mine
+    RequiredItems:
+    - Index: 0
+      Item: Shooting_Mine
+      Amount: 500
+  - Index: 17
+    Item: Nw_Grenade_Box
+    RequiredItems:
+    - Index: 0
+      Item: Nw_Grenade
+      Amount: 500
+  - Index: 18
+    Item: Gong_Bug_Pocket
+    RequiredItems:
+    - Index: 0
+      Item: Gong_Bug
+      Amount: 200
+- Name: Ninja_Parchment_Exchange
+  Items:
+  - Index: 0
+    Item: Kunai_Scroll
+    RequiredItems:
+    - Index: 0
+      Item: Kunai
+      Amount: 500
+  - Index: 1
+    Item: Kunai_Scroll_Nothing
+    RequiredItems:
+    - Index: 0
+      Item: Kunai_Of_Nothing
+      Amount: 500
+  - Index: 2
+    Item: Kunai_Scroll_Shadow
+    RequiredItems:
+    - Index: 0
+      Item: Kunai_Of_Shadow
+      Amount: 500
+  - Index: 3
+    Item: Kunai_Scroll_Hamaya
+    RequiredItems:
+    - Index: 0
+      Item: Kunai_Of_Hamaya
+      Amount: 500
+  - Index: 4
+    Item: Kunai_Scroll_Of_Flame
+    RequiredItems:
+    - Index: 0
+      Item: Kunai_Of_Fierce_Flame
+      Amount: 500
+  - Index: 5
+    Item: Kunai_Scroll_Of_Wind
+    RequiredItems:
+    - Index: 0
+      Item: Kunai_Of_Furious_Wind
+      Amount: 500
+  - Index: 6
+    Item: Kunai_Scroll_Of_Icicle
+    RequiredItems:
+    - Index: 0
+      Item: Kunai_Of_Icicle
+      Amount: 500
+  - Index: 7
+    Item: Kunai_Scroll_Of_Soil
+    RequiredItems:
+    - Index: 0
+      Item: Kunai_Of_Black_Soil
+      Amount: 500
+  - Index: 8
+    Item: Kunai_Scroll_Of_Poison
+    RequiredItems:
+    - Index: 0
+      Item: Kunai_Of_Deadly_Poison
+      Amount: 500
+  - Index: 9
+    Item: Kunai_Scroll_Explosive
+    RequiredItems:
+    - Index: 0
+      Item: Explosive_Kunai
+      Amount: 500
+  - Index: 10
+    Item: Charm_Fire_Bundle
+    RequiredItems:
+    - Index: 0
+      Item: Charm_Fire
+      Amount: 500
+  - Index: 11
+    Item: Charm_Ice_Bundle
+    RequiredItems:
+    - Index: 0
+      Item: Charm_Ice
+      Amount: 500
+  - Index: 12
+    Item: Charm_Wind_Bundle
+    RequiredItems:
+    - Index: 0
+      Item: Charm_Wind
+      Amount: 500
+  - Index: 13
+    Item: Charm_Earth_Bundle
+    RequiredItems:
+    - Index: 0
+      Item: Charm_Earth
+      Amount: 500
+  - Index: 14
+    Item: Flame_Stone_Bundle
+    RequiredItems:
+    - Index: 0
+      Item: Flame_Stone
+      Amount: 500
+  - Index: 15
+    Item: Ice_Stone_Bundle
+    RequiredItems:
+    - Index: 0
+      Item: Ice_Stone
+      Amount: 500
+  - Index: 16
+    Item: Wind_Stone_Bundle
+    RequiredItems:
+    - Index: 0
+      Item: Wind_Stone
+      Amount: 500
+  - Index: 17
+    Item: Shadow_Orb_Bundle
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Orb
+      Amount: 500
+  - Index: 18
+    Item: SS_Charm_Box
+    RequiredItems:
+    - Index: 0
+      Item: SS_Charm
+      Amount: 500
+  - Index: 19
+    Item: SS_Charm_F_Box
+    RequiredItems:
+    - Index: 0
+      Item: SS_Charm_F
+      Amount: 500
+  - Index: 20
+    Item: SS_Charm_W_Box
+    RequiredItems:
+    - Index: 0
+      Item: SS_Charm_W
+      Amount: 500
+  - Index: 21
+    Item: SS_Charm_G_Box
+    RequiredItems:
+    - Index: 0
+      Item: SS_Charm_G
+      Amount: 500
+  - Index: 22
+    Item: SS_Charm_L_Box
+    RequiredItems:
+    - Index: 0
+      Item: SS_Charm_L
+      Amount: 500
+  - Index: 23
+    Item: Starfish_Box
+    RequiredItems:
+    - Index: 0
+      Item: Starfish
+      Amount: 200
+  - Index: 24
+    Item: Dried_Squid_Box
+    RequiredItems:
+    - Index: 0
+      Item: Dried_Squid
+      Amount: 200
+  - Index: 25
+    Item: Flying_Fish_Box
+    RequiredItems:
+    - Index: 0
+      Item: Flying_Fish
+      Amount: 200
+- Name: Mado_Box_Exchange
+  Items:
+  - Index: 0
+    Item: Cannon_Ball_Box
+    RequiredItems:
+    - Index: 0
+      Item: Cannon_Ball
+      Amount: 500
+  - Index: 1
+    Item: Iron_Cannon_Ball_Box
+    RequiredItems:
+    - Index: 0
+      Item: Iron_Cannon_Ball
+      Amount: 500
+  - Index: 2
+    Item: Soul_Cannon_Ball_Box
+    RequiredItems:
+    - Index: 0
+      Item: Soul_Cannon_Ball
+      Amount: 500
+  - Index: 3
+    Item: Dark_Cannon_Ball_Box
+    RequiredItems:
+    - Index: 0
+      Item: Dark_Cannon_Ball
+      Amount: 500
+  - Index: 4
+    Item: Holy_Cannon_Ball_Box
+    RequiredItems:
+    - Index: 0
+      Item: Holy_Cannon_Ball
+      Amount: 500
+  - Index: 5
+    Item: Cannon_Box_6
+    RequiredItems:
+    - Index: 0
+      Item: Liquid_Condensed_Bullet
+      Amount: 500
+  - Index: 6
+    Item: Cannon_Box_Ice
+    RequiredItems:
+    - Index: 0
+      Item: Ice_Cannon_Ball
+      Amount: 500
+  - Index: 7
+    Item: Cannon_Box_Lightning
+    RequiredItems:
+    - Index: 0
+      Item: Lightning_Cannon_Ball
+      Amount: 500
+  - Index: 8
+    Item: Cannon_Box_Stone
+    RequiredItems:
+    - Index: 0
+      Item: Stone_Cannon_Ball
+      Amount: 500
+  - Index: 9
+    Item: Cannon_Box_Flare
+    RequiredItems:
+    - Index: 0
+      Item: Flare_Cannon_Ball
+      Amount: 500
+  - Index: 10
+    Item: Cannon_Box_Poisoning
+    RequiredItems:
+    - Index: 0
+      Item: Poisoning_Cannon_Ball
+      Amount: 500
+  - Index: 11
+    Item: Vulcan_Bullet_Magazine
+    RequiredItems:
+    - Index: 0
+      Item: Vulcan_Bullet
+      Amount: 500
+  - Index: 12
+    Item: Magic_Gear_Fuel_Box
+    RequiredItems:
+    - Index: 0
+      Item: Magic_Gear_Fuel
+      Amount: 500
+  - Index: 13
+    Item: RepairA_Box
+    RequiredItems:
+    - Index: 0
+      Item: RepairA
+      Amount: 500
+  - Index: 14
+    Item: RepairB_Box
+    RequiredItems:
+    - Index: 0
+      Item: RepairB
+      Amount: 500
+  - Index: 15
+    Item: RepairC_Box
+    RequiredItems:
+    - Index: 0
+      Item: RepairC
+      Amount: 500
+- Name: Talisman_Bundle_Exchange
+  Items:
+  - Index: 0
+    Item: Soa_Charm_Bundle
+    RequiredItems:
+    - Index: 0
+      Item: Soa_Charm
+      Amount: 500
+
+- Name: Rare_Poison_Herb_Exchange
+  Items:
+  # 1 Izidor for 10,000 Zeny + 1 Animal Gore
+  - Index: 0
+    Item: Izidor
+    Zeny: 10000
+    RequiredItems:
+    - Index: 0
+      Item: Animal_Blood
+      Amount: 1
+
+  # 1 Izidor for 10,000 Zeny + 1 Bitter Herb
+  - Index: 1
+    Item: Izidor
+    Zeny: 10000
+    RequiredItems:
+    - Index: 0
+      Item: Bitter_Herb
+      Amount: 1
+
+  # 1 Izidor for 10,000 Zeny + 1 Deadly Noxious Herb
+  - Index: 2
+    Item: Izidor
+    Zeny: 10000
+    RequiredItems:
+    - Index: 0
+      Item: Deadly_Noxious_Herb
+      Amount: 1
+
+  # 1 Izidor for 10,000 Zeny + 1 Frozen Rose
+  - Index: 3
+    Item: Izidor
+    Zeny: 10000
+    RequiredItems:
+    - Index: 0
+      Item: Frozen_Rose
+      Amount: 1
+
+  # 1 Izidor for 10,000 Zeny + 1 Anodyne
+  - Index: 4
+    Item: Izidor
+    Zeny: 10000
+    RequiredItems:
+    - Index: 0
+      Item: Anodyne
+      Amount: 1
+
+  # 1 Izidor for 10,000 Zeny + 1 Hinalle
+  - Index: 5
+    Item: Izidor
+    Zeny: 10000
+    RequiredItems:
+    - Index: 0
+      Item: Hinalle
+      Amount: 1
+- Name: Poison_Merchant_Izidor
+  Items:
+  # 1 Izidor for 1 Animal Gore + 10,000 Zeny
+  - Index: 0
+    Item: Izidor
+    Zeny: 10000
+    RequiredItems:
+    - Index: 0
+      Item: Animal_Blood
+      Amount: 1
+
+  # 1 Izidor for 1 Bitter Herb + 10,000 Zeny
+  - Index: 1
+    Item: Izidor
+    Zeny: 10000
+    RequiredItems:
+    - Index: 0
+      Item: Bitter_Herb
+      Amount: 1
+
+  # 1 Izidor for 1 Deadly Noxious Herb + 10,000 Zeny
+  - Index: 2
+    Item: Izidor
+    Zeny: 10000
+    RequiredItems:
+    - Index: 0
+      Item: Deadly_Noxious_Herb
+      Amount: 1
+
+  # 1 Izidor for 1 Frozen Rose + 10,000 Zeny
+  - Index: 3
+    Item: Izidor
+    Zeny: 10000
+    RequiredItems:
+    - Index: 0
+      Item: Frozen_Rose
+      Amount: 1
+
+  # 1 Izidor for 1 Anodyne + 10,000 Zeny
+  - Index: 4
+    Item: Izidor
+    Zeny: 10000
+    RequiredItems:
+    - Index: 0
+      Item: Anodyne
+      Amount: 1
+
+  # 1 Izidor for 1 Hinalle + 10,000 Zeny
+  - Index: 5
+    Item: Izidor
+    Zeny: 10000
+    RequiredItems:
+    - Index: 0
+      Item: Hinalle
+      Amount: 1
+- Name: DrFresa_PremiumPots
+  Items:
+  - Index: 0
+    Item: Life_Potion_I
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 4
+  - Index: 1
+    Item: Life_Potion_II
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 6
+  - Index: 2
+    Item: Life_Potion_III
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 5
+  - Index: 3
+    Item: Mana_Potion_I
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 5
+  - Index: 4
+    Item: Gunnar_Defense_Scroll
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 10
+  - Index: 5
+    Item: Almightyy
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 25
+  - Index: 6
+    Item: Njords_Power_Potion
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 15
+  - Index: 7
+    Item: Freyas_Infinity_Potion
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 10
+  - Index: 8
+    Item: Skadis_Power_Potion
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 5
+  - Index: 9
+    Item: Friggs_ASPD_Potion
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 5
+  - Index: 10
+    Item: Tyrs_Blessing
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 10
+  - Index: 11
+    Item: Ymirs_Spirit_Potion
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 5
+  - Index: 12
+    Item: Mega_Resist_Potionn
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 5
+  - Index: 13
+    Item: Abrasive_Liquid
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 10
+- Name: Cactus_SealedAlbums
+  Items:
+  - Index: 0
+    Item: Sealed_Card  # ID: 22829
+    Zeny: 10000000
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Evil_Mind
+      Amount: 500
+    - Index: 1
+      Item: Shadowdecon
+      Amount: 1000
+    - Index: 2
+      Item: Zelunium
+      Amount: 200
+    - Index: 3
+      Item: Etel_Dust
+      Amount: 1500
+  - Index: 1
+    Item: Sealed_Card2  # ID: 23719
+    Zeny: 10000000
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Evil_Mind
+      Amount: 500
+    - Index: 1
+      Item: Shadowdecon
+      Amount: 1000
+    - Index: 2
+      Item: Zelunium
+      Amount: 200
+    - Index: 3
+      Item: Etel_Dust
+      Amount: 1500
+  - Index: 2
+    Item: Sealed_Card3  # ID: 101074
+    Zeny: 10000000
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Evil_Mind
+      Amount: 500
+    - Index: 1
+      Item: Shadowdecon
+      Amount: 1000
+    - Index: 2
+      Item: Zelunium
+      Amount: 200
+    - Index: 3
+      Item: Etel_Dust
+      Amount: 1500
+
+  # IV disabled pending its Aegis name.
+#   - Index: 3
+#     Item: REPLACE_AEGIS_44561  # ID: 44561
+#     Zeny: 10000000
+#     RequiredItems:
+#     - Index: 0
+#       Item: Sealed_Evil_Mind
+#       Amount: 500
+#     - Index: 1
+#       Item: Shadowdecon
+#       Amount: 1000
+#     - Index: 2
+#       Item: Zelunium
+#       Amount: 300
+#     - Index: 3
+#       Item: Etel_Dust
+#       Amount: 1500
+
+- Name: Cactus_SealedCards
+  Items:
+  - Index: 0
+    Item: Sealed_Kiel_Card  # ID: 4480
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 1
+    Item: Sealed_Ktullanux_Card  # ID: 4481
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 2
+    Item: Sealed_B_Ygnizem_Card  # ID: 4482
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 3
+    Item: Sealed_Dracula_Card  # ID: 4483
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 4
+    Item: Sealed_Mistress_Card  # ID: 4484
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 5
+    Item: Sealed_Gloom_Card  # ID: 4485
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 6
+    Item: Sealed_Berz_Card  # ID: 4486
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 7
+    Item: Sealed_Ifrit_Card  # ID: 4487
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 8
+    Item: Sealed_D_Lord_Card  # ID: 4488
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 9
+    Item: Sealed_Pharaoh_Card  # ID: 4489
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 10
+    Item: Sealed_M_Flower_Card  # ID: 4490
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 11
+    Item: Sealed_B_Shecil_Card  # ID: 4491
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 12
+    Item: Sealed_Orc_Hero_Card  # ID: 4492
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 13
+    Item: Sealed_Tao_Card  # ID: 4493
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 14
+    Item: Sealed_TurtleG_Card  # ID: 4494
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 15
+    Item: Sealed_Knight_WS_Card  # ID: 4497
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 16
+    Item: Sealed_Lady_Tanee_Card  # ID: 4498
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 17
+    Item: Sealed_Samurai_Card  # ID: 4499
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 18
+    Item: Sealed_Orc_Load_Card  # ID: 4500
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 19
+    Item: Sealed_B_Magaleta_Card  # ID: 4501
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 20
+    Item: Sealed_B_Harword_Card  # ID: 4502
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 21
+    Item: Sealed_Apocalips_H_Card  # ID: 4503
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 22
+    Item: Sealed_Eddga_Card  # ID: 4504
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 23
+    Item: Sealed_Bacsojin_Card  # ID: 4538
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 24
+    Item: Sealed_F_Bishop_Card  # ID: 4539
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 25
+    Item: SLD_Q_Scaraba_Card  # ID: 27209
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 26
+    Item: SLD_Baphomet_Card  # ID: 27211
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 27
+    Item: SLD_Maya_Card  # ID: 27212
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 28
+    Item: SLD_Clown_Card  # ID: 27213
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 29
+    Item: SLD_Professor_Card  # ID: 27214
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 30
+    Item: SLD_Champion_Card  # ID: 27215
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 31
+    Item: SLD_Creator_Card  # ID: 27216
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 32
+    Item: SLD_Stalker_Card  # ID: 27217
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 33
+    Item: SLD_Paladin_Card  # ID: 27218
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 34
+    Item: SLD_Gypsy_Card  # ID: 27219
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 35
+    Item: SLD_Daehyon_Card  # ID: 27220
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 36
+    Item: SLD_Gioia_Card  # ID: 27221
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 37
+    Item: SLD_Pyuriel_Card  # ID: 27222
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 38
+    Item: SLD_Kades_Card  # ID: 27224
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 39
+    Item: SLD_Timeholder_Card  # ID: 27225
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 40
+    Item: SLD_Boitata_Card  # ID: 300195
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 41
+    Item: SLD_F_Muspell_Card  # ID: 300203
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 42
+    Item: SLD_Grave_Amon_Ra_Card  # ID: 300209
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10
+  - Index: 43
+    Item: SLD_P_Spi_Q_Card  # ID: 300201
+    RequiredItems:
+    - Index: 0
+      Item: Sealed_Card_Sand
+      Amount: 10

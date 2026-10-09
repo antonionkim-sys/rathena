@@ -1,0 +1,36 @@
+iz_ac01,97,152,3	script	Hero Bethany	10435,{
+	if (checkquest(90084) == 1) {
+		mes "[Hero Bethany]";
+		mes "Heeeeeey! You are the one Grandpa keeps going on about!";
+		next;
+
+		mes "[Hero Bethany]";
+		mes "This is the <b>Hero Garden</b>!";
+		mes "And around here, there's only one thing anyone really cares about:";
+		mes "<b>Master Shadow</b> equipment.";
+		mes "The strongest Shadow gear around, and every piece of it is crafted right here.";
+		next;
+
+		mes "[Hero Bethany]";
+		mes "Take the door behind me into the <b>Hero Dungeon</b> and carve <b>Hero Ores</b> from the monsters inside.";
+		mes "Bring those ores to the <b>Mineral Forger</b>, and he'll turn them into Copper, Silver, and Gold Bars.";
+		mes "Then take your Bars to <b>Hero Shinji</b>, and he'll trade them for the Master Shadow set you want.";
+		next;
+
+		mes "[Hero Bethany]";
+		mes "You've recovered ^i[44599] 1x ^0000FF<b>Memory Shard!</b>^000000";
+		mes "You gained ^FFA500some experience back^000000.";
+
+		completequest 90084;
+		setquest 90085;
+		end;
+	}
+
+	mes "[Hero Bethany]";
+	mes "Welcome to the Hero Garden!";
+	end;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Hero Garden Entrance]");
+	end;
+}

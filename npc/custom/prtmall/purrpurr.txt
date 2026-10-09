@@ -1,0 +1,143 @@
+//===== rAthena Script =======================================
+//= Malang Cat Can - Purr Purr
+//============================================================
+// Malang Cat Can:
+//   Item 12633, 500,000 Zeny each
+//   Quantity menu: 1 / 5 / 10 / 100
+//
+// Premium Silvervine Fruit:
+//   Item 6417, 200,000 Zeny each
+//   Marketshop with 100 shared stock per server day
+//============================================================
+
+prtmall,44,40,3	script	Purr Purr	495,{
+
+	mes "[Purr Purr]";
+	mes "Welcome, welcome, my esteemed visitor!";
+	mes "Puuhaps you're here for the finest delicacy from Malangdo Island, the ^i[12633]" + mesitemlink(12633) + "!";
+	next;
+
+	mes "[Purr Purr]";
+	mes "Each can is lovingly crafted and sealed with a secret feline recipe.";
+	mes "For you, my dear customer, it's just 500k zeny. A small price for purrfection, don't you think?";
+	next;
+
+	switch (select(
+		"Buy 1:" +
+		"Buy 5:" +
+		"Buy 10:" +
+		"Buy 100!:" +
+		"Do you have something more premium?:" +
+		"Cancel"
+	)) {
+	case 1:
+		.@amount = 1;
+		break;
+
+	case 2:
+		.@amount = 5;
+		break;
+
+	case 3:
+		.@amount = 10;
+		break;
+
+	case 4:
+		.@amount = 100;
+		break;
+
+	case 5:
+		goto L_Premium;
+
+	case 6:
+		close;
+	}
+
+	.@cost = .@amount * 500000;
+
+	mes "[Purr Purr]";
+	mes "You would like " + .@amount + " Malang Cat Can?";
+	mes "That will be " + callfunc("F_InsertComma", .@cost) + " Zeny.";
+	next;
+
+	if (select("Buy:Cancel") == 2)
+		close;
+
+	if (Zeny < .@cost) {
+		mes "[Purr Purr]";
+		mes "You don't have enough Zeny, my dear customer.";
+		close;
+	}
+
+	if (!checkweight(12633, .@amount)) {
+		mes "[Purr Purr]";
+		mes "Please make enough room in your inventory first.";
+		close;
+	}
+
+	Zeny -= .@cost;
+	getitem 12633, .@amount;
+
+	mes "[Purr Purr]";
+	mes "Here are your " + .@amount + " Malang Cat Can!";
+	mes "Thank you for your purchase. Enjoy the purrfection!";
+	close;
+
+// --------------------------------------------------
+// Premium option: limited-stock Silvervine shop
+// --------------------------------------------------
+L_Premium:
+	mes "[Purr Purr]";
+	mes "Well, well, if that didn't attract you.";
+	mes "Yes, I have the finest " + mesitemlink(6417) + " in all the land.";
+	next;
+
+	if (select("Show me asap!:Cancel") == 2)
+		close;
+
+	mes "[Purr Purr]";
+	mes "But they're very popular, you see. I only have 100 in stock each day.";
+	mes "That stock is shared by all my customers!";
+	mes "Each fruit costs 200,000 Zeny.";
+	next;
+
+	callsub L_RestockSilvervine;
+
+	close2;
+	callshop "PurrPurr_Silvervine_Shop", 1;
+	end;
+
+// --------------------------------------------------
+// Restock Silvervine once per server calendar day.
+// Reset stock to 100; do not add to remaining stock.
+// --------------------------------------------------
+L_RestockSilvervine:
+	.@today = gettime(7) * 10000
+		+ gettime(6) * 100
+		+ gettime(5);
+
+	if ($PurrPurr_SilverRestockDate != .@today) {
+		npcshopupdate "PurrPurr_Silvervine_Shop", 6417, 200000, 100;
+		$PurrPurr_SilverRestockDate = .@today;
+	}
+
+	return;
+
+// --------------------------------------------------
+// Midnight restock
+// --------------------------------------------------
+OnClock0000:
+	callsub L_RestockSilvervine;
+	end;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Malang Cat Can]");
+	end;
+}
+
+// --------------------------------------------------
+// Premium marketshop
+// Item:Price:Stock
+// --------------------------------------------------
+
+-	marketshop	PurrPurr_Silvervine_Shop	-1,6417:200000:100

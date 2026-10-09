@@ -1,0 +1,32 @@
+Header:
+  Type: BARTER_DB
+  Version: 2
+
+Body:
+  - Name: mvp_queen_barter
+    Items:
+      - Index: 0
+        Item: Bloody_Dead_Branch
+        Amount: 1
+        RequiredItems:
+          - Index: 0
+            Item: Branch_Of_Dead_Tree
+            Amount: 100
+
+      - Index: 1
+        Item: Bloody_Dead_Branch
+        Amount: 1
+        RequiredItems:
+          - Index: 0
+            Item: Nyangvine_Fruit
+            Amount: 40
+
+  - Name: mvp_queen_rune_ticket
+    Items:
+      - Index: 0
+        Item: Bloody_Dead_Branch
+        Amount: 25
+        RequiredItems:
+          - Index: 0
+            Item: Rune_Ticket
+            Amount: 1

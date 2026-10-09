@@ -1,0 +1,41 @@
+iz_ac01,93,148,5	script	Explorer Gacha	10545,{
+	if (checkquest(90092) == 1) {
+		mes "[Explorer Gacha]";
+		mes "*ka-chunk*";
+		next;
+
+		mes "[Explorer Gacha]";
+		mes "Insert forty ^i[44592] <b>Explorer Bookmarks</b> for one pull.";
+		next;
+
+		mes "[Explorer Gacha]";
+		mes "One pull, ten, or fifty - every pull gives you something from the <b>Premium Pool</b>.";
+		mes "Whatever the machine happens to be holding, that's what you might get.";
+		next;
+
+		mes "[Explorer Gacha]";
+		mes "The same goes for all the other lottery machines.";
+		next;
+		mes "No skill required.";
+		mes "No strategy.";
+		mes "Just hope...";
+		mes "and <b>RNGesus</b>.";
+		next;
+
+		mes "[Explorer Gacha]";
+		mes "You've recovered ^i[44599] 1x ^0000FF<b>Memory Shard!</b>^000000";
+		mes "You gained ^FFA500some experience back^000000.";
+
+		completequest 90092;
+		setquest 90093;
+		end;
+	}
+
+	mes "[Explorer Gacha]";
+	mes "ka-chunk";
+	end;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Lottery Machine]");
+	end;
+}

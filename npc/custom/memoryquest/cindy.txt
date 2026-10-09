@@ -1,0 +1,140 @@
+//===== rAthena Script =======================================
+//= Malangdo Corp Healer - Cindy
+//============================================================
+
+iz_ac01,93,156,6	script	Cindy	437,{
+
+	if (checkquest(90073) == 1) {
+		mes "[Cindy]";
+		mes "Hi again, " + strcharinfo(0) + "!";
+		next;
+
+		mes "[Cindy]";
+		mes "In case you've forgotten, I'm Cindy. Whenever you need me, I'll restore you to full health and send you on your way with a fresh set of buffs.";
+		mes "No zeny. No waiting. Just ask.";
+		next;
+
+		mes "[Cindy]";
+		mes "I can also cleanse your debuffs, identify your items, and repair your equipment.";
+		mes "Think of me as your one-stop shop for getting back into the fight!";
+		next;
+
+		mes "[Cindy]";
+		mes "You've recovered 1x Memory Shard!";
+		mes "You gained some experience back.";
+		next;
+
+		completequest 90073;
+		setquest 90074;
+	}
+
+	mes "[Cindy]";
+	mes "I'm here whenever you need me.";
+	next;
+
+	if (select("Heal and buff me:Nothing right now") == 2)
+		close;
+
+	sc_end SC_POISON;
+	sc_end SC_SILENCE;
+	sc_end SC_BLIND;
+	sc_end SC_CONFUSION;
+	sc_end SC_CURSE;
+	sc_end SC_STONE;
+	sc_end SC_FREEZE;
+	sc_end SC_SLEEP;
+	sc_end SC_STUN;
+	sc_end SC_BLEEDING;
+	sc_end SC_BURNING;
+	sc_end SC_FEAR;
+	sc_end SC_DEEPSLEEP;
+	sc_end SC_CRYSTALIZE;
+	sc_end SC_MANDRAGORA;
+	sc_end SC_HALLUCINATIONWALK_POSTDELAY;
+	sc_end SC_TOXIN;
+	sc_end SC_PARALYSE;
+	sc_end SC_VENOMBLEED;
+	sc_end SC_MAGICMUSHROOM;
+	sc_end SC_DEATHHURT;
+	sc_end SC_PYREXIA;
+	sc_end SC_OBLIVIONCURSE;
+	sc_end SC_LEECHESEND;
+	sc_end SC_DPOISON;
+	sc_end SC__CHAOS;
+	sc_end SC__FEVER;
+	sc_end SC__BLOODYLUST;
+
+	percentheal 100,100;
+	specialeffect2 EF_HEAL2;
+
+	specialeffect2 EF_INCAGILITY;
+	sc_start SC_INCREASEAGI,2400000,10;
+
+	specialeffect2 EF_BLESSING;
+	sc_start SC_BLESSING,2400000,10;
+
+	specialeffect2 EF_MAGNIFICAT;
+	sc_start SC_MAGNIFICAT,1800000,5;
+
+	specialeffect2 EF_IMPOSITIO;
+	sc_start SC_IMPOSITIO,1800000,5;
+
+	specialeffect2 EF_ANGELUS;
+	sc_start SC_ANGELUS,1800000,10;
+
+	specialeffect2 EF_KYRIE;
+	sc_start SC_KYRIE,1800000,10;
+
+	repairall;
+	identifyall;
+
+	mes "[Cindy]";
+	mes "All set! You're healed, buffed, cleansed, repaired, and identified.";
+	close;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Malangdo Corp]");
+	end;
+}
+
+
+// Duplicates
+//============================================================
+alberta,25,240,6	duplicate(Cindy)	Cindy#alb	437
+aldebaran,135,118,6	duplicate(Cindy)	Cindy#alde	437
+amatsu,200,79,4	duplicate(Cindy)	Cindy#ama	437
+ayothaya,207,169,6	duplicate(Cindy)	Cindy#ayo	437
+comodo,184,158,6	duplicate(Cindy)	Cindy#com	437
+einbech,57,36,6	duplicate(Cindy)	Cindy#ein	437
+einbroch,57,202,6	duplicate(Cindy)	Cindy#einbr	437
+geffen,115,72,6	duplicate(Cindy)	Cindy#gef	437
+gonryun,156,122,6	duplicate(Cindy)	Cindy#gon	437
+hugel,89,150,6	duplicate(Cindy)	Cindy#hug	437
+izlude,121,150,6	duplicate(Cindy)	Cindy#izl	437
+jawaii,250,139,4	duplicate(Cindy)	Cindy#jaw	437
+lighthalzen,152,100,6	duplicate(Cindy)	Cindy#lhz	437
+louyang,226,103,4	duplicate(Cindy)	Cindy#lou	437
+manuk,272,144,6	duplicate(Cindy)	Cindy#man	437
+mid_camp,203,289,6	duplicate(Cindy)	Cindy#mid	437
+moc_ruins,72,164,4	duplicate(Cindy)	Cindy#moc	437
+moscovia,220,191,4	duplicate(Cindy)	Cindy#mos	437
+niflheim,212,182,5	duplicate(Cindy)	Cindy#nif	437
+payon,179,106,4	duplicate(Cindy)	Cindy#pay	437
+prontera,162,193,4	duplicate(Cindy)	Cindy#prt	437
+rachel,125,116,6	duplicate(Cindy)	Cindy#rac	437
+splendide,201,153,4	duplicate(Cindy)	Cindy#spl	437
+thor_camp,249,74,4	duplicate(Cindy)	Cindy#thor	437
+umbala,105,148,3	duplicate(Cindy)	Cindy#umb	437
+veins,217,121,4	duplicate(Cindy)	Cindy#ve	437
+xmas,143,136,4	duplicate(Cindy)	Cindy#xmas	437
+yuno,164,45,4	duplicate(Cindy)	Cindy#yuno	437
+
+// Duplicates (Renewal)
+//============================================================
+brasilis,194,221,6	duplicate(Cindy)	Cindy#bra	437
+dewata,195,187,4	duplicate(Cindy)	Cindy#dew	437
+dicastes01,201,194,4	duplicate(Cindy)	Cindy#dic	437
+ecl_in01,45,60,4	duplicate(Cindy)	Cindy#ecl	437
+malangdo,132,114,6	duplicate(Cindy)	Cindy#mal	437
+malaya,227,204,6	duplicate(Cindy)	Cindy#ma	437
+mora,55,152,4	duplicate(Cindy)	Cindy#mor	437

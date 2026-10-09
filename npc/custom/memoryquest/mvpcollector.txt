@@ -1,0 +1,251 @@
+//===== rAthena Script =======================================
+//= Boss Eisen - Footprint Collector
+//============================================================
+
+prtinn,63,53,3	script	Boss Eisen	10189,{
+
+	if (checkquest(90082) == 1) {
+		mes "[Boss Eisen]";
+		mes "Hmm...";
+		mes "You carry something that interests me.";
+		mes "A memory, is it?";
+		next;
+
+		mes "[Boss Eisen]";
+		mes "I collect <b>MVP Footprints</b> - four of them, to be exact:";
+		mes "^i[44410] A, ^i[44411] B, ^i[44412] C, ^i[44413] D.";
+		mes "Slay the great ones, and they may leave one behind.";
+		next;
+
+		mes "[Boss Eisen]";
+		mes "Bring those footprints to me, and I'll trade them for <b>Headgears, Heroic Weapons, and Thanos Helmets</b>.";
+		mes "";
+		mes "And remember:";
+		mes "<b>Two of the same tier become one of the next.</b>";
+		next;
+
+		mes "[Boss Eisen]";
+		mes "You've recovered ^i[44599] 1x ^0000FF<b>Memory Shard!</b>^000000";
+		mes "You gained ^FFA500some experience back^000000.";
+		next;
+
+		completequest 90082;
+		setquest 90083;
+	}
+
+	mes "[Boss Eisen]";
+	mes "I collect <b>MVP Footprints</b> - four of them, to be exact:";
+	mes "^i[44410] A, ^i[44411] B, ^i[44412] C, ^i[44413] D.";
+	next;
+
+	mes "[Boss Eisen]";
+	mes "Dropped by MvPs that naturally spawn around the world.";
+	mes "Tier 1 & Tier 2 MvPs drop Footprint A, Tier 3 drops Footprint B, Tier 4 drops Footprint C and Tier 5 drops Footprint D.";
+	next;
+
+	switch(select(
+		"Turn in MvP Footprint A:"
+		+ "Turn in MvP Footprint B:"
+		+ "Turn in MvP Footprint C:"
+		+ "Turn in MvP Footprint D:"
+		+ "MvP Footprint Cross Exchange:"
+		+ "Cancel"
+	)) {
+
+	// --------------------------------------------------
+	// MvP Footprint A
+	// --------------------------------------------------
+	case 1:
+		mes "[Boss Eisen]";
+		mes "Tell me child, what type of rewards do you desire in return for your";
+		mes mesitemlink(44410) + "?";
+		next;
+
+		switch(select(
+			"Useful Items:"
+			+ "Mixed Shield, Shoes and Garments:"
+			+ "Upper Hats:"
+			+ "Middle Hats:"
+			+ "Lower Hats:"
+			+ "Cancel"
+		)) {
+		case 1: .@shop$ = "eisen_a_useful"; break;
+		case 2: .@shop$ = "eisen_a_mixed"; break;
+		case 3: .@shop$ = "eisen_a_upper"; break;
+		case 4: .@shop$ = "eisen_a_middle"; break;
+		case 5: .@shop$ = "eisen_a_lower"; break;
+		default: close;
+		}
+
+		mes "[Boss Eisen]";
+		mes "Here, take what you need.";
+		close2;
+		callshop .@shop$, 1;
+		end;
+
+	// --------------------------------------------------
+	// MvP Footprint B
+	// --------------------------------------------------
+	case 2:
+		mes "[Boss Eisen]";
+		mes "Tell me child, what type of rewards do you desire in return for your";
+		mes mesitemlink(44411) + "?";
+		next;
+
+		switch(select(
+			"Useful Items:"
+			+ "Headgears:"
+			+ "Equipment:"
+			+ "Heroic Weapons:"
+			+ "Cancel"
+		)) {
+		case 1:
+			mes "[Boss Eisen]";
+			mes "Anything you find useful?";
+			.@shop$ = "eisen_b_useful";
+			break;
+		case 2:
+			mes "[Boss Eisen]";
+			mes "Anything you find useful?";
+			.@shop$ = "eisen_b_headgears";
+			break;
+		case 3:
+			mes "[Boss Eisen]";
+			mes "Anything you find useful?";
+			.@shop$ = "eisen_b_equipment";
+			break;
+		case 4:
+			mes "[Boss Eisen]";
+			mes "Here's a list of all heroic weapons.";
+			.@shop$ = "eisen_b_heroic";
+			break;
+		default:
+			close;
+		}
+
+		close2;
+		callshop .@shop$, 1;
+		end;
+
+	// --------------------------------------------------
+	// MvP Footprint C
+	// --------------------------------------------------
+	case 3:
+		mes "[Boss Eisen]";
+		mes "Tell me child, what type of rewards do you desire in return for your";
+		mes mesitemlink(44412) + "?";
+		next;
+
+		switch(select(
+			"Many Headgears:"
+			+ "Mixed Equipment:"
+			+ "Patent Heroic Weapon Cubes:"
+			+ "Hero and Heroic Token Accessories:"
+			+ "Thanos Helmets:"
+			+ "Cancel"
+		)) {
+		case 1:
+			mes "[Boss Eisen]";
+			mes "There must be something that you find useful.";
+			.@shop$ = "eisen_c_headgears";
+			break;
+		case 2:
+			mes "[Boss Eisen]";
+			mes "Just a few equipment that you could find useful.";
+			.@shop$ = "eisen_c_mixed";
+			break;
+		case 3:
+			mes "[Boss Eisen]";
+			mes "Use these weapon cubes to transform your regular Heroic weapons into a Patent version.";
+			.@shop$ = "eisen_c_cubes";
+			break;
+		case 4:
+			mes "[Boss Eisen]";
+			mes "Really good accessories.";
+			.@shop$ = "eisen_c_accessories";
+			break;
+		case 5:
+			mes "[Boss Eisen]";
+			mes "Take a look.";
+			.@shop$ = "eisen_c_thanos";
+			break;
+		default:
+			close;
+		}
+
+		close2;
+		callshop .@shop$, 1;
+		end;
+
+	// --------------------------------------------------
+	// MvP Footprint D
+	// --------------------------------------------------
+	case 4:
+		mes "[Boss Eisen]";
+		mes "Tell me child, what type of rewards do you desire in return for your";
+		mes mesitemlink(44413) + "?";
+		next;
+
+		switch(select(
+			"Lapine Box:"
+			+ "Special Equipment and Headgears:"
+			+ "Good and Evil Weapons:"
+			+ "Good and Evil Crowns:"
+			+ "Good and Evil Boots:"
+			+ "Cancel"
+		)) {
+		case 1:
+			mes "[Boss Eisen]";
+			mes "Safe refining is very important.";
+			.@shop$ = "eisen_d_lapine";
+			break;
+		case 2:
+			mes "[Boss Eisen]";
+			mes "Super powerful equipment and headgears.";
+			mes "You won't find anything similar elsewhere!";
+			.@shop$ = "eisen_d_special";
+			break;
+		case 3:
+			mes "[Boss Eisen]";
+			mes "High quality weapons!";
+			mes "You can apply extra Enchants from NPC Jekyll inside the Item Mall.";
+			.@shop$ = "eisen_d_ge_weapons";
+			break;
+		case 4:
+			mes "[Boss Eisen]";
+			mes "Really powerful crowns!";
+			mes "You can apply extra Enchants from NPC Jekyll inside the Item Mall.";
+			.@shop$ = "eisen_d_ge_crowns";
+			break;
+		case 5:
+			mes "[Boss Eisen]";
+			mes "Really powerful boots!";
+			mes "You can apply extra Enchants from NPC Jekyll inside the Item Mall.";
+			.@shop$ = "eisen_d_ge_boots";
+			break;
+		default:
+			close;
+		}
+
+		close2;
+		callshop .@shop$, 1;
+		end;
+
+	// --------------------------------------------------
+	// Cross Exchange
+	// --------------------------------------------------
+	case 5:
+		mes "[Boss Eisen]";
+		mes "The ratio to exchange is 2:1.";
+		close2;
+		callshop "eisen_footprint_exchange", 1;
+		end;
+
+	default:
+		close;
+	}
+
+OnInit:
+	setunittitle(getnpcid(0), "[Footprint Collector]");
+	end;
+}

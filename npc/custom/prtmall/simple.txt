@@ -1,0 +1,433 @@
+//===== rAthena Script =======================================
+//= Food Dealer
+//============================================================
+
+prtmall,75,72,5	shop	Food Dealer	548,512:15,513:15,515:15,516:15,519:25,522:8500,535:15,536:150,517:50,11519:1200,11515:1500,11516:15,581:40,12849:40,7482:375,580:150,577:200,7457:375,7454:525,7455:525,7453:525,7456:750,7452:750,579:700,12125:500,12126:1000,12127:2000,7472:750,7473:750,7474:750,7475:750,7476:750,518:10000,528:60
+
+// Murr Murr - Inventory Expansion
+prtmall,48,71,5	script	Murr Murr	495,{
+	mes "[Murr Murr]";
+	mes "Meow there, here at my stall, I offer the finest " + mesitemlink(25793) + ".";
+	next;
+
+	mes "[Murr Murr]";
+	mes "How to use this? Well you can read this <TIPBOX>Inventory Expansion User Manual<INFO>65</INFO></TIPBOX>.";
+	next;
+
+	close2;
+	callshop "MurrMurr_Inventory_Shop", 1;
+	end;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Inventory Expansion]");
+	end;
+}
+
+// --------------------------------------------------
+// Inventory Expansion Voucher: 4,000,000 Zeny
+// --------------------------------------------------
+
+-	shop	MurrMurr_Inventory_Shop	-1,25793:4000000
+
+
+//===== rAthena Script =======================================
+//= Cat Paw Shrimp Merchant
+//============================================================
+
+prtmall,54,68,5	shop	Cat Paw Shrimp Merchant	495,515:15,567:500,11602:15
+
+
+//===== rAthena Script =======================================
+//= Pet Groomer
+//============================================================
+
+prtmall,58,71,5	shop	Pet Groomer	125,25377:10000,537:1000,643:10000,10013:1500,10014:2000,6113:1000,6114:1000,6115:1000,6110:1000,6100:1000,6098:1000,6112:1000,6104:1000,6108:1000,6111:1000,6095:1000,7824:1000,6097:1000,6107:1000,6105:1000,6099:1000,25231:1000,25232:1000,25233:1000,6106:1000,11616:1400,6109:1000,6096:1000,7821:1000,7822:1000,7823:1000,1000552:1000,1000889:1000,531:1000,532:1000,534:1000,6534:1000
+
+
+
+//===== rAthena Script =======================================
+//= Point Merchant
+//============================================================
+
+prtmall,64,68,3	shop	Point Merchant	123,6360:200,6363:200,6361:200,6362:200,1000291:1000,1000292:1000,1000293:1000,1000294:1000,1000295:1000,994:6000,995:6000,996:6000,997:60
+
+//===== rAthena Script =======================================
+//= Biscuit Sticks - Husman
+//============================================================
+// Replace SPRITE_ID with the intended NPC sprite.
+//============================================================
+
+prtmall,68,72,5	script	Husman	10122,{
+	mes "[Husman]";
+	mes "Greetings, adventurer! I am Husman, your go-to merchant for the finest Biscuit Sticks in all of Prontera!";
+	next;
+
+	mes "[Husman]";
+	mes "Why choose my Biscuit Sticks, you ask? Well, each stick is crafted with the finest ingredients and baked to golden perfection.";
+	mes "Whether you're looking for a quick snack on your journey or a delightful treat to buff yourself, I've got you covered!";
+	next;
+
+	close2;
+	callshop "Husman_Biscuit_Shop", 1;
+	end;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Buscuit Stick]");
+	end;
+}
+
+// --------------------------------------------------
+// Biscuit Sticks: 200,000 Zeny each
+// --------------------------------------------------
+
+-	shop	Husman_Biscuit_Shop	-1,14616:200000,14617:200000,14618:200000,14619:200000,14620:200000,14621:200000
+
+
+//===== rAthena Script =======================================
+//= Rune Merchant
+//============================================================
+
+prtmall,34,60,5	script	Rune Merchant	86,{
+	mes "[Rune Merchant]";
+	mes "All the runes I sell are hand made...if you don't trust me on it.";
+	mes "Well, how about make them yourself?";
+	next;
+
+	switch (select("Let me buy.:I want to craft myself.")) {
+	case 1:
+		close2;
+		callshop "Rune_Merchant_Shop", 1;
+		end;
+
+	case 2:
+		close2;
+		callshop "Rune_Merchant_Crafting", 1;
+		end;
+	}
+
+	end;
+}
+
+// --------------------------------------------------
+// Finished runes
+// --------------------------------------------------
+
+-	shop	Rune_Merchant_Shop	-1,12725:10000,12726:10000,12727:15000,12728:15000,12729:10000,12730:10000,12731:10000,12732:10000,12733:15000,22540:30000
+
+// --------------------------------------------------
+// Rune crafting materials
+// --------------------------------------------------
+
+-	shop	Rune_Merchant_Crafting	-1,12737:1000,12734:2500,12738:7500,12735:18000,12736:50000,7939:20000,7938:10000
+
+
+// --------------------------------------------------
+// Magician Steven
+// --------------------------------------------------
+
+prtmall,36,67,7	script	Magician Steven	937,{
+	mes "[Magician Steven]";
+	mes "Are you looking for something magical?";
+	mes "Perhaps books? Or poison bottles?";
+	next;
+
+	switch (select("Supplies:Books:Scrolls:Cancel")) {
+	case 1:
+		close2;
+		callshop "Steven_Supplies", 1;
+		end;
+
+	case 2:
+		close2;
+		callshop "Steven_Books", 1;
+		end;
+
+	case 3:
+		close2;
+		callshop "Steven_Scrolls", 1;
+		end;
+
+	case 4:
+		close;
+	}
+
+	end;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Magic and Supplies]");
+	end;
+}
+
+// Supplies
+-	shop	Steven_Supplies	-1,717:1500,715:4500,716:4500,12016:50000,505:11000,12679:130000,12676:50000,12680:80000
+
+// Books
+-	shop	Steven_Books	-1,100065:100000,100066:100000,100067:100000,100068:500000,100069:500000,100070:500000,100071:500000,100072:500000,100073:1000000,100074:1000000
+
+// Scrolls
+-	shop	Steven_Scrolls	-1,14512:100000,14513:100000,14514:100000,23194:300000,23193:300000,23191:300000,23192:300000
+
+// --------------------------------------------------
+// Rare Poison Herb Collector
+// Shadow Cross only
+// --------------------------------------------------
+
+prtmall,40,69,1	script	Rare Herb Collector	515,{
+	mes "[Rare Herb Collector]";
+
+	if (Class != Job_Shadow_Cross) {
+		mes "I wander around the world and collect rare poison herbs. But I don't feel like selling my herbs to a person like you... ha ha ha...";
+		close;
+	}
+
+	mes "I wander around the world and collect rare poison herbs.";
+	mes "For a Shadow Cross like you, I can offer " + mesitemlink(709) + ".";
+	mes "Each one costs 10,000 Zeny and one of the ingredients listed in my exchange.";
+	next;
+
+	if (select("Exchange for Izidor:Cancel") == 2)
+		close;
+
+	close2;
+	callshop "Rare_Poison_Herb_Exchange", 1;
+	end;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Rare Poison Herb Collector]");
+	end;
+}
+
+
+//===== rAthena Script =======================================
+//= Chemical and Dinner - Gorme
+//============================================================
+
+prtmall,33,53,3	script	Gorme	883,{
+	mes "[Gorme]";
+	mes "You can be an expert in many fields.";
+	mes "As for me, I'm an expert in Chemistry and Cooking!";
+	next;
+
+	switch (select(
+		"Chemical Supplies:" +
+		"Plant materials:" +
+		"Dinner Buffs:" +
+		"Elemental Buffs:" +
+		"Crafting Manuals:" +
+		"Cancel"
+	)) {
+	case 1:
+		close2;
+		callshop "Gorme_Chemical", 1;
+		end;
+
+	case 2:
+		close2;
+		callshop "Gorme_Plant", 1;
+		end;
+
+	case 3:
+		close2;
+		callshop "Gorme_Dinner", 1;
+		end;
+
+	case 4:
+		close2;
+		callshop "Gorme_Elemental", 1;
+		end;
+
+	case 5:
+		close2;
+		callshop "Gorme_Manuals", 1;
+		end;
+
+	case 6:
+		close;
+	}
+
+	end;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Chemical and Dinner]");
+	end;
+}
+
+// --------------------------------------------------
+// Chemical Supplies
+// Glistening Coat, Acid Bottle, Bottle Grenade,
+// elemental Acid Bottles, and High Coating Bottle.
+// --------------------------------------------------
+
+-	shop	Gorme_Chemical	-1,7139:10000,7136:1000,7135:1000,1000276:2000,1000277:2000,1000278:2000,1000279:2000,1000280:20000
+
+// --------------------------------------------------
+// Plant materials
+// Seeds, spores, plant bottles, and fruit bombs.
+// --------------------------------------------------
+
+-	shop	Gorme_Plant	-1,6210:800,6211:1000,6212:1200,7137:1000,7138:5000,1000281:3000,6279:100000,6280:100000,6281:100000,6282:100000,6283:100000
+
+// --------------------------------------------------
+// Dinner Buffs
+// Level 5 / 6 / 7 / 8 Assorted Cuisine.
+// --------------------------------------------------
+
+-	shop	Gorme_Dinner	-1,100075:250000,100076:380000,100077:420000,100078:560000
+
+// --------------------------------------------------
+// Elemental Buffs
+// Resistance potions and elemental converters.
+// --------------------------------------------------
+
+-	shop	Gorme_Elemental	-1,12118:60000,12119:60000,12121:60000,12120:60000,12114:160000,12115:160000,12116:160000,12117:160000
+
+// --------------------------------------------------
+// Crafting Manuals
+// Chemistry guides and cooking manuals.
+// --------------------------------------------------
+
+-	shop	Gorme_Manuals	-1,6284:100000,6285:100000,11022:100000,11023:100000,11024:100000,7129:100000,7127:100000,7128:100000,7133:100000,7434:100000,7132:100000,7130:100000,7144:100000,7477:160000,7478:240000,7479:380000
+
+
+
+//===== rAthena Script =======================================
+//= Poison Merchant
+//============================================================
+
+prtmall,45,67,4	script	Poison Merchant	877,{
+	mes "[Poison Merchant]";
+	mes "Hi...";
+	next;
+
+	switch (select(
+		"Purchase Poisons:" +
+		"Izidor Exchange:" +
+		"Poison Herbs:" +
+		"Cancel"
+	)) {
+	case 1:
+		mes "[Poison Merchant]";
+		mes "Okey...";
+		close2;
+		callshop "Poison_Merchant_Poisons", 1;
+		end;
+
+	case 2:
+		mes "[Poison Merchant]";
+		mes "Here you go...";
+		close2;
+		callshop "Poison_Merchant_Izidor", 1;
+		end;
+
+	case 3:
+		mes "[Poison Merchant]";
+		mes "Sure....";
+		close2;
+		callshop "Poison_Merchant_Herbs", 1;
+		end;
+
+	case 4:
+		close;
+	}
+
+	end;
+}
+
+// --------------------------------------------------
+// Purchase Poisons
+// Shadow Bottle intentionally omitted.
+// --------------------------------------------------
+
+-	shop	Poison_Merchant_Poisons	-1,7931:5000,678:30000,6128:1000,12717:20000,12718:20000,12719:20000,12720:20000,12721:20000,12722:20000,12723:20000,12724:20000
+
+// --------------------------------------------------
+// Poison Herbs: 4,000 Zeny each
+// --------------------------------------------------
+
+-	shop	Poison_Merchant_Herbs	-1,7932:4000,7933:4000,7934:4000,7935:4000,7936:4000,7937:4000
+
+
+//===== rAthena Script =======================================
+//= Tool Dealer, Material Dealer, Katarina
+//============================================================
+
+// --------------------------------------------------
+// Tool Dealer: direct shop, no dialogue
+// --------------------------------------------------
+
+prtmall,30,43,5	shop	Tool Dealer	478,12548:500,501:10,502:50,504:1200,506:40,11621:800,503:180,11623:1500,11624:700,11622:1200,11523:3000,11524:3500,11522:2500,656:2200,657:4500,645:1200,602:1000,610:12000,6123:250,6120:150,611:40,2239:10000,2241:5000,2201:5000,2243:20000,2212:1000,2242:24000,601:250,12212:5000
+
+// --------------------------------------------------
+// Material Dealer: direct shop, no dialogue
+// --------------------------------------------------
+
+prtmall,30,40,5	shop	Material Dealer	541,713:400,717:1500,1000275:1000,7143:5000,7141:20000,1092:3,1093:10,7140:60000,6248:750,6250:375,6251:375,6255:625,6261:625,6262:500,6297:300,6258:1000,11513:1250,6144:1250,911:270,919:480,925:48,734:3000,735:5000,736:1000,737:400,746:1400,712:2,744:2000,748:41250,965:560,964:900,910:400,912:480,740:1000,741:1800,742:3000,747:15000,1062:680,902:200,7106:1600,7154:1100,1052:460,934:1600,950:4900,1044:3900,704:18700,937:5500,939:1200,952:3000,7069:2200,7099:1700,7210:1700,7097:1900,7002:1600,1048:1800,1034:1200,7030:1750,1035:1000,7221:1200,7123:2000,7134:8,957:820,7155:1100,7565:1200,7003:2000,1025:3000
+
+// --------------------------------------------------
+// Katarina: Character Rename / Position Change
+// --------------------------------------------------
+
+prtmall,81,71,4	script	Katarina	90,{
+	mes "[Katarina]";
+	mes "Howdy.";
+	mes "I'm selling";
+	mes mesitemlink(12786) + ".";
+	mes "You can ^0000FFchange the slot position of a character using the card.^000000";
+	next;
+
+	mes "[Katarina]";
+	mes "I also sell " + mesitemlink(12790) + ", just as it's named. You can use it to ^0000FFchange your character name^000000.";
+	next;
+
+	close2;
+	callshop "Katarina_Rename_Move_Shop", 1;
+	end;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Char Rename/Move]");
+	end;
+}
+
+// --------------------------------------------------
+// Character Position Change Coupon: 100,000 Zeny
+// Char Name Change Ticket: 5,000,000 Zeny
+// --------------------------------------------------
+
+-	shop	Katarina_Rename_Move_Shop	-1,12786:100000,12790:5000000
+
+
+
+//===== rAthena Script =======================================
+//= Soul Plunger - Boo Boo
+//============================================================
+
+prtmall,51,32,3	script	Boo Boo	1186,{
+	mes "[Boo Boo]";
+	mes "Oooooooo...boooooo.";
+	mes "Boooooo...!!!!";
+	next;
+
+	mes "[Boo Boo]";
+	mes "Boooo, ooooo, oooo!";
+	mes "Ooooo.....boooo!";
+	next;
+
+	mes "[Boo Boo]";
+	mes "....????";
+	mes "Boooooooo!!!!";
+	next;
+
+	close2;
+	callshop "BooBoo_Soul_Plunger_Shop", 1;
+	end;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Soul Plunger]");
+	end;
+}
+
+// --------------------------------------------------
+// Soul Plunger: 5,000,000 Zeny
+// --------------------------------------------------
+
+-	shop	BooBoo_Soul_Plunger_Shop	-1,25041:5000000

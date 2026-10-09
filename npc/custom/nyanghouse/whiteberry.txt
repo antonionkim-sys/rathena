@@ -1,0 +1,37 @@
+prt_in,136,35,3	script	Whiteberry	544,{
+	mes "[Whiteberry]";
+	mes "Purr~Welcome.";
+	mes "The Cat Paw merchant group is pleased to welcome you.";
+	mes "We collect ^0000FFSilvervine Cat Fruits^000000 for soul stones, purr~";
+	next;
+
+	switch (select(
+		"Exchange Soul Stones",
+		"How to get Silvervine Cat Fruits?",
+		"Where to enchant costume hats?"
+	)) {
+	case 1:
+		mes "[Whiteberry]";
+		mes "Me love Silvervine Cat Fruits, purr~";
+		mes "Please give me some and in return, I'll give you Soul Stones.";
+		close2;
+		callshop "Whiteberry_SoulStones";
+		end;
+
+	case 2:
+		mes "[Whiteberry]";
+		mes "Purr~ You don't know?";
+		mes "They can be obtained from house planting, various weekly rankings, or Galaxy String turn ins!";
+		close;
+
+	case 3:
+		mes "[Whiteberry]";
+		mes "You can enchant them in Costume Grand Hall...using Soul Stones.";
+		close;
+	}
+
+OnInit:
+	setunittitle(getnpcid(0), "[Soul Stonez]");
+	setunitdata getnpcid(0), UNPC_GROUP_ID, 40;
+	end;
+}

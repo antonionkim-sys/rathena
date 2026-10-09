@@ -1,0 +1,250 @@
+//===== rAthena Script =======================================
+//= Card Remover - Thia
+//= 60% option: 100,000 Zeny.
+//= 100% option: 100,000 Zeny + 10 Etel Dust.
+//= Failure never destroys the equipment or cards.
+//============================================================
+
+prtrefinery,220,123,3	script	Thia	10079,{
+	disable_items;
+	cutin "ep15_2_fru_1.bmp",2;
+
+	mes "[Card Remover]";
+	mes "Umm...";
+	mes strcharinfo(0) + ", do you have any cards you would like removed?";
+	next;
+
+	switch(select("Information:100000 Zeny (60% success):100000 Zeny + 10 Etel Dust (100% success):Nah, I'm cool")) {
+	case 1:
+		goto L_Information;
+
+	case 2:
+		.@service = 1;
+		goto L_SelectItem;
+
+	case 3:
+		.@service = 2;
+		goto L_SelectItem;
+
+	default:
+		cutin "",255;
+		close;
+	}
+
+
+L_Information:
+	mes "[Card Remover]";
+	mes "I charge a fee of ^0000FF100,000 Zeny^000000 for each card that I remove from the item.";
+	next;
+
+	mes "[Card Remover]";
+	mes "There's a risk that it may fail...";
+	mes "^FF0000I won't return your Zeny!^000000";
+	mes "However, your ^0000FFitem and cards will be safe!^000000";
+	next;
+
+	mes "[Card Remover]";
+	mes "I could also help you remove the card without failure, but then I need ^0000FF100,000 Zeny^000000 and ^i[1000322]^0000FF 10 Etel Dust^000000.";
+
+	cutin "",255;
+	close;
+
+
+L_SelectItem:
+	mes "[Card Remover]";
+	mes "Very well. Which item shall I examine for you?";
+	next;
+
+	.@menu$ = "";
+	.@equipped_count = 0;
+
+	setarray .@indices[0],
+		EQI_HEAD_TOP,
+		EQI_HEAD_MID,
+		EQI_HEAD_LOW,
+		EQI_ARMOR,
+		EQI_HAND_R,
+		EQI_HAND_L,
+		EQI_GARMENT,
+		EQI_SHOES,
+		EQI_ACC_L,
+		EQI_ACC_R;
+
+	for (.@i = 0; .@i < getarraysize(.@indices); .@i++) {
+		.@slot = .@indices[.@i];
+
+		if (getequipisequiped(.@slot)) {
+			.@equipped_count++;
+			.@slot_list[.@equipped_count] = .@slot;
+			.@menu$ += F_getpositionname(.@slot) + "-[" + getequipname(.@slot) + "]:";
+		}
+	}
+
+	// Nothing equipped.
+	if (!.@equipped_count) {
+		mes "[Card Remover]";
+		mes "Weird.";
+		mes "You're not wearing anything there that I can remove cards from.";
+		mes "I can't work on this.";
+
+		cutin "",255;
+		close;
+	}
+
+	.@choice = select(.@menu$);
+	.@part = .@slot_list[.@choice];
+
+	// The selected slot is no longer equipped.
+	if (!getequipisequiped(.@part)) {
+		mes "[Card Remover]";
+		mes "Weird.";
+		mes "You're not wearing anything there that I can remove cards from.";
+		mes "I can't work on this.";
+
+		cutin "",255;
+		close;
+	}
+
+	.@cardcount = getequipcardcnt(.@part);
+
+	// No compounded cards.
+	if (!.@cardcount) {
+		mes "[Card Remover]";
+		mes "Weird.";
+		mes "There are no cards compounded on this item.";
+		mes "I can't work on this.";
+
+		cutin "",255;
+		close;
+	}
+
+	// Requires room for the equipment and returned card items.
+	if (!checkweight(1202, .@cardcount + 1)) {
+		mes "[Card Remover]";
+		mes "^3355FFJust a minute!^000000";
+		mes "I can't offer any of my";
+		mes "services to you because";
+		mes "you're carrying too much";
+		mes "stuff. Put your extra items in";
+		mes "Kafra Storage and come again~";
+
+		cutin "",255;
+		close;
+	}
+
+	goto L_Confirm;
+
+
+L_Confirm:
+	// 60% removal option.
+	if (.@service == 1) {
+		mes "[Card Remover]";
+		mes "This will cost ^0000FF100,000 Zeny^000000.";
+		mes "The removal has a ^0000FF60% chance^000000 to succeed.";
+		mes "If it fails, I won't return your Zeny.";
+		mes "However, your item and cards will be safe.";
+		next;
+
+		if (select("Remove the cards:Cancel") == 2) {
+			cutin "",255;
+			close;
+		}
+
+		if (Zeny < 100000) {
+			mes "[Card Remover]";
+			mes "You don't have enough Zeny.";
+
+			cutin "",255;
+			close;
+		}
+
+		// Recheck before charging/removing cards.
+		if (!getequipisequiped(.@part) || getequipcardcnt(.@part) != .@cardcount) {
+			mes "[Card Remover]";
+			mes "Weird.";
+			mes "That item changed while I was examining it.";
+			mes "Please try again.";
+
+			cutin "",255;
+			close;
+		}
+
+		Zeny -= 100000;
+
+		mes "[Card Remover]";
+		mes "Let me see...";
+		cutin "",255;
+		close2;
+
+		// 60% success. On failure, item/cards remain unchanged.
+		if (rand(100) < 60) {
+			successremovecards .@part;
+
+			mes "[Card Remover]";
+			mes "Done.";
+			mes "The cards have been removed safely.";
+			close;
+		}
+
+		mes "[Card Remover]";
+		mes "I'm sorry...";
+		mes "The removal failed.";
+		mes "I won't return your Zeny, but your item and cards are safe.";
+		close;
+	}
+
+	// Guaranteed removal option.
+	if (.@service == 2) {
+		mes "[Card Remover]";
+		mes "This will cost ^0000FF100,000 Zeny^000000 and";
+		mes "^i[1000322]^0000FF 10 Etel Dust^000000.";
+		mes "This removal will not fail.";
+		next;
+
+		if (select("Remove the cards:Cancel") == 2) {
+			cutin "",255;
+			close;
+		}
+
+		if (Zeny < 100000) {
+			mes "[Card Remover]";
+			mes "You don't have enough Zeny.";
+
+			cutin "",255;
+			close;
+		}
+
+		if (countitem(1000322) < 10) {
+			mes "[Card Remover]";
+			mes "You need ^i[1000322]^0000FF 10 Etel Dust^000000.";
+			cutin "",255;
+			close;
+		}
+
+		// Recheck before charging/removing cards.
+		if (!getequipisequiped(.@part) || getequipcardcnt(.@part) != .@cardcount) {
+			mes "[Card Remover]";
+			mes "Weird.";
+			mes "That item changed while I was examining it.";
+			mes "Please try again.";
+
+			cutin "",255;
+			close;
+		}
+
+		Zeny -= 100000;
+		delitem 1000322,10;
+
+		mes "[Card Remover]";
+		mes "Let me see...";
+		cutin "",255;
+		close2;
+
+		successremovecards .@part;
+
+		mes "[Card Remover]";
+		mes "Done.";
+		mes "The cards have been removed safely.";
+		close;
+	}
+}

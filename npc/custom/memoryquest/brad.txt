@@ -1,0 +1,218 @@
+//===== rAthena Script =======================================
+//= Brad - Stats, Traits, and Skill Reset Service
+//============================================================
+
+iz_ac01,99,156,5	script	Brad	416,{
+	// --------------------------------------------------
+	// Configuration
+	// --------------------------------------------------
+	.@starting_cost = 25000;
+	.@maximum_cost = 1000000;
+	.@etel_dust_id = 1000322;
+	.@etel_dust_amount = 1000;
+
+	// --------------------------------------------------
+	// Quest introduction
+	// --------------------------------------------------
+	if (checkquest(90076) == 1) {
+		mes "[Stats/Skill Reset]";
+		mes "Ahh... a mortal who walks the road again.";
+		mes "I keep the memory of every path you wished you could take back.";
+		next;
+
+		mes "[Stats/Skill Reset]";
+		mes "I can reset your <b>Stats and Traits</b>, or your <b>Skills</b>, returning every point to you.";
+		mes "If you are <b>Level 200 or below</b>, the reset costs you nothing at all.";
+		next;
+
+		mes "[Stats/Skill Reset]";
+		mes "Above Level 200, the price grows with each reset.";
+		mes "But if you wish to clear that counter and start fresh, I can do that too...";
+		mes "For just <b>1,000</b> ^i[1000322] <b>Etel Dust</b>.";
+		next;
+
+		if (!checkweight(44599, 1)) {
+			mes "[Stats/Skill Reset]";
+			mes "Please make room in your inventory before recovering your Memory Shard.";
+			close;
+		}
+
+		getitem 44599, 1;
+
+		mes "[Stats/Skill Reset]";
+		mes "You've recovered ^i[44599] 1x ^0000FF<b>Memory Shard!</b>^000000";
+		mes "You gained ^FFA500some experience back^000000.";
+		next;
+
+		completequest 90076;
+		setquest 90077;
+	}
+
+	// --------------------------------------------------
+	// Default dialogue
+	// --------------------------------------------------
+	mes "[Stats/Skill Reset]";
+	mes "I can use my power to reset your ^0000FFStats^000000 & ^0000FFTraits^000000 or ^0000FFSkills^000000.";
+	mes "P.S. it's ^0000FFfree to reset^000000 if you are under Level 200.";
+	next;
+
+	// #brad_reset_times is account-wide. Remove the # in every
+	// occurrence below if you want each character to have its own counter.
+	.@reset_times = #brad_reset_times;
+
+	mes "[Stats/Skill Reset]";
+
+	if (BaseLevel <= 200) {
+		mes "Your reset is currently ^0000FFfree^000000 because you are Level " + BaseLevel + ".";
+	}
+	else {
+		mes "The cost rises ^FF0000exponentially^000000 with each paid reset.";
+		mes "The maximum cost is ^FF00001,000,000 Zeny^000000.";
+	}
+
+	mes "You have used the reset ^0000FF" + .@reset_times + " time" + ((.@reset_times == 1) ? "" : "s") + ".^000000";
+	mes "";
+	mes "";
+	mes "Would you like to use my services?";
+	next;
+
+	.@choice = select(
+		"Stats & Traits reset" +
+		":Traits reset" +
+		":Skills reset" +
+		":Reset the Reset Counter" +
+		":Cancel"
+	);
+
+	if (.@choice == 5)
+		close;
+
+	// --------------------------------------------------
+	// Reset counter nullification
+	// --------------------------------------------------
+	if (.@choice == 4) {
+		mes "[Stats/Skill Reset]";
+		mes "Do you want to reset your Reset Times to 0?";
+		mes "";
+		mes "I'll need 1000 ^i[1000322] to perform the nullification ritual!";
+		next;
+
+		if (select("Yes please!:Not yet.") == 2)
+			close;
+
+		if (countitem(.@etel_dust_id) < .@etel_dust_amount) {
+			mes "[Stats/Skill Reset]";
+			mes "You do not have enough ^i[1000322] Etel Dust.";
+			mes "I need " + .@etel_dust_amount + " Etel Dust.";
+			close;
+		}
+
+		delitem .@etel_dust_id, .@etel_dust_amount;
+		#brad_reset_times = 0;
+
+		mes "[Stats/Skill Reset]";
+		mes "The nullification ritual is complete.";
+		mes "Your Reset Times have returned to ^0000FF0^000000.";
+		close;
+	}
+
+	// --------------------------------------------------
+	// Exponential price calculation
+	// --------------------------------------------------
+	// 25,000 -> 50,000 -> 100,000 -> 200,000 -> 400,000
+	// -> 800,000 -> 1,000,000 Zeny maximum.
+	.@cost = .@starting_cost * pow(2, .@reset_times);
+
+	if (.@cost > .@maximum_cost)
+		.@cost = .@maximum_cost;
+
+	// Resets at Level 200 and below are always free.
+	if (BaseLevel <= 200)
+		.@cost = 0;
+
+	// --------------------------------------------------
+	// Service choice text
+	// --------------------------------------------------
+	if (.@choice == 1) {
+		.@service$ = "Stats & Traits reset";
+		.@result$ = "Your ^0000FFstats and traits^000000 have been reset.";
+	}
+	else if (.@choice == 2) {
+		.@service$ = "Traits reset";
+		.@result$ = "Your ^0000FFtraits^000000 have been reset.";
+	}
+	else {
+		.@service$ = "Skills reset";
+		.@result$ = "Your ^0000FFskills^000000 have been reset.";
+	}
+
+	// --------------------------------------------------
+	// Reset confirmation
+	// --------------------------------------------------
+	mes "[Stats/Skill Reset]";
+	mes "You selected ^0000FF" + .@service$ + "^000000.";
+
+	if (.@cost == 0) {
+		mes "Cost: ^0000FFFree^000000.";
+	}
+	else {
+		mes "Cost: ^FF0000" + callfunc("F_InsertComma", .@cost) + " Zeny^000000.";
+	}
+
+	next;
+
+	if (select("Reset now:Cancel") == 2)
+		close;
+
+	if (.@cost > 0 && Zeny < .@cost) {
+		mes "[Stats/Skill Reset]";
+		mes "You do not have enough Zeny.";
+		mes "You need ^FF0000" + callfunc("F_InsertComma", .@cost) + " Zeny^000000.";
+		close;
+	}
+
+	if (.@cost > 0)
+		Zeny -= .@cost;
+
+	// --------------------------------------------------
+	// Perform the selected reset
+	// --------------------------------------------------
+	if (.@choice == 1) {
+		// Standard stat reset. Add the trait reset command below
+		// if your rAthena revision provides one.
+		ResetStatus;
+
+		// Example only: uncomment ONLY if your server supports it.
+		// ResetTrait;
+	}
+	else if (.@choice == 2) {
+		// Trait reset is revision/custom-source dependent.
+		// Replace this with the correct trait reset command for your server.
+		mes "[Stats/Skill Reset]";
+		mes "Trait reset is not configured on this server yet.";
+		mes "Add your server's trait reset command in this section.";
+		close;
+	}
+	else {
+		sc_end_class;
+		ResetSkill;
+	}
+
+	// Only paid resets increase the reset counter.
+	if (BaseLevel > 200)
+		#brad_reset_times++;
+
+	mes "[Stats/Skill Reset]";
+	mes .@result$;
+
+	if (.@cost > 0) {
+		mes "You paid ^FF0000" + callfunc("F_InsertComma", .@cost) + " Zeny^000000.";
+		mes "Reset Times: ^0000FF" + #brad_reset_times + "^000000.";
+	}
+
+	close;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Stats/Skill Reset]");
+	end;
+}

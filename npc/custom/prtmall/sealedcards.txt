@@ -1,0 +1,46 @@
+prtmall,85,57,3	script	Mysterious Cactus	10219,3,3,{
+	mes "[Mysterious Cactus]";
+	mes "Cough~ Need water...";
+	mes "Are you looking for something?";
+	next;
+
+	switch (select(
+		"I heard you got Sealed Cards?",
+		"Sand into Sealed Cards?",
+		"Nope"
+	)) {
+	case 1:
+		mes "[Mysterious Cactus]";
+		mes "Oh! Who told you that?";
+		mes "Now, since you know it... I might as well show 'em to you.";
+		close2;
+		callshop "Cactus_SealedAlbums";
+		end;
+
+	case 2:
+		mes "[Mysterious Cactus]";
+		mes "Right! Sand! But not regular sand.";
+		mes "I'm collecting special magical Sealed Card Sand.";
+		mes "Give me some, and I'll give you any sealed card.";
+		close2;
+		callshop "Cactus_SealedCards";
+		end;
+
+	case 3:
+		mes "[Mysterious Cactus]";
+		mes "Then... could you at least bring me some water?";
+		close;
+	}
+
+OnTouch:
+	if (@CactusGreeted)
+		end;
+
+	@CactusGreeted = 1;
+	npctalk "Cough~ Need water...";
+	end;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Sealed Cards]");
+	end;
+}

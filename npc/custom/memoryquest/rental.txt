@@ -1,0 +1,329 @@
+//===== rAthena Script =======================================
+//= Rental & Homun Service
+//============================================================
+
+iz_ac01,97,156,6	script	Rental & Homun Service	461,{
+
+	.@mado_cost = 1000000;
+
+	// --------------------------------------------------
+	// Quest introduction
+	// --------------------------------------------------
+	if (checkquest(90075) == 1) {
+		mes "[Rental & Homun Service]";
+		mes "Meollo! You are here for the stable memory, yes?";
+		mes "The one where a whole herd somehow fits inside one little shop!";
+		next;
+
+		mes "[Rental & Homun Service]";
+		mes "For just <b>1,000 zeny</b>, I can get you mounted on whatever your class can ride!";
+		mes "Peco Peco, Dragon, Mado Gear... if you can ride it, I can get you on it!";
+		mes "And if you want your own, I sell the <b>flutes, halters, and Mado Gear boxes</b> you need.";
+		next;
+
+		mes "[Rental & Homun Service]";
+		mes "And homunculi! Ohhh, the homunculi!";
+		mes "I level them, befriend them, evolve them, mutate them...";
+		mes "And for <b>1,000,000 zeny</b>, I can even shuffle their stats!";
+		mes "Hoooocuusss! Pooocuus!!";
+		next;
+
+		if (!checkweight(44599, 1)) {
+			mes "[Rental & Homun Service]";
+			mes "Please make room in your inventory before recovering your Memory Shard.";
+			close;
+		}
+
+		getitem 44599, 1;
+
+		mes "[Rental & Homun Service]";
+		mes "You've recovered ^i[44599] 1x ^0000FF<b>Memory Shard!</b>^000000";
+		mes "You gained ^FFA500some experience back^000000.";
+		next;
+
+		completequest 90075;
+		setquest 90076;
+	}
+
+	// --------------------------------------------------
+	// Mount restriction
+	// --------------------------------------------------
+	if (ismounting()) {
+		mes "[Rental Service]";
+		mes "Please remove your mount first.";
+		close;
+	}
+
+	// --------------------------------------------------
+	// Rune Knight: Dragon
+	// --------------------------------------------------
+	if ((eaclass() & EAJ_THIRDMASK) == EAJ_RUNE_KNIGHT) {
+		mes "[Rental Service]";
+		mes "I can rent Dragons to Rune Knights.";
+		next;
+
+		if (!getskilllv("KN_RIDING")) {
+			mes "[Rental Service]";
+			mes "Please learn how to ride a Dragon first.";
+			close;
+		}
+
+		if (checkdragon()) {
+			mes "[Rental Service]";
+			mes "You already have a Dragon.";
+			close;
+		}
+
+		if (select("Ride a Dragon:Cancel") == 2)
+			close;
+
+		setdragon;
+		specialeffect2 EF_TEIHIT3;
+
+		mes "[Rental Service]";
+		mes "Your Dragon is ready. Enjoy the ride!";
+		close;
+	}
+
+	// --------------------------------------------------
+	// Royal Guard: Gryphon
+	// --------------------------------------------------
+	if ((eaclass() & EAJ_THIRDMASK) == EAJ_ROYAL_GUARD) {
+		mes "[Rental Service]";
+		mes "I can rent Gryphons to Royal Guards.";
+		next;
+
+		if (!getskilllv("KN_RIDING")) {
+			mes "[Rental Service]";
+			mes "Please learn how to ride a Gryphon first.";
+			close;
+		}
+
+		if (checkriding()) {
+			mes "[Rental Service]";
+			mes "You already have a Gryphon.";
+			close;
+		}
+
+		if (select("Ride a Gryphon:Cancel") == 2)
+			close;
+
+		setriding;
+		specialeffect2 EF_TEIHIT3;
+
+		mes "[Rental Service]";
+		mes "Your Gryphon is ready. Enjoy the ride!";
+		close;
+	}
+
+	// --------------------------------------------------
+	// Ranger: Falcon or Wolf Flute
+	// --------------------------------------------------
+	if ((eaclass() & EAJ_THIRDMASK) == EAJ_RANGER) {
+		mes "[Rental Service]";
+		mes "I provide Falcons and Wolf Flutes.";
+		next;
+
+		.@choice = select("Rent a Falcon:Get a Wolf Flute:Cancel");
+
+		if (.@choice == 1) {
+			if (!getskilllv("HT_FALCON")) {
+				mes "[Rental Service]";
+				mes "Please learn Falcon Mastery first.";
+				close;
+			}
+
+			if (checkfalcon()) {
+				mes "[Rental Service]";
+				mes "You already have a Falcon.";
+				close;
+			}
+
+			if (checkwug()) {
+				mes "[Rental Service]";
+				mes "Please dismiss your Warg before renting a Falcon.";
+				close;
+			}
+
+			setfalcon;
+			specialeffect2 EF_TEIHIT3;
+
+			mes "[Rental Service]";
+			mes "Your Falcon is ready. Take good care of it!";
+			close;
+		}
+
+		if (.@choice == 2) {
+			if (countitem(6124)) {
+				mes "[Rental Service]";
+				mes "You already have a Wolf Flute.";
+				close;
+			}
+
+			if (!checkweight(6124, 1)) {
+				mes "[Rental Service]";
+				mes "Please make room in your inventory first.";
+				close;
+			}
+
+			getitem 6124, 1;
+
+			mes "[Rental Service]";
+			mes "Here is your Wolf Flute. Keep it safe!";
+			close;
+		}
+
+		close;
+	}
+
+	// --------------------------------------------------
+	// Falcon rental: other classes with Falcon Mastery
+	// Rangers are handled by the branch above.
+	// --------------------------------------------------
+	if (getskilllv("HT_FALCON")) {
+		mes "[Rental Service]";
+
+		if (checkfalcon()) {
+			mes "You already have a Falcon.";
+			close;
+		}
+
+		if (checkwug()) {
+			mes "Please dismiss your Warg before renting a Falcon.";
+			close;
+		}
+
+		mes "I can rent you a Falcon.";
+		next;
+
+		if (select("Rent a Falcon:Cancel") == 2)
+			close;
+
+		setfalcon;
+		specialeffect2 EF_TEIHIT3;
+
+		mes "[Rental Service]";
+		mes "Your Falcon is ready. Take good care of it!";
+		close;
+	}
+
+	// --------------------------------------------------
+	// Mechanic: Pushcart or Mado Gear
+	// --------------------------------------------------
+	if ((eaclass() & EAJ_THIRDMASK) == EAJ_MECHANIC) {
+		if (!checkcart() && getskilllv("MC_PUSHCART") &&
+		    !checkmadogear() && getskilllv("NC_MADOLICENCE")) {
+
+			mes "[Rental Service]";
+			mes "I provide Pushcarts and sell Mado Gears.";
+			next;
+
+			.@choice = select("Get a Pushcart:Buy Mado Gear:Cancel");
+
+			if (.@choice == 1) {
+				setcart;
+				specialeffect2 EF_TEIHIT3;
+
+				mes "[Rental Service]";
+				mes "Your Pushcart is ready to use.";
+				close;
+			}
+
+			if (.@choice == 2)
+				goto L_BuyMado;
+
+			close;
+		}
+
+		if (!checkcart() && getskilllv("MC_PUSHCART")) {
+			setcart;
+			specialeffect2 EF_TEIHIT3;
+
+			mes "[Rental Service]";
+			mes "Your Pushcart is ready to use.";
+			close;
+		}
+
+		if (!checkmadogear() && getskilllv("NC_MADOLICENCE"))
+			goto L_BuyMado;
+
+		goto L_Introduction;
+	}
+
+	// --------------------------------------------------
+	// Knight / Crusader: Peco Peco
+	// --------------------------------------------------
+	if (getskilllv("KN_RIDING") &&
+	    !checkriding() &&
+	    !checkdragon()) {
+
+		mes "[Rental Service]";
+		mes "I can rent Peco Peco to Knight / Crusader jobs.";
+		next;
+
+		if (select("Ride a Peco Peco:Cancel") == 2)
+			close;
+
+		setriding;
+		specialeffect2 EF_TEIHIT3;
+
+		mes "[Rental Service]";
+		mes "Your Peco Peco is ready. Enjoy the ride!";
+		close;
+	}
+
+L_Introduction:
+	mes "[Rental Service]";
+	mes "I can rent Peco Peco to Knight / Crusader jobs.";
+	mes "I can also rent Dragons to Rune Knights and Gryphons to Royal Guards.";
+	mes "I rent Falcons to Hunters and Snipers with Falcon Mastery.";
+	mes "Rangers can rent Falcons or receive a Wolf Flute.";
+	mes "I also sell Mado Gears to Mechanics.";
+	close;
+
+L_BuyMado:
+	mes "[Rental Service]";
+	mes "I sell Mado Gear for " + callfunc("F_InsertComma", .@mado_cost) + " Zeny.";
+	next;
+
+	if (select("Buy Mado Gear:Cancel") == 2)
+		close;
+
+	if (checkmadogear()) {
+		mes "[Rental Service]";
+		mes "You already have a Mado Gear.";
+		close;
+	}
+
+	if (!getskilllv("NC_MADOLICENCE")) {
+		mes "[Rental Service]";
+		mes "Please learn the Mado Gear License first.";
+		close;
+	}
+
+	if (ismounting()) {
+		mes "[Rental Service]";
+		mes "Please remove your mount first.";
+		close;
+	}
+
+	if (Zeny < .@mado_cost) {
+		mes "[Rental Service]";
+		mes "You do not have enough Zeny.";
+		close;
+	}
+
+	Zeny -= .@mado_cost;
+	setmadogear;
+	specialeffect2 EF_TEIHIT3;
+
+	mes "[Rental Service]";
+	mes "Thank you for purchasing Mado Gear.";
+	mes "You paid " + callfunc("F_InsertComma", .@mado_cost) + " Zeny.";
+	close;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Malangdo Corp]");
+	debugmes "Rental & Homun Service: title initialized.";
+	end;
+}

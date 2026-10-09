@@ -1,0 +1,28 @@
+iz_ac01,95,148,5	script	Warp Altar	10527,{
+	if (checkquest(90094) == 1) {
+		mes "[Warp Altar]";
+		mes "...the altar hums. <b>ONE LAST STORY</b>, it seems to say.";
+		mes "THE ONE YOU NEVER FINISHED.";
+		next;
+
+		mes "[Warp Altar]";
+		mes "Beyond me lies the <b>Dimensional Library</b>, where every instance ever written is shelved by rank: <b>S-Solo</b> for level-210, <b>S-Party</b> for level-220, <b>SS-Party</b> for level-250 and <b>SSS-Party</b> for level-270. A <b>party leader</b> creates, a party enters. S-Solo takes a single person, so beginners start there.";
+		next;
+
+		mes "[Warp Altar]";
+		mes "Each rank pays in ^i[42001] <b>Chrono Coins - S</b> from S-Solo and S-Party, ^i[42002] <b>SS</b> from SS-Party, ^i[42003] <b>SSS</b> from SSS-Party, and the merchants trade gear for them.";
+		next;
+
+		mes "[Warp Altar]";
+		mes "You've recovered ^i[44599] 1x ^0000FF<b>Memory Shard!</b>^000000";
+		mes "You gained ^FFA500some experience back^000000.";
+
+		completequest 90094;
+		setquest 90095;
+		end;
+	}
+
+	mes "[Warp Altar]";
+	mes "The altar hums softly.";
+	end;
+}

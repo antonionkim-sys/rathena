@@ -1,0 +1,1270 @@
+Header:
+  Type: BARTER_DB
+  Version: 2
+
+Body:
+- Name: Whiteberry_SoulStones
+  Items:
+  - Index: 0
+    Item: Soul_Stone
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 50
+- Name: Blackphone_ShadowCubes
+  Items:
+  - Index: 0
+    Item: Shadow_Piece  # ID: 44590
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 40
+  - Index: 1
+    Item: Shadow_Cube  # ID: 22827
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 50
+  - Index: 2
+    Item: Material_Shadow_Cube  # ID: 23335
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 30
+  - Index: 3
+    Item: Material_Shadow_CubeII  # ID: 100690
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 150
+  - Index: 4
+    Item: Skill_Shadow_Cube  # ID: 100198
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 50
+  - Index: 5
+    Item: Ex_Skill_Shadow_Cube  # ID: 100512
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 50
+  - Index: 6
+    Item: Shadow_Cube_Weapon  # ID: 22973
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 80
+  - Index: 7
+    Item: Shadow_Cube_Armor  # ID: 22974
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 80
+  - Index: 8
+    Item: Shadow_Cube_Shield  # ID: 22975
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 80
+  - Index: 9
+    Item: Shadow_Cube_Shoes  # ID: 22976
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 80
+  - Index: 10
+    Item: Shadow_Cube_Pendant  # ID: 22977
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 80
+  - Index: 11
+    Item: Shadow_Cube_Earing  # ID: 22978
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 80
+- Name: Blackphone_ShadowBoxes
+  Items:
+  - Index: 0
+    Item: Greed_Shadow_Box  # ID: 14726
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 100
+  - Index: 1
+    Item: Heal_Shadow_Box  # ID: 14727
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 100
+  - Index: 2
+    Item: Hiding_Shadow_Box  # ID: 14728
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 100
+  - Index: 3
+    Item: Cloaking_Shadow_Box  # ID: 14729
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 100
+  - Index: 4
+    Item: Teleport_Shadow_Box  # ID: 14731
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 100
+  - Index: 5
+    Item: Steal_Shadow_Box  # ID: 14732
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 100
+  - Index: 6
+    Item: Shadow_Box  # ID: 17292
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 100
+  - Index: 7
+    Item: Sigrun_Shadow_Box  # ID: 23924
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 100
+  - Index: 8
+    Item: Gemstone_Shadow_Box  # ID: 14704
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 300
+  - Index: 9
+    Item: Bearers_Shadow_Box  # ID: 22813
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 300
+  - Index: 10
+    Item: Mammoth_Shadow_Box  # ID: 100707
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 300
+  - Index: 11
+    Item: AutoSpell_Shadow_Box  # ID: 100785
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 300
+  - Index: 12
+    Item: PhyMag_Shadow_Box  # ID: 100886
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 300
+- Name: Blackphone_TraitShadows
+  Items:
+  - Index: 0
+    Item: S_P_Power_Weapon  # ID: 24751
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 100
+  - Index: 1
+    Item: S_P_Power_Shield  # ID: 24752
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 100
+  - Index: 2
+    Item: S_M_Spell_Weapon  # ID: 24753
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 100
+  - Index: 3
+    Item: S_M_Spell_Shield  # ID: 24754
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 100
+  - Index: 4
+    Item: S_Concentration_Weapon  # ID: 24755
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 100
+  - Index: 5
+    Item: S_Concentration_Shield  # ID: 24756
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 100
+  - Index: 6
+    Item: S_Wisdom_Weapon  # ID: 24757
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 100
+  - Index: 7
+    Item: S_Wisdom_Shield  # ID: 24758
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 100
+  - Index: 8
+    Item: S_Stamina_Weapon  # ID: 24759
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 100
+  - Index: 9
+    Item: S_Stamina_Shield  # ID: 24760
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 100
+  - Index: 10
+    Item: S_Creative_Weapon  # ID: 24761
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 100
+  - Index: 11
+    Item: S_Creative_Shield  # ID: 24762
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 100
+- Name: Blackphone_Job31Shadows
+  Items:
+  - Index: 0
+    Item: S_Ignition_Cube  # ID: 100951
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 1
+    Item: S_W_Breath_Cube  # ID: 100952
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 2
+    Item: S_F_Breath_Cube  # ID: 100954
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 3
+    Item: S_Sonic_Cube  # ID: 100955
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 4
+    Item: S_Strain_Cube  # ID: 100960
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 5
+    Item: S_Jack_Cube  # ID: 100961
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 6
+    Item: S_Chain_Cube  # ID: 100962
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 7
+    Item: S_Crimson_Cube  # ID: 100963
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 8
+    Item: S_Vulcan_Cube  # ID: 100968
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 9
+    Item: S_Boomerang_Cube  # ID: 100969
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 10
+    Item: S_Arms_Cube  # ID: 100970
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 11
+    Item: S_Tornado_Cube  # ID: 100971
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 12
+    Item: S_Duplelight_Cube  # ID: 100976
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 13
+    Item: S_Magnus_Cube  # ID: 100977
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 14
+    Item: S_Adoramus_Cube  # ID: 100978
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 15
+    Item: S_Judex_Cube  # ID: 100979
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 16
+    Item: S_Rolling_Cube  # ID: 100984
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 17
+    Item: S_Ripper_Cube  # ID: 100985
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 18
+    Item: S_Slash_Cube  # ID: 100986
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 19
+    Item: S_Katar_Cube  # ID: 100987
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 20
+    Item: S_Shooting_Cube  # ID: 100992
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 21
+    Item: S_Arrow_Cube  # ID: 100994
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 22
+    Item: S_Aimed_Cube  # ID: 100995
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 23
+    Item: S_Cluster_Cube  # ID: 100996
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+- Name: Blackphone_Job32Shadows
+  Items:
+  - Index: 0
+    Item: S_Banish_Cannon_Cube  # ID: 100956
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 1
+    Item: S_Brand_Cube  # ID: 100957
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 2
+    Item: S_Genesis_Cube  # ID: 100958
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 3
+    Item: S_Chain_Press_Cube  # ID: 100959
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 4
+    Item: S_Grave_Cube  # ID: 100964
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 5
+    Item: S_Dust_Cube  # ID: 100965
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 6
+    Item: S_Varetyr_Cube  # ID: 100966
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 7
+    Item: S_Psychic_Cube  # ID: 100967
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 8
+    Item: S_Spore_Bomb_Cube  # ID: 100972
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 9
+    Item: S_Cannon_Cart_Cube  # ID: 100973
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 10
+    Item: S_Crazy_Cube  # ID: 100974
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 11
+    Item: S_Cart_Tornado_Cube  # ID: 100975
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 12
+    Item: S_Knucklearrow_Cube  # ID: 100980
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 13
+    Item: S_Skynetblow_Cube  # ID: 100981
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 14
+    Item: S_Rampage_Cube  # ID: 100982
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 15
+    Item: S_TigerCannon_Cube  # ID: 100983
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 16
+    Item: S_Menace_Cube  # ID: 100988
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 17
+    Item: S_Shadowspell_Cube  # ID: 100989
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 18
+    Item: S_Triangle_Cube  # ID: 100990
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 19
+    Item: S_Paint_Cube  # ID: 100991
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 20
+    Item: S_Rainstorm_Cube  # ID: 100997
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 21
+    Item: S_Metalic_Cube  # ID: 100998
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 22
+    Item: S_Arrowvulcan_Cube  # ID: 100999
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 23
+    Item: S_Reverberation_Cube  # ID: 101000
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+- Name: Blackphone_ExtendedShadows
+  Items:
+  - Index: 0
+    Item: S_Moonlight_Cube  # ID: 101001
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 1
+    Item: S_Sunshine_Cube  # ID: 101002
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 2
+    Item: S_Stardust_Cube  # ID: 101003
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 3
+    Item: S_S_Cube  # ID: 101004
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 4
+    Item: S_Evilcurse_Cube  # ID: 101005
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 5
+    Item: S_Syuriken_Cube  # ID: 101006
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 6
+    Item: S_Kunai_Cube  # ID: 101007
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 7
+    Item: S_Huusouka_Cube  # ID: 101008
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 8
+    Item: S_Kamaenraku_Cube  # ID: 101009
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 9
+    Item: S_God_Hammer_Cube  # ID: 101010
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 10
+    Item: S_Shatter_Buster_Cube  # ID: 101011
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 11
+    Item: S_Tail_Dragon_Cube  # ID: 101012
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 12
+    Item: S_Trip_Cube  # ID: 101013
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 13
+    Item: S_Flare_Dance_Cube  # ID: 101014
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 14
+    Item: S_Super_Magic_Cube  # ID: 101015
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 15
+    Item: S_Super_Power_Cube  # ID: 101016
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 16
+    Item: S_Silvervine_Cube  # ID: 101017
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 17
+    Item: S_Catnip_Cube  # ID: 101018
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 18
+    Item: S_SavageRabbit_Cube  # ID: 101019
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+  - Index: 19
+    Item: S_Pickyrush_Cube  # ID: 101020
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 15
+- Name: Blackphone_GeneralShadows
+  Items:
+  - Index: 0
+    Item: S_RuneKnight_Cube  # ID: 101021
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 30
+  - Index: 1
+    Item: S_RoyalGuard_Cube  # ID: 101022
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 30
+  - Index: 2
+    Item: S_Warlock_Cube  # ID: 101023
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 30
+  - Index: 3
+    Item: S_Sorcerer_Cube  # ID: 101024
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 30
+  - Index: 4
+    Item: S_Mechanic_Cube  # ID: 101025
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 30
+  - Index: 5
+    Item: S_Generic_Cube  # ID: 101026
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 30
+  - Index: 6
+    Item: S_ArchBishop_Cube  # ID: 101027
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 30
+  - Index: 7
+    Item: S_Sura_Cube  # ID: 101028
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 30
+  - Index: 8
+    Item: S_GuillotineCross_Cube  # ID: 101029
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 30
+  - Index: 9
+    Item: S_ShadowChaser_Cube  # ID: 101030
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 30
+  - Index: 10
+    Item: S_Ranger_Cube  # ID: 101031
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 30
+  - Index: 11
+    Item: S_Wanderer_Cube  # ID: 101032
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 30
+  - Index: 12
+    Item: S_Minstrel_Cube  # ID: 101033
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 30
+  - Index: 13
+    Item: S_Star_Emperor_Cube  # ID: 101034
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 30
+  - Index: 14
+    Item: S_Soul_Reaper_Cube  # ID: 101035
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 30
+  - Index: 15
+    Item: S_Kagerou_Cube  # ID: 101036
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 30
+  - Index: 16
+    Item: S_Oboro_Cube  # ID: 101037
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 30
+  - Index: 17
+    Item: S_Rebellion_Cube  # ID: 101038
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 30
+  - Index: 18
+    Item: S_SuperNovice_Cube  # ID: 101039
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 30
+  - Index: 19
+    Item: S_Doram_Cube  # ID: 101040
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 30
+- Name: Blackphone_CoolCubes
+  Items:
+  - Index: 0
+    Item: S_Doram_Cube  # ID: 101040
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 40
+  - Index: 1
+    Item: S_Gemstone_Cube  # ID: 101042
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 40
+  - Index: 2
+    Item: S_Pene1_Cube  # ID: 101043
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 35
+  - Index: 3
+    Item: S_Pene2_Cube  # ID: 101044
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 35
+  - Index: 4
+    Item: S_Temp1_Cube  # ID: 101045
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 35
+  - Index: 5
+    Item: S_Temp2_Cube  # ID: 101046
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 35
+- Name: Blackphone_BlueShadows
+  Items:
+  - Index: 0
+    Item: S_Absorb_Shield  # ID: 24685
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 1
+    Item: S_Absorb_Weapon  # ID: 24686
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 2
+    Item: S_M_AutoSpell_Armor  # ID: 24728
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 3
+    Item: S_M_AutoSpell_Shoes  # ID: 24729
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 4
+    Item: S_M_AutoSpell_Earring  # ID: 24730
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 5
+    Item: S_M_AutoSpell_Pendant  # ID: 24731
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 6
+    Item: S_R_Bearers_Shoes  # ID: 24763
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 7
+    Item: S_R_Bearers_Armor  # ID: 24764
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 8
+    Item: S_R_Bearers_Pendant  # ID: 24765
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 9
+    Item: S_R_Bearers_Earring  # ID: 24766
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 10
+    Item: S_Mega_Blitz_Shield  # ID: 24767
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 11
+    Item: S_Mega_Blitz_Weapon  # ID: 24768
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 12
+    Item: S_CriticalHit_Weapon  # ID: 24738
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 13
+    Item: S_CriticalHit_Armor  # ID: 15280
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 14
+    Item: S_EXP_Shield  # ID: 24683
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 15
+    Item: S_EXP_Weapon  # ID: 24770
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 16
+    Item: S_TrueGem_Armor  # ID: 24675
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 17
+    Item: S_TrueGem_Shoes  # ID: 24676
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 18
+    Item: S_TrueGem_Earring  # ID: 24677
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 19
+    Item: S_TrueGem_Pendant  # ID: 24678
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 20
+    Item: S_HardChamption_Shoes  # ID: 24400
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 21
+    Item: S_Hasty_Weapon  # ID: 24439
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 22
+    Item: S_Hasty_Shield  # ID: 24732
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 23
+    Item: S_Infinity_Weapon  # ID: 24386
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 24
+    Item: S_Infinity_Shield  # ID: 24733
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 25
+    Item: S_ImmunedAthena_Shield  # ID: 24399
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 26
+    Item: S_KingbirdAncient_Armor  # ID: 24401
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 27
+    Item: S_KingbirdAnc_Weapon  # ID: 24745
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 28
+    Item: S_Clever_Weapon  # ID: 24736
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 29
+    Item: S_Clever_Shield  # ID: 24737
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 30
+    Item: S_M_Mammoth_Armor  # ID: 24679
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 31
+    Item: S_M_Mammoth_Shoes  # ID: 24680
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 32
+    Item: S_M_Mammoth_Earring  # ID: 24681
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 33
+    Item: S_M_Mammoth_Pendant  # ID: 24682
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 34
+    Item: S_FullPene_Earring  # ID: 24661
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 35
+    Item: S_FullPene_Pendant  # ID: 24662
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 36
+    Item: S_FullPene_Armor  # ID: 24663
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 37
+    Item: S_FullPene_Shoes  # ID: 24664
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 38
+    Item: S_Durable_Weapon  # ID: 24734
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 39
+    Item: S_Durable_Shield  # ID: 24735
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 40
+    Item: S_AllRace_Shield  # ID: 24342
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 41
+    Item: S_AllRace_Shoes  # ID: 24341
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 42
+    Item: S_S_Reload_Shield  # ID: 24746
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 43
+    Item: S_PerfectSize_Weapon  # ID: 24425
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 44
+    Item: S_PerfectSize_Armor  # ID: 24426
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 45
+    Item: S_SpellCaster_Armor  # ID: 24747
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 46
+    Item: S_SpellCaster_Shoes  # ID: 24748
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 47
+    Item: S_SpellCaster_Earring  # ID: 24749
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 48
+    Item: S_SpellCaster_Pendant  # ID: 24750
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 49
+    Item: S2_Plasterer's_Armor  # ID: 24352
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 50
+    Item: S2_Insomniac_Shoes  # ID: 24353
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 51
+    Item: S2_Peerless_Armor  # ID: 24354
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 52
+    Item: S2_Adurate_Shoes  # ID: 24355
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 53
+    Item: Unfreez_Weapon_S2  # ID: 24356
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 54
+    Item: Vitality_Earing_S2  # ID: 24357
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 55
+    Item: S2_Neutral_Weapon  # ID: 24358
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 56
+    Item: S2_Curse_Lift_Pendent  # ID: 24359
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 57
+    Item: S_AllMighty_Pendant  # ID: 24340
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 58
+    Item: S_AllMighty_Earring  # ID: 24339
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 59
+    Item: S_FullTemp_Earring  # ID: 24665
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 60
+    Item: S_FullTemp_Shoes  # ID: 24666
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 61
+    Item: S_FullTemp_Armor  # ID: 24667
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+  - Index: 62
+    Item: S_FullTemp_Pendant  # ID: 24668
+    RequiredItems:
+    - Index: 0
+      Item: Shadow_Piece
+      Amount: 80
+Header:
+  Type: BARTER_DB
+  Version: 2
+
+Body:
+- Name: Cheshire_EXPManuals
+  Items:
+  - Index: 0
+    Item: Comp_Battle_Manual  # 12263
+    Zeny: 100000
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 50
+
+  - Index: 1
+    Item: Comp_Battle_Bubble  # 22979
+    RequiredItems:
+    - Index: 0
+      Item: Comp_Battle_Manual
+      Amount: 1
+    - Index: 1
+      Item: Comp_Bubble_Gum
+      Amount: 1
+
+  - Index: 2
+    Item: Core_Battle_Manual  # 100351
+    Zeny: 1000
+    RequiredItems:
+    - Index: 0
+      Item: Comp_Battle_Manual
+      Amount: 2
+
+  - Index: 3
+    Item: Real_Battle_Manual  # 100352
+    Zeny: 50000
+    RequiredItems:
+    - Index: 0
+      Item: Core_Battle_Manual
+      Amount: 4
+
+- Name: Cheshire_BubbleGums
+  Items:
+  - Index: 0
+    Item: Comp_Bubble_Gum  # 12264
+    Zeny: 100000
+    RequiredItems:
+    - Index: 0
+      Item: Nyangvine_Fruit
+      Amount: 100
+
+  - Index: 1
+    Item: Comp_Battle_Bubble  # 22979
+    Zeny: 1000
+    RequiredItems:
+    - Index: 0
+      Item: Comp_Battle_Manual
+      Amount: 1
+    - Index: 1
+      Item: Comp_Bubble_Gum
+      Amount: 1
+
+  - Index: 2
+    Item: HE_Bubble_Gum  # 12412
+    Zeny: 100000
+    RequiredItems:
+    - Index: 0
+      Item: Comp_Battle_Bubble
+      Amount: 5
+    - Index: 1
+      Item: Comp_Bubble_Gum
+      Amount: 2
+    - Index: 2
+      Item: Nyangvine_Fruit
+      Amount: 2

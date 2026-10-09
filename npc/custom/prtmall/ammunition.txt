@@ -1,0 +1,191 @@
+// Mall ammunition merchants. Load with the accompanying barter database.
+
+prtmall,54,53,3	script	Arrow Merchant	4_M_ARCHER,{
+	mes "[Arrow Merchant]";
+	mes "Hi!";
+	mes "Do you want to buy arrows or exchange the quiver?";
+	next;
+	switch (select("Buy Arrows:Buy Additional Arrows:Buy Quivers:Quiver Exchange:Sell Items:Cancel")) {
+	case 1:
+		close2;
+		callshop "Arrow_Basic", 1;
+		end;
+	case 2:
+		close2;
+		callshop "Arrow_Additional", 1;
+		end;
+	case 3:
+		close2;
+		callshop "Arrow_Quivers", 1;
+		end;
+	case 4:
+		close2;
+		callshop "Arrow_Quiver_Exchange", 1;
+		end;
+	case 5:
+		close2;
+		callshop "Arrow_Basic", 2;
+		end;
+	case 6:
+		close;
+	}
+	end;
+
+OnInit:
+	setunitdata getnpcid(0), UNPC_GROUP_ID, 7;
+	end;
+}
+
+prtmall,54,50,3	script	Ammunition Merchant	4_F_GUNSLINGER,{
+	mes "[Ammunition Merchant]";
+	mes "Hi!";
+	mes "What did you come to see?";
+	next;
+	switch (select("Buy Weapons:Buy Ammunition:Buy Additional Ammunition:Buy Cartridge:Cartridge Exchange:Sell Items:Cancel")) {
+	case 1:
+		close2;
+		callshop "Ammo_Weapons", 1;
+		end;
+	case 2:
+		close2;
+		callshop "Ammo_Basic", 1;
+		end;
+	case 3:
+		close2;
+		callshop "Ammo_Additional", 1;
+		end;
+	case 4:
+		close2;
+		callshop "Ammo_Cartridges", 1;
+		end;
+	case 5:
+		close2;
+		callshop "Ammo_Cartridge_Exchange", 1;
+		end;
+	case 6:
+		close2;
+		callshop "Ammo_Weapons", 2;
+		end;
+	case 7:
+		close;
+	}
+	end;
+
+OnInit:
+	setunitdata getnpcid(0), UNPC_GROUP_ID, 13;
+	end;
+}
+
+prtmall,54,47,3	script	Ninja Tool Merchant	4_M_NINJA_RED,{
+	mes "[Ninja Tool Merchant]";
+	mes "Hi, what can I do to help you?";
+	next;
+	switch (select("Buy Ninjutsu Tool:Buy Additional Ninjutsu Tool:Buy Parchment:Parchment Exchange:Sell Items:Cancel")) {
+	case 1:
+		close2;
+		callshop "Ninja_Tools", 1;
+		end;
+	case 2:
+		close2;
+		callshop "Ninja_Additional", 1;
+		end;
+	case 3:
+		close2;
+		callshop "Ninja_Parchments", 1;
+		end;
+	case 4:
+		close2;
+		callshop "Ninja_Parchment_Exchange", 1;
+		end;
+	case 5:
+		close2;
+		callshop "Ninja_Tools", 2;
+		end;
+	case 6:
+		close;
+	}
+	end;
+
+OnInit:
+	setunitdata getnpcid(0), UNPC_GROUP_ID, 11;
+	end;
+}
+
+prtmall,51,47,3	script	Mado Gear Merchant	4_TOWER_17,{
+	mes "[Mado Gear Merchant]";
+	mes "Hi!";
+	mes "Here you will find equipment for Madogear, except for those that cannot be sold!";
+	mes "How can I help you?";
+	next;
+	switch (select("Buy Component:Consumables and Cooling Device:Buy Box:Box Exchange:Sell Items:Cancel")) {
+	case 1:
+		close2;
+		callshop "Mado_Components", 1;
+		end;
+	case 2:
+		close2;
+		callshop "Mado_Consumables", 1;
+		end;
+	case 3:
+		close2;
+		callshop "Mado_Boxes", 1;
+		end;
+	case 4:
+		close2;
+		callshop "Mado_Box_Exchange", 1;
+		end;
+	case 5:
+		close2;
+		callshop "Mado_Components", 2;
+		end;
+	case 6:
+		close;
+	}
+	end;
+
+OnInit:
+	setunitdata getnpcid(0), UNPC_GROUP_ID, 11;
+	end;
+}
+
+prtmall,48,47,3	script	Talisman Merchant	4_M_POORSCHOLAR,{
+	mes "[Talisman Merchant]";
+	mes "Hello. Did you come to see the spirits?";
+	next;
+	switch (select("Buy Talisman:Talisman Bundle Exchange:Sell Items:Cancel")) {
+	case 1:
+		close2;
+		callshop "Talisman_Items", 1;
+		end;
+	case 2:
+		close2;
+		callshop "Talisman_Bundle_Exchange", 1;
+		end;
+	case 3:
+		close2;
+		callshop "Talisman_Items", 2;
+		end;
+	case 4:
+		close;
+	}
+	end;
+
+OnInit:
+	setunitdata getnpcid(0), UNPC_GROUP_ID, 12;
+	end;
+}
+
+-	shop	Arrow_Basic	-1,1750:1,1770:3,1751:5,1752:5,1754:5,1755:5,1756:5,1757:5,1767:5,1762:5,1065:50,7940:100
+-	shop	Arrow_Additional	-1,1753:4,1758:10,1759:10,1760:10,1761:10,1763:10,1764:20,1765:30,1768:10,1769:10,1772:3,1773:10,1774:10,1775:10,1776:10
+-	shop	Arrow_Quivers	-1,12004:1000,12005:3000,12006:4000,12007:30000,12008:5000,12009:5000,12010:5000,12011:5000,12012:5000,12013:5000,12014:5000,12015:5000,12083:3000,12575:10000,12576:10000,100174:10000,12678:10000,12677:10000,23061:20000,23711:75000,12341:300000
+-	shop	Ammo_Weapons	-1,13120:1200000,13122:1450000,13189:1350000,13195:1800000,13192:1250000,13193:1350000,13194:1950000,13197:1600000,13198:2200000,28200:2700000,28201:2800000
+-	shop	Ammo_Basic	-1,13200:1,13221:5,13228:5,13229:5,13230:5,13231:5,13232:5,13222:5,13215:5,13216:5,13217:5,13218:5,13219:5,13220:5,7663:15,7665:15,7664:30,25187:1000,1000564:30
+-	shop	Ammo_Additional	-1,13208:200
+-	shop	Ammo_Cartridges	-1,12149:1000,22738:5000,23123:5000,23124:5000,23125:5000,23126:5000,23127:5000,22737:10000,22744:5000,22745:5000,22746:5000,22747:5000,22748:5000,22749:5000,100195:15000,100197:15000,100196:30000,101116:30000,12637:80000
+-	shop	Ninja_Tools	-1,1220001:30,1220002:30,1220003:30,1220004:30,13258:30,13257:30,13255:30,13256:30,13259:30,13294:100,6512:50,6513:50,6514:50,6515:50,13250:2,13251:4,13252:6,13253:12,13254:20,7521:50,7522:50,7523:50,7524:200,1000565:30,1000566:30,1000567:30,1000568:30,1000569:30
+-	shop	Ninja_Additional	-1,13291:200,13292:200,13293:200,6493:30
+-	shop	Ninja_Parchments	-1,101112:30000,101113:30000,101114:30000,101115:30000,23081:30000,23083:30000,23082:30000,23084:30000,23085:30000,100191:100000,100187:100000,100188:100000,100189:100000,100190:100000,100183:112000,100184:112000,100185:112000,100186:225000,101118:30000,101119:30000,101120:30000,101121:30000,101122:30000,12640:80000,12638:80000,12639:80000
+-	shop	Mado_Components	-1,2139:20000,2800:100000,2801:100000,2802:500000,2803:100000,2805:100000,2806:150000,6186:500,2808:250000,2807:200000
+-	shop	Mado_Consumables	-1,1000289:1000,1000290:1000,18000:30,18003:50,18001:50,18002:50,18004:80,18005:50,18006:50,18007:50,18008:50,18009:50,6145:12,6146:375,12394:1000,12393:500,12392:200,6147:125,23277:10000,100158:10000,2804:100000,2809:2000000,2810:5000000
+-	shop	Mado_Boxes	-1,100171:30000,100172:80000,100173:50000,100176:50000,100177:50000,100178:50000,101107:50000,101108:50000,101109:50000,101110:50000,101111:50000,12383:12000,100179:375000,100180:1000000,100181:500000,100182:200000
+-	shop	Talisman_Items	-1,1000563:30,101117:15000

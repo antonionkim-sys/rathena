@@ -1,0 +1,47 @@
+iz_ac01,107,156,3	script	Bouncer Smith	899,{
+	if (checkquest(90080) == 1) {
+		mes "[Bouncer Smith]";
+		mes "Hold it.";
+		mes "State your business.";
+		mes "This door does not open for just anyone.";
+		next;
+
+		mes "[Bouncer Smith]";
+		mes "<b>VIP 3+</b> walks straight into the club.";
+		mes "Anyone below that? I'm afraid this door stays shut, no matter how nicely you ask.";
+		next;
+
+		mes "[Bouncer Smith]";
+		mes "...It says you have <b>VIP 69</b>?!";
+		mes "What?!";
+		mes "I've been a bouncer here for years, and I've never seen your face before..";
+		mes "";
+		mes "Something isn't right...";
+		next;
+
+		mes "[Bouncer Smith]";
+		mes "Hm...";
+		mes "It must be a mistake.";
+		mes "";
+		mes "I'm reverting your status to <b>VIP 1</b>.";
+		mes "There. Much better.";
+		mes "Now move along.";
+		next;
+
+		mes "[Bouncer Smith]";
+		mes "You've recovered ^i[44599] 1x ^0000FF<b>Memory Shard!</b>^000000";
+		mes "You gained ^FFA500some experience back^000000.";
+
+		completequest 90080;
+		setquest 90081;
+		end;
+	}
+
+	mes "[Bouncer Smith]";
+	mes "This door is for VIP 3 and above.";
+	end;
+
+OnInit:
+	setunittitle(getnpcid(0), "[VIP Club]");
+	end;
+}

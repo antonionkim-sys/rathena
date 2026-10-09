@@ -1,0 +1,90 @@
+//===== rAthena Script =======================================
+//= Nyarom - Random Options
+//============================================================
+//= Barter shop definitions belong in your loaded barter YAML.
+//============================================================
+
+prtrefinery,208,136,3	script	Nyarom	495,{
+	mes "[Nyarom]";
+	mes "Welcome, welcome.";
+	mes "This is the Random Options shop.";
+	mes "I hope you find the catalysts you need here!";
+	next;
+
+	switch(select(
+		"Buy Special Item Random Options (Silvervine)",
+		"Buy Special Item Random Options (Zeny)",
+		"Exchange Ancient Hero Wisdom and Bravery",
+		"Buy Instance Random Options",
+		"Buy Shadow Gear Random Options",
+		"Buy Dungeon Random Options",
+//		"^0000FFBuy Random Max Options^000000",
+		"Cancel"
+	)) {
+	case 1:
+		mes "[Nyarom]";
+		mes "Get a special item with a few Silvervine Cat Fruit.";
+		close2;
+		callshop "Nyarom_Silvervine",1;
+		end;
+
+	case 2:
+		mes "[Nyarom]";
+		mes "There are special items for you.";
+		close2;
+		callshop "Nyarom_Zeny",1;
+		end;
+
+	case 3:
+		mes "[Nyarom]";
+		mes "We have prepared the Bravery and Wisdom of Great Hero for our special customer.";
+		close2;
+		callshop "Nyarom_Hero",1;
+		end;
+
+	case 4:
+		mes "[Nyarom]";
+		mes "These ones are special catalysts for items of instances.";
+		mes "The materials needed to exchange can be farmed from instances.";
+		close2;
+		callshop "Nyarom_Instance",1;
+		end;
+
+	case 5:
+		mes "[Nyarom]";
+		mes "These ones are special catalysts for Shadow equipment.";
+		close2;
+		callshop "Nyarom_Shadow",1;
+		end;
+
+	case 6:
+		mes "[Nyarom]";
+		mes "If you want to make your dungeon equipment more powerful, get the random options!";
+		close2;
+		callshop "Nyarom_Dungeon",1;
+		end;
+
+//	case 7:
+//		mes "[Nyarom]";
+//		mes "The catalyst here gives ^0000FFrandom MAX options^000000.";
+//		mes "Every random option it gives has the maximum value for that option!";
+//		close2;
+//		callshop "Nyarom_Max",1;
+//		end;
+
+	default:
+		close;
+	}
+
+OnInit:
+	setunittitle(getnpcid(0), "[Random Options]");
+	end;
+}
+
+// --------------------------------------------------
+// Hidden Zeny Shop: Special Item Random Options
+// Prices preserved exactly as supplied.
+// --------------------------------------------------
+prtrefinery,3,1,0	shop	Nyarom_Zeny	-1,23100:100000,23170:100000,23175:100000,23289:100000,23290:100000,23291:100000,23308:100000,23311:100000,23545:100000,23547:100000,23546:50000,9551:100000,9550:100000,100009:100000,100023:100000,100025:100000,100481:100000,100579:50000,100580:100000,100710:100000,100744:200000,100745:200000,100823:100000,102278:250000,100487:250000,102343:250000,102277:250000,100488:250000,102342:250000,102344:250000,102676:250000,102677:250000
+
+//,106502:250000,107026:250000,106844:500000

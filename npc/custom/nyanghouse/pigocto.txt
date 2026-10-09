@@ -1,0 +1,9 @@
+prt_in,136,29,4	script	Rich Pigocto	10341,{
+	npctalk "Nuf~ Nuf~";
+	end;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Nyang 4ever]");
+	setunitdata getnpcid(0), UNPC_GROUP_ID, 40;
+	end;
+}

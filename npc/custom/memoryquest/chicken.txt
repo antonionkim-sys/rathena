@@ -1,0 +1,102 @@
+chicken,266,43,5	script	Chicken	10285,{
+	// Quest conversation only.
+	if (checkquest(90093) == 1) {
+		mes "[Chicken]";
+		mes "Cluck.";
+		mes "You found the lighthouse.";
+		next;
+
+		mes "Everyone eventually finds the lighthouse.";
+		next;
+
+		mes "[Chicken]";
+		mes "I hand out <b>Free Egg Scrolls</b> once a day.";
+		mes "Crack one open, and whatever luck is hiding inside is yours.";
+		next;
+
+		mes "[Chicken]";
+		mes "One scroll. Every day.";
+		mes "That is the only reason a chicken would ever keep a ledger.";
+		next;
+
+		mes "Cluck.";
+		next;
+
+		mes "[Chicken]";
+		mes "You've recovered ^i[44599] 1x ^0000FF<b>Memory Shard!</b>^000000";
+		mes "You gained ^FFA500some experience back^000000.";
+
+		completequest 90093;
+		setquest 90094;
+		close;
+	}
+
+	// Normal conversation.
+	mes "[Chicken]";
+	mes "Cluck... cluck cluck! ^0000FFEgg Scrolls^000000, free!";
+	mes "Cluck! One a day! Cluck!";
+	next;
+
+	mes "[" + strcharinfo(0) + "]";
+	mes "I think the chicken is telling me that I can ^0000FFclaim a free Egg Scroll every day^000000.";
+	next;
+
+	// Remove the tracker when its cooldown expires.
+	if (checkquest(90098, PLAYTIME) == 2)
+		erasequest 90098;
+
+	if (checkquest(90098) != -1) {
+		mes "[Chicken]";
+		mes "Cluck! Already claimed!";
+		mes "Tomorrow, cluck cluck! Again!";
+		close;
+	}
+
+	mes "[" + strcharinfo(0) + "]";
+	mes "I can claim ^FF00001 Egg Scroll^000000.";
+	next;
+
+	switch (select("Claim Egg Scrolls:Go away...")) {
+	case 1:
+		// Recheck the cooldown before granting the reward.
+		if (checkquest(90098, PLAYTIME) == 2)
+			erasequest 90098;
+
+		if (checkquest(90098) != -1) {
+			mes "[Chicken]";
+			mes "Cluck! Already claimed!";
+			mes "Tomorrow, cluck cluck! Again!";
+			close;
+		}
+
+		// Select one egg from subgroup 1.
+		.@egg = groupranditem(IG_CHICKEN_FREE_EGGS, 1);
+
+		if (.@egg <= 0) {
+			mes "[Chicken]";
+			mes "Cluck... the Egg Scrolls aren't ready yet.";
+			close;
+		}
+
+		if (!checkweight(.@egg, 1)) {
+			mes "[Chicken]";
+			mes "Cluck! Make some room first!";
+			close;
+		}
+
+		setquest 90098;
+		getitem .@egg, 1;
+
+		mes "[Chicken]";
+		mes "Cluuuck cluck cluck!";
+		mes "Tomorrow, cluck cluck! Again!";
+		close;
+
+	case 2:
+		close;
+	}
+
+OnInit:
+	setunittitle(getnpcid(0), "[Free Egg Scrolls]");
+	end;
+}

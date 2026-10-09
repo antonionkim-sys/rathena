@@ -1,0 +1,38 @@
+iz_ac01,103,148,3	script	Manager Mark	10123,{
+	if (checkquest(90086) == 1) {
+		mes "[Manager Mark]";
+		mes "Welcome to the <b>Vending Garden</b>.";
+		mes "I manage this floor - or rather, I manage the mess of it.";
+		next;
+
+		mes "[Manager Mark]";
+		mes "Merchants park their shops here with <b>@autotrade</b> and walk away.";
+		mes "";
+		mes "Every stall you see belongs to a player who is fast asleep...";
+		mes "and somehow still making sales.";
+		next;
+
+		mes "[Manager Mark]";
+		mes "Buy from them as much as you like.";
+		mes "Just don't park your own shop on top of somebody else's.";
+		mes "";
+		mes "That's the one rule I actually enforce.";
+		next;
+
+		mes "[Manager Mark]";
+		mes "You've recovered ^i[44599] 1x ^0000FF<b>Memory Shard!</b>^000000";
+		mes "You gained ^FFA500some experience back^000000.";
+
+		completequest 90086;
+		setquest 90087;
+		end;
+	}
+
+	mes "[Manager Mark]";
+	mes "Welcome to the Vending Garden.";
+	end;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Vending Garden]");
+	end;
+}

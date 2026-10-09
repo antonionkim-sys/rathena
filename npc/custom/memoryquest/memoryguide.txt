@@ -1,0 +1,54 @@
+iz_ac01,91,156,5	script	[Memory Guide]	10346,{
+	if (checkquest(900722) == 1) {
+		mes "[Memory Guide]";
+		mes "Welcome, adventurer.";
+		next;
+
+		mes "[Memory Guide]";
+		mes "I am the <b>Memory Guide</b>, and I keep two very useful services running throughout this town.";
+		next;
+
+		mes "[Memory Guide]";
+		mes "Need somewhere in Prontera? Simply walk up to me, and I'll <b>teleport you directly to any major building or facility:</b> the Illusion Excavation House, the Costume Grand Hall, the Hero Garden, the Nightmare Garden, the Dimensional Library, and many more.";
+		next;
+
+		mes "[Memory Guide]";
+		mes "No zeny. No cooldown. No trekking across the entire city on foot.";
+		next;
+
+		mes "[Memory Guide]";
+		mes "I also have something special for adventurers who like to let their characters do the hard work.";
+		next;
+
+		mes "[Memory Guide]";
+		mes "Once per day, <b>per account</b>, I can provide you with a ^i[46410]<b>Auto Play Device</b>. It gives you <b>2 to 4 hours of hands-free hunting</b>, letting your character continue fighting while you take a break.";
+		next;
+
+		mes "[Memory Guide]";
+		mes "Before you can use it, make sure you've configured your Auto Play settings through the ^FFA500@bell^000000 service.";
+		next;
+
+		mes "[Memory Guide]";
+		mes "Once everything is ready, come back to me and claim your device.";
+		next;
+
+		getitem 44599,1;
+
+		mes "[Memory Guide]";
+		mes "You've recovered ^i[44599] 1x ^0000FF<b>Memory Shard!</b>^000000";
+		mes "You gained ^FFA500some experience back^000000.";
+
+		completequest 90072;
+		setquest 90073;
+
+		close2;
+		cutin "",255;
+		end;
+	}
+
+	mes "[Memory Guide]";
+	mes "I have nothing more for you right now.";
+	close2;
+	cutin "",255;
+	end;
+}

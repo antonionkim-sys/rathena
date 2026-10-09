@@ -1,0 +1,1572 @@
+Header:
+  Type: BARTER_DB
+  Version: 2
+
+Body:
+  - Name: "Flamering_Regular"
+    Items:
+      # 1010: 5 of 909
+      - Index: 0
+        Item: Phracon
+        RequiredItems:
+          - Index: 0
+            Item: Jellopy
+            Amount: 5
+
+      # 1011: 5 of 1010
+      - Index: 1
+        Item: Emveretarcon
+        RequiredItems:
+          - Index: 0
+            Item: Phracon
+            Amount: 5
+
+      # 756: 5 of 1011
+      - Index: 2
+        Item: Oridecon_Stone
+        RequiredItems:
+          - Index: 0
+            Item: Emveretarcon
+            Amount: 5
+
+      # 757: 5 of 1011
+      - Index: 3
+        Item: Elunium_Stone
+        RequiredItems:
+          - Index: 0
+            Item: Emveretarcon
+            Amount: 5
+
+      # 984: 5 of 756
+      - Index: 4
+        Item: Oridecon
+        RequiredItems:
+          - Index: 0
+            Item: Oridecon_Stone
+            Amount: 5
+
+      # 985: 5 of 757
+      - Index: 5
+        Item: Elunium
+        RequiredItems:
+          - Index: 0
+            Item: Elunium_Stone
+            Amount: 5
+
+      # 6224: 3 of 984
+      - Index: 6
+        Item: Bradium
+        RequiredItems:
+          - Index: 0
+            Item: Oridecon
+            Amount: 3
+
+      # 6223: 3 of 985
+      - Index: 7
+        Item: Carnium
+        RequiredItems:
+          - Index: 0
+            Item: Elunium
+            Amount: 3
+
+      # 6223: 2 of 6090
+      - Index: 8
+        Item: Carnium
+        RequiredItems:
+          - Index: 0
+            Item: Purified_Bradium
+            Amount: 2
+
+      # 25729: 20 of 25728
+      - Index: 9
+        Item: Shadowdecon
+        RequiredItems:
+          - Index: 0
+            Item: Shadowdecon_Ore
+            Amount: 20
+
+      # 25729: 2 of 25731
+      - Index: 10
+        Item: Shadowdecon
+        RequiredItems:
+          - Index: 0
+            Item: Zelunium
+            Amount: 2
+
+      # 25731: 20 of 25730
+      - Index: 11
+        Item: Zelunium
+        RequiredItems:
+          - Index: 0
+            Item: Zelunium_Ore
+            Amount: 20
+
+      # 25731: 2 of 25729
+      - Index: 12
+        Item: Zelunium
+        RequiredItems:
+          - Index: 0
+            Item: Shadowdecon
+            Amount: 2
+
+
+  - Name: "Flamering_Premium"
+    Items:
+      # 7620: 20 of 984 and 30,000 Zeny
+      - Index: 0
+        Item: Enriched_Oridecon
+        Zeny: 30000
+        RequiredItems:
+          - Index: 0
+            Item: Oridecon
+            Amount: 20
+
+      # 7619: 10 of 985 and 10,000 Zeny
+      - Index: 1
+        Item: Enriched_Elunium
+        Zeny: 10000
+        RequiredItems:
+          - Index: 0
+            Item: Elunium
+            Amount: 10
+
+      # 6240: 20 of 984 and 50,000 Zeny
+      - Index: 2
+        Item: HD_Oridecon
+        Zeny: 50000
+        RequiredItems:
+          - Index: 0
+            Item: Oridecon
+            Amount: 20
+
+      # 6241: 10 of 985 and 20,000 Zeny
+      - Index: 3
+        Item: HD_Elunium
+        Zeny: 20000
+        RequiredItems:
+          - Index: 0
+            Item: Elunium
+            Amount: 10
+
+      # 6226: 30 of 6224 and 50,000 Zeny
+      - Index: 4
+        Item: HD_Bradium
+        Zeny: 50000
+        RequiredItems:
+          - Index: 0
+            Item: Bradium
+            Amount: 30
+
+      # 6225: 20 of 6223 and 30,000 Zeny
+      - Index: 5
+        Item: HD_Carnium
+        Zeny: 30000
+        RequiredItems:
+          - Index: 0
+            Item: Carnium
+            Amount: 20
+
+
+  - Name: "Flamering_Ether"
+    Items:
+      # 1000331: 1 of 1000322, 1 of 985, and 10,000 Zeny
+      - Index: 0
+        Item: Ethernium
+        Zeny: 10000
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 1
+          - Index: 1
+            Item: Elunium
+            Amount: 1
+
+      # 1000332: 1 of 1000322, 1 of 984, and 10,000 Zeny
+      - Index: 1
+        Item: Etherdeocon
+        Zeny: 10000
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 1
+          - Index: 1
+            Item: Oridecon
+            Amount: 1
+
+      # 1000368: 3 of 1000322, 1 of 6224, and 50,000 Zeny
+      - Index: 2
+        Item: Etel_Bradium
+        Zeny: 50000
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 3
+          - Index: 1
+            Item: Bradium
+            Amount: 1
+
+      # 1000370: 3 of 1000322, 1 of 6223, and 50,000 Zeny
+      - Index: 3
+        Item: Etel_Carnium
+        Zeny: 50000
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 3
+          - Index: 1
+            Item: Carnium
+            Amount: 1
+
+      # 1000333: 2 of 1000322, 1 of 7619, and 20,000 Zeny
+      - Index: 4
+        Item: Enriched_Ethernium
+        Zeny: 20000
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 2
+          - Index: 1
+            Item: Enriched_Elunium
+            Amount: 1
+
+      # 1000334: 2 of 1000322, 1 of 7620, and 20,000 Zeny
+      - Index: 5
+        Item: Enriched_Etherdeocon
+        Zeny: 20000
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 2
+          - Index: 1
+            Item: Enriched_Oridecon
+            Amount: 1
+
+      # 1000335: 3 of 1000322, 1 of 6241, and 50,000 Zeny
+      - Index: 6
+        Item: HD_Ethernium
+        Zeny: 50000
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 3
+          - Index: 1
+            Item: HD_Elunium
+            Amount: 1
+
+      # 1000336: 3 of 1000322, 1 of 6240, and 50,000 Zeny
+      - Index: 7
+        Item: HD_Etherdeocon
+        Zeny: 50000
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 3
+          - Index: 1
+            Item: HD_Oridecon
+            Amount: 1
+
+      # 1000369: 3 of 1000322, 1 of 6226, and 50,000 Zeny
+      - Index: 8
+        Item: HD_Etel_Bradium
+        Zeny: 50000
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 3
+          - Index: 1
+            Item: HD_Bradium
+            Amount: 1
+
+      # 1000371: 3 of 1000322, 1 of 6225, and 50,000 Zeny
+      - Index: 9
+        Item: HD_Etel_Carnium
+        Zeny: 50000
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 3
+          - Index: 1
+            Item: HD_Carnium
+            Amount: 1
+
+
+  - Name: "Flamering_Blessing"
+    Items:
+      # 6635: 35 of 6909
+      - Index: 0
+        Item: Blacksmith_Blessing
+        RequiredItems:
+          - Index: 0
+            Item: Nyangvine_Fruit
+            Amount: 35
+
+      # 6635: 100 of 25731
+      - Index: 1
+        Item: Blacksmith_Blessing
+        RequiredItems:
+          - Index: 0
+            Item: Zelunium
+            Amount: 100
+
+      # 6635: 110 of 25729
+      - Index: 2
+        Item: Blacksmith_Blessing
+        RequiredItems:
+          - Index: 0
+            Item: Shadowdecon
+            Amount: 110
+
+      # 6635: 170 of 1000322
+      - Index: 3
+        Item: Blacksmith_Blessing
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 170
+  # --------------------------------------------------
+  # Upgrade ore to stone exchange
+  # --------------------------------------------------
+  - Name: OreResearcher_Ore
+    Items:
+      - Index: 0
+        Item: Weapon_Stone_1
+        Zeny: 10000
+        RequiredItems:
+          - Index: 0
+            Item: Weapon_Ore_1
+            Amount: 5
+
+      - Index: 1
+        Item: Armor_Stone_1
+        Zeny: 10000
+        RequiredItems:
+          - Index: 0
+            Item: Armor_Ore_1
+            Amount: 5
+
+      - Index: 2
+        Item: Acc_Stone_1
+        Zeny: 10000
+        RequiredItems:
+          - Index: 0
+            Item: Acc_Ore_1
+            Amount: 5
+
+      - Index: 3
+        Item: Weapon_Stone_2
+        Zeny: 20000
+        RequiredItems:
+          - Index: 0
+            Item: Weapon_Ore_2
+            Amount: 5
+
+      - Index: 4
+        Item: Armor_Stone_2
+        Zeny: 20000
+        RequiredItems:
+          - Index: 0
+            Item: Armor_Ore_2
+            Amount: 5
+
+      - Index: 5
+        Item: Acc_Stone_2
+        Zeny: 20000
+        RequiredItems:
+          - Index: 0
+            Item: Acc_Ore_2
+            Amount: 5
+
+      - Index: 6
+        Item: Weapon_Stone_3
+        Zeny: 50000
+        RequiredItems:
+          - Index: 0
+            Item: Weapon_Ore_3
+            Amount: 5
+
+      - Index: 7
+        Item: Armor_Stone_3
+        Zeny: 50000
+        RequiredItems:
+          - Index: 0
+            Item: Armor_Ore_3
+            Amount: 5
+
+      - Index: 8
+        Item: Acc_Stone_3
+        Zeny: 50000
+        RequiredItems:
+          - Index: 0
+            Item: Acc_Ore_3
+            Amount: 5
+
+      - Index: 9
+        Item: Weapon_Stone_4
+        Zeny: 100000
+        RequiredItems:
+          - Index: 0
+            Item: Weapon_Ore_4
+            Amount: 5
+
+      - Index: 10
+        Item: Armor_Stone_4
+        Zeny: 100000
+        RequiredItems:
+          - Index: 0
+            Item: Armor_Ore_4
+            Amount: 5
+
+      - Index: 11
+        Item: Acc_Stone_4
+        Zeny: 100000
+        RequiredItems:
+          - Index: 0
+            Item: Acc_Ore_4
+            Amount: 5
+
+  # --------------------------------------------------
+  # Upgrade stone to stone exchange
+  # --------------------------------------------------
+  - Name: OreResearcher_Stone
+    Items:
+      - Index: 0
+        Item: Weapon_Stone_2
+        Zeny: 10000
+        RequiredItems:
+          - Index: 0
+            Item: Weapon_Stone_1
+            Amount: 3
+
+      - Index: 1
+        Item: Armor_Stone_2
+        Zeny: 10000
+        RequiredItems:
+          - Index: 0
+            Item: Armor_Stone_1
+            Amount: 3
+
+      - Index: 2
+        Item: Acc_Stone_2
+        Zeny: 10000
+        RequiredItems:
+          - Index: 0
+            Item: Acc_Stone_1
+            Amount: 3
+
+      - Index: 3
+        Item: Weapon_Stone_3
+        Zeny: 20000
+        RequiredItems:
+          - Index: 0
+            Item: Weapon_Stone_2
+            Amount: 3
+
+      - Index: 4
+        Item: Armor_Stone_3
+        Zeny: 20000
+        RequiredItems:
+          - Index: 0
+            Item: Armor_Stone_2
+            Amount: 3
+
+      - Index: 5
+        Item: Acc_Stone_3
+        Zeny: 20000
+        RequiredItems:
+          - Index: 0
+            Item: Acc_Stone_2
+            Amount: 3
+
+      - Index: 6
+        Item: Weapon_Stone_4
+        Zeny: 50000
+        RequiredItems:
+          - Index: 0
+            Item: Weapon_Stone_3
+            Amount: 3
+
+      - Index: 7
+        Item: Armor_Stone_4
+        Zeny: 50000
+        RequiredItems:
+          - Index: 0
+            Item: Armor_Stone_3
+            Amount: 3
+
+      - Index: 8
+        Item: Acc_Stone_4
+        Zeny: 50000
+        RequiredItems:
+          - Index: 0
+            Item: Acc_Stone_3
+            Amount: 3
+
+  # --------------------------------------------------
+  # Shadowdecon to stone exchange
+  # --------------------------------------------------
+  - Name: OreResearcher_Shadowdecon
+    Items:
+      - Index: 0
+        Item: Weapon_Stone_1
+        Zeny: 20000
+        RequiredItems:
+          - Index: 0
+            Item: Shadowdecon
+            Amount: 1
+
+      - Index: 1
+        Item: Armor_Stone_1
+        Zeny: 20000
+        RequiredItems:
+          - Index: 0
+            Item: Shadowdecon
+            Amount: 1
+
+      - Index: 2
+        Item: Acc_Stone_1
+        Zeny: 20000
+        RequiredItems:
+          - Index: 0
+            Item: Shadowdecon
+            Amount: 1
+
+  # --------------------------------------------------
+  # Cross exchange upgrade stones
+  # Five input stones for one output stone.
+  # No Zeny cost.
+  # --------------------------------------------------
+  - Name: OreResearcher_Cross
+    Items:
+      - Index: 0
+        Item: Weapon_Stone_1
+        RequiredItems:
+          - Index: 0
+            Item: Armor_Stone_1
+            Amount: 5
+
+      - Index: 1
+        Item: Weapon_Stone_1
+        RequiredItems:
+          - Index: 0
+            Item: Acc_Stone_1
+            Amount: 5
+
+      - Index: 2
+        Item: Armor_Stone_1
+        RequiredItems:
+          - Index: 0
+            Item: Weapon_Stone_1
+            Amount: 5
+
+      - Index: 3
+        Item: Armor_Stone_1
+        RequiredItems:
+          - Index: 0
+            Item: Acc_Stone_1
+            Amount: 5
+
+      - Index: 4
+        Item: Acc_Stone_1
+        RequiredItems:
+          - Index: 0
+            Item: Armor_Stone_1
+            Amount: 5
+
+      - Index: 5
+        Item: Acc_Stone_1
+        RequiredItems:
+          - Index: 0
+            Item: Weapon_Stone_1
+            Amount: 5
+            
+  - Name: Nyarom_Silvervine
+    Items:
+      # Output ID 23100
+      - Index: 0
+        Item: Gunslinger_Enchant
+        RequiredItems:
+          - Index: 0
+            Item: Silvervine
+            Amount: 2
+
+      # Output ID 23170
+      - Index: 1
+        Item: Fan_Upgrade_Kit
+        RequiredItems:
+          - Index: 0
+            Item: Silvervine
+            Amount: 2
+
+      # Output ID 23175
+      - Index: 2
+        Item: Suit_Upgrade_Kit
+        RequiredItems:
+          - Index: 0
+            Item: Silvervine
+            Amount: 2
+
+      # Output ID 23289
+      - Index: 3
+        Item: Candy_Bag_Scroll_Melee
+        RequiredItems:
+          - Index: 0
+            Item: Silvervine
+            Amount: 2
+
+      # Output ID 23290
+      - Index: 4
+        Item: Candy_Bag_Scroll_Range
+        RequiredItems:
+          - Index: 0
+            Item: Silvervine
+            Amount: 2
+
+      # Output ID 23291
+      - Index: 5
+        Item: Candy_Bag_Scroll_Magic
+        RequiredItems:
+          - Index: 0
+            Item: Silvervine
+            Amount: 2
+
+      # Output ID 23308
+      - Index: 6
+        Item: Booster_Amplifier
+        RequiredItems:
+          - Index: 0
+            Item: Silvervine
+            Amount: 2
+
+      # Output ID 23311
+      - Index: 7
+        Item: Magical_Cat_Hand
+        RequiredItems:
+          - Index: 0
+            Item: Silvervine
+            Amount: 2
+
+      # Output ID 23545
+      - Index: 8
+        Item: Silver_Statue
+        RequiredItems:
+          - Index: 0
+            Item: Silvervine
+            Amount: 2
+
+      # Output ID 23547
+      - Index: 9
+        Item: Gold_Statue
+        RequiredItems:
+          - Index: 0
+            Item: Silvervine
+            Amount: 2
+
+      # Output ID 23546
+      - Index: 10
+        Item: Cursed_Blood
+        RequiredItems:
+          - Index: 0
+            Item: Silvervine
+            Amount: 1
+
+      # Output ID 9551
+      - Index: 11
+        Item: Time_Unseal_Key
+        RequiredItems:
+          - Index: 0
+            Item: Silvervine
+            Amount: 2
+
+      # Output ID 9550
+      - Index: 12
+        Item: Gemstone_Of_Time
+        RequiredItems:
+          - Index: 0
+            Item: Silvervine
+            Amount: 2
+
+      # Output ID 100009
+      - Index: 13
+        Item: Joy_Of_Victory
+        RequiredItems:
+          - Index: 0
+            Item: Silvervine
+            Amount: 2
+
+      # Output ID 100023
+      - Index: 14
+        Item: Ancient_Hero_Bravery
+        RequiredItems:
+          - Index: 0
+            Item: Silvervine
+            Amount: 2
+
+      # Output ID 100025
+      - Index: 15
+        Item: Ancient_Hero_Wisdom
+        RequiredItems:
+          - Index: 0
+            Item: Silvervine
+            Amount: 2
+
+      # Output ID 100481
+      - Index: 16
+        Item: Overclocker
+        RequiredItems:
+          - Index: 0
+            Item: Silvervine
+            Amount: 2
+
+      # Output ID 100579
+      - Index: 17
+        Item: PendantStoneForWork
+        RequiredItems:
+          - Index: 0
+            Item: Silvervine
+            Amount: 1
+
+      # Output ID 100580
+      - Index: 18
+        Item: Dark_Stone
+        RequiredItems:
+          - Index: 0
+            Item: Silvervine
+            Amount: 2
+
+      # Output ID 100710
+      - Index: 19
+        Item: EXP_Overclocker
+        RequiredItems:
+          - Index: 0
+            Item: Silvervine
+            Amount: 2
+
+      # Output ID 100744
+      - Index: 20
+        Item: Hero_LT_Refine_Melee
+        RequiredItems:
+          - Index: 0
+            Item: Silvervine
+            Amount: 3
+
+      # Output ID 100745
+      - Index: 21
+        Item: Hero_LT_Refine_Magic
+        RequiredItems:
+          - Index: 0
+            Item: Silvervine
+            Amount: 3
+
+      # Output ID 100823
+      - Index: 22
+        Item: Lens_Craft_Stone
+        RequiredItems:
+          - Index: 0
+            Item: Silvervine
+            Amount: 2
+
+      # Output ID 102278
+      - Index: 23
+        Item: Loki_Coin
+        RequiredItems:
+          - Index: 0
+            Item: Silvervine
+            Amount: 3
+
+      # Output ID 100487
+      - Index: 24
+        Item: Loki_Coin_2
+        RequiredItems:
+          - Index: 0
+            Item: Silvervine
+            Amount: 3
+
+      # Output ID 102343
+      - Index: 25
+        Item: Loki_Coin_3
+        RequiredItems:
+          - Index: 0
+            Item: Silvervine
+            Amount: 3
+
+      # Output ID 102277
+      - Index: 26
+        Item: Loki_Advice
+        RequiredItems:
+          - Index: 0
+            Item: Silvervine
+            Amount: 3
+
+      # Output ID 100488
+      - Index: 27
+        Item: Loki_Advice_2
+        RequiredItems:
+          - Index: 0
+            Item: Silvervine
+            Amount: 3
+
+      # Output ID 102342
+      - Index: 28
+        Item: Loki_Advice_3
+        RequiredItems:
+          - Index: 0
+            Item: Silvervine
+            Amount: 3
+
+      # Output ID 102344
+      - Index: 29
+        Item: Fan_Upgrade_Kit_EX
+        RequiredItems:
+          - Index: 0
+            Item: Silvervine
+            Amount: 3
+
+      # Output ID 102676
+      - Index: 30
+        Item: Loki_Coin_4
+        RequiredItems:
+          - Index: 0
+            Item: Silvervine
+            Amount: 3
+
+      # Output ID 102677
+      - Index: 31
+        Item: Loki_Advice_4
+        RequiredItems:
+          - Index: 0
+            Item: Silvervine
+            Amount: 3
+
+      # Output ID 106502
+ #     - Index: 32
+ #       Item: MISSING_AEGIS_ID_106502
+ #       RequiredItems:
+ #         - Index: 0
+ #           Item: Silvervine
+ #           Amount: 3
+
+      # Output ID 107026
+ #     - Index: 33
+ #       Item: MISSING_AEGIS_ID_107026
+ #       RequiredItems:
+ #         - Index: 0
+ #           Item: Silvervine
+ #           Amount: 3
+
+      # Output ID 106844
+ #     - Index: 34
+ #       Item: MISSING_AEGIS_ID_106844
+ #       RequiredItems:
+ #         - Index: 0
+ #           Item: Silvervine
+ #           Amount: 5
+
+
+  - Name: Nyarom_Hero
+    Items:
+      # Output ID 100412
+      - Index: 0
+        Item: Great_Hero_Bravery
+        RequiredItems:
+          - Index: 0
+            Item: Ancient_Hero_Bravery
+            Amount: 2
+
+      # Output ID 100413
+      - Index: 1
+        Item: Great_Hero_Wisdom
+        RequiredItems:
+          - Index: 0
+            Item: Ancient_Hero_Wisdom
+            Amount: 2
+
+
+  - Name: Nyarom_Instance
+    Items:
+      # Output ID 100479
+      - Index: 0
+        Item: Sakray_Fury
+        Zeny: 5000
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core
+            Amount: 1
+
+      # Output ID 100485
+      - Index: 1
+        Item: Sakray_Regret
+        Zeny: 5000
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core
+            Amount: 1
+
+      # Output ID 100480
+      - Index: 2
+        Item: Sakray_Fury2
+        Zeny: 15000
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core
+            Amount: 3
+
+      # Output ID 100486
+      - Index: 3
+        Item: Sakray_Regret2
+        Zeny: 15000
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core
+            Amount: 3
+
+      # Output ID 23675
+      - Index: 4
+        Item: Geffen_Magic_Scroll
+        Zeny: 1000
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core_Piece
+            Amount: 10
+
+      # Output ID 23679
+      - Index: 5
+        Item: Geffen_Magic_Scroll2
+        Zeny: 1000
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core_Piece
+            Amount: 10
+
+      # Output ID 100365
+      - Index: 6
+        Item: MD_Geffen_Rarmor
+        Zeny: 15000
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core
+            Amount: 3
+
+      # Output ID 100366
+      - Index: 7
+        Item: MD_Geffen_Rhood
+        Zeny: 15000
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core
+            Amount: 3
+
+      # Output ID 100367
+      - Index: 8
+        Item: MD_Geffen_Racc
+        Zeny: 15000
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core
+            Amount: 3
+
+      # Output ID 100368
+      - Index: 9
+        Item: MD_Geffen_Rsheild
+        Zeny: 15000
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core
+            Amount: 3
+
+      # Output ID 23676
+      - Index: 10
+        Item: Gray_Charcoal_Melee
+        Zeny: 1000
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core_Piece
+            Amount: 10
+
+      # Output ID 23677
+      - Index: 11
+        Item: Gray_Charcoal_Magic
+        Zeny: 1000
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core_Piece
+            Amount: 10
+
+      # Output ID 23678
+      - Index: 12
+        Item: Gray_Charcoal_Range
+        Zeny: 1000
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core_Piece
+            Amount: 10
+
+      # Output ID 100650
+      - Index: 13
+        Item: Pontifex_Courage
+        Zeny: 1500
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core_Piece
+            Amount: 5
+
+      # Output ID 100651
+      - Index: 14
+        Item: Pontifex_Wisdom
+        Zeny: 1500
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core_Piece
+            Amount: 5
+
+      # Output ID 100652
+      - Index: 15
+        Item: Pontifex_Tenacity
+        Zeny: 3000
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core_Piece
+            Amount: 10
+
+      # Output ID 100653
+      - Index: 16
+        Item: Pontifex_Belief
+        Zeny: 3000
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core_Piece
+            Amount: 10
+
+      # Output ID 100476
+      - Index: 17
+        Item: MD_Airboat_Random
+        Zeny: 3000
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core_Piece
+            Amount: 10
+
+      # Output ID 23776
+      - Index: 18
+        Item: EP17_1_SPC05
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core_Piece
+            Amount: 3
+
+      # Output ID 23777
+      - Index: 19
+        Item: EP17_1_SPC06
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core_Piece
+            Amount: 3
+
+      # Output ID 23778
+      - Index: 20
+        Item: EP17_1_SPC07
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core_Piece
+            Amount: 3
+
+      # Output ID 23779
+      - Index: 21
+        Item: EP17_1_SPC08
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core_Piece
+            Amount: 3
+
+      # Output ID 23780
+      - Index: 22
+        Item: EP17_1_SPC09
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core_Piece
+            Amount: 3
+
+      # Output ID 23781
+      - Index: 23
+        Item: EP17_1_SPC10
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core_Piece
+            Amount: 3
+
+      # Output ID 100131
+      - Index: 24
+        Item: Imperial_Convert1
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core_Piece
+            Amount: 3
+
+      # Output ID 100132
+      - Index: 25
+        Item: Imperial_Convert2
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core_Piece
+            Amount: 3
+
+      # Output ID 100135
+      - Index: 26
+        Item: Imperial_Convert3
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core_Piece
+            Amount: 3
+
+      # Output ID 100136
+      - Index: 27
+        Item: Imperial_Convert4
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core_Piece
+            Amount: 3
+
+      # Output ID 100133
+      - Index: 28
+        Item: Grace_Convert1
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core_Piece
+            Amount: 3
+
+      # Output ID 100134
+      - Index: 29
+        Item: Grace_Convert2
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core_Piece
+            Amount: 3
+
+      # Output ID 100137
+      - Index: 30
+        Item: Grace_Convert3
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core_Piece
+            Amount: 3
+
+      # Output ID 100138
+      - Index: 31
+        Item: Grace_Convert4
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core_Piece
+            Amount: 3
+
+      # Output ID 100164
+      - Index: 32
+        Item: Auto_Imp_Melee_1
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core_Piece
+            Amount: 3
+
+      # Output ID 100165
+      - Index: 33
+        Item: Auto_Imp_Melee_2
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core_Piece
+            Amount: 3
+
+      # Output ID 100166
+      - Index: 34
+        Item: Auto_Imp_Melee_3
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core_Piece
+            Amount: 3
+
+      # Output ID 100167
+      - Index: 35
+        Item: Auto_Imp_Magic_1
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core_Piece
+            Amount: 3
+
+      # Output ID 100168
+      - Index: 36
+        Item: Auto_Imp_Magic_2
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core_Piece
+            Amount: 3
+
+      # Output ID 100169
+      - Index: 37
+        Item: Auto_Imp_Magic_3
+        RequiredItems:
+          - Index: 0
+            Item: Infinity_Core_Piece
+            Amount: 3
+
+      # Output ID 40061
+#      - Index: 38
+#        Item: MISSING_AEGIS_ID_40061
+#        Zeny: 50000
+#        RequiredItems:
+#          - Index: 0
+#            Item: Infinity_Core
+#            Amount: 5
+
+      # Output ID 40062
+#      - Index: 39
+#        Item: MISSING_AEGIS_ID_40062
+#        Zeny: 50000
+#        RequiredItems:
+#          - Index: 0
+#            Item: Infinity_Core
+#            Amount: 5
+
+
+  - Name: Nyarom_Shadow
+    Items:
+      # Output ID 23720
+      - Index: 0
+        Item: Shadow_Random_Mix
+        RequiredItems:
+          - Index: 0
+            Item: Shadowdecon
+            Amount: 2
+
+      # Output ID 40057
+#      - Index: 1
+#        Item: MISSING_AEGIS_ID_40057
+#        RequiredItems:
+#          - Index: 0
+#            Item: S_Enchant_Essence
+#            Amount: 2
+
+      # Output ID 100205
+      - Index: 2
+        Item: Class_Sha_R_M_Melee
+        RequiredItems:
+          - Index: 0
+            Item: Shadowdecon
+            Amount: 2
+
+      # Output ID 100206
+      - Index: 3
+        Item: Class_Sha_R_M_Magic
+        RequiredItems:
+          - Index: 0
+            Item: Shadowdecon
+            Amount: 2
+
+      # Output ID 100207
+      - Index: 4
+        Item: Skill_Sha_R_M_Melee
+        RequiredItems:
+          - Index: 0
+            Item: Shadowdecon
+            Amount: 2
+
+      # Output ID 100208
+      - Index: 5
+        Item: Skill_Sha_R_M_Magic
+        RequiredItems:
+          - Index: 0
+            Item: Shadowdecon
+            Amount: 2
+
+      # Output ID 101264
+      - Index: 6
+        Item: Mammoth_Shadow_Up
+        RequiredItems:
+          - Index: 0
+            Item: Shadowdecon
+            Amount: 2
+
+      # Output ID 101262
+      - Index: 7
+        Item: Absorb_Shadow_Up
+        RequiredItems:
+          - Index: 0
+            Item: Shadowdecon
+            Amount: 2
+
+      # Output ID 101261
+      - Index: 8
+        Item: M_Blitz_Shadow_Up
+        RequiredItems:
+          - Index: 0
+            Item: Shadowdecon
+            Amount: 2
+
+      # Output ID 101260
+      - Index: 9
+        Item: R_Bearers_Shadow_Up
+        RequiredItems:
+          - Index: 0
+            Item: Shadowdecon
+            Amount: 2
+
+      # Output ID 101180
+      - Index: 10
+        Item: Ex_Status_Shadow_Up
+        RequiredItems:
+          - Index: 0
+            Item: Shadowdecon
+            Amount: 2
+
+      # Output ID 101179
+      - Index: 11
+        Item: SpellCaster_Shadow_Up
+        RequiredItems:
+          - Index: 0
+            Item: Shadowdecon
+            Amount: 2
+
+      # Output ID 101178
+      - Index: 12
+        Item: Reload_Shadow_Up
+        RequiredItems:
+          - Index: 0
+            Item: Shadowdecon
+            Amount: 2
+
+      # Output ID 101177
+      - Index: 13
+        Item: FullPenest_Shadow_Up
+        RequiredItems:
+          - Index: 0
+            Item: Shadowdecon
+            Amount: 2
+
+      # Output ID 101308
+      - Index: 14
+        Item: True_GemShadow_Up
+        RequiredItems:
+          - Index: 0
+            Item: Shadowdecon
+            Amount: 2
+
+      # Output ID 101309
+      - Index: 15
+        Item: EXPShadow_Up
+        RequiredItems:
+          - Index: 0
+            Item: Shadowdecon
+            Amount: 2
+
+      # Output ID 101564
+      - Index: 16
+        Item: AllMighty_Up
+        RequiredItems:
+          - Index: 0
+            Item: Shadowdecon
+            Amount: 2
+
+      # Output ID 101311
+      - Index: 17
+        Item: InfinityShadow_Up
+        RequiredItems:
+          - Index: 0
+            Item: Shadowdecon
+            Amount: 2
+
+      # Output ID 101310
+      - Index: 18
+        Item: MagicalShadow_Up
+        RequiredItems:
+          - Index: 0
+            Item: Shadowdecon
+            Amount: 2
+
+      # Output ID 101359
+      - Index: 19
+        Item: MajorAutoSpell_Up
+        RequiredItems:
+          - Index: 0
+            Item: Shadowdecon
+            Amount: 2
+
+      # Output ID 101360
+      - Index: 20
+        Item: Hasty_Up
+        RequiredItems:
+          - Index: 0
+            Item: Shadowdecon
+            Amount: 2
+
+      # Output ID 101361
+      - Index: 21
+        Item: PhysicalShadow_Up
+        RequiredItems:
+          - Index: 0
+            Item: Shadowdecon
+            Amount: 2
+
+      # Output ID 101362
+      - Index: 22
+        Item: PerfectSize_Up
+        RequiredItems:
+          - Index: 0
+            Item: Shadowdecon
+            Amount: 2
+
+
+  - Name: Nyarom_Dungeon
+    Items:
+      # Output ID 100003
+      - Index: 0
+        Item: ILL_Piece_A
+        RequiredItems:
+          - Index: 0
+            Item: IllusionStone
+            Amount: 2
+
+      # Output ID 100004
+      - Index: 1
+        Item: ILL_Piece_B
+        RequiredItems:
+          - Index: 0
+            Item: IllusionStone
+            Amount: 2
+
+      # Output ID 40055
+      - Index: 2
+        Item: ILL_Piece_2A
+        RequiredItems:
+          - Index: 0
+            Item: IllusionStone
+            Amount: 10
+
+      # Output ID 40056
+      - Index: 3
+        Item: ILL_Piece_2B
+        RequiredItems:
+          - Index: 0
+            Item: IllusionStone
+            Amount: 10
+
+      # Output ID 23815
+      - Index: 4
+        Item: Magma_Essence
+        RequiredItems:
+          - Index: 0
+            Item: Shadowdecon
+            Amount: 3
+
+      # Output ID 9529
+      - Index: 5
+        Item: Ein_Ddbox2
+        RequiredItems:
+          - Index: 0
+            Item: Ein_DYNITE
+            Amount: 5
+
+      # Output ID 9514
+      - Index: 6
+        Item: Ein_Ddbox
+        RequiredItems:
+          - Index: 0
+            Item: Ein_DYNITE
+            Amount: 5
+
+      # Output ID 23981
+      - Index: 7
+        Item: Abyss_Ddbox
+        RequiredItems:
+          - Index: 0
+            Item: Dragenergy_Red
+            Amount: 10
+
+      # Output ID 100142
+      - Index: 8
+        Item: Abyss_Ddbox2
+        RequiredItems:
+          - Index: 0
+            Item: Dragenergy_Red
+            Amount: 10
+
+      # Output ID 100144
+      - Index: 9
+        Item: Abyss_Ddbox3
+        RequiredItems:
+          - Index: 0
+            Item: Dragenergy_Red
+            Amount: 10
+
+      # Output ID 100145
+      - Index: 10
+        Item: Abyss_Ddbox4
+        RequiredItems:
+          - Index: 0
+            Item: Dragenergy_Red
+            Amount: 10
+  - Name: Fruity_Etel
+    Items:
+      # 1000323: 5 Etel Dust + 10,000 Zeny
+      - Index: 0
+        Item: Etel_Stone
+        Zeny: 10000
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Dust
+            Amount: 5
+
+      # 1000325: 3 Etel Stones + 1 Aquamarine + 10,000 Zeny
+      - Index: 1
+        Item: Etel_Skyblue_Jewel
+        Zeny: 10000
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Stone
+            Amount: 3
+          - Index: 1
+            Item: Skyblue_Jewel
+            Amount: 1
+
+      # 1000326: 6 Etel Stones + 1 Topaz + 20,000 Zeny
+      - Index: 2
+        Item: Etel_Topaz
+        Zeny: 20000
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Stone
+            Amount: 6
+          - Index: 1
+            Item: Golden_Jewel
+            Amount: 1
+
+      # 1000327: 10 Etel Stones + 1 Amethyst + 30,000 Zeny
+      - Index: 3
+        Item: Etel_Violet_Jewel
+        Zeny: 30000
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Stone
+            Amount: 10
+          - Index: 1
+            Item: Violet_Jewel
+            Amount: 1
+
+      # 1000328: 15 Etel Stones + 1 Amber + 50,000 Zeny
+      - Index: 4
+        Item: Etel_Amber
+        Zeny: 50000
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Stone
+            Amount: 15
+          - Index: 1
+            Item: Amber
+            Amount: 1
+
+      # 1000337: 3 Etel Stones + 1 Blacksmith Blessing + 10,000 Zeny
+      - Index: 5
+        Item: Blessed_Etel_Dust
+        Zeny: 10000
+        RequiredItems:
+          - Index: 0
+            Item: Etel_Stone
+            Amount: 3
+          - Index: 1
+            Item: Blacksmith_Blessing
+            Amount: 1

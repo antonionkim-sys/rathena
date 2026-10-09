@@ -1,0 +1,54 @@
+prt_in,123,38,3	script	Silvervine Bush	2135,{
+	switch (checkquest(.CooldownQuest, PLAYTIME)) {
+	case -1:
+		break;
+
+	case 0:
+	case 1:
+		mes "[Silvervine Bush]";
+		mes "I've got no fruits left for you, come back again tomorrow!";
+		close;
+
+	case 2:
+		erasequest .CooldownQuest;
+		break;
+	}
+
+	mes "[" + strcharinfo(0) + "]";
+	mes "Oh, what's this bush over here?";
+	next;
+
+	mes "[Silvervine Bush]";
+	mes "Harvest ^i[6909] Silvervine Cat Fruits.";
+	mes "You can do it ^FF0000once a day.^000000";
+	next;
+
+	mes "[Silvervine Bush]";
+	mes "Potential harvest...1-3 ^i[6909]";
+	next;
+
+	select("Harvest it now.");
+
+	.@amount = rand(1,3);
+
+	if (!checkweight(6909,.@amount)) {
+		mes "[Silvervine Bush]";
+		mes "You don't have enough inventory space to carry the fruits.";
+		close;
+	}
+
+	setquest .CooldownQuest;
+	getitem 6909,.@amount;
+
+	mes "[Silvervine Bush]";
+	mes "How many did you get?";
+	mes "Hope you liked what you received today!";
+	mes "See you again tomorrow!";
+	close;
+
+OnInit:
+	.CooldownQuest = 90097;
+	setunittitle(getnpcid(0), "[Weekly Fruits]");
+	setunitdata getnpcid(0), UNPC_GROUP_ID, 40;	
+	end;
+}

@@ -1,0 +1,34 @@
+prt_in,136,27,3	script	Cheshire	497,{
+	cutin "ep13_cheshire.bmp",2;
+
+	mes "[Cheshire]";
+	mes "It is Nyaaaaa time!";
+	mes "I have got a few useful tools that would help your leveling / farming life easier.";
+	next;
+
+	switch (select(
+		"EXP Manuals",
+		"Bubble Gums"
+	)) {
+	case 1:
+		mes "[Cheshire]";
+		mes "Some extra EXP and Drop rate buffs?";
+		close2;
+		cutin "",255;
+		callshop "Cheshire_EXPManuals";
+		end;
+
+	case 2:
+		mes "[Cheshire]";
+		mes "Some extra EXP and Drop rate buffs?";
+		close2;
+		cutin "",255;
+		callshop "Cheshire_BubbleGums";
+		end;
+	}
+
+OnInit:
+	setunittitle(getnpcid(0), "[Fancy Store]");
+	setunitdata getnpcid(0), UNPC_GROUP_ID, 40;
+	end;
+}

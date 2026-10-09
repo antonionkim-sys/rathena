@@ -1,0 +1,45 @@
+iz_ac01,95,152,3	script	Nightmare Warp Altar	10527,{
+	if (checkquest(90083) == 1) {
+		mes "[Warp Altar]";
+		mes "...The altar glows a cold sky blue.";
+		mes "It is listening for a name...";
+		next;
+
+		mes "[Warp Altar]";
+		mes "Beyond me lies the <b>Nightmare Garden</b> - the lobby to the <b>Nightmare Dungeons</b>.";
+		mes "Abyss Glast Heim, Einbech Mines F3, Past Odin Temple, Thanatos Tower, Abyss Lake F4, Niflheim, and the Varmundt Biospheres.";
+		next;
+		mes "Harder monsters. Rarer materials. Greater rewards.";
+		next;
+
+		mes "[Warp Altar]";
+		mes "Hunters come for what those monsters leave behind:";
+		mes "^i[25731] <b>Zelunium</b> and ^i[25729] <b>Shadowdecon</b>.";
+		next;
+		mes "Uncle Ahmed trades Zelunium for <b>Costume Enchant Stones</b>.";
+		mes "Buidai takes Shadowdecon in exchange for <b>Shadow Equipment</b>.";
+		mes "And deeper within the dungeons, you'll find <b>special gear</b> - things like Rune Armor.";
+		next;
+
+		mes "[Warp Altar]";
+		mes "Step onto the altar.";
+		mes "The crossing is free.";
+		next;
+
+		mes "[Warp Altar]";
+		mes "You've recovered ^i[44599] 1x ^0000FF<b>Memory Shard!</b>^000000";
+		mes "You gained ^FFA500some experience back^000000.";
+
+		completequest 90083;
+		setquest 90084;
+		end;
+	}
+
+	mes "[Warp Altar]";
+	mes "The altar is waiting.";
+	end;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Nightmare Garden]");
+	end;
+}

@@ -1,0 +1,124 @@
+prt_in,133,39,4	script	Sophie	10209,{
+	cutin "prm_1.bmp",2;
+
+	// Quest conversation.
+	if (checkquest(90095) == 1) {
+		mes "[Sophie]";
+		mes "Nyang~ welcome to the <b>Nyang Club</b>.";
+		next;
+
+		mes "[Sophie]";
+		mes "Most people only find this room after the whole city already feels like theirs.";
+		next;
+
+		mes "[Sophie]";
+		mes "I cast the <b>Yggdrasil Blessing</b>:";
+		mes "Every stat <b>+7</b>, Attack and Magic Attack <b>+30</b>, Hit and Flee <b>+5</b>, every Trait <b>+1</b>, and <b>5 RES and MRES</b>.";
+		next;
+
+		mes "[Sophie]";
+		mes "One hour costs one ^i[6909] <b>Silvervine Cat Fruit</b>.";
+		mes "Need more?";
+		mes "You can extend it all the way to <b>7 hours</b> for just <b>4</b> Silvervine Cat Fruits.";
+		next;
+
+		mes "[Sophie]";
+		mes "The bush by the door grows the fruit, so you'll never have to look far.";
+		next;
+
+		mes "[Sophie]";
+		mes "Water it once a week, and harvest whatever it gives you.";
+		mes "Nyang~";
+		next;
+
+		mes "[Sophie]";
+		mes "You've recovered ^i[44599] 1x ^0000FF<b>Memory Shard!</b>^000000";
+		mes "You gained ^FFA500some experience back^000000.";
+
+		completequest 90095;
+		setquest 90096;
+
+		cutin "",255;
+		close;
+	}
+
+	// Main blessing conversation.
+	mes "[Sophie]";
+	mes "Nyang~ ^0000FF" + strcharinfo(0) + "^000000.";
+	mes "I can bless you with my neki magic, the ^0000FFYggdrasil Blessing^000000!";
+	mes "But you have to provide me <ITEM>[Silvervine Cat Fruit]<INFO>6909</INFO></ITEM> for it...";
+	mes "Do you want to receive it?";
+	next;
+
+	switch (select(
+		"What does it do?",
+		"Buff me for 1 hour. (1x)",
+		"Buff me for 3 hours. (2x)",
+		"Buff me for 5 hours. (3x)",
+		"Buff me for 7 hours. (4x)",
+		"Cancel"
+	)) {
+	case 1:
+		next;
+		mes "[Sophie]";
+		mes "It gives you power of";
+		mes "All Stats +7";
+		mes "ATK +30, MATK +30";
+		mes "HIT +5 and FLEE +5";
+		mes "All Traits +1";
+		mes "RES and MRES +5";
+		cutin "",255;
+		close;
+
+	case 2:
+		.@hours = 1;
+		.@cost = 1;
+		break;
+
+	case 3:
+		.@hours = 3;
+		.@cost = 2;
+		break;
+
+	case 4:
+		.@hours = 5;
+		.@cost = 3;
+		break;
+
+	case 5:
+		.@hours = 7;
+		.@cost = 4;
+		break;
+
+	case 6:
+		cutin "",255;
+		close;
+	}
+
+	next;
+	mes "[Sophie]";
+
+	if (countitem(6909) < .@cost) {
+		mes "Nyang~ you need " + .@cost + " <ITEM>Silvervine Cat Fruit<INFO>6909</INFO></ITEM> for this blessing.";
+		cutin "",255;
+		close;
+	}
+
+	delitem 6909,.@cost;
+
+	mes "Get ready to receive the blessing...";
+	sleep2 1000;
+
+	mes "^0000FFI now cast Yggdrasil Blessing upon you!^000000";
+
+	specialeffect2 EF_HEAL4;
+	sc_start SC_YGGDRASIL_BLESSING,.@hours * 3600000,1;
+
+	cutin "",255;
+	close;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Yggdrasil Blessing]");
+	setunitdata getnpcid(0), UNPC_GROUP_ID, 40;		
+	end;
+}

@@ -1,0 +1,116 @@
+//===== rAthena Script =======================================
+//= Kay Sanders - Useful Supplies
+//============================================================
+
+// --------------------------------------------------
+// Hidden dummy shop.
+// Must be on a valid map coordinate for this server.
+// It is hidden at startup and opened through Kay.
+// --------------------------------------------------
+iz_ac01,1,1,0	shop	kay_useful_supplies	-1,501:1
+
+// --------------------------------------------------
+// Kay Sanders: Memory Quest dialogue and Useful Supplies
+// --------------------------------------------------
+prtmall,30,32,5	script	Kay Sanders	10298,{
+	// Sex script variable:
+	// 0 = female -> Auntie
+	// 1 = male   -> Uncle
+	if (Sex == 1)
+		.@relative$ = "Uncle";
+	else
+		.@relative$ = "Auntie";
+
+	// --------------------------------------------------
+	// One-time Memory Quest dialogue: quest 90078
+	// --------------------------------------------------
+	if (checkquest(90078) == 1) {
+		mes "[Kay Sanders]";
+		mes "Welcome, honoured guest. I am <b>Kay Sanders</b>, a Star Emperor...";
+		mes "Wait.";
+		mes "It can't be...";
+		mes .@relative$ + " " + strcharinfo(0) + "?!";
+		next;
+
+		mes "[Kay Sanders]";
+		mes "I still remember the days when you would drag me into one reckless quest after another.";
+		mes "I suppose becoming a Star Emperor was my way of making sure I could finally keep up with you.";
+		next;
+
+		mes "[Kay Sanders]";
+		mes "You are now standing in the <b>Department Store</b> - the one floor where the city's merchants have all gathered.";
+		mes "Skill scrolls and potions, gym passes and inventory expansions, pet supplies and cooking ingredients.";
+		mes "Everything an adventurer could need, all under one roof.";
+		next;
+
+		mes "[Kay Sanders]";
+		mes "My own counter is called <b>Useful Supplies</b>, and I keep a small selection of things worth having on hand.";
+		mes "The rest of the floor will take care of you.";
+		next;
+
+		if (!checkweight(44599, 1)) {
+			mes "[Kay Sanders]";
+			mes "Please make room in your inventory before recovering your Memory Shard.";
+			close;
+		}
+
+		getitem 44599, 1;
+
+		mes "[Kay Sanders]";
+		mes "You've recovered ^i[44599] 1x ^0000FF<b>Memory Shard!</b>^000000";
+		mes "You gained ^FFA500some experience back^000000.";
+		next;
+
+		completequest 90078;
+		setquest 90079;
+	}
+
+	// --------------------------------------------------
+	// Original dialogue after the quest introduction
+	// --------------------------------------------------
+	mes "[Kay Sanders]";
+	mes "Hi again, " + .@relative$ + " " + strcharinfo(0) + ".";
+	mes "";
+	mes "I am dedicated to aiding those who embark on daring quests and thrilling journeys.";
+	next;
+
+	mes "[Kay Sanders]";
+	mes "You are standing in the <b>Department Store</b> of Prontera, where every shop in the city is gathered on one floor.";
+	next;
+	mes "Skill scrolls and potions, gym passes and inventory expansions, pet supplies and cooking ingredients...";
+	mes "Whatever a long journey asks for, somebody here is selling it.";
+	next;
+
+	mes "[Kay Sanders]";
+	mes "Would you like to browse my Useful Supplies?";
+	next;
+
+	if (select("Open Shop:No, thank you.") == 2) {
+		mes "[Kay Sanders]";
+		mes "Come back whenever you need supplies.";
+		close;
+	}
+
+	close2;
+	callshop "kay_useful_supplies", 1;
+	end;
+
+OnInit:
+	// Hide the dummy shop so only Kay is visible.
+	hideoffnpc "kay_useful_supplies";
+
+	// Remove the temporary Red Potion.
+	npcshopdelitem "kay_useful_supplies", 501;
+
+	// Add Useful Supplies inventory at your custom Zeny prices.
+	npcshopadditem "kay_useful_supplies", 12858, 1500000;
+	npcshopadditem "kay_useful_supplies", 41180, 300000;
+	npcshopadditem "kay_useful_supplies", 41112, 500000;  //41112
+	npcshopadditem "kay_useful_supplies", 41110, 12000000; //41110
+	npcshopadditem "kay_useful_supplies", 7621, 4000000;
+	npcshopadditem "kay_useful_supplies", 41215, 30000000; //41215
+	npcshopadditem "kay_useful_supplies", 41216, 100000000; //41216
+
+	setunittitle(getnpcid(0), "[Useful Supplies]");
+	end;
+}

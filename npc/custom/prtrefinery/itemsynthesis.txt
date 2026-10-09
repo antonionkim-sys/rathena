@@ -1,0 +1,278 @@
+//===== rAthena Script =======================================
+//= Large Recycling Machine - Item Synthesis
+//============================================================
+//= Dimensions Crystal:
+//=   3 crystals per roll.
+//=   One randomly selected reward per roll.
+//=   Equal 20% chance for each of the five reward types.
+//=
+//= Good and Evil Crowns:
+//=   Test synthesis item ID: 800000.
+//=
+//= Other synthesis systems:
+//=   Dialogue and menus only; calls pending implementation.
+//============================================================
+
+prtrefinery,198,119,3	script	Large Recycling Machine	10042,{
+	mes "[Large Recycling Machine]";
+	mes "Extract different items into materials.";
+	next;
+
+	switch(select(
+		"Recycle Dimensions Crystal",
+		"Recycle Good and Evil Crowns",
+		"Recycle Good and Evil Weapons",
+		"Recycle Normal Cards",
+		"Recycle MvP Cards",
+		"Recycle Sealed Boss Cards",
+		"Recycle Lottery Costume Hats",
+		// "Recycle Costume Enchant Stones",
+		"Recycle Shadow Gears",
+		"Cancel"
+	)) {
+	case 1:
+		mes "[Large Recycling Machine]";
+		mes "Recycle 3x ^i[44164] for a chance to get one of the following materials:";
+		mes "50-70 " + mesitemlink(1001552);
+		mes "50-70 " + mesitemlink(1001553);
+		mes "8-12 " + mesitemlink(1001554);
+		mes "3-5 " + mesitemlink(1001555);
+		mes "1-2 " + mesitemlink(1001556);
+		mes "Each recycle gives one randomly selected material from this pool.";
+		next;
+
+		switch(select(
+			"Recycle 1 time (Costs 3)",
+			"Recycle 10 times (Costs 30)",
+			"Recycle 30 times (Costs 90)",
+			"Cancel"
+		)) {
+		case 1:
+			.@rolls = 1;
+			break;
+		case 2:
+			.@rolls = 10;
+			break;
+		case 3:
+			.@rolls = 30;
+			break;
+		default:
+			close;
+		}
+
+		.@cost = .@rolls * 3;
+
+		if (countitem(44164) < .@cost) {
+			mes "[Large Recycling Machine]";
+			mes "You need " + .@cost + "x ^i[44164] to recycle " + .@rolls + " time(s).";
+			close;
+		}
+
+		mes "[Large Recycling Machine]";
+		mes "Consume " + .@cost + "x ^i[44164] for " + .@rolls + " independent recycling roll(s)?";
+		next;
+
+		if (select("Recycle:Cancel") == 2)
+			close;
+
+		// Recheck materials after confirmation.
+		if (countitem(44164) < .@cost) {
+			mes "[Large Recycling Machine]";
+			mes "You no longer have enough Dimensions Crystals.";
+			close;
+		}
+
+		setarray .@reward_id[0],
+			1001552,
+			1001553,
+			1001554,
+			1001555,
+			1001556;
+
+		// Reserve room for the largest possible batch before rolling.
+		// This deliberately conservative check avoids rerolling
+		// actual rewards through repeated capacity failures.
+		setarray .@capacity[0],
+			70 * .@rolls,
+			70 * .@rolls,
+			12 * .@rolls,
+			5 * .@rolls,
+			2 * .@rolls;
+
+		if (!checkweight2(.@reward_id,.@capacity)) {
+			mes "[Large Recycling Machine]";
+			mes "Please free more inventory space and carrying capacity before recycling.";
+			close;
+		}
+
+		// Every roll independently chooses one reward type.
+		// Aggregate quantities for delivery and result display.
+		for (.@i = 0; .@i < .@rolls; .@i++) {
+			.@pool = rand(5);
+
+			switch (.@pool) {
+			case 0:
+			case 1:
+				.@amount = rand(50,70);
+				break;
+			case 2:
+				.@amount = rand(8,12);
+				break;
+			case 3:
+				.@amount = rand(3,5);
+				break;
+			case 4:
+				.@amount = rand(1,2);
+				break;
+			}
+
+			.@reward_amount[.@pool] += .@amount;
+		}
+
+		delitem 44164,.@cost;
+
+		for (.@i = 0; .@i < 5; .@i++) {
+			if (.@reward_amount[.@i] > 0)
+				getitem .@reward_id[.@i],.@reward_amount[.@i];
+		}
+
+		mes "[Large Recycling Machine]";
+		mes "Recycling complete.";
+		mes "Consumed: " + .@cost + "x ^i[44164]";
+		mes "Rewards:";
+
+		for (.@i = 0; .@i < 5; .@i++) {
+			if (.@reward_amount[.@i] > 0)
+				mes .@reward_amount[.@i] + "x "
+					+ mesitemlink(.@reward_id[.@i]);
+		}
+		close;
+
+	case 2:
+		mes "[Large Recycling Machine]";
+		mes "Recycle 4 of any Good and Evil crowns for 1x ^i[44187].";
+		mes "^FF0000Warning: Double-check your crowns before you recycle!!!!!!^000000";
+
+		close2;
+		laphine_synthesis(49000);
+		end;
+
+	case 3:
+		mes "[Large Recycling Machine]";
+		mes "Recycle 3 of any Good and Evil weapons for 1x ^i[44188].";
+		mes "^FF0000Warning: Double-check your weapons before you recycle!!!!!^000000";
+
+		close2;
+		laphine_synthesis(49001);
+		end;
+
+	case 4:
+		mes "[Large Recycling Machine]";
+		mes "Recycle Normal Cards into ^i[6379].";
+		mes "Each recycled card gives 1 coin.";
+		next;
+
+		switch(select(
+			"Recycle 1 Card",
+			"Recycle 5 Cards (Stacks)",
+			"Recycle 10 Cards (Stacks)",
+			"Recycle 5 Cards (Separated)",
+			"Recycle 10 Cards (Separated)",
+			"Cancel"
+		)) {
+		case 1:
+			close2;
+			laphine_synthesis(49002);
+			end;
+
+		case 2:
+			close2;
+			laphine_synthesis(49003);
+			end;
+
+		case 3:
+			close2;
+			laphine_synthesis(49004);
+			end;
+
+		case 4:
+			close2;
+			laphine_synthesis(49005);
+			end;
+
+		case 5:
+			close2;
+			laphine_synthesis(49006);
+			end;
+
+		default:
+			close;
+		}
+		end;
+
+	case 5:
+		mes "[Large Recycling Machine]";
+		mes "Recycle MvP Cards into ^i[44415].";
+		mes "^0000FFChances to get 30x/60x/90x/120x^000000";
+		mes "are defined by 50%/30%/15%/5%.";
+		next;
+
+		switch(select(
+			"Recycle 3 Cards",
+			"Recycle 3 Cards (Stacks)",
+			"Cancel"
+		)) {
+		case 1:
+			close2;
+			laphine_synthesis(49007);
+			end;
+
+		case 2:
+			close2;
+			laphine_synthesis(49008);
+			end;
+
+		default:
+			close;
+		}
+		end;
+
+	case 6:
+		mes "[Large Recycling Machine]";
+		mes "Recycle 3 Sealed Boss Cards into 1x ^i[44560] and 1 random Sealed Boss Card.";
+			close2;
+			laphine_synthesis(102815);
+			
+		end;
+
+	case 7:
+		mes "[Large Recycling Machine]";
+		mes "Recycle your Zeny Lottery Costume hats into ^i[44904].";
+		mes "You can then use the fragments to purchase costume hats in the Grand Hall.";
+			close2;
+		laphine_synthesis(23154);
+
+		end;
+
+	/*
+	// Costume Enchant Stone recycling is disabled for now.
+	// Add its menu option and branch when requirements are ready.
+	*/
+
+	case 8:
+		mes "[Large Recycling Machine]";
+		mes "Do you have extra Shadow gears?";
+		mes "You can recycle 3 pieces and get one random piece back.";
+
+			close2;
+		laphine_synthesis(22529);
+		end;
+
+	default:
+		close;
+	}
+
+OnInit:
+	setunittitle(getnpcid(0), "[Item Synthesis]");
+	end;
+}

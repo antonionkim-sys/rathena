@@ -1,0 +1,173 @@
+//===== rAthena Script =======================================
+//= Yuki the Smith - Item Workshop
+//============================================================
+
+// --------------------------------------------------
+// Hidden Zeny Shop: Common Ores, Steel, and Gold
+// --------------------------------------------------
+iz_ac01,1,1,0	shop	yuki_ores_shop	-1,501:1
+
+// --------------------------------------------------
+// Hidden Zeny Shop: Supportive Goods
+// --------------------------------------------------
+iz_ac01,2,1,0	shop	yuki_support_shop	-1,501:1
+
+// --------------------------------------------------
+// Yuki the Smith
+// --------------------------------------------------
+prontera,181,216,3	script	Yuki the Smith	63,{
+
+	if (checkquest(90079) == 1) {
+		mes "[Yuki the Smith]";
+		mes "Take a look at my storage.";
+		mes "Ores, Steel, Gold - all of it, right here.";
+		next;
+
+		mes "[Yuki the Smith]";
+		mes "Safe Refine Tickets, Special Refine Hammers, Safe Refine Boxes.";
+		mes "And if your Dimensional Accessories have reached <b>+9</b>, I can <b>reform</b> them all the way up to <b>+11</b>.";
+		next;
+
+		mes "[Yuki the Smith]";
+		mes "Refining is a gamble.";
+		mes "I sell you the tools to lose less.";
+		next;
+
+		mes "[Yuki the Smith]";
+		mes "You've recovered ^i[44599] 1x <b>Memory Shard!</b>";
+		mes "You gained some experience back.";
+
+		completequest 90079;
+		setquest 90080;
+	}
+
+	mes "[Yuki the Smith]";
+	mes "Take a look at my storage.";
+	mes "I got plenty of different items for sale or exchange.";
+	next;
+
+	switch(select(
+		"Common Ores, Steel, and Gold:"
+		+ "Buy Supportive Goods:"
+		+ "Buy Safe Refine Tickets:"
+		+ "Buy Special Refine Hammers:"
+		+ "Buy Safe Refine Boxes:"
+		+ "Refine Dimensional Accessories +9 to +11:"
+		+ "Upgrade Weapon Lv1-4 Safe Refine Ticket:"
+		+ "Upgrade Weapon Lv5 Safe Refine Ticket:"
+		+ "Upgrade Armor Lv1 Safe Refine Ticket:"
+		+ "Upgrade Armor Lv2 Safe Refine Ticket:"
+		+ "Cross Exchange +20 Safe Tickets:"
+		+ "Cancel"
+	)) {
+
+	case 1:
+		mes "[Yuki the Smith]";
+		mes "Buy any amount you need!";
+		close2;
+		callshop "yuki_ores_shop", 1;
+		end;
+
+	case 2:
+		mes "[Yuki the Smith]";
+		mes "Buy any amount you need!";
+		close2;
+		callshop "yuki_support_shop", 1;
+		end;
+
+	case 3:
+		mes "[Yuki the Smith]";
+		mes "You can buy Safe Refine Tickets by giving me Illusion Stones.";
+		close2;
+		callshop "yuki_safe_refine_tickets", 1;
+		end;
+
+	case 4:
+		mes "[Yuki the Smith]";
+		mes "You can buy special refine hammers by giving me different materials.";
+		close2;
+		callshop "yuki_special_refine_hammers", 1;
+		end;
+
+	case 5:
+		mes "[Yuki the Smith]";
+		mes "You can buy safe refine boxes!";
+		close2;
+		callshop "yuki_safe_refine_boxes", 1;
+		end;
+
+	case 6:
+		mes "[Yuki the Smith]";
+		mes "A safer method to refine the accessories from +9 to +11.";
+		mes "For the following accessories:";
+		mes "^i[490276], ^i[490277], ^i[490278]";
+		item_reform("Dimmen_A_Refine");
+		close2;
+		end;
+
+	case 7:
+		mes "[Yuki the Smith]";
+		mes "Time to upgrade!";
+		close2;
+		callshop "yuki_weapon_safe_ticket_upgrade", 1;
+		end;
+
+	case 8:
+		mes "[Yuki the Smith]";
+		mes "This option is not available yet.";
+		close;
+
+	case 9:
+		mes "[Yuki the Smith]";
+		mes "Time to upgrade!";
+		close2;
+		callshop "yuki_armor_safe_ticket_upgrade", 1;
+		end;
+
+	case 10:
+		mes "[Yuki the Smith]";
+		mes "This option is not available yet.";
+		close;
+
+	case 11:
+		mes "[Yuki the Smith]";
+		mes "Exchange your +20 Safe Refine Tickets.";
+		close2;
+		callshop "yuki_safe_ticket_cross_exchange", 1;
+		end;
+
+	default:
+		close;
+	}
+
+OnInit:
+	hideoffnpc "yuki_ores_shop";
+	hideoffnpc "yuki_support_shop";
+
+	npcshopdelitem "yuki_ores_shop", 501;
+	npcshopdelitem "yuki_support_shop", 501;
+
+	// Common Ores, Steel, and Gold
+	npcshopadditem "yuki_ores_shop", 998, 2000;
+	npcshopadditem "yuki_ores_shop", 1003, 2000;
+	npcshopadditem "yuki_ores_shop", 1002, 3000;
+	npcshopadditem "yuki_ores_shop", 999, 3000;
+	npcshopadditem "yuki_ores_shop", 969, 100000;
+	npcshopadditem "yuki_ores_shop", 25728, 20000;
+	npcshopadditem "yuki_ores_shop", 25730, 25000;
+
+	// Supportive Goods
+	npcshopadditem "yuki_support_shop", 612, 150;
+	npcshopadditem "yuki_support_shop", 613, 1000;
+	npcshopadditem "yuki_support_shop", 614, 3000;
+	npcshopadditem "yuki_support_shop", 615, 5000;
+	npcshopadditem "yuki_support_shop", 988, 350000;
+	npcshopadditem "yuki_support_shop", 989, 700000;
+	npcshopadditem "yuki_support_shop", 990, 10000;
+	npcshopadditem "yuki_support_shop", 991, 10000;
+	npcshopadditem "yuki_support_shop", 992, 10000;
+	npcshopadditem "yuki_support_shop", 993, 10000;
+
+	setunittitle(getnpcid(0), "[Item Workshop]");
+	end;
+}

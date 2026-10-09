@@ -1,0 +1,101 @@
+prtrefinery,220,127,3	script	Hollgrehenn	85,{
+	// One-time refining tutorial / quest completion.
+	if (checkquest(90089) == 1) {
+		mes "[Hollgrehenn]";
+		mes "Refining takes one piece of gear and pushes it one level higher.";
+		mes "There is no replacement and no new item—the same equipment becomes stronger.";
+		mes "Each refine level is a harder roll than the last.";
+		next;
+
+		mes "[Hollgrehenn]";
+		mes "I am the one who makes that roll.";
+		mes "Normal equipment can be refined up to ^0000FF+20^000000.";
+		mes "Shadow equipment can be refined up to ^0000FF+10^000000.";
+		mes "With ^i[44636]^0000FF Blacksmith Blessing^000000, Shadow equipment can exceed that limit and reach ^0000FF+20^000000.";
+		next;
+
+		mes "[Hollgrehenn]";
+		mes "Refining requires catalysts, such as ^i[756]^0000FF Oridecon^000000, and zeny.";
+		mes "A failed attempt can break your equipment or lower its refine level.";
+		next;
+
+		mes "[Hollgrehenn]";
+		mes "Bring ^i[6635]^0000FF Blacksmith Blessing^000000 and select it in the refine window.";
+		mes "It protects your gear from the usual consequences of a failed refine.";
+		next;
+
+		mes "[Hollgrehenn]";
+		mes "^FFA500Flamering^000000 exchanges Blacksmith Blessings for ores.";
+		mes "Also, each failed refine attempt grants a ^0000FF2% Pity Refine Bonus^000000.";
+		next;
+
+		mes "[Hollgrehenn]";
+		mes "The Pity Refine Bonus is not permanent.";
+		mes "It can reset to 0% after a successful refine, changing items, relogging, opening storage, trading, or other actions.";
+		mes "Make sure you are prepared before refining.";
+		next;
+
+		mes "[Hollgrehenn]";
+		mes "You've recovered ^i[44599]^0000FF 1x Memory Shard!^000000";
+		mes "You gained ^FFA500some experience back.^000000";
+
+		completequest 90089;
+		setquest 90090;
+	}
+
+	// This menu is always shown, including after quest completion.
+	mes "[Hollgrehenn]";
+	mes "I'm a blacksmith who can refine weapons and equipment.";
+	mes "Do you have any items that you'd like to refine?";
+	next;
+
+	switch(select("Refine equipment:More information:Cancel")) {
+	case 1:
+		mes "[Hollgrehenn]";
+		mes "Good luck!";
+		close2;
+
+		// Opens the official/item-refine UI.
+		refineui();
+		end;
+
+	case 2:
+		mes "[Hollgrehenn]";
+		mes "Item Refine makes your equipment ^0000FF+1 stronger^000000 at a time.";
+		mes "It can also grant additional bonuses depending on the equipment and refine level.";
+		next;
+
+		mes "[Hollgrehenn]";
+		mes "Normal equipment has a maximum refine level of ^0000FF+20^000000.";
+		next;
+
+		mes "[Hollgrehenn]";
+		mes "Shadow equipment normally has a maximum refine level of ^0000FF+10^000000.";
+		mes "Use ^i[44636]^0000FF Blacksmith Blessing^000000 to exceed that limit, up to ^0000FF+20^000000.";
+		next;
+
+		mes "[Hollgrehenn]";
+		mes "Refining requires catalysts such as ^i[756]^0000FF Oridecon^000000 and zeny.";
+		mes "A failure may break your gear or lower its refine level.";
+		next;
+
+		mes "[Hollgrehenn]";
+		mes "What is the ^0000FFPity Refine Bonus^000000?";
+		mes "Each failed attempt gives the current item a ^0000FF2% pity bonus^000000 toward its next refine attempt.";
+		next;
+
+		mes "[Hollgrehenn]";
+		mes "It is not fail-safe and can reset to 0% if you succeed, change refining items, relog, open storage, trade, or take certain other actions.";
+		mes "Prepare everything before you begin.";
+		close;
+
+	default:
+		mes "[Hollgrehenn]";
+		mes "Come back when you're ready.";
+		close;
+	}
+
+OnInit:
+	setunittitle(getnpcid(0), "[Item Refine]");
+	end;
+}

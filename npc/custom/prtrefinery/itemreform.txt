@@ -1,0 +1,640 @@
+//===== rAthena Script =======================================
+//= Gigantic Device
+//= Item Reform / Reform Scroll Shops
+//============================================================
+//= Reform identifiers must exist in your item reform database.
+//= Menu level labels are informational, not additional gates.
+//= Azure Flame Mana reform is disabled until implemented.
+//============================================================
+
+prtrefinery,198,141,3	script	Gigantic Device	10046,{
+	mes "[Gigantic Device]";
+	mes "Have the base item in your inventory to display the required materials, then you can toss it in to reform.";
+	next;
+
+	.@choice = select(
+		"Reform Thanos Weapons (190+)",
+		"Reform OS Weapons (170+)",
+		"Reform Special Armors (100-190+)",
+		"Reform Heroic Weapons (190+)",
+		"Reform Thanatos Sword Garment (210+)",
+		"Reform Adulter Fides Weapons (210+)",
+		"Reform Varmundt Armor & Accessory (230+)",
+		"Reform Sealed Dimensional Accessory (240+)",
+		"Reform Metal Weapon Scrolls (250+)",
+		"Reform Rune Armor into Engraved (250+)",
+		"Reform Engraved Rune Armor into normal version (250+)",
+		"Reform Manteau of Mystical Beast (250+)",
+		"Reform Gaebolg Equipment (250+)",
+		"Reform Encroached Weapon Scrolls (255+)",
+		"Reform to Printed Version for Rune Tablet"
+		// ,"Reform Azure Flame Mana equipment (235+)"
+	);
+
+	switch (.@choice) {
+
+	//========================================================
+	// Thanos Weapons
+	//========================================================
+	case 1:
+		mes "[Gigantic Device]";
+		mes "Reform ^0000FFThanos weapons^000000 into AD form.";
+		next;
+
+		callsub L_List,
+			13441,500024,
+			21009,600016,
+			16028,590020,
+			13093,510030,
+			2023,640017,
+			1988,580016,
+			1933,570016,
+			1669,550023,
+			1438,530012,
+			28000,610019,
+			28100,620009,
+			18119,700029,
+			1836,560017;
+
+		switch(select("Basic Reform:Intermediate Reform")) {
+		case 1:
+			mes "[Gigantic Device]";
+			mes "Thanos weapon Basic Reforms.";
+			mes "^FF0000Reduces 5 refine levels^000000, but requires fewer materials.";
+			mes "In order to modify it, the weapon needs to have a refine level of +9 or greater.";
+			close2;
+			item_reform("Thanos_W_Reform_1");
+			end;
+
+		case 2:
+			mes "[Gigantic Device]";
+			mes "Thanos weapon Intermediate Reforms.";
+			mes "^FF0000Reduces 1 refine level^000000, but requires more materials.";
+			mes "In order to modify it, the weapon needs to have a refine level of +9 or greater.";
+			close2;
+			item_reform("Thanos_W_Reform_2");
+			end;
+		}
+		end;
+
+	//========================================================
+	// OS Weapons
+	//========================================================
+	case 2:
+		mes "[Gigantic Device]";
+		mes "Refinement must be +7 or higher for reforming.";
+		mes "List of OS weapons into OSAD weapons:";
+		next;
+
+		callsub L_List,
+			21047,600028,
+			28038,610039,
+			28136,620018,
+			18178,700054,
+			18179,700055,
+			18180,700056,
+			28253,810013,
+			1862,560034,
+			13493,500051,
+			16088,590043,
+			16089,590044,
+			26151,550075,
+			26164,550076,
+			28629,540051,
+			28755,510066,
+			32019,530031;
+
+		close2;
+		item_reform("OS_Weapon_Reform");
+		end;
+
+	//========================================================
+	// Special Armors
+	//========================================================
+	case 3:
+		mes "[Gigantic Device]";
+		mes "For ^0000FFSpecial Armors^000000, there are Basic, Intermediate and Advanced types of reform.";
+		mes "The final five entries in this list are Advanced-only.";
+		mes "List of special armors:";
+		next;
+
+		callsub L_List,
+			400134,400135,
+			400141,400142,
+			400146,400145,
+			400150,400151,
+			22238,470094,
+			19265,400152,
+			19134,400153,
+			19266,400154,
+			19264,400155,
+			5658,400156,
+			5497,400245,
+			5464,400246,
+			28902,460020,
+			400061,400261,
+			400059,400262,
+			400054,400263,
+			400049,400264,
+			400044,400265,
+			400022,400266,
+			400021,400267,
+			400011,400445,
+			400023,400465,
+			19267,420066,
+			490100,490382,
+			490101,490383,
+			28439,490374,
+			28440,490375;
+
+		switch(select("Basic Reform:Intermediate Reform:Advanced Reform")) {
+		case 1:
+			mes "[Gigantic Device]";
+			mes "Special Armor Basic Reforms.";
+			mes "^FF0000Reduces 5 refine levels^000000, but requires fewer materials.";
+			mes "In order to modify it, the armor needs to have a refine level of +9 or greater.";
+			close2;
+			item_reform("C_Armor_Reform_1");
+			end;
+
+		case 2:
+			mes "[Gigantic Device]";
+			mes "Special Armor Intermediate Reforms.";
+			mes "^FF0000Reduces 1 refine level^000000, but requires more materials.";
+			mes "In order to modify it, the armor needs to have a refine level of +9 or greater.";
+			close2;
+			item_reform("C_Armor_Reform_2");
+			end;
+
+		case 3:
+			mes "[Gigantic Device]";
+			mes "Advanced Armor Reforms? Sure thing.";
+			mes "Only non-refinable armors can be used.";
+			close2;
+			item_reform("C_Armor_Reform_3");
+			end;
+		}
+		end;
+
+	//========================================================
+	// Heroic Weapons: Patent -> LT
+	//========================================================
+	case 4:
+		mes "[Gigantic Device]";
+		mes "For ^0000FFHeroic Weapons^000000, there are Basic, Intermediate and Advanced types of reform.";
+		mes "List of Heroic weapons:";
+		next;
+
+		callsub L_List,
+			590012,590030,
+			610009,610034,
+			530006,530019,
+			610008,610033,
+			540011,540035,
+			21058,600024,
+			500017,500038,
+			600009,600023,
+			510019,510040,
+			510022,510060,
+			510020,510041,
+			650004,650024,
+			640011,640027,
+			830002,830012,
+			640012,640028,
+			800002,800013,
+			550012,550045,
+			820001,820007,
+			550013,550046,
+			540010,540048,
+			560008,560026,
+			840001,840008,
+			560009,560027,
+			810001,810009,
+			500013,500039,
+			550015,550068,
+			500014,500040,
+			550014,550067,
+			700018,700045,
+			550081,550082,
+			700019,700046,
+			510071,510072,
+			570009,570027,
+			580009,580027,
+			700013,700049,
+			620004,620015,
+			590011,590034;
+
+		switch(select("Basic Reform:Intermediate Reform:Advanced Reform")) {
+		case 1:
+			mes "[Gigantic Device]";
+			mes "Heroic Weapon Basic Reforms.";
+			mes "^FF0000Reduces 5 refine levels^000000, but requires fewer materials.";
+			mes "In order to modify it, the weapon needs to have a refine level of +9 or greater.";
+			close2;
+			item_reform("C_Weapon_Reform_1");
+			end;
+
+		case 2:
+			mes "[Gigantic Device]";
+			mes "Heroic Weapon Intermediate Reforms.";
+			mes "^FF0000Reduces 1 refine level^000000, but requires more materials.";
+			mes "In order to modify it, the weapon needs to have a refine level of +9 or greater.";
+			close2;
+			item_reform("C_Weapon_Reform_2");
+			end;
+
+		case 3:
+			mes "[Gigantic Device]";
+			mes "Advanced Weapon Reforms.";
+			mes "^FF0000Reduces refine level by 1^000000, but consumes the most materials.";
+			mes "In order to modify it, the weapon needs to have a refine level of +9 or greater.";
+			close2;
+			item_reform("C_Weapon_Reform_3");
+			end;
+		}
+		end;
+
+	//========================================================
+	// Thanatos Sword Garment
+	//========================================================
+	case 5:
+		mes "[Gigantic Device]";
+		mes "Just in time. We have significant new findings from our research.";
+		mes "New items can be reformed and made into a stronger FA version.";
+		mes "We are offering two methods, FA Reform 1 and FA Reform 2.";
+		next;
+
+		callsub L_List,480136,480324;
+
+		switch(select("FA Reform 1:FA Reform 2")) {
+		case 1:
+			mes "[Gigantic Device]";
+			mes "Launching FA method 1 reforming window.";
+			close2;
+			item_reform("FA_Armor_Reform_1");
+			end;
+
+		case 2:
+			mes "[Gigantic Device]";
+			mes "Launching FA method 2 reforming window.";
+			close2;
+			item_reform("FA_Armor_Reform_2");
+			end;
+		}
+		end;
+
+	//========================================================
+	// Adulter Fides -> Vivatus Fides
+	//========================================================
+	case 6:
+		mes "[Gigantic Device]";
+		mes "You can reform the +9 refined Adulter Fides weapon series into the Vivatus Fides series.";
+		mes "The refining level drop varies depending on the reform chosen.";
+		mes "List of weapons:";
+		next;
+
+		callsub L_List,
+			600017,600018,
+			630012,630013,
+			500025,500027,
+			530013,530014,
+			520008,520009,
+			590021,590023,
+			500026,500028,
+			590022,590024,
+			610020,610022,
+			610021,610023,
+			510032,510033,
+			700030,700033,
+			640019,640021,
+			640020,640022,
+			540019,540024,
+			540020,540025,
+			540021,540026,
+			550024,550029,
+			560018,560020,
+			560019,560021,
+			700031,700034,
+			700032,700035,
+			570017,570019,
+			580017,580019,
+			570018,570020,
+			580018,580020,
+			650008,650022,
+			650009,650021,
+			800003,800012,
+			810002,810008,
+			830003,830011,
+			840002,840007,
+			540022,540046,
+			540023,540045,
+			550025,550064,
+			550026,550063,
+			550027,550065,
+			550028,550066;
+
+		switch(select("Basic Reform:Advanced Reform")) {
+		case 1:
+			mes "[Gigantic Device]";
+			mes "May the blessings of the Gods be with you.";
+			close2;
+			item_reform("Consecrate_Weapon_1");
+			end;
+
+		case 2:
+			mes "[Gigantic Device]";
+			mes "May the blessings of the Gods be with you.";
+			close2;
+			item_reform("Consecrate_Weapon_2");
+			end;
+		}
+		end;
+
+	//========================================================
+	// Varmundt Armor & Accessory
+	//========================================================
+	case 7:
+		mes "[Gigantic Device]";
+		mes "Do you happen to have Varmundt Rune Equipment that you obtained from the artificial habitat?";
+		mes "If it's ^0000FFrefined to +7 or above, or is an accessory^000000, I can reform it for you.";
+		mes "List of gears available:";
+		next;
+
+		callsub L_List,
+			450201,450243,
+			470108,470174,
+			480145,480231,
+			450200,450234,
+			470109,470173,
+			480146,480230,
+			450203,450244,
+			470111,470175,
+			480148,480232,
+			450202,450245,
+			470110,470176,
+			480147,480233,
+			490299,490302,
+			490299,490305,
+			490300,490303,
+			490300,490306,
+			490301,490304,
+			490301,490307;
+
+		switch(select(
+			"Glade Equipment",
+			"Flame Equipment",
+			"Glacial Equipment",
+			"Death Equipment",
+			"Soul Accessory",
+			"Venom Accessory",
+			"Temple Accessory"
+		)) {
+		case 1:
+			mes "[Gigantic Device]";
+			mes "To reform Glade equipment.";
+			close2;
+			item_reform("Barmund_Plain_Reform");
+			end;
+
+		case 2:
+			mes "[Gigantic Device]";
+			mes "To reform Flame equipment.";
+			close2;
+			item_reform("Barmund_Flame_Reform");
+			end;
+
+		case 3:
+			mes "[Gigantic Device]";
+			mes "To reform Glacial equipment.";
+			close2;
+			item_reform("Barmund_Ice_Reform");
+			end;
+
+		case 4:
+			mes "[Gigantic Device]";
+			mes "To reform Death equipment.";
+			close2;
+			item_reform("Barmund_Death_Reform");
+			end;
+
+		case 5:
+			.@ring = select("Soul Rune Ring:Soul Magic Ring");
+
+			mes "[Gigantic Device]";
+			mes "To reform Soul equipment.";
+			close2;
+
+			if (.@ring == 1)
+				item_reform("Barmund_Soul_Reform");
+			else
+				item_reform("Barmund_S_Reform");
+			end;
+
+		case 6:
+			.@ring = select("Venom Rune Ring:Venom Magic Ring");
+
+			mes "[Gigantic Device]";
+			mes "To reform Venom equipment.";
+			close2;
+
+			if (.@ring == 1)
+				item_reform("Barmund_Venom_Reform");
+			else
+				item_reform("Barmund_V_Reform");
+			end;
+
+		case 7:
+			.@ring = select("Temple Rune Ring:Temple Magic Ring");
+
+			mes "[Gigantic Device]";
+			mes "To reform Temple equipment.";
+			close2;
+
+			if (.@ring == 1)
+				item_reform("Barmund_Temple_Reform");
+			else
+				item_reform("Barmund_T_Reform");
+			end;
+		}
+		end;
+
+	//========================================================
+	// Sealed Dimensional Accessory
+	//========================================================
+	case 8:
+		mes "[Gigantic Device]";
+		mes "List of gears available:";
+		next;
+
+		callsub L_List,
+			490273,490276,
+			490274,490277,
+			490275,490278;
+
+		close2;
+		item_reform("Dimmen_A_Reform");
+		end;
+
+	//========================================================
+	// Metal Weapon Scroll Shop
+	//========================================================
+	case 9:
+		mes "[Gigantic Device]";
+		mes "With the help of these scrolls, you can reform your Metal weapons into Flush Metal weapons.";
+		close2;
+		callshop "GiganticDevice_Metal",1;
+		end;
+
+	//========================================================
+	// Rune Armor -> Engraved
+	//========================================================
+	case 10:
+		mes "[Gigantic Device]";
+		mes "Let the machine engrave your Rune armor, making it stronger but untradable.";
+		close2;
+		item_reform("Bar_D_A_Seal");
+		end;
+
+	//========================================================
+	// Engraved Rune Armor -> Normal
+	//========================================================
+	case 11:
+		mes "[Gigantic Device]";
+		mes "Let the machine remove the engraving from your Engraved Rune armor, making it tradable.";
+		close2;
+		item_reform("Bar_D_A_Unseal");
+		end;
+
+	//========================================================
+	// Manteau of Mystical Beast
+	//========================================================
+	case 12:
+		mes "[Gigantic Device]";
+		mes "Time to make your Manteau of Mystical Beast into Circulation of Life.";
+		close2;
+		item_reform("Season_H_Upgrade");
+		end;
+
+	//========================================================
+	// Gaebolg -> Yorscalp
+	//========================================================
+	case 13:
+		mes "[Gigantic Device]";
+		mes "Reform Gaebolg equipment into the Yorscalp version.";
+		close2;
+		item_reform("Yorscalp_Scroll_A");
+		end;
+
+	//========================================================
+	// Encroached Weapon Scroll Shop
+	//========================================================
+	case 14:
+		mes "[Gigantic Device]";
+		mes "With the help of these powerful scrolls, you can reform your Encroached weapons refined to +10 or higher.";
+		close2;
+		callshop "GiganticDevice_Encroached",1;
+		end;
+
+	//========================================================
+	// Printed Version for Rune Tablet
+	//========================================================
+	case 15:
+		mes "[Gigantic Device]";
+		mes "Toss in the equipment and I will make it the printed version.";
+		close2;
+
+		// Kept exactly as requested.
+		item_reform("OS_Weapon_Reform");
+		end;
+
+	//========================================================
+	// Azure Flame Mana - NOT IMPLEMENTED
+	// Menu entry and entire branch are commented out.
+	// No reform identifier has been invented.
+	//========================================================
+	/*
+	case 16:
+		mes "[Gigantic Device]";
+		mes "Reform Azure Flame Mana equipment refined to +11 into Blaze Mana equipment.";
+		mes "Refine levels are reduced by 2.";
+		next;
+
+		switch(select("Reform Equipment:Reform Accessory")) {
+		case 1:
+			mes "[Gigantic Device]";
+			mes "List of gears available:";
+			next;
+
+			callsub L_List,
+				450531,450533,
+				450532,450534,
+				480751,480753,
+				480752,480754,
+				470420,470422,
+				470421,470423,
+				460147,460148;
+
+			// Add the implemented equipment reform call here.
+			close;
+
+		case 2:
+			mes "[Gigantic Device]";
+			mes "List of gears available:";
+			next;
+
+			callsub L_List,
+				490930,490934,
+				490931,490935,
+				490932,490936,
+				490933,490937;
+
+			// Add the implemented accessory reform call here.
+			close;
+		}
+		end;
+	*/
+	}
+
+	end;
+
+//============================================================
+// Equipment list helper.
+// Arguments are alternating base/result item IDs.
+// Displays five pairs per page.
+//============================================================
+L_List:
+	mes "[Gigantic Device]";
+	mes "List of items";
+
+	for (.@i = 0; .@i < getargcount(); .@i += 2) {
+		mes "^i[" + getarg(.@i) + "] -> ^i[" + getarg(.@i + 1) + "]";
+	}
+
+	next;
+	return;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Item Reform]");
+	end;
+}
+
+// --------------------------------------------------
+// Hidden Zeny Shop: Metal Weapon Reform Scrolls
+// All items cost 300,000 Zeny.
+// --------------------------------------------------
+prtrefinery,1,1,0	shop	GiganticDevice_Metal	-1,102018:300000,102020:300000,102019:300000,102021:300000,102023:300000,102022:300000,102024:300000,102025:300000,102026:300000,102027:300000,102028:300000,102029:300000,102030:300000,102031:300000,102032:300000,102033:300000,102034:300000,102035:300000
+
+// --------------------------------------------------
+// Hidden Zeny Shop: Encroached Weapon Reform Scrolls
+// --------------------------------------------------
+prtrefinery,2,1,0	shop	GiganticDevice_Encroached	-1,105163:500000,105164:500000,105165:500000,105166:500000,105167:500000,105168:500000,105169:500000,105170:500000,105171:500000,105172:500000,105173:500000,105174:500000,105175:500000,105176:500000,105177:500000,105178:500000,105179:500000,105180:500000,105181:500000,105415:1500000,105416:1500000,105417:1500000,105418:1500000,105419:1500000,105420:1500000,105421:1500000,105422:1500000
+
+// Missing items — add these back to the shop line once implemented:
+// ,106250:500000
+// ,106251:1500000
+// ,106252:1500000
+// ,106253:1500000
+// ,106254:1500000
+// ,106255:1500000
+// ,106256:1500000
+// ,105685:1500000,105686:1500000,105687:1500000,105688:1500000,105689:1500000,105690:1500000

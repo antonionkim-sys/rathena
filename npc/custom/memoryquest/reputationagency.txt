@@ -1,0 +1,34 @@
+iz_ac01,91,148,5	script	Reinhardt	47,{
+	if (checkquest(90091) == 1) {
+		mes "[Reinhardt]";
+		mes "Welcome to the <b>Reputation Agency</b>!";
+		mes "Yes, that is a real agency.";
+		next;
+
+		mes "[Reinhardt]";
+		mes "Every region our city works with keeps a reputation record with me - the <b>Grey Wolf Village</b>, the <b>Ice Castle</b>, the <b>White Cat Alliance</b>.";
+		mes "Bring me their materials, and I'll increase your reputation with them.";
+		next;
+
+		mes "[Reinhardt]";
+		mes "Reputation is friendship...with paperwork.";
+		mes "Build it high enough, and those regions will start rewarding you in return.";
+		next;
+
+		mes "[Reinhardt]";
+		mes "You've recovered ^i[44599] 1x ^0000FF<b>Memory Shard!</b>^000000";
+		mes "You gained ^FFA500some experience back^000000.";
+
+		completequest 90091;
+		setquest 90092;
+		end;
+	}
+
+	mes "[Reinhardt]";
+	mes "Reputation is friendship... with paperwork.";
+	end;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Reputation Manager]");
+	end;
+}

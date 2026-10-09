@@ -1,0 +1,78 @@
+//===== rAthena Script =======================================
+//= Sir Umiro - Quest Skill Trainer
+//============================================================
+
+iz_ac01,101,156,3	script	Sir Umiro	866,{
+	// --------------------------------------------------
+	// One-time quest dialogue and reward
+	// --------------------------------------------------
+	if (checkquest(90077) == 1) {
+		mes "[Quest Skill Trainer]";
+		mes "Tsk. Another one.";
+		mes strcharinfo(0) + ", after everything I taught you, you have the audacity to forget?";
+		mes "You think I keep this Memory Shard around for the pleasure of your union?";
+		next;
+
+		mes "[Quest Skill Trainer]";
+		mes "Fine.";
+		mes "I'll teach your class's <b>Quest Skills</b> again.";
+		mes "Those Platinum Skills you were supposed to earn the slow way.";
+		mes "Say the word, and I'll pour every last one of them straight back into your head.";
+		mes "All at once.";
+		next;
+
+		mes "[Quest Skill Trainer]";
+		mes "Now take it and go.";
+		mes "Before I remember why I stopped liking people.";
+		next;
+
+		if (!checkweight(44599, 1)) {
+			mes "[Quest Skill Trainer]";
+			mes "Your inventory is full.";
+			mes "Make room before you recover your Memory Shard.";
+			close;
+		}
+
+		getitem 44599, 1;
+
+		// Optional EXP reward.
+		// Remove the dialogue line below if no EXP is being granted.
+		// getexp 100000, 0;
+
+		mes "[Quest Skill Trainer]";
+		mes "You've recovered ^i[44599] 1x ^0000FF<b>Memory Shard!</b>^000000";
+		mes "You gained ^FFA500some experience back^000000.";
+		next;
+
+		completequest 90077;
+		setquest 90078;
+
+		// Continue directly to the skill service afterward.
+	}
+
+	// --------------------------------------------------
+	// Platinum / Quest Skill service
+	// --------------------------------------------------
+	mes "[Quest Skill Trainer]";
+	mes "Don't bother me unless you've forgotten your Quest Skills.";
+	mes "Do you want me to restore the Quest Skills available to your class?";
+	next;
+
+	if (select("Restore my Quest Skills:Never mind") == 2) {
+		mes "[Quest Skill Trainer]";
+		mes "Then stop wasting my time.";
+		close;
+	}
+
+	// This grants all supported Platinum / Quest Skills for the player's job.
+	callfunc "F_GetPlatinumSkills";
+
+	mes "[Quest Skill Trainer]";
+	mes "There. Your Quest Skills have been restored.";
+	mes "Try not to forget them again.";
+	close;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Quest Skill Trainer]");
+	end;
+}

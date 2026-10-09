@@ -1,0 +1,166 @@
+izlude_b,24,99,5	script	Valkyrie Sigrun#izlude	811,{
+
+    // No quest started yet.
+    if (isbegin_quest(90001) == 0 && isbegin_quest(90002) == 0) {
+
+	mes "[Valkyrie Sigrun]";
+        mes "Hey adventurer. Stop everything you are doing right now.";
+        next;
+	mes "[Valkyrie Sigrun]";
+        mes "You have lost your memories,";
+        mes "but I know exactly who you are.";
+        next;
+	mes "[Valkyrie Sigrun]";
+        mes "You are no ordinary novice.";
+        mes "You were once much stronger than this.";
+        next;
+	mes "[Valkyrie Sigrun]";
+        mes "Hell has come to Ragnarok.";
+        mes "The MVPs are multiplying. They are taking control of dungeons, fields, towns... and soon, all of Midgard.";
+        next;
+	mes "[Valkyrie Sigrun]";
+        mes "You are not ready to face them yet.";
+        mes "Not in this form.";
+        next;
+	mes "[Valkyrie Sigrun]";
+        mes "I will guide you back to your original strength. Quickly.";
+        mes "The world is in danger... and, between us, quests are still currently under development.";
+        next;
+	mes "[Valkyrie Sigrun]";
+        mes "Do not worry. I have a plan.";
+        next;
+	mes "[Valkyrie Sigrun]";
+        mes "First, prove that your body still remembers how to fight.";
+        next;
+	mes "[Valkyrie Sigrun]";
+        mes "Kill 1 Poring outside Izlude.";
+        next;
+
+        if (select("Accept the quest:Not yet") == 2) {
+            mes "Return when you are ready.";
+            close;
+        }
+
+        setquest 90001;
+        mes "Quest accepted: The Valkyrie's Trial I.";
+        close;
+    }
+
+    // 90001 is still active (before kill).
+    if (isbegin_quest(90001) == 1) {
+	mes "[Valkyrie Sigrun]";
+        mes "You are not finished yet.";
+        mes "Defeat the Poring and return to me.";
+        close;
+    }
+
+    // 90002 is the post-kill/turn-in stage.
+    if (isbegin_quest(90002) == 1) {
+        mes "Your body is beginning to remember.";
+        next;
+	mes "[Valkyrie Sigrun]";
+        mes "You survived your first trial.";
+        mes "Now accept your reward.";
+        next;
+
+        if (Class != Job_Novice) {
+            mes "You have already chosen a job.";
+            close;
+        }
+	mes "[Valkyrie Sigrun]";
+        mes "Choose your first job.";
+        next;
+
+        switch (select(
+            "Swordman:"+
+            "Mage:"+
+            "Archer:"+
+            "Acolyte:"+
+            "Merchant:"+
+            "Thief:"+
+            "Super Novice:"+
+            "Taekwon:"+
+            "Gunslinger:"+
+            "Ninja:"+
+            "Cancel"
+        )) {
+            case 1:
+                .@job = Job_Swordman;
+                break;
+            case 2:
+                .@job = Job_Mage;
+                break;
+            case 3:
+                .@job = Job_Archer;
+                break;
+            case 4:
+                .@job = Job_Acolyte;
+                break;
+            case 5:
+                .@job = Job_Merchant;
+                break;
+            case 6:
+                .@job = Job_Thief;
+                break;
+            case 7:
+                .@job = Job_Super_Novice;
+                break;
+            case 8:
+                .@job = Job_Taekwon;
+                break;
+            case 9:
+                .@job = Job_Gunslinger;
+                break;
+            case 10:
+                .@job = Job_Ninja;
+                break;
+            default:
+                mes "Choose your job when you are ready.";
+                close;
+        }
+	mes "[Valkyrie Sigrun]";
+        mes "Are you sure you want to become";
+        mes jobname(.@job) + "?";
+        next;
+
+        if (select("Yes, change my job:Cancel") == 2) {
+            mes "Very well. Choose again when you are ready.";
+            close;
+        }
+
+        jobchange .@job;
+
+        completequest 90002;
+	setquest 90003;
+
+        getexp 25000,0;
+        Zeny += 100000;
+        getitem 480198,1;
+        getitem Red_Potion,30;
+        getitem Fly_Wing,10;
+
+        atcommand "@adjgroup 1";
+	mes "[Valkyrie Sigrun]";
+        mes "Congratulations.";
+        mes "You are now a " + jobname(.@job) + " and may use multiple @commands.";
+        mes "Your next destination is the <NAVI>[the Academy building]<INFO>iz_ac01,100,39</INFO></NAVI>, north of Izlude.";
+	next;
+        mes "Find ^FF0000Secretary Snow^000000 there when you are ready.";
+        close;
+    }
+
+    // Quest fully completed – keep pointing to Secretary Snow.
+	mes "[Valkyrie Sigrun]";
+    mes "You have completed my trial.";
+    mes "Your next destination is the Academy, north of Izlude.";
+    mes "Find ^FF0000Secretary Snow^000000 there when you are ready.";
+    close;
+
+OnNPCKillEvent:
+    if (isbegin_quest(90001) == 1 && killedrid == 1002) {
+        completequest 90001;
+        setquest 90002;
+        dispbottom "The Valkyrie's Trial I is complete.";
+    }
+    end;
+}

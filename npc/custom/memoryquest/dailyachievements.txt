@@ -1,0 +1,36 @@
+iz_ac01,107,152,5	script	Oliver	626,{
+	if (checkquest(90090) == 1) {
+		mes "[Oliver]";
+		mes "Hi...";
+		next;
+
+		mes "[Oliver]";
+		mes "You know the routine.";
+		mes "Complete all <b>5 daily tasks</b>, and I'll give you ten ^i[43066] <b>Bags of Achievement Medals</b>.";
+		next;
+		mes "The tasks reset every day at <b>Midnight</b>, so be sure to come back tomorrow.";
+		next;
+
+		mes "[Oliver]";
+		mes "Keep up the good work, and don't forget to stop by each day.";
+		mes "";
+		mes "I'll be here, keeping track of your progress.";
+		next;
+
+		mes "[Oliver]";
+		mes "You've recovered ^i[44599] 1x ^0000FF<b>Memory Shard!</b>^000000";
+		mes "You gained ^FFA500some experience back^000000.";
+
+		completequest 90090;
+		setquest 90091;
+		end;
+	}
+
+	mes "[Oliver]";
+	mes "I'll be here, keeping track of your progress.";
+	end;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Daily Achievements]");
+	end;
+}

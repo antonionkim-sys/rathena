@@ -1,0 +1,54 @@
+//============================================================
+// Buff Potion Shop — Dr.Fresa
+// Barter shop: DrFresa_PremiumPots
+// Currency: 6909 (Nyangvine_Fruit)
+//============================================================
+
+prtmall,33,48,5	script	Dr.Fresa	10078,{
+	mes "[Dr.Fresa]";
+	mes "Welcome to my corner of the Department Store. Isn't it lovely?";
+	next;
+	mes "[Dr.Fresa]";
+	mes "How can I assist you today? Looking for some magical boosts?";
+
+	switch (select(
+		"Buy Premium Pots",
+		"Convert to Premium (G) Pots",
+		"Buy Premium (G) Pots with Zeny",
+		"Extend Biolo Pots",
+		"Premium Biolo Pots (ignores death/dispell)"
+	)) {
+	case 1:
+		close2;
+		callshop "DrFresa_PremiumPots";
+		end;
+
+	case 2:
+		next;
+		mes "[Dr.Fresa]";
+		mes "Come back soon. I'm cooking up something good here.";
+		close;
+
+	case 3:
+		next;
+		mes "[Dr.Fresa]";
+		mes "Come back soon. I'm cooking up something good here.";
+		close;
+
+	case 4:
+		next;
+		mes "[Dr.Fresa]";
+		mes "Come back soon. I'm cooking up something good here.";
+		close;
+
+	case 5:
+		next;
+		mes "[Dr.Fresa]";
+		mes "Come back soon. I'm cooking up something good here.";
+		close;
+	}
+
+OnInit:
+	setunittitle(getnpcid(0), "[Buff Potion Shop]");
+	end;
+}

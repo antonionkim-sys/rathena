@@ -1,0 +1,108 @@
+prt_in,136,33,3	script	Blackphone	496,{
+	mes "[Blackphone]";
+	mes "Meow~ Welcome, do you have ^i[6909]?";
+	mes "Meow~ I can exchange them to a Shadow Cube, Shadow Box, or a Thump Box!";
+	next;
+
+	mes "[Blackphone]";
+	mes "If you are looking for <b>Master Shadows</b>, you have to goto Hero Garden.";
+	mes "If you want to recycle your regular shadow gears, go to the <b>Large Recycle</b> in the Workshop.";
+	next;
+
+	switch (select(
+		"Look at shadow cubes and Shadow Piece.",
+		"Look at shadow boxes",
+		"Buy Trait Shadow",
+		"Buy 3-1 Job Skill Shadows",
+		"Buy 3-2 Job Skill Shadows",
+		"Buy Extended Job Skill Shadows",
+		"Buy General Job Shadows",
+		"Buy Cool Shadow Cubes",
+		"Buy Blue Shadows"
+	)) {
+	case 1:
+		next;
+		mes "[Blackphone]";
+		mes "Meow~ Shadow Cubes gives random shadow equipment.";
+		mes "Meow~ The Thump Box takes random shadows and give you a new one.";
+		close2;
+		callshop "Blackphone_ShadowCubes";
+		end;
+
+	case 2:
+		next;
+		mes "[Blackphone]";
+		mes "Meow~ Shadow Cubes gives one random specific type of shadow gears.";
+		close2;
+		callshop "Blackphone_ShadowBoxes";
+		end;
+
+	case 3:
+		next;
+		mes "[Blackphone]";
+		mes "These are all I have.";
+		mes "You can buy Shadow Piece or get from recycling.";
+		close2;
+		callshop "Blackphone_TraitShadows";
+		end;
+
+	case 4:
+		next;
+		mes "[Blackphone]";
+		mes "These are all I have.";
+		mes "You can buy Shadow Piece or get from recycling.";
+		close2;
+		callshop "Blackphone_Job31Shadows";
+		end;
+
+	case 5:
+		next;
+		mes "[Blackphone]";
+		mes "These are all I have.";
+		mes "You can buy Shadow Piece or get from recycling.";
+		close2;
+		callshop "Blackphone_Job32Shadows";
+		end;
+
+	case 6:
+		next;
+		mes "[Blackphone]";
+		mes "These are all I have.";
+		mes "You can buy Shadow Piece or get from recycling.";
+		close2;
+		callshop "Blackphone_ExtendedShadows";
+		end;
+
+	case 7:
+		next;
+		mes "[Blackphone]";
+		mes "These are all I have.";
+		mes "You can buy Shadow Piece or get from recycling.";
+		close2;
+		callshop "Blackphone_GeneralShadows";
+		end;
+
+	case 8:
+		next;
+		mes "[Blackphone]";
+		mes "These are all I have.";
+		mes "You can buy Shadow Piece or get from recycling.";
+		close2;
+		callshop "Blackphone_CoolCubes";
+		end;
+
+	case 9:
+		next;
+		mes "[Blackphone]";
+		mes "These are all I have.";
+		mes "You can buy Shadow Piece or get from recycling.";
+		close2;
+		callshop "Blackphone_BlueShadows";
+		end;
+	}
+
+OnInit:
+	setunittitle(getnpcid(0), "[Shadow Gears]");
+	setunitdata getnpcid(0), UNPC_GROUP_ID, 40;
+	end;
+}

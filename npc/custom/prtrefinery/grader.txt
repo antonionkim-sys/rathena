@@ -1,0 +1,55 @@
+//===== rAthena Script =======================================
+//= Fruity - Item Grade
+//============================================================
+
+prtrefinery,213,136,3	script	Fruity	666,{
+	mes "[Fruity]";
+	mes "Welcome to Item Gradement service.";
+	mes "May good luck always be with you.";
+	next;
+
+	switch(select(
+		"Item Grade",
+		"Etel Shop",
+		"What is Item Gradement?",
+		"Cancel"
+	)) {
+	case 1:
+		mes "[Fruity]";
+		mes "Hold our hands and have faith, good luck!";
+		close2;
+		enchantgradeui;
+		end;
+
+	case 2:
+		mes "[Fruity]";
+		mes "You need Etel Gems to upgrade the Item Ranks.";
+		mes "I can help you combine raw Etel Dusts or Stones into Etel Gems!";
+		close2;
+		callshop "Fruity_Etel",1;
+		end;
+
+	case 3:
+		mes "[Fruity]";
+		mes "Occasionally, unstable gems with a lot of high-purity magic can be found.";
+		mes "I decided to call these gems ^0000FFEtel Gems^000000.";
+		next;
+
+		mes "[Fruity]";
+		mes "The magical power of Etel Gems sometimes awakens the hidden potential of ^0000FFLevel 5 weapons or Level 2 armor^000000.";
+		mes "We call it ^0000FFItem Gradement^000000, because it goes up one grade if successful!";
+		next;
+
+		mes "[Fruity]";
+		mes "You may unlock unknown potential, but it may cost you a fortune!";
+		mes "Challenge yourself, have faith in yourself!";
+		close;
+
+	default:
+		close;
+	}
+
+OnInit:
+	setunittitle(getnpcid(0), "[Item Grade]");
+	end;
+}

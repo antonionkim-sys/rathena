@@ -1,0 +1,41 @@
+prtrefinery,215,115,3	script	Flamering	22447,{
+	mes "[Ore Exchange]";
+	mes "Woosh~ Woosh~";
+	mes "I'm ^FF0000Flamering^000000.";
+	mes "I may look hot, but the fire only burns ores.";
+	mes "Do you want to browse my ore shops?";
+	next;
+
+	switch(select("Regular Ore Exchange:Premium Ore Exchange:Ether Ore Exchange:Blacksmith's Blessing:Nah, I'm cool")) {
+	case 1:
+		close2;
+		callshop "Flamering#Regular",1;
+		end;
+
+	case 2:
+		close2;
+		callshop "Flamering#Premium",1;
+		end;
+
+	case 3:
+		close2;
+		callshop "Flamering#Ether",1;
+		end;
+
+	case 4:
+		mes "[Ore Exchange]";
+		mes "Wooosh~ Wooosh~";
+		mes "The most appealing product!";
+		next;
+		close2;
+		callshop "Flamering#Blessing",1;
+		end;
+
+	default:
+		close;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Ore Exchange]");
+	end;
+	}
+}

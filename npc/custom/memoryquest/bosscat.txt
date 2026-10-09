@@ -1,0 +1,40 @@
+iz_ac01,99,152,3	script	Boss Cat	421,{
+	if (checkquest(90085) == 1) {
+		mes "[Boss Cat]";
+		mes "I am here to do serious business.";
+		mes "Serious <b>fashion</b> business.";
+		next;
+
+		mes "[Boss Cat]";
+		mes "Costume headgears, wigs, wings, entire faces - you name it.";
+		mes "Every piece is <b>looks only</b>. No stats, no tricks. Just pure style.";
+		mes "You'll find them all here, in the <b>Costume Grand Hall</b>.";
+		mes "That's the entire point of this place.";
+		next;
+
+		mes "[Boss Cat]";
+		mes "You pay me in ^i[6969] <b>Silvervine Cat Fruit</b>.";
+		mes "When I restock, the pieces I'm finished with don't simply disappear.";
+		mes "They move into the <b>Costume Machine</b> instead.";
+		next;
+		mes "So don't worry...";
+		mes "<b>Nothing is ever truly gone.</b>";
+		next;
+
+		mes "[Boss Cat]";
+		mes "You've recovered ^i[44599] 1x ^0000FF<b>Memory Shard!</b>^000000";
+		mes "You gained ^FFA500some experience back^000000.";
+
+		completequest 90085;
+		setquest 90086;
+		end;
+	}
+
+	mes "[Boss Cat]";
+	mes "I'm here for serious fashion business.";
+	end;
+
+OnInit:
+	setunittitle(getnpcid(0), "[Silvervine Costumes]");
+	end;
+}
